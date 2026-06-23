@@ -93,6 +93,28 @@
             <!-- Rendered via JS -->
         </div>
 
+        <!-- Prompt Modal -->
+        <div class="prompt-modal-overlay" id="prompt-modal" style="display: none;">
+            <div class="prompt-modal-content">
+                <div class="prompt-modal-header">
+                    <div class="prompt-modal-meta">
+                        <div class="prompt-icon" id="modal-icon" style="color: var(--color-accent); font-size: 1.5rem;"></div>
+                    </div>
+                    <button class="btn-close-modal" id="btn-close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <h2 class="prompt-modal-title" id="modal-title"></h2>
+                <p class="prompt-modal-desc" id="modal-desc"></p>
+                <div class="prompt-content-box" id="modal-prompt-box">
+                    <!-- Format Prompt HTML injected here -->
+                </div>
+                <div class="prompt-modal-footer">
+                    <button class="btn btn-primary btn-copy-modal" id="modal-btn-copy">
+                        <i class="fas fa-copy"></i> Salin Prompt
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer -->

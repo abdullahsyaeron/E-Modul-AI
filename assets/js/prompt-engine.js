@@ -45,19 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       html += `
         <div class="prompt-card" data-category="${p.category}">
-          <div class="prompt-card-body">
+          <div class="prompt-card-body" style="cursor: pointer;" onclick="document.querySelector('.btn-open-modal[data-id=\\'${p.id}\\']').click()">
             <div class="prompt-card-meta">
-              <div class="prompt-icon" style="color: var(--color-accent); font-size: 1.25rem;"><i class="fas ${icon}"></i></div>
+              <div class="prompt-icon" style="color: var(--color-accent); font-size: 1.5rem;"><i class="fas ${icon}"></i></div>
             </div>
             <h3 class="prompt-card-title">${p.title}</h3>
-            <p class="prompt-card-desc">${p.description}</p>
-            <div class="prompt-content-box">
-              ${formatPromptHTML(p.prompt)}
-            </div>
           </div>
           <div class="prompt-card-footer">
-            <button class="btn btn-sm btn-secondary btn-copy" data-text="${encodeURIComponent(p.prompt)}">
-              <i class="fas fa-copy"></i> Salin Prompt
+            <button class="btn btn-sm btn-outline btn-open-modal" data-id="${p.id}" style="width: 100%;">
+              Lihat Detail
             </button>
           </div>
         </div>
@@ -66,29 +62,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
     promptGrid.innerHTML = html;
 
-    // Attach copy events
-    const copyBtns = promptGrid.querySelectorAll('.btn-copy');
-    copyBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
+    // Attach Modal Events
+    const openBtns = promptGrid.querySelectorAll('.btn-open-modal');
+    const modal = document.getElementById('prompt-modal');
+    const btnClose = document.getElementById('btn-close-modal');
+    const btnCopyModal = document.getElementById('modal-btn-copy');
+
+    if (!modal) return;
+
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const id = this.getAttribute('data-id');
+        const p = window.promptDatabase.find(x => x.id === id);
+        if (!p) return;
+
+        // Determine icon
+        let icon = 'fa-magic';
+        if (p.category === 'perencanaan') icon = 'fa-file-alt';
+        else if (p.category === 'materi') icon = 'fa-book-open';
+        else if (p.category === 'evaluasi') icon = 'fa-clipboard-check';
+        else if (p.category === 'interaksi') icon = 'fa-users';
+
+        document.getElementById('modal-icon').innerHTML = `<i class="fas ${icon}"></i>`;
+        document.getElementById('modal-title').innerText = p.title;
+        document.getElementById('modal-desc').innerText = p.description;
+        document.getElementById('modal-prompt-box').innerHTML = formatPromptHTML(p.prompt);
+        btnCopyModal.setAttribute('data-text', encodeURIComponent(p.prompt));
+
+        modal.style.display = 'flex';
+      });
+    });
+
+    // Close Modal Events
+    const closeModal = () => { modal.style.display = 'none'; };
+    if (btnClose) btnClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+
+    // Copy Event in Modal
+    if (btnCopyModal) {
+      // remove old listener to avoid duplicate bindings
+      const newCopyBtn = btnCopyModal.cloneNode(true);
+      btnCopyModal.parentNode.replaceChild(newCopyBtn, btnCopyModal);
+      
+      newCopyBtn.addEventListener('click', function() {
         const textToCopy = decodeURIComponent(this.getAttribute('data-text'));
-        
         if (window.copyToClipboard) {
           window.copyToClipboard(textToCopy, 'Prompt disalin ke clipboard!');
         }
         
-        // Visual feedback on button
         const originalHtml = this.innerHTML;
         this.innerHTML = '<i class="fas fa-check"></i> Disalin';
-        this.classList.remove('btn-secondary');
-        this.classList.add('btn-primary');
         
         setTimeout(() => {
           this.innerHTML = originalHtml;
-          this.classList.remove('btn-primary');
-          this.classList.add('btn-secondary');
         }, 2000);
       });
-    });
+    }
   }
 
   // Filter and Search Logic
