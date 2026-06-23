@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 1: Konsep Dasar AI - E-Modul AI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-body bg-alt">
+
+    <div id="reading-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                    <i class="fas fa-robot text-primary"></i>
+                </div>
+                <div>
+                    <span class="brand-name">E-Modul AI</span>
+                    <span class="brand-sub">Media Pembelajaran</span>
+                </div>
+            </a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="navbar-mobile" id="navbar-mobile">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a>
+        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
+        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
+        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a>
+    </div>
+
+    <!-- Chapter Header -->
+    <header class="chapter-header">
+        <div class="container-narrow">
+            <div class="breadcrumb mb-4" style="padding-block: 0;">
+                <a href="index.html" style="color: rgba(255,255,255,0.7);">Dashboard</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <a href="materi.html" style="color: rgba(255,255,255,0.7);">Materi</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <span class="current" style="color: white;">BAB 1</span>
+            </div>
+            
+            <div class="chapter-num">
+                <i class="fas fa-bookmark text-accent-light"></i> BAB 1
+            </div>
+            <h1>Konsep Dasar Artificial Intelligence</h1>
+            
+            <div class="chapter-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> Estimasi Waktu: 15 Menit</div>
+                <div class="meta-item"><i class="fas fa-book-open"></i> Teori & Pemahaman Dasar</div>
+            </div>
+
+            <div class="chapter-tujuan">
+                <h3>Capaian Pembelajaran Bab Ini:</h3>
+                <ul>
+                    <li>Memahami definisi Artificial Intelligence secara komprehensif.</li>
+                    <li>Mengetahui perbedaan AI Konvensional dan Generative AI.</li>
+                    <li>Memahami relevansi dan potensi AI dalam bidang pendidikan.</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container section pt-8">
+        <div class="materi-layout">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="materi-sidebar hide-mobile">
+                <div class="sidebar-header">Daftar Materi</div>
+                <div class="sidebar-nav-list">
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab1.html" class="active">
+                            <span class="bab-badge">1</span> Konsep Dasar AI
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab2.html">
+                            <span class="bab-badge">2</span> Jenis AI Media
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab3.html">
+                            <span class="bab-badge">3</span> Prompt Engineering
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab4.html">
+                            <span class="bab-badge">4</span> Implementasi Praktis
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab5.html">
+                            <span class="bab-badge">5</span> Etika Penggunaan
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="materi-main content-body">
+                
+                <h2>1. Apa itu Artificial Intelligence?</h2>
+                <p>
+                    <span class="key-term">Artificial Intelligence (AI)</span> atau Kecerdasan Buatan merujuk pada sistem komputer atau perangkat lunak yang dirancang untuk meniru fungsi kognitif manusia. Fungsi kognitif ini meliputi kemampuan untuk belajar dari data (learning), bernalar untuk menarik kesimpulan (reasoning), memecahkan masalah (problem solving), hingga memahami bahasa alami.
+                </p>
+                <p>
+                    Secara sederhana, jika komputer tradisional hanya menjalankan perintah statis berdasarkan kode yang diketik manusia, AI memiliki kemampuan untuk mengenali pola dan membuat keputusan atau prediksi berdasarkan data yang telah dipelajarinya.
+                </p>
+
+                <div class="highlight-box">
+                    <i class="fas fa-lightbulb text-accent text-2xl mb-2"></i>
+                    <p style="margin-bottom:0;"><strong>Penting:</strong> AI bukanlah "robot yang memiliki kesadaran", melainkan algoritma matematika kompleks yang memproses data dalam skala masif untuk menemukan probabilitas terbaik dari suatu masalah.</p>
+                </div>
+
+                <h2>2. Generative AI vs AI Konvensional</h2>
+                <p>Dalam konteks pengembangan media pembelajaran saat ini, istilah yang paling sering kita dengar adalah <strong>Generative AI</strong> (AI Generatif). Apa bedanya dengan AI konvensional yang sudah ada sebelumnya?</p>
+                
+                <table class="mt-4">
+                    <thead>
+                        <tr>
+                            <th>Aspek</th>
+                            <th>AI Konvensional (Analytical AI)</th>
+                            <th>Generative AI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fungsi Utama</strong></td>
+                            <td>Menganalisis, mengklasifikasi, dan memprediksi data yang sudah ada.</td>
+                            <td>Menciptakan (men-generate) data/konten baru yang sebelumnya tidak ada.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cara Kerja</strong></td>
+                            <td>Mendeteksi pola untuk mengambil kesimpulan.</td>
+                            <td>Mempelajari pola distribusi data untuk mereproduksi variasi baru.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contoh Penggunaan</strong></td>
+                            <td>Filter spam email, rekomendasi produk Netflix/YouTube, pendeteksi wajah.</td>
+                            <td>Membuat esai/artikel (ChatGPT), membuat ilustrasi gambar (Midjourney), membuat suara narator (ElevenLabs).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="mt-4">
+                    Sebagai guru, <strong>Generative AI</strong> adalah "asisten asisten pencipta" Anda. Ketika Anda membutuhkan paragraf pengantar materi, soal pilihan ganda, atau gambar ilustrasi ekosistem laut untuk modul, Generative AI dapat menghasilkannya hanya dengan instruksi teks (prompt) yang Anda berikan.
+                </p>
+
+                <h2>3. Cara Kerja Large Language Models (LLM)</h2>
+                <p>
+                    ChatGPT, Claude, dan Gemini adalah contoh dari LLM (Large Language Models). Bagaimana mereka bisa seolah-olah "mengerti" pertanyaan kita dan menjawab dengan sangat natural?
+                </p>
+                <p>
+                    LLM pada dasarnya beroperasi seperti fitur <em>autocomplete</em> (teks otomatis) pada keyboard smartphone Anda, tetapi dengan skala yang jutaan kali lebih canggih. Mereka dilatih menggunakan miliaran teks dari internet. Ketika Anda memberikan sebuah prompt (instruksi), LLM menggunakan probabilitas statistik untuk memprediksi kata (token) apa yang paling logis untuk muncul selanjutnya.
+                </p>
+
+                <blockquote>
+                    "LLM tidak benar-benar memahami makna dari kata-kata yang ia hasilkan. Ia hanya sangat mahir memprediksi urutan kata yang secara statistik paling relevan dengan konteks pertanyaan Anda."
+                </blockquote>
+
+                <h2>4. Relevansi AI dalam Pendidikan</h2>
+                <p>Kehadiran AI Generatif tidak dirancang untuk menggantikan posisi guru, melainkan membebaskan guru dari tugas-tugas administratif dan produksi repetitif, sehingga guru bisa lebih fokus pada pendampingan emosional dan pedagogik siswa.</p>
+                
+                <p>Berikut adalah peran AI dalam ekosistem pendidikan:</p>
+                <ul>
+                    <li><strong>Efisiensi Waktu (Co-Pilot):</strong> Membuat draf RPP, menyusun daftar soal, atau merangkum jurnal pendidikan dalam hitungan detik.</li>
+                    <li><strong>Personalisasi Materi:</strong> Membantu mengubah tingkat kesulitan teks materi bacaan agar sesuai dengan gaya belajar atau tingkat literasi siswa yang berbeda di satu kelas yang sama.</li>
+                    <li><strong>Peningkatan Kreativitas:</strong> Menciptakan media ajar visual (gambar, diagram, audio) tanpa guru harus memiliki keahlian desain grafis atau produksi multimedia profesional.</li>
+                </ul>
+
+                <!-- Quiz Container -->
+                <div id="quiz-container" data-bab="bab1">
+                    <!-- Quiz Engine akan me-render kuis di sini -->
+                </div>
+
+                <!-- Navigation -->
+                <div class="chapter-nav">
+                    <div></div> <!-- Empty div for flex layout -->
+                    <a href="materi-bab2.html" class="chapter-nav-btn next">
+                        <div>
+                            <span class="nav-label">Bab Selanjutnya</span>
+                            <span class="nav-title">Jenis AI untuk Media</span>
+                        </div>
+                        <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
+                    </a>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name">
+                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                    </span>
+                    <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Pintasan</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="materi.html">Materi Belajar</a></li>
+                        <li><a href="prompt.html">Kumpulan Prompt</a></li>
+                        <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="fas fa-heart text-danger"></i> di Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/quiz-data.js"></script>
+    <script src="assets/js/quiz-engine.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
