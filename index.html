@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Modul AI - Media Pembelajaran</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-body">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                    <i class="fas fa-robot text-primary"></i>
+                </div>
+                <div>
+                    <span class="brand-name">E-Modul AI</span>
+                    <span class="brand-sub">Media Pembelajaran</span>
+                </div>
+            </a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="navbar-mobile" id="navbar-mobile">
+        <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="materi.html" class="nav-link"><i class="fas fa-book"></i> Materi</a>
+        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
+        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
+        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <i class="fas fa-bolt"></i> Panduan Praktis untuk Guru
+                </div>
+                <h1 class="hero-title">
+                    Revolusi Media Pembelajaran dengan <span class="accent">Artificial Intelligence</span>
+                </h1>
+                <p class="hero-desc">
+                    Tingkatkan kreativitas dan efisiensi Anda dalam membuat media pembelajaran interaktif menggunakan teknologi AI Generatif. Dirancang khusus untuk pendidik di Indonesia.
+                </p>
+                <div class="hero-actions">
+                    <a href="materi.html" class="btn btn-primary btn-lg">
+                        Mulai Belajar <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#cara-penggunaan" class="btn btn-secondary-white btn-lg">
+                        Cara Penggunaan
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat-item">
+                        <div class="number">5</div>
+                        <div class="label">Bab Materi</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="number">100+</div>
+                        <div class="label">Contoh Prompt</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="number">Interaktif</div>
+                        <div class="label">Modul Evaluasi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Section -->
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-label">Akses Cepat</div>
+                <h2 class="section-title">Eksplorasi E-Modul</h2>
+                <p class="section-desc">Pilih modul yang ingin Anda pelajari atau gunakan. Modul dirancang agar saling melengkapi untuk pengalaman belajar yang komprehensif.</p>
+            </div>
+            
+            <div class="quick-access-grid">
+                <a href="materi.html" class="quick-card">
+                    <div class="quick-card-icon card-icon-primary">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Materi Utama</h3>
+                    <p>Pelajari konsep dasar AI, tools generatif, dan strategi implementasinya dalam pembelajaran.</p>
+                    <div class="card-arrow">Mulai Belajar <i class="fas fa-arrow-right"></i></div>
+                </a>
+                
+                <a href="prompt.html" class="quick-card">
+                    <div class="quick-card-icon card-icon-accent">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Kumpulan Prompt</h3>
+                    <p>Temukan ratusan template prompt siap pakai untuk berbagai mata pelajaran dan kebutuhan.</p>
+                    <div class="card-arrow">Lihat Prompt <i class="fas fa-arrow-right"></i></div>
+                </a>
+                
+                <a href="evaluasi.html" class="quick-card">
+                    <div class="quick-card-icon card-icon-success">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Evaluasi Media</h3>
+                    <p>Gunakan instrumen interaktif untuk menilai kualitas media pembelajaran yang telah Anda buat.</p>
+                    <div class="card-arrow">Mulai Evaluasi <i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="tentang.html" class="quick-card">
+                    <div class="quick-card-icon card-icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>Informasi Modul</h3>
+                    <p>Kenali latar belakang pengembangan e-modul, profil pengembang, dan referensi yang digunakan.</p>
+                    <div class="card-arrow">Baca Selengkapnya <i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capaian Pembelajaran -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="grid grid-2 gap-12 items-center">
+                <div>
+                    <div class="section-label">Kompetensi</div>
+                    <h2 class="section-title">Capaian Pembelajaran</h2>
+                    <p class="section-desc mb-8">Setelah mempelajari seluruh materi pada e-modul ini, Anda diharapkan mampu memahami, merancang, dan mengevaluasi media pembelajaran berbasis AI dengan efektif dan etis.</p>
+                    
+                    <a href="materi.html" class="btn btn-primary">Lihat Seluruh Materi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="capaian-list">
+                    <div class="capaian-item">
+                        <div class="capaian-num">1</div>
+                        <p><strong>Memahami konsep dasar AI</strong> dan relevansinya dalam konteks pendidikan modern.</p>
+                    </div>
+                    <div class="capaian-item">
+                        <div class="capaian-num">2</div>
+                        <p><strong>Mengenal berbagai AI tools</strong> yang efektif untuk merancang media pembelajaran interaktif.</p>
+                    </div>
+                    <div class="capaian-item">
+                        <div class="capaian-num">3</div>
+                        <p><strong>Mampu menyusun prompt</strong> (perintah) yang presisi untuk menghasilkan output AI yang berkualitas.</p>
+                    </div>
+                    <div class="capaian-item">
+                        <div class="capaian-num">4</div>
+                        <p><strong>Mengevaluasi kelayakan</strong> media pembelajaran AI yang telah dibuat berdasarkan standar pedagogik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Penggunaan -->
+    <section id="cara-penggunaan" class="section bg-surface">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-label">Panduan</div>
+                <h2 class="section-title">Cara Menggunakan E-Modul</h2>
+                <p class="section-desc">Ikuti langkah-langkah berikut untuk mendapatkan hasil maksimal dari pembelajaran menggunakan e-modul ini.</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <h4>Pelajari Materi</h4>
+                    <p>Mulai dengan membaca BAB 1 hingga 5 secara berurutan untuk memahami teori dan praktik. Setiap akhir bab terdapat kuis interaktif.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <h4>Praktikkan Prompt</h4>
+                    <p>Buka halaman Kumpulan Prompt dan salin template yang sesuai dengan mata pelajaran Anda. Modifikasi variabelnya.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <h4>Buat Media Anda</h4>
+                    <p>Gunakan tools AI generatif (seperti ChatGPT, Canva AI, dll) untuk memproduksi komponen media pembelajaran Anda.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <h4>Evaluasi Hasil</h4>
+                    <p>Gunakan instrumen Evaluasi untuk menilai apakah media yang Anda hasilkan sudah memenuhi kelayakan pedagogik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)); color: white;">
+        <div class="container-narrow text-center">
+            <h2 class="heading-section text-4xl mb-4 text-inverse">Siap Untuk Bertransformasi?</h2>
+            <p class="text-lg mb-8" style="color: rgba(255,255,255,0.8);">Mulai perjalanan Anda sekarang dalam mengintegrasikan kecerdasan buatan ke dalam ruang kelas Anda.</p>
+            <a href="materi.html" class="btn btn-primary btn-lg" style="background: white; color: var(--color-primary); border-color: white;">
+                Mulai Pembelajaran
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name">
+                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                    </span>
+                    <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Pintasan</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="materi.html">Materi Belajar</a></li>
+                        <li><a href="prompt.html">Kumpulan Prompt</a></li>
+                        <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Kontak & Info</h4>
+                    <ul>
+                        <li><a href="tentang.html">Tentang Pengembang</a></li>
+                        <li><a href="tentang.html#referensi">Referensi</a></li>
+                        <li><a href="#">Bantuan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="fas fa-heart text-danger"></i> di Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
