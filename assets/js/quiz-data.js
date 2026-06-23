@@ -122,59 +122,59 @@ const quizData = {
 
   bab3: [
     {
-      question: "Apa yang dimaksud dengan 'Prompt' dalam interaksi dengan AI generatif?",
+      question: "Guru ingin membuat video pembelajaran menggunakan AI. Langkah pertama dalam Model MAP-AI adalah...",
       options: [
-        "Kode pemrograman rumit yang harus dihafal",
-        "Sistem operasi yang menjalankan AI",
-        "Instruksi atau teks masukan yang diberikan pengguna kepada AI untuk menghasilkan output",
-        "Biaya berlangganan bulanan untuk menggunakan AI"
-      ],
-      correct: 2,
-      explanation: "Prompt adalah teks instruksi yang kita ketikkan. Kualitas output AI sangat bergantung pada seberapa jelas dan spesifik prompt yang kita berikan (Garbage in, Garbage out)."
-    },
-    {
-      question: "Manakah struktur prompt yang paling komprehensif dan menghasilkan output terbaik?",
-      options: [
-        "Buatkan soal matematika.",
-        "Saya butuh soal cerita matematika tentang pecahan untuk anak SD kelas 4, berikan 5 soal beserta kunci jawabannya.",
-        "Matematika SD pecahan",
-        "Tolong bantu saya"
+        "Membuat video",
+        "Menentukan tujuan pembelajaran",
+        "Menulis prompt",
+        "Memilih platform"
       ],
       correct: 1,
-      explanation: "Prompt kedua memiliki Konteks (anak SD kelas 4), Topik (matematika pecahan), Format (5 soal cerita), dan Instruksi tambahan (kunci jawaban)."
+      explanation: "Langkah paling awal dalam Model MAP-AI (maupun desain instruksional lainnya) selalu berawal dari merumuskan tujuan pembelajaran sebelum menyentuh AI."
     },
     {
-      question: "Dalam formula 'CREATE' untuk menyusun prompt, huruf 'R' merujuk pada Role (Peran). Apa tujuannya?",
+      question: "Seorang guru meminta ChatGPT langsung membuat materi presentasi lengkap.\nGuru lain meminta ChatGPT:\n• menganalisis materi\n• menyusun tujuan\n• membuat outline\n• membuat prompt Gamma\nPendekatan kedua lebih baik karena...",
       options: [
-        "Meminta AI untuk bernyanyi",
-        "Memerintahkan AI untuk bertindak sebagai persona/profesi tertentu (misal: 'Bertindaklah sebagai Guru Biologi ahli')",
-        "Mengulangi pertanyaan sampai AI menjawab benar",
-        "Menghapus jawaban AI sebelumnya"
+        "Lebih cepat",
+        "Menggunakan prompt chaining yang lebih sistematis",
+        "Menghasilkan lebih banyak slide",
+        "Lebih mudah disalin"
       ],
       correct: 1,
-      explanation: "Memberikan 'Role' (Peran) pada awal prompt membantu LLM menyesuaikan gaya bahasa, kedalaman materi, dan perspektif sesuai profesi yang diminta."
+      explanation: "Pendekatan kedua adalah contoh penerapan Prompt Chaining. Hal ini memastikan output AI selaras secara bertahap dan lebih terstruktur dibanding prompt sekali jadi."
     },
     {
-      question: "Mengapa penting memberikan 'Konteks' audiens dalam prompt pembuatan materi pembelajaran?",
+      question: "Dalam Model MAP-AI, kapan proses revisi perlu dilakukan?",
       options: [
-        "Agar AI bisa menagih biaya lebih mahal",
-        "Konteks tidak penting, AI tahu segalanya secara otomatis",
-        "Agar AI menyesuaikan tingkat kesulitan bahasa dan analogi yang tepat (misal: bahasa untuk anak SD berbeda dengan mahasiswa)",
-        "Agar AI bisa mencari data pribadi siswa"
+        "Hanya setelah media selesai",
+        "Jika ditemukan ketidaksesuaian terhadap kriteria evaluasi",
+        "Setelah presentasi kepada siswa",
+        "Setelah semester berakhir"
       ],
-      correct: 2,
-      explanation: "Konteks audiens (usia, jenjang, kemampuan) memastikan materi tidak terlalu kekanak-kanakan atau terlalu rumit, melainkan pas dengan sasaran pembaca."
+      correct: 1,
+      explanation: "Proses revisi bersifat iteratif dan dilakukan setiap kali ditemukan output yang tidak selaras dengan kriteria evaluasi (tujuan, karakteristik siswa, akurasi fakta)."
     },
     {
-      question: "Apa yang harus dilakukan jika output dari AI tidak sesuai dengan harapan Anda?",
+      question: "Manakah contoh penerapan prinsip kontekstualisasi?",
       options: [
-        "Berhenti menggunakan AI selamanya",
-        "Membuat akun baru",
-        "Melakukan iterasi prompt dengan memberikan umpan balik (feedback) dan instruksi perbaikan kepada AI",
-        "Melaporkan aplikasi AI ke pihak berwajib"
+        "Menggunakan output AI apa adanya",
+        "Menyesuaikan media dengan karakteristik siswa dan konteks sekolah",
+        "Menggunakan AI terbaru",
+        "Membuat media sebanyak mungkin"
+      ],
+      correct: 1,
+      explanation: "Prinsip kontekstualisasi berarti menyesuaikan konten umum dari AI agar relevan dengan budaya sekolah, latar belakang siswa, dan lingkungan belajar lokal."
+    },
+    {
+      question: "Seorang guru memperoleh media yang menarik tetapi tidak mendukung tujuan pembelajaran. Prinsip yang dilanggar adalah...",
+      options: [
+        "Iterasi",
+        "Verifikasi",
+        "Goal-Driven",
+        "Prompt Chaining"
       ],
       correct: 2,
-      explanation: "Prompt engineering adalah proses iteratif. Anda bisa merespons output AI dengan koreksi, misalnya: 'Buat bahasanya lebih sederhana' atau 'Soal nomor 3 terlalu sulit, ganti dengan yang lebih mudah'."
+      explanation: "Prinsip Goal-Driven menekankan bahwa tujuan pembelajaran adalah panglima. Visual yang indah tidak ada gunanya jika melenceng dari kompetensi yang harus dicapai."
     }
   ],
 
