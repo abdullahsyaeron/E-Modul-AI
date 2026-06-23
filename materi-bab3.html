@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 3: Seni Menyusun Prompt (Prompt Engineering) - E-Modul AI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-body bg-alt">
+
+    <div id="reading-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                    <i class="fas fa-robot text-primary"></i>
+                </div>
+                <div>
+                    <span class="brand-name">E-Modul AI</span>
+                    <span class="brand-sub">Media Pembelajaran</span>
+                </div>
+            </a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="navbar-mobile" id="navbar-mobile">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a>
+        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
+        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
+        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a>
+    </div>
+
+    <!-- Chapter Header -->
+    <header class="chapter-header">
+        <div class="container-narrow">
+            <div class="breadcrumb mb-4" style="padding-block: 0;">
+                <a href="index.html" style="color: rgba(255,255,255,0.7);">Dashboard</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <a href="materi.html" style="color: rgba(255,255,255,0.7);">Materi</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <span class="current" style="color: white;">BAB 3</span>
+            </div>
+            
+            <div class="chapter-num">
+                <i class="fas fa-bookmark text-accent-light"></i> BAB 3
+            </div>
+            <h1>Seni Menyusun Prompt (Prompt Engineering)</h1>
+            
+            <div class="chapter-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> Estimasi Waktu: 25 Menit</div>
+                <div class="meta-item"><i class="fas fa-book-open"></i> Keterampilan Inti AI</div>
+            </div>
+
+            <div class="chapter-tujuan">
+                <h3>Capaian Pembelajaran Bab Ini:</h3>
+                <ul>
+                    <li>Memahami prinsip dasar "Garbage In, Garbage Out" dalam AI.</li>
+                    <li>Menguasai formula CREATE untuk menyusun prompt yang presisi.</li>
+                    <li>Mampu melakukan iterasi prompt untuk menyempurnakan hasil.</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container section pt-8">
+        <div class="materi-layout">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="materi-sidebar hide-mobile">
+                <div class="sidebar-header">Daftar Materi</div>
+                <div class="sidebar-nav-list">
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab1.html">
+                            <span class="bab-badge">1</span> Konsep Dasar AI
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab2.html">
+                            <span class="bab-badge">2</span> Jenis AI Media
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab3.html" class="active">
+                            <span class="bab-badge">3</span> Prompt Engineering
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab4.html">
+                            <span class="bab-badge">4</span> Implementasi Praktis
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab5.html">
+                            <span class="bab-badge">5</span> Etika Penggunaan
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="materi-main content-body">
+                
+                <h2>1. Apa itu Prompt?</h2>
+                <p>
+                    <span class="key-term">Prompt</span> adalah instruksi, pertanyaan, atau kalimat pemicu yang Anda berikan kepada AI untuk memberitahunya apa yang harus dilakukan. Menyusun prompt yang baik sering disebut sebagai <strong>Prompt Engineering</strong>.
+                </p>
+                <p>
+                    Kualitas hasil yang diberikan AI berbanding lurus dengan kualitas prompt yang Anda tulis. Ada prinsip yang berlaku di dunia komputasi: <em>"Garbage in, Garbage out"</em> (Instruksi sampah, hasilnya sampah). Jika Anda memberikan instruksi yang ambigu, AI akan menebak-nebak dan hasilnya kemungkinan besar tidak sesuai harapan.
+                </p>
+
+                <h2>2. Formula CREATE untuk Prompt Pembelajaran</h2>
+                <p>
+                    Untuk memastikan AI (terutama AI teks seperti ChatGPT) memberikan hasil maksimal untuk pembuatan materi ajar, gunakan formula <strong>CREATE</strong>:
+                </p>
+
+                <table class="mt-4">
+                    <thead>
+                        <tr>
+                            <th>Akronim</th>
+                            <th>Kepanjangan</th>
+                            <th>Penjelasan & Contoh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td><strong>Context</strong> (Konteks)</td>
+                            <td>Latar belakang atau audiens target.<br><em>"Saya mengajar anak SD kelas 4 yang suka sepak bola..."</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>R</strong></td>
+                            <td><strong>Role</strong> (Peran)</td>
+                            <td>Peran yang harus dimainkan AI.<br><em>"Bertindaklah sebagai guru Matematika yang ramah dan kreatif..."</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td><strong>Exact Task</strong> (Tugas Spesifik)</td>
+                            <td>Apa persisnya yang Anda inginkan.<br><em>"Buatkan 5 soal cerita tentang pecahan..."</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td><strong>Additional Rules</strong> (Aturan Tambahan)</td>
+                            <td>Batasan atau syarat khusus.<br><em>"Jangan gunakan angka desimal, sertakan pembahasan langkah demi langkah..."</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>T</strong></td>
+                            <td><strong>Tone</strong> (Nada/Gaya Bahasa)</td>
+                            <td>Gaya bahasa yang diinginkan.<br><em>"Gunakan bahasa yang sederhana, ceria, dan memotivasi..."</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td><strong>Example / Format</strong> (Contoh/Format)</td>
+                            <td>Bentuk akhir dari output.<br><em>"Format output dalam bentuk tabel dengan kolom: Nomor, Soal, Jawaban."</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box mt-6">
+                    <strong>Contoh Prompt Buruk:</strong><br>
+                    <em class="text-danger">"Buatkan soal matematika tentang pecahan."</em> (Terlalu umum, AI mungkin membuat soal level universitas).
+                    <br><br>
+                    <strong>Contoh Prompt Baik (Menggunakan CREATE):</strong><br>
+                    <em class="text-success">"Bertindaklah sebagai guru Matematika SD. [Role] Saya sedang mengajar kelas 4. [Context] Tolong buatkan 5 soal cerita tentang penjumlahan pecahan. [Exact Task] Gunakan analogi makanan yang disukai anak-anak dan jangan gunakan penyebut lebih dari 10. [Additional Rules] Gunakan gaya bahasa yang ceria dan menyemangati. [Tone] Berikan output dalam format: Soal, Kunci Jawaban, dan Penjelasan Singkat. [Format]"</em>
+                </div>
+
+                <h2>3. Teknik Iterasi (Refining Prompt)</h2>
+                <p>
+                    Prompt pertama jarang sekali langsung sempurna. Anda perlu berinteraksi dengan AI seperti sedang berdiskusi dengan asisten manusia. Jika hasil pertama kurang pas, jangan menyerah dan memulai dari awal. Berikan "feedback" atau umpan balik pada chat yang sama.
+                </p>
+
+                <ul>
+                    <li><strong>Jika bahasa terlalu sulit:</strong> <em>"Bagus, tapi tolong ubah bahasanya agar lebih mudah dipahami oleh anak usia 10 tahun."</em></li>
+                    <li><strong>Jika terlalu panjang:</strong> <em>"Ringkas menjadi maksimal 3 paragraf."</em></li>
+                    <li><strong>Jika formatnya salah:</strong> <em>"Ubah tampilannya menjadi format bullet points (poin-poin)."</em></li>
+                </ul>
+
+                <blockquote>
+                    "Bekerja dengan AI adalah sebuah percakapan (conversation), bukan pencarian mesin telusur (search engine)."
+                </blockquote>
+
+                <!-- Quiz Container -->
+                <div id="quiz-container" data-bab="bab3" class="mt-12">
+                    <!-- Quiz Engine akan me-render kuis di sini -->
+                </div>
+
+                <!-- Navigation -->
+                <div class="chapter-nav">
+                    <a href="materi-bab2.html" class="chapter-nav-btn prev">
+                        <i class="fas fa-arrow-left text-accent" style="font-size: 1.5rem;"></i>
+                        <div>
+                            <span class="nav-label">Bab Sebelumnya</span>
+                            <span class="nav-title">Jenis AI Media</span>
+                        </div>
+                    </a>
+                    <a href="materi-bab4.html" class="chapter-nav-btn next">
+                        <div>
+                            <span class="nav-label">Bab Selanjutnya</span>
+                            <span class="nav-title">Implementasi Praktis</span>
+                        </div>
+                        <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
+                    </a>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name">
+                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                    </span>
+                    <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Pintasan</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="materi.html">Materi Belajar</a></li>
+                        <li><a href="prompt.html">Kumpulan Prompt</a></li>
+                        <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="fas fa-heart text-danger"></i> di Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/quiz-data.js"></script>
+    <script src="assets/js/quiz-engine.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
