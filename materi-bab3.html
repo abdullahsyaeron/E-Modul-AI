@@ -96,32 +96,22 @@
         <div class="materi-layout">
             
             <!-- Sidebar Navigation -->
-            <aside class="materi-sidebar hide-mobile">
-                <div class="sidebar-header">Daftar Materi</div>
+            <aside class="materi-sidebar hide-mobile" style="position: sticky; top: 100px;">
+                <div class="sidebar-header">Sub-Bab Materi</div>
                 <div class="sidebar-nav-list">
                     <div class="sidebar-nav-item">
-                        <a href="materi-bab1.html">
-                            <span class="bab-badge">1</span> Konsep Dasar AI
+                        <a href="#sub1">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">1</span> Apa itu Prompt?
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
-                        <a href="materi-bab2.html">
-                            <span class="bab-badge">2</span> Jenis AI Media
+                        <a href="#sub2">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">2</span> Formula CREATE
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
-                        <a href="materi-bab3.html" class="active">
-                            <span class="bab-badge">3</span> Prompt Engineering
-                        </a>
-                    </div>
-                    <div class="sidebar-nav-item">
-                        <a href="materi-bab4.html">
-                            <span class="bab-badge">4</span> Implementasi Praktis
-                        </a>
-                    </div>
-                    <div class="sidebar-nav-item">
-                        <a href="materi-bab5.html">
-                            <span class="bab-badge">5</span> Etika Penggunaan
+                        <a href="#sub3">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">3</span> Teknik Iterasi
                         </a>
                     </div>
                 </div>
@@ -130,7 +120,7 @@
             <!-- Main Content -->
             <main class="materi-main content-body">
                 
-                <h2>1. Apa itu Prompt?</h2>
+                <h2 id="sub1" style="scroll-margin-top: 100px;">1. Apa itu Prompt?</h2>
                 <p>
                     <span class="key-term">Prompt</span> adalah instruksi, pertanyaan, atau kalimat pemicu yang Anda berikan kepada AI untuk memberitahunya apa yang harus dilakukan. Menyusun prompt yang baik sering disebut sebagai <strong>Prompt Engineering</strong>.
                 </p>
@@ -138,7 +128,7 @@
                     Kualitas hasil yang diberikan AI berbanding lurus dengan kualitas prompt yang Anda tulis. Ada prinsip yang berlaku di dunia komputasi: <em>"Garbage in, Garbage out"</em> (Instruksi sampah, hasilnya sampah). Jika Anda memberikan instruksi yang ambigu, AI akan menebak-nebak dan hasilnya kemungkinan besar tidak sesuai harapan.
                 </p>
 
-                <h2>2. Formula CREATE untuk Prompt Pembelajaran</h2>
+                <h2 id="sub2" style="scroll-margin-top: 100px;">2. Formula CREATE untuk Prompt Pembelajaran</h2>
                 <p>
                     Untuk memastikan AI (terutama AI teks seperti ChatGPT) memberikan hasil maksimal untuk pembuatan materi ajar, gunakan formula <strong>CREATE</strong>:
                 </p>
@@ -193,7 +183,7 @@
                     <em class="text-success">"Bertindaklah sebagai guru Matematika SD. [Role] Saya sedang mengajar kelas 4. [Context] Tolong buatkan 5 soal cerita tentang penjumlahan pecahan. [Exact Task] Gunakan analogi makanan yang disukai anak-anak dan jangan gunakan penyebut lebih dari 10. [Additional Rules] Gunakan gaya bahasa yang ceria dan menyemangati. [Tone] Berikan output dalam format: Soal, Kunci Jawaban, dan Penjelasan Singkat. [Format]"</em>
                 </div>
 
-                <h2>3. Teknik Iterasi (Refining Prompt)</h2>
+                <h2 id="sub3" style="scroll-margin-top: 100px;">3. Teknik Iterasi (Refining Prompt)</h2>
                 <p>
                     Prompt pertama jarang sekali langsung sempurna. Anda perlu berinteraksi dengan AI seperti sedang berdiskusi dengan asisten manusia. Jika hasil pertama kurang pas, jangan menyerah dan memulai dari awal. Berikan "feedback" atau umpan balik pada chat yang sama.
                 </p>

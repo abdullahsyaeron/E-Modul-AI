@@ -96,32 +96,27 @@
         <div class="materi-layout">
             
             <!-- Sidebar Navigation -->
-            <aside class="materi-sidebar hide-mobile">
-                <div class="sidebar-header">Daftar Materi</div>
+            <aside class="materi-sidebar hide-mobile" style="position: sticky; top: 100px;">
+                <div class="sidebar-header">Sub-Bab Materi</div>
                 <div class="sidebar-nav-list">
                     <div class="sidebar-nav-item">
-                        <a href="materi-bab1.html">
-                            <span class="bab-badge">1</span> Konsep Dasar AI
+                        <a href="#sub1">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">1</span> Workflow AI
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
-                        <a href="materi-bab2.html">
-                            <span class="bab-badge">2</span> Jenis AI Media
+                        <a href="#sub2">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">2</span> Studi Kasus: Slide
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
-                        <a href="materi-bab3.html">
-                            <span class="bab-badge">3</span> Prompt Engineering
+                        <a href="#sub3">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">3</span> Studi Kasus: Video
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
-                        <a href="materi-bab4.html" class="active">
-                            <span class="bab-badge">4</span> Implementasi Praktis
-                        </a>
-                    </div>
-                    <div class="sidebar-nav-item">
-                        <a href="materi-bab5.html">
-                            <span class="bab-badge">5</span> Etika Penggunaan
+                        <a href="#sub4">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">4</span> Human-in-the-Loop
                         </a>
                     </div>
                 </div>
@@ -130,7 +125,7 @@
             <!-- Main Content -->
             <main class="materi-main content-body">
                 
-                <h2>1. Alur Kerja (Workflow) Pembuatan Media</h2>
+                <h2 id="sub1" style="scroll-margin-top: 100px;">1. Alur Kerja (Workflow) Pembuatan Media</h2>
                 <p>
                     Kesalahan terbesar yang sering dilakukan pemula adalah meminta AI untuk membuat materi utuh secara langsung dalam satu klik. Hal ini sering menghasilkan materi yang dangkal, tidak terstruktur, dan berpotensi halusinasi. Alur kerja yang benar haruslah bertahap (step-by-step).
                 </p>
@@ -146,7 +141,7 @@
                     </ol>
                 </div>
 
-                <h2>2. Studi Kasus 1: Membuat Slide Presentasi (PPT)</h2>
+                <h2 id="sub2" style="scroll-margin-top: 100px;">2. Studi Kasus 1: Membuat Slide Presentasi (PPT)</h2>
                 <p>
                     Anda akan mengajar tentang "Daur Air" (Siklus Hidrologi) untuk kelas 5 SD. Berikut cara menggabungkan beberapa AI:
                 </p>
@@ -156,7 +151,7 @@
                     <li><strong>Langkah 3 (Human Assembly):</strong> Masukkan teks dari ChatGPT dan gambar dari Canva AI ke dalam template slide Anda. Sesuaikan letaknya.</li>
                 </ul>
 
-                <h2>3. Studi Kasus 2: Membuat Video Pembelajaran (Avatar)</h2>
+                <h2 id="sub3" style="scroll-margin-top: 100px;">3. Studi Kasus 2: Membuat Video Pembelajaran (Avatar)</h2>
                 <p>
                     Jika Anda tidak nyaman tampil di depan kamera, Anda bisa menggunakan AI Video:
                 </p>
@@ -166,7 +161,7 @@
                     <li><strong>Generate:</strong> Avatar akan membaca teks tersebut dengan gerakan bibir (lip-sync) dan gestur yang natural. Anda bisa mengunduh videonya dan menambahkannya ke YouTube atau Google Classroom.</li>
                 </ul>
 
-                <h2>4. Konsep "Human-in-the-Loop"</h2>
+                <h2 id="sub4" style="scroll-margin-top: 100px;">4. Konsep "Human-in-the-Loop"</h2>
                 <p>
                     Prinsip terpenting dalam implementasi AI adalah <strong>Human-in-the-Loop (Manusia di dalam lingkaran proses)</strong>. AI bertindak sebagai "Drafter" (pembuat draf/konsep awal), namun Guru tetap menjadi "Editor in Chief" (Pemred).
                 </p>
