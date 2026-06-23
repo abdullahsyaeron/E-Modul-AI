@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAB 1: Konsep Dasar AI - E-Modul AI</title>
+    <title>BAB 1: Pendahuluan - E-Modul AI</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,19 +74,19 @@
             <div class="chapter-num">
                 <i class="fas fa-bookmark text-accent-light"></i> BAB 1
             </div>
-            <h1>Konsep Dasar Artificial Intelligence</h1>
+            <h1>Pendahuluan</h1>
             
-            <div class="chapter-meta">
-                <div class="meta-item"><i class="fas fa-clock"></i> Estimasi Waktu: 15 Menit</div>
-                <div class="meta-item"><i class="fas fa-book-open"></i> Teori & Pemahaman Dasar</div>
-            </div>
+            <p style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
+                Pada bab ini, Anda akan mempelajari konteks dan landasan mengapa guru perlu memanfaatkan AI dalam pengembangan media pembelajaran. Bab ini membangun pemahaman awal yang diperlukan sebelum Anda memasuki pembahasan teknis dan praktis pada bab-bab berikutnya.
+            </p>
 
-            <div class="chapter-tujuan">
-                <h3>Capaian Pembelajaran Bab Ini:</h3>
+            <div class="chapter-tujuan mt-8">
+                <h3><i class="fas fa-bullseye text-accent-light"></i> Tujuan Pembelajaran Bab Ini:</h3>
                 <ul>
-                    <li>Memahami definisi Artificial Intelligence secara komprehensif.</li>
-                    <li>Mengetahui perbedaan AI Konvensional dan Generative AI.</li>
-                    <li>Memahami relevansi dan potensi AI dalam bidang pendidikan.</li>
+                    <li>Menjelaskan peran media pembelajaran dalam proses instruksional.</li>
+                    <li>Mengidentifikasi fungsi strategis AI dalam pengembangan media pembelajaran.</li>
+                    <li>Menjelaskan urgensi dan tantangan pemanfaatan AI bagi guru pada satuan pendidikan.</li>
+                    <li>Memahami gambaran umum struktur dan alur modul ini.</li>
                 </ul>
             </div>
         </div>
@@ -101,22 +101,22 @@
                 <div class="sidebar-nav-list">
                     <div class="sidebar-nav-item">
                         <a href="#sub1">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">1</span> Apa itu AI?
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">A</span> Konsep Media
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub2">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">2</span> Generative AI vs Konvensional
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">B</span> Peran AI
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub3">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">3</span> Cara Kerja LLM
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">C</span> Urgensi AI bagi Guru
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub4">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">4</span> Relevansi AI Pendidikan
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">D</span> Gambaran Umum
                         </a>
                     </div>
                 </div>
@@ -124,90 +124,116 @@
 
             <!-- Main Content -->
             <main class="materi-main content-body">
+
+                <!-- Pertanyaan Pemantik -->
+                <div class="highlight-box" style="background: linear-gradient(135deg, rgba(16,185,129,0.06), rgba(30,58,95,0.04)); border: 1px solid rgba(16,185,129,0.2);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <i class="fas fa-lightbulb text-success text-2xl"></i>
+                        <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
+                    </div>
+                    <p>Pernahkah Anda menghabiskan berjam-jam menyiapkan media pembelajaran, tetapi hasilnya terasa kurang menarik atau tidak sesuai dengan yang dibayangkan? Kira-kira, di mana letak tantangan terbesarnya, apakah pada ide, waktu, atau keahlian teknis?</p>
+                    <p style="margin-bottom:0;">Jika tersedia alat yang dapat membantu Anda merancang poster, presentasi, atau video dalam waktu singkat, hal apa yang tetap harus menjadi keputusan Anda sebagai guru dan tidak boleh diserahkan kepada alat tersebut?</p>
+                </div>
                 
-                <h2 id="sub1" style="scroll-margin-top: 100px;">1. Apa itu Artificial Intelligence?</h2>
+                <h2 id="sub1" style="scroll-margin-top: 100px;">A. Konsep Media Pembelajaran</h2>
                 <p>
-                    <span class="key-term">Artificial Intelligence (AI)</span> atau Kecerdasan Buatan merujuk pada sistem komputer atau perangkat lunak yang dirancang untuk meniru fungsi kognitif manusia. Fungsi kognitif ini meliputi kemampuan untuk belajar dari data (learning), bernalar untuk menarik kesimpulan (reasoning), memecahkan masalah (problem solving), hingga memahami bahasa alami.
+                    Sebelum mengembangkan media berbantuan AI, Anda perlu memahami bahwa media pembelajaran bukan sekadar alat bantu visual, melainkan perantara yang dirancang untuk menyampaikan pesan instruksional secara efektif. Media pembelajaran yang baik tidak berdiri sendiri—ia dirancang berdasarkan tujuan pembelajaran yang jelas, karakteristik siswa yang spesifik, dan konteks belajar yang nyata (Arsyad, 2013).
                 </p>
                 <p>
-                    Secara sederhana, jika komputer tradisional hanya menjalankan perintah statis berdasarkan kode yang diketik manusia, AI memiliki kemampuan untuk mengenali pola dan membuat keputusan atau prediksi berdasarkan data yang telah dipelajarinya.
+                    Dalam kerangka komunikasi instruksional, media berfungsi sebagai komponen integral dari sistem pembelajaran yang memengaruhi proses kognisi, motivasi, dan hasil belajar siswa. Gagne dan Briggs (1979, dalam Arsyad, 2013) menegaskan bahwa media mencakup seluruh sarana fisik yang digunakan untuk menyampaikan isi materi pembelajaran. Dalam konteks abad ke-21, definisi ini berkembang mencakup ekosistem digital termasuk media berbasis AI generatif.
+                </p>
+                <p>
+                    Tiga jenis media yang relevan dalam modul ini adalah: (1) media visual statis seperti poster dan infografis; (2) media visual dinamis seperti presentasi dan video; dan (3) media interaktif seperti kuis digital. Setiap jenis media memiliki karakteristik, kekuatan, dan keterbatasan tersendiri yang harus dipahami sebelum Anda memilih strategi produksinya.
                 </p>
 
-                <div class="highlight-box">
-                    <i class="fas fa-lightbulb text-accent text-2xl mb-2"></i>
-                    <p style="margin-bottom:0;"><strong>Penting:</strong> AI bukanlah "robot yang memiliki kesadaran", melainkan algoritma matematika kompleks yang memproses data dalam skala masif untuk menemukan probabilitas terbaik dari suatu masalah.</p>
+                <h2 id="sub2" style="scroll-margin-top: 100px;">B. Peran AI dalam Pengembangan Media Pembelajaran</h2>
+                <p>
+                    Dalam praktik pengembangan media, Anda dapat memanfaatkan Generative AI untuk membantu menyusun teks, membuat rancangan visual, menyiapkan naskah video, atau menyusun soal kuis. Namun, setiap hasil AI tetap perlu diperiksa dan disesuaikan dengan tujuan pembelajaran. Perkembangan Generative AI—sistem yang mampu menghasilkan konten baru berupa teks, gambar, audio, dan video berdasarkan instruksi pengguna—mengubah paradigma pengembangan media dari yang semula memerlukan keahlian teknis tinggi menjadi proses yang dapat diakses lebih luas (Wollny et al., 2021).
+                </p>
+                <p>
+                    Dalam konteks modul ini, ChatGPT berperan utama sebagai <span class="key-term">meta prompting tool</span>: alat yang membantu guru mentransformasi niat pedagogis menjadi instruksi teknis yang dapat dieksekusi oleh platform AI produksi (White et al., 2023). Posisi ini menempatkan ChatGPT sebagai jembatan antara keputusan instruksional guru dengan kapabilitas platform seperti Canva, Gamma, Google Vids, dan Quizizz.
+                </p>
+
+                <!-- Catatan Penting -->
+                <div class="highlight-box" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 4px solid var(--color-warning);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <i class="fas fa-exclamation-triangle text-warning text-xl"></i>
+                        <h4 style="margin: 0; color: #b45309;">Catatan Penting</h4>
+                    </div>
+                    <p style="margin-bottom:0; color: #78350f;">
+                        AI adalah asisten, bukan pengambil keputusan pedagogis. Seluruh keputusan tentang tujuan pembelajaran, kesesuaian konten, dan relevansi media tetap berada di tangan Anda sebagai guru.
+                    </p>
                 </div>
 
-                <h2 id="sub2" style="scroll-margin-top: 100px;">2. Generative AI vs AI Konvensional</h2>
-                <p>Dalam konteks pengembangan media pembelajaran saat ini, istilah yang paling sering kita dengar adalah <strong>Generative AI</strong> (AI Generatif). Apa bedanya dengan AI konvensional yang sudah ada sebelumnya?</p>
-                
-                <div class="table-responsive">
-                    <table class="mt-4">
-                        <thead>
-                            <tr>
-                                <th>Aspek</th>
-                                <th>AI Konvensional (Analytical AI)</th>
-                                <th>Generative AI</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Fungsi Utama</strong></td>
-                                <td>Menganalisis, mengklasifikasi, dan memprediksi data yang sudah ada.</td>
-                                <td>Menciptakan (men-generate) data/konten baru yang sebelumnya tidak ada.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Cara Kerja</strong></td>
-                                <td>Mendeteksi pola untuk mengambil kesimpulan.</td>
-                                <td>Mempelajari pola distribusi data untuk mereproduksi variasi baru.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Contoh Penggunaan</strong></td>
-                                <td>Filter spam email, rekomendasi produk Netflix/YouTube, pendeteksi wajah.</td>
-                                <td>Membuat esai/artikel (ChatGPT), membuat ilustrasi gambar (Midjourney), membuat suara narator (ElevenLabs).</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="mt-4">
-                    Sebagai guru, <strong>Generative AI</strong> adalah "asisten asisten pencipta" Anda. Ketika Anda membutuhkan paragraf pengantar materi, soal pilihan ganda, atau gambar ilustrasi ekosistem laut untuk modul, Generative AI dapat menghasilkannya hanya dengan instruksi teks (prompt) yang Anda berikan.
-                </p>
-
-                <h2 id="sub3" style="scroll-margin-top: 100px;">3. Cara Kerja Large Language Models (LLM)</h2>
+                <h2 id="sub3" style="scroll-margin-top: 100px;">C. Urgensi Pemanfaatan AI bagi Guru</h2>
                 <p>
-                    ChatGPT, Claude, dan Gemini adalah contoh dari LLM (Large Language Models). Bagaimana mereka bisa seolah-olah "mengerti" pertanyaan kita dan menjawab dengan sangat natural?
+                    Guru pada satuan pendidikan menghadapi tantangan yang nyata: mengintegrasikan nilai, budaya, dan karakter sekolah ke dalam pembelajaran yang modern, inovatif, dan teknologis. Pemanfaatan AI dalam pengembangan media memberikan solusi pragmatis terhadap tiga hambatan yang sering dialami guru: keterbatasan waktu, keterbatasan keahlian teknis desain, dan kebutuhan akan konten yang terkontekstualisasi.
                 </p>
                 <p>
-                    LLM pada dasarnya beroperasi seperti fitur <em>autocomplete</em> (teks otomatis) pada keyboard smartphone Anda, tetapi dengan skala yang jutaan kali lebih canggih. Mereka dilatih menggunakan miliaran teks dari internet. Ketika Anda memberikan sebuah prompt (instruksi), LLM menggunakan probabilitas statistik untuk memprediksi kata (token) apa yang paling logis untuk muncul selanjutnya.
+                    Hasil survei dari <em>The Office of Educational Technology (2023)</em> menunjukkan bahwa kurangnya waktu menjadi hambatan utama guru dalam mengembangkan media berkualitas. Dalam konteks ini, AI berperan sebagai alat pengefisiensi yang memungkinkan guru menghasilkan draft media dalam waktu yang lebih singkat dengan syarat prompt yang diberikan terarah dan berbasis tujuan pembelajaran.
+                </p>
+                <p>
+                    Di sisi lain, integrasi nilai dan karakter sekolah dalam media berbantuan AI memerlukan supervisi aktif guru. Konten yang dihasilkan AI harus selalu diperiksa, disunting, dan disesuaikan dengan nilai yang dianut satuan pendidikan serta karakteristik peserta didik sebelum digunakan. Inilah mengapa pemahaman tentang prinsip desain instruksional dan tanggung jawab etis menjadi bagian yang tidak terpisahkan dari modul ini.
                 </p>
 
-                <blockquote>
-                    "LLM tidak benar-benar memahami makna dari kata-kata yang ia hasilkan. Ia hanya sangat mahir memprediksi urutan kata yang secara statistik paling relevan dengan konteks pertanyaan Anda."
-                </blockquote>
-
-                <h2 id="sub4" style="scroll-margin-top: 100px;">4. Relevansi AI dalam Pendidikan</h2>
-                <p>Kehadiran AI Generatif tidak dirancang untuk menggantikan posisi guru, melainkan membebaskan guru dari tugas-tugas administratif dan produksi repetitif, sehingga guru bisa lebih fokus pada pendampingan emosional dan pedagogik siswa.</p>
+                <h2 id="sub4" style="scroll-margin-top: 100px;">D. Gambaran Umum Modul</h2>
+                <p>Modul ini disusun dalam lima bab yang saling terhubung secara progresif. Setiap bab dibangun di atas pemahaman dari bab sebelumnya.</p>
                 
-                <p>Berikut adalah peran AI dalam ekosistem pendidikan:</p>
                 <ul>
-                    <li><strong>Efisiensi Waktu (Co-Pilot):</strong> Membuat draf RPP, menyusun daftar soal, atau merangkum jurnal pendidikan dalam hitungan detik.</li>
-                    <li><strong>Personalisasi Materi:</strong> Membantu mengubah tingkat kesulitan teks materi bacaan agar sesuai dengan gaya belajar atau tingkat literasi siswa yang berbeda di satu kelas yang sama.</li>
-                    <li><strong>Peningkatan Kreativitas:</strong> Menciptakan media ajar visual (gambar, diagram, audio) tanpa guru harus memiliki keahlian desain grafis atau produksi multimedia profesional.</li>
+                    <li><strong>BAB 1 (Pendahuluan)</strong> — membangun konteks dan urgensi pemanfaatan AI bagi guru pada satuan pendidikan.</li>
+                    <li><strong>BAB 2 (Dasar Teori)</strong> — menyediakan fondasi konseptual tentang media pembelajaran, Generative AI, dan keterbatasannya.</li>
+                    <li><strong>BAB 3 (Pengembangan Media dengan AI)</strong> — inti modul yang mencakup strategi meta prompting, Model MAP-AI, dan panduan praktis per jenis media.</li>
+                    <li><strong>BAB 4 (Etika dan Tanggung Jawab)</strong> — membahas secara khusus dimensi etis dan profesional penggunaan AI dalam pengembangan media.</li>
+                    <li><strong>BAB 5 (Evaluasi dan Refleksi)</strong> — mendorong guru untuk mengevaluasi media yang dikembangkan dan merencanakan tindak lanjut.</li>
                 </ul>
 
-                <!-- Quiz Container -->
+                <p>
+                    Benang merah yang menghubungkan seluruh bab adalah <strong>Model Pemanfaatan AI Berbasis Meta Prompting dalam Pengembangan Media Pembelajaran (Model MAP-AI)</strong>, yang akan dijelaskan secara lengkap pada BAB 3.
+                </p>
+
+                <hr style="margin: var(--space-8) 0; border: none; border-top: 1px solid var(--color-border);">
+
+                <!-- Rangkuman -->
+                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="background: var(--color-primary); padding: var(--space-4) var(--space-6);">
+                        <h3 style="margin: 0; color: white;"><i class="fas fa-clipboard-list"></i> Rangkuman BAB 1</h3>
+                    </div>
+                    <div style="padding: var(--space-6); background: white;">
+                        <ul style="margin-bottom:0;">
+                            <li>Media pembelajaran adalah perantara instruksional yang dirancang berdasarkan tujuan, karakteristik siswa, dan konteks belajar—bukan sekadar alat visual.</li>
+                            <li>Generative AI memungkinkan guru mengembangkan media lebih efisien, tetapi kontrol pedagogis tetap berada di tangan guru.</li>
+                            <li>Bagi guru, AI membantu mengatasi hambatan waktu dan keahlian teknis, tetapi integrasi nilai dan karakter sekolah tetap memerlukan supervisi aktif.</li>
+                            <li>Modul ini terdiri atas lima bab yang disusun secara progresif dengan Model MAP-AI sebagai kerangka utama.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Refleksi -->
+                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="background: var(--color-accent); padding: var(--space-4) var(--space-6);">
+                        <h3 style="margin: 0; color: white;"><i class="fas fa-comment-dots"></i> Refleksi BAB 1</h3>
+                    </div>
+                    <div style="padding: var(--space-6); background: white;">
+                        <ol style="margin-bottom:0; padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.75rem;">Jenis media pembelajaran apa yang paling sering Anda gunakan saat ini? Apa tantangan utama dalam pengembangannya?</li>
+                            <li style="margin-bottom: 0.75rem;">Berdasarkan gambaran umum modul ini, kompetensi mana yang paling Anda butuhkan dan ingin kembangkan lebih lanjut?</li>
+                            <li>Sebagai guru, nilai-nilai apa yang menurut Anda paling penting untuk dijaga ketika menggunakan AI dalam pengembangan media?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Quiz Container (Untuk Nanti) -->
                 <div id="quiz-container" data-bab="bab1">
                     <!-- Quiz Engine akan me-render kuis di sini -->
                 </div>
 
                 <!-- Navigation -->
-                <div class="chapter-nav">
+                <div class="chapter-nav mt-8">
                     <div></div> <!-- Empty div for flex layout -->
                     <a href="materi-bab2.html" class="chapter-nav-btn next">
                         <div>
                             <span class="nav-label">Bab Selanjutnya</span>
-                            <span class="nav-title">Jenis AI untuk Media</span>
+                            <span class="nav-title">BAB 2: Dasar Teori</span>
                         </div>
                         <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
                     </a>
