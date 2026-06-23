@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAB 2: Jenis AI untuk Media Pembelajaran - E-Modul AI</title>
+    <title>BAB 2: Dasar Teori - E-Modul AI</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,19 +74,19 @@
             <div class="chapter-num">
                 <i class="fas fa-bookmark text-accent-light"></i> BAB 2
             </div>
-            <h1>Jenis AI untuk Media Pembelajaran</h1>
+            <h1>Dasar Teori</h1>
             
-            <div class="chapter-meta">
-                <div class="meta-item"><i class="fas fa-clock"></i> Estimasi Waktu: 20 Menit</div>
-                <div class="meta-item"><i class="fas fa-book-open"></i> Eksplorasi Tools</div>
-            </div>
+            <p style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
+                Pada bab ini, Anda akan mempelajari fondasi konseptual yang diperlukan sebelum menggunakan AI untuk mengembangkan media. Memahami dasar teori ini akan membantu Anda membuat keputusan yang lebih tepat tentang jenis media yang dipilih, cara mengoperasikan AI, dan hal-hal yang perlu diverifikasi dalam output yang dihasilkan.
+            </p>
 
-            <div class="chapter-tujuan">
-                <h3>Capaian Pembelajaran Bab Ini:</h3>
+            <div class="chapter-tujuan mt-8">
+                <h3><i class="fas fa-bullseye text-accent-light"></i> Tujuan Pembelajaran Bab Ini:</h3>
                 <ul>
-                    <li>Mengenali kategori Generative AI berdasarkan format outputnya.</li>
-                    <li>Mengidentifikasi platform AI spesifik untuk teks, gambar, audio, dan video.</li>
-                    <li>Mampu memilih AI tool yang tepat sesuai dengan tujuan pembuatan media pembelajaran.</li>
+                    <li>Menjelaskan jenis media pembelajaran berdasarkan modalitas dan relevansinya dengan praktik di kelas.</li>
+                    <li>Mendeskripsikan konsep dan karakteristik Generative AI secara kontekstual.</li>
+                    <li>Mengidentifikasi fungsi strategis AI dalam pengembangan media pembelajaran.</li>
+                    <li>Mengenali keterbatasan AI yang perlu dipahami sebagai dasar penggunaan yang kritis dan bertanggung jawab.</li>
                 </ul>
             </div>
         </div>
@@ -101,22 +101,22 @@
                 <div class="sidebar-nav-list">
                     <div class="sidebar-nav-item">
                         <a href="#sub1">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">1</span> Text-to-Text AI
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">A</span> Media Modalitas
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub2">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">2</span> Text-to-Image AI
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">B</span> Konsep Gen AI
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub3">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">3</span> Text-to-Audio AI
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">C</span> Pemanfaatan AI
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub4">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">4</span> Text-to-Video AI
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">D</span> Keterbatasan AI
                         </a>
                     </div>
                 </div>
@@ -124,79 +124,154 @@
 
             <!-- Main Content -->
             <main class="materi-main content-body">
-                
-                <h2 id="sub1" style="scroll-margin-top: 100px;">1. Text-to-Text AI (AI Berbasis Teks)</h2>
-                <p>
-                    Ini adalah jenis AI yang paling fundamental dan serbaguna. Anda memberikan prompt berupa teks, dan AI membalasnya dengan teks. Platform ini sangat ahli dalam merangkum, menulis, menerjemahkan, dan bahkan menyusun logika soal evaluasi.
-                </p>
-                
-                <h4>Tools Populer:</h4>
-                <ul>
-                    <li><strong>ChatGPT (OpenAI):</strong> Sangat baik untuk brainstorming, menyusun draf materi pelajaran, membuat skrip video, dan menyusun kuis.</li>
-                    <li><strong>Claude (Anthropic):</strong> Unggul dalam memproses dokumen panjang dan memiliki gaya penulisan yang lebih natural dan lebih aman.</li>
-                    <li><strong>Google Gemini:</strong> Terintegrasi kuat dengan ekosistem Google (Docs, Gmail) dan memiliki kemampuan akses informasi real-time dari internet yang sangat baik.</li>
-                </ul>
 
-                <div class="highlight-box">
-                    <strong>Contoh Penggunaan:</strong> Meminta ChatGPT untuk mengubah teks ilmiah yang rumit tentang "Sistem Pencernaan" menjadi sebuah cerita petualangan interaktif agar lebih mudah dipahami oleh siswa SMP.
+                <!-- Pertanyaan Pemantik -->
+                <div class="highlight-box" style="background: linear-gradient(135deg, rgba(16,185,129,0.06), rgba(30,58,95,0.04)); border: 1px solid rgba(16,185,129,0.2);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <i class="fas fa-lightbulb text-success text-2xl"></i>
+                        <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
+                    </div>
+                    <p>Pernahkah Anda menerima informasi dari internet yang tampak meyakinkan, tetapi ternyata tidak akurat? Bagaimana cara Anda memverifikasinya?</p>
+                    <p style="margin-bottom:0;">Menurut Anda, apakah semua jenis materi pelajaran cocok disampaikan melalui media yang sama? Apa yang menentukan pilihan Anda?</p>
+                </div>
+                
+                <h2 id="sub1" style="scroll-margin-top: 100px;">A. Media Pembelajaran Berbasis Modalitas</h2>
+                <p>
+                    Pemilihan jenis media yang tepat mensyaratkan pemahaman tentang modalitas penyampaian informasi dan implikasinya terhadap proses kognisi siswa. Mayer (2009) dalam <em>Cognitive Theory of Multimedia Learning</em> menegaskan bahwa manusia memproses informasi melalui dua saluran independen: verbal (bahasa) dan piktorial (gambar). Pembelajaran yang optimal terjadi ketika kedua saluran diaktifkan secara proporsional tanpa menimbulkan <em>cognitive overload</em>.
+                </p>
+
+                <h3 class="mt-6 mb-3 text-xl text-primary">1. Media Visual Statis</h3>
+                <p>
+                    Poster dan infografis termasuk dalam kategori media visual statis yang mengandalkan kombinasi elemen grafis dan teks ringkas untuk menyampaikan informasi secara efisien. Efektivitas media jenis ini bergantung pada penerapan prinsip desain visual—hierarki informasi, kontras, kesatuan, dan keseimbangan. Dalam pengembangan berbantuan AI, media visual statis dapat diproduksi melalui platform seperti Canva dengan panduan prompt yang dihasilkan ChatGPT.
+                </p>
+
+                <h3 class="mt-6 mb-3 text-xl text-primary">2. Media Visual Dinamis</h3>
+                <p>
+                    Presentasi dan video termasuk dalam kategori media yang mengombinasikan elemen visual dengan elemen temporal. Presentasi berbasis slide memungkinkan penyampaian informasi yang terstruktur dan dapat dinavigasi, sementara video mengintegrasikan visual bergerak, narasi, dan audio untuk menciptakan pengalaman belajar yang lebih imersif. Bloom dan Agosto (2020) menekankan bahwa video pembelajaran yang efektif harus memenuhi prinsip segmentasi, modalitas, dan personalisasi dari Mayer (2009).
+                </p>
+
+                <h3 class="mt-6 mb-3 text-xl text-primary">3. Media Interaktif</h3>
+                <p>
+                    Kuis interaktif merepresentasikan bentuk media yang memungkinkan umpan balik langsung kepada siswa. Media interaktif mendukung pendekatan konstruktivis (Vygotsky, 1978) di mana siswa secara aktif membangun pemahaman melalui partisipasi dan respons. Asesmen formatif yang tertanam dalam kuis interaktif memberikan data berharga bagi guru untuk menyesuaikan strategi pembelajaran.
+                </p>
+
+                <!-- Aktivitas Singkat -->
+                <div class="highlight-box mt-6" style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.3); border-left: 4px solid #8b5cf6;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <i class="fas fa-pencil-alt text-xl" style="color: #8b5cf6;"></i>
+                        <h4 style="margin: 0; color: #5b21b6;">Aktivitas Singkat</h4>
+                    </div>
+                    <p style="margin-bottom:0; color: #4c1d95;">
+                        Pilih satu topik dari mata pelajaran yang Anda ampu. Tentukan jenis media apa yang paling sesuai (poster, presentasi, video, atau kuis). Tuliskan alasan pemilihan Anda berdasarkan karakteristik konten dan kebutuhan belajar siswa.
+                    </p>
                 </div>
 
-                <h2 id="sub2" style="scroll-margin-top: 100px;">2. Text-to-Image AI (AI Penghasil Gambar)</h2>
+                <h2 id="sub2" style="scroll-margin-top: 100px;">B. Konsep dan Karakteristik Generative AI</h2>
                 <p>
-                    AI jenis ini dapat menghasilkan gambar, ilustrasi, atau lukisan digital yang benar-benar baru berdasarkan deskripsi teks yang Anda berikan. Ini memecahkan masalah bagi guru yang kesulitan mencari gambar yang persis sesuai kebutuhan di Google Images (yang sering terhalang masalah resolusi atau hak cipta).
+                    Generative AI merujuk pada kategori sistem kecerdasan buatan yang menggunakan model machine learning—khususnya Large Language Models (LLM) dan Diffusion Models—untuk menghasilkan konten baru berupa teks, gambar, audio, atau video berdasarkan input pengguna (Wollny et al., 2021). Berbeda dengan AI analitik yang mengklasifikasikan atau memprediksi, Generative AI secara aktif memproduksi output baru.
+                </p>
+                <p>
+                    ChatGPT, sebagai salah satu LLM terkemuka, bekerja berdasarkan arsitektur Transformer yang dilatih pada korpus teks yang sangat besar. Kemampuan ini menjadikannya sangat efektif sebagai <span class="key-term">meta prompting tool</span>—sistem yang membantu pengguna merumuskan instruksi optimal untuk sistem AI lainnya (Brown et al., 2020; White et al., 2023).
                 </p>
 
-                <h4>Tools Populer:</h4>
-                <ul>
-                    <li><strong>Midjourney:</strong> Menghasilkan gambar dengan kualitas paling artistik dan fotorealistik, namun harus diakses melalui Discord.</li>
-                    <li><strong>Canva AI (Magic Media):</strong> Sangat praktis karena terintegrasi langsung di dalam Canva. Cocok untuk membuat ilustrasi slide presentasi.</li>
-                    <li><strong>DALL-E 3 (OpenAI):</strong> Terintegrasi di ChatGPT Plus, sangat pintar dalam menerjemahkan prompt rumit menjadi gambar yang sangat akurat secara logika visual.</li>
-                </ul>
-
-                <h2 id="sub3" style="scroll-margin-top: 100px;">3. Text-to-Audio / Music AI (AI Audio)</h2>
+                <h2 id="sub3" style="scroll-margin-top: 100px;">C. Pemanfaatan AI dalam Pengembangan Media Pembelajaran</h2>
                 <p>
-                    Mencakup dua jenis: Text-to-Speech (mengubah teks menjadi suara narator manusia) dan Music Generation (membuat lagu dari deskripsi teks).
+                    Dalam konteks pengembangan media, AI dapat difungsikan dalam empat kapasitas strategis yang saling melengkapi.
                 </p>
 
-                <h4>Tools Populer:</h4>
-                <ul>
-                    <li><strong>ElevenLabs:</strong> Rajanya Text-to-Speech saat ini. Menghasilkan suara manusia yang sangat natural, lengkap dengan intonasi emosi dan pernapasan. Sangat cocok untuk mengisi suara (voice-over) video pembelajaran.</li>
-                    <li><strong>Suno AI / Udio:</strong> Dapat menghasilkan lagu lengkap dengan vokal dan instrumen hanya dari teks. Sangat berguna untuk membuat "Lagu Hafalan" bagi siswa (misal: lagu untuk menghafal tabel periodik unsur).</li>
-                </ul>
+                <ol class="mt-4 mb-6">
+                    <li class="mb-3"><strong>Perancangan Instruksional:</strong> ChatGPT dapat membantu Anda merumuskan tujuan pembelajaran, menganalisis karakteristik materi, dan merancang strategi penyampaian yang sesuai. Ini bukan berarti AI yang menentukan—tujuan Anda yang memutuskan, AI yang membantu memformulaikannya.</li>
+                    <li class="mb-3"><strong>Meta Prompting:</strong> ChatGPT berperan sebagai perancang prompt yang menghasilkan instruksi optimal untuk platform AI produksi lainnya. Inilah fungsi primer dalam modul ini dan pembeda utama pendekatan yang digunakan.</li>
+                    <li class="mb-3"><strong>Produksi Konten:</strong> Platform AI produksi (Canva/Chat GPT, Gamma, Google Flow, Quizizz) menghasilkan media aktual berdasarkan prompt yang telah dirancang dan disempurnakan. Guru melakukan penyesuaian manual pada tahap ini.</li>
+                    <li class="mb-3"><strong>Evaluasi dan Revisi Media:</strong> ChatGPT dapat membantu Anda mengevaluasi draft media berdasarkan kriteria yang Anda tetapkan dan menyarankan revisi prompt. Namun, penilaian akhir tetap ada pada Anda.</li>
+                </ol>
 
-                <h2 id="sub4" style="scroll-margin-top: 100px;">4. Text-to-Video & Presentation AI</h2>
+                <!-- Catatan Penting -->
+                <div class="highlight-box" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 4px solid var(--color-warning);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <i class="fas fa-exclamation-triangle text-warning text-xl"></i>
+                        <h4 style="margin: 0; color: #b45309;">Catatan Penting</h4>
+                    </div>
+                    <p style="margin-bottom:0; color: #78350f;">
+                        Penggunaan AI dalam pengembangan media bukan hanya persoalan teknis—ia juga menyangkut tanggung jawab Anda terhadap kebenaran informasi, keselamatan belajar siswa, dan nilai-nilai yang dipegang lembaga. Dimensi ini akan dibahas secara khusus pada BAB 4.
+                    </p>
+                </div>
+
+                <h2 id="sub4" style="scroll-margin-top: 100px;">D. Keterbatasan AI yang Perlu Dipahami Guru</h2>
                 <p>
-                    AI yang mengubah teks atau dokumen langsung menjadi format video jadi atau slide presentasi lengkap.
+                    Memahami keterbatasan AI adalah komponen kritis dalam pemanfaatan yang bertanggung jawab. Berikut ini adalah keterbatasan utama yang perlu Anda waspadai.
                 </p>
 
-                <h4>Tools Populer:</h4>
-                <ul>
-                    <li><strong>HeyGen / Synthesia:</strong> Memungkinkan Anda mengetik teks materi, lalu avatar fotorealistik manusia akan "membacakan" teks tersebut di dalam video layaknya presenter berita.</li>
-                    <li><strong>Gamma.app / Tome:</strong> Anda hanya perlu mengetik judul materi (misal: "Sejarah Perang Diponegoro"), dan platform ini akan men-generate slide presentasi lengkap (teks materi, layout, dan gambar ilustrasi pendukung) dalam hitungan detik.</li>
-                </ul>
+                <ol class="mt-4 mb-6">
+                    <li class="mb-3"><strong>Halusinasi AI:</strong> ChatGPT dan LLM lainnya dapat menghasilkan informasi yang tampak meyakinkan namun faktual tidak akurat. Ini dikenal sebagai "halusinasi AI." Seluruh konten faktual—angka, nama, tanggal, kutipan, ayat, hadis—yang dihasilkan AI wajib diverifikasi oleh Anda sebelum digunakan dalam pembelajaran.</li>
+                    <li class="mb-3"><strong>Bias Data Latihan:</strong> AI dilatih pada data yang mungkin mengandung bias budaya, gender, atau ideologis. Konten yang dihasilkan harus diperiksa kesesuaiannya dengan nilai dan karakter yang dianut satuan pendidikan, serta karakteristik peserta didik.</li>
+                    <li class="mb-3"><strong>Ketergantungan pada Kualitas Prompt:</strong> Output AI sangat ditentukan oleh kualitas prompt yang diberikan. Prompt yang ambigu atau tidak kontekstual akan menghasilkan output yang tidak optimal. Inilah mengapa strategi meta prompting dan prompt chaining menjadi kunci dalam modul ini.</li>
+                    <li class="mb-3"><strong>Keterbatasan Visual AI:</strong> Beberapa platform AI masih memiliki keterbatasan dalam menghasilkan gambar yang akurat—misalnya kesalahan pada teks dalam gambar atau proporsi figur. Gambar yang menampilkan sosok manusia memerlukan kehati-hatian khusus dalam konteks sekolah Islam.</li>
+                    <li class="mb-3"><strong>Isu Hak Cipta:</strong> Status hak cipta konten yang dihasilkan AI masih dalam perdebatan hukum di berbagai yurisdiksi. Gunakan konten AI sesuai kebijakan platform dan berikan atribusi yang sesuai apabila diperlukan. Hindari mempublikasikan konten AI sebagai karya orisinal tanpa kontribusi intelektual yang substansial.</li>
+                </ol>
 
-                <blockquote>
-                    "Jangan gunakan semua AI sekaligus. Mulailah dari AI Teks (ChatGPT) untuk menyusun struktur materi, baru kemudian gunakan AI Gambar atau Presentasi untuk memvisualisasikannya."
-                </blockquote>
+                <!-- Catatan Penting -->
+                <div class="highlight-box" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 4px solid var(--color-warning);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <i class="fas fa-exclamation-triangle text-warning text-xl"></i>
+                        <h4 style="margin: 0; color: #b45309;">Catatan Penting</h4>
+                    </div>
+                    <p style="margin-bottom:0; color: #78350f;">
+                        Jangan memasukkan nama, foto, atau data identitas siswa ke dalam platform AI. Data pribadi siswa bersifat sensitif dan penggunaannya dalam sistem AI publik dapat melanggar privasi dan peraturan perlindungan data.
+                    </p>
+                </div>
+
+                <hr style="margin: var(--space-8) 0; border: none; border-top: 1px solid var(--color-border);">
+
+                <!-- Rangkuman -->
+                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="background: var(--color-primary); padding: var(--space-4) var(--space-6);">
+                        <h3 style="margin: 0; color: white;"><i class="fas fa-clipboard-list"></i> Rangkuman BAB 2</h3>
+                    </div>
+                    <div style="padding: var(--space-6); background: white;">
+                        <ul style="margin-bottom:0;">
+                            <li>Tiga jenis media pembelajaran yang dibahas dalam modul ini—visual statis, visual dinamis, dan interaktif—masing-masing memiliki kekuatan dan kegunaan yang berbeda.</li>
+                            <li>Generative AI menghasilkan konten baru berdasarkan instruksi pengguna; efektivitasnya bergantung pada kualitas prompt.</li>
+                            <li>ChatGPT berfungsi utama sebagai meta prompting tool, bukan sebagai platform produksi media langsung.</li>
+                            <li>AI memiliki keterbatasan nyata: halusinasi, bias, ketergantungan pada prompt, isu visual, dan hak cipta semuanya menuntut verifikasi aktif dari guru.</li>
+                            <li>Penggunaan AI dalam pendidikan tidak hanya bersifat teknis, tetapi juga menyangkut tanggung jawab etis dan profesional.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Refleksi -->
+                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="background: var(--color-accent); padding: var(--space-4) var(--space-6);">
+                        <h3 style="margin: 0; color: white;"><i class="fas fa-comment-dots"></i> Refleksi BAB 2</h3>
+                    </div>
+                    <div style="padding: var(--space-6); background: white;">
+                        <ol style="margin-bottom:0; padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.75rem;">Dari empat keterbatasan AI yang dibahas, mana yang menurut Anda paling berisiko dalam konteks pembelajaran di kelas Anda? Mengapa?</li>
+                            <li style="margin-bottom: 0.75rem;">Bagaimana Anda akan memastikan konten yang dihasilkan AI sesuai dengan nilai dan karakter yang dianut satuan pendidikan Anda?</li>
+                            <li>Apakah Anda pernah menggunakan AI sebelumnya dalam pekerjaan Anda? Jika ya, keterbatasan apa yang pernah Anda temui?</li>
+                        </ol>
+                    </div>
+                </div>
 
                 <!-- Quiz Container -->
-                <div id="quiz-container" data-bab="bab2" class="mt-12">
+                <div id="quiz-container" data-bab="bab2">
                     <!-- Quiz Engine akan me-render kuis di sini -->
                 </div>
 
                 <!-- Navigation -->
-                <div class="chapter-nav">
+                <div class="chapter-nav mt-8">
                     <a href="materi-bab1.html" class="chapter-nav-btn prev">
                         <i class="fas fa-arrow-left text-accent" style="font-size: 1.5rem;"></i>
-                        <div>
+                        <div style="text-align: right;">
                             <span class="nav-label">Bab Sebelumnya</span>
-                            <span class="nav-title">Konsep Dasar AI</span>
+                            <span class="nav-title">BAB 1: Pendahuluan</span>
                         </div>
                     </a>
+                    
                     <a href="materi-bab3.html" class="chapter-nav-btn next">
                         <div>
                             <span class="nav-label">Bab Selanjutnya</span>
-                            <span class="nav-title">Prompt Engineering</span>
+                            <span class="nav-title">BAB 3: Pengembangan Media</span>
                         </div>
                         <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
                     </a>
