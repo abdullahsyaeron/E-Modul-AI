@@ -74,7 +74,7 @@
             <div class="chapter-num">
                 <i class="fas fa-bookmark text-accent-light"></i> BAB 3
             </div>
-            <h1>Pengembangan Media Pembelajaran dengan AI</h1>
+            <h1>Pengembangan Media Pembelajaran dengan Artificial Intelligence</h1>
             
             <p style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
                 Bab ini adalah inti praktis dari modul. Di sini Anda akan mempelajari strategi meta prompting, memahami Model MAP-AI, dan mengikuti panduan langkah demi langkah untuk mengembangkan poster, presentasi, video, dan kuis interaktif berbantuan AI. Ikuti setiap langkah secara berurutan untuk mendapatkan hasil yang optimal.
@@ -155,7 +155,7 @@
                     <li class="mb-3"><strong>Prinsip Kontrol Pedagogis:</strong> Guru tetap memegang kendali atas seluruh keputusan instruksional. AI adalah asisten Anda yang menentukan apa yang harus dipelajari siswa dan bagaimana caranya.</li>
                     <li class="mb-3"><strong>Prinsip Verifikasi:</strong> Seluruh konten faktual yang dihasilkan AI wajib diverifikasi sebelum digunakan. Tidak ada pengecualian untuk fakta, angka, kutipan, ayat, atau hadis.</li>
                     <li class="mb-3"><strong>Prinsip Kontekstualisasi:</strong> Output AI selalu disesuaikan dengan konteks mata pelajaran, karakteristik siswa, dan nilai-nilai yang dianut sekolah. Konten yang "benar" secara umum belum tentu tepat untuk kelas Anda.</li>
-                    <li class="mb-3"><strong>Prinsip Iterasi:</strong> Pengembangan media berbantuan AI adalah proses siklik—prompt dirancang, output dievaluasi, prompt direvisi, output diperbaiki hingga memenuhi standar kualitas yang Anda tetapkan.</li>
+                    <li class="mb-3"><strong>Prinsip Iterasi:</strong> Pengembangan media berbantuan AI adalah proses siklik prompt dirancang, output dievaluasi, prompt direvisi, output diperbaiki hingga memenuhi standar kualitas yang Anda tetapkan.</li>
                 </ol>
 
                 <h2 id="sub2" style="scroll-margin-top: 100px;">B. Meta Prompting dan Prompt Chaining</h2>
@@ -282,7 +282,7 @@
                     <li class="mb-3"><strong>Sempurnakan Prompt (Prompt Chaining).</strong> Tanyakan kepada ChatGPT apakah ada elemen yang perlu ditambahkan atau diperkuat. Lakukan iterasi hingga prompt dinilai cukup presisi.</li>
                     <li class="mb-3"><strong>Gunakan Prompt pada Platform AI Produksi.</strong> Terapkan prompt final pada platform yang sesuai (Canva, Gamma, Google Vids, Quizizz, atau lainnya) dan hasilkan draft media.</li>
                     <li class="mb-3"><strong>Evaluasi Berdasarkan Prinsip Instruksional.</strong> Periksa media berdasarkan: keselarasan dengan tujuan pembelajaran, kesesuaian dengan karakteristik siswa, akurasi konten, dan kesesuaian nilai serta karakter sekolah.</li>
-                    <li class="mb-3"><strong>Revisi dan Finalisasi.</strong> Lakukan revisi berdasarkan hasil evaluasi—baik secara manual maupun dengan merevisi prompt di ChatGPT dan mengulang proses produksi.</li>
+                    <li class="mb-3"><strong>Revisi dan Finalisasi.</strong> Lakukan revisi berdasarkan hasil evaluasi baik secara manual maupun dengan merevisi prompt di ChatGPT dan mengulang proses produksi.</li>
                 </ol>
 
                 <h2 id="sub5" style="scroll-margin-top: 100px;">E. Implementasi per Jenis Media</h2>
@@ -296,30 +296,60 @@
                     <h4 class="mt-4">Alur Kerja:</h4>
                     <p><strong>Langkah 1. Tentukan Tujuan Pembelajaran</strong><br>
                     Sebelum menggunakan AI, tentukan terlebih dahulu tujuan pembelajaran yang ingin dicapai melalui poster. Tujuan ini akan menjadi dasar dalam menentukan isi, desain, dan fokus utama poster.<br>
-                    <em>Contoh: "Siswa mampu mengidentifikasi organ-organ sistem pernapasan manusia dan menjelaskan fungsi masing-masing organ."</em></p>
+                    <em>Contoh:<br>"Siswa mampu mengidentifikasi organ-organ sistem pernapasan manusia dan menjelaskan fungsi masing-masing organ."</em></p>
                     
                     <p><strong>Langkah 2. Analisis Materi dan Karakteristik Peserta Didik</strong><br>
-                    Identifikasi: Konsep utama, tingkat kesulitan materi, karakteristik usia peserta didik, informasi visual yang diperlukan, serta nilai/konteks yang perlu diperhatikan.</p>
+                    Identifikasi:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Konsep utama yang harus dipahami siswa</li>
+                        <li>Tingkat kesulitan materi</li>
+                        <li>Karakteristik usia peserta didik</li>
+                        <li>Informasi yang perlu ditampilkan secara visual</li>
+                        <li>Nilai atau konteks yang perlu diperhatikan</li>
+                    </ul>
+                    Tahap ini membantu memastikan poster benar-benar sesuai dengan kebutuhan pembelajaran.</p>
                     
                     <p><strong>Langkah 3. Gunakan ChatGPT untuk Meta Prompting</strong><br>
-                    Berikan konteks lengkap kepada ChatGPT (mata pelajaran, kelas, topik, tujuan, karakteristik siswa). Minta ChatGPT menghasilkan struktur konten, hierarki, judul, prompt visual, dan saran desain.</p>
+                    Berikan konteks lengkap kepada ChatGPT, meliputi:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Mata pelajaran</li>
+                        <li>Jenjang atau kelas</li>
+                        <li>Topik materi (Sebaiknya Anda mengunggah file materi yang akan digunakan)</li>
+                        <li>Tujuan pembelajaran</li>
+                        <li>Karakteristik peserta didik</li>
+                        <li>Kebutuhan visual tertentu</li>
+                    </ul>
+                    Minta ChatGPT menghasilkan:
+                    <ol style="margin-top: 0.5rem;">
+                        <li>Struktur konten poster</li>
+                        <li>Hierarki informasi</li>
+                        <li>Judul dan teks utama</li>
+                        <li>Prompt visual untuk generator AI</li>
+                        <li>Saran desain dan ilustrasi</li>
+                    </ol>
+                    Pada tahap ini ChatGPT berfungsi sebagai perancang prompt.</p>
 
                     <div class="prompt-content-box" style="margin: 1.5rem 0;">
-                        <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Template Prompt (ChatGPT)</div>
+                        <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Prompt:</div>
                         <p style="margin-bottom: 0; white-space: pre-line;">Saya adalah guru [mata pelajaran] kelas [kelas].
                         Saya ingin membuat poster pembelajaran tentang [topik].
-                        Tujuan pembelajaran: [tuliskan tujuan pembelajaran]
-                        Karakteristik peserta didik: [tuliskan usia, jenjang, atau karakteristik khusus siswa]
-                        
+                        Tujuan pembelajaran:
+                        [tuliskan tujuan pembelajaran]
+                        Karakteristik peserta didik:
+                        [tuliskan usia, jenjang, atau karakteristik khusus siswa]
                         Bertindaklah sebagai ahli desain pembelajaran dan desainer infografis pendidikan.
                         Buatkan:
                         1. Struktur konten poster yang informatif dan ringkas.
                         2. Hierarki informasi yang tepat (judul, subjudul, isi utama, ringkasan).
                         3. Teks poster yang sesuai dengan usia peserta didik.
                         4. Prompt visual yang siap digunakan pada AI Image Generator atau Canva AI.
-                        5. Panduan desain yang mencakup: komposisi visual, warna yang direkomendasikan, gaya ilustrasi, jenis ikon, tata letak poster.
+                        5. Panduan desain yang mencakup:
+                        o komposisi visual
+                        o warna yang direkomendasikan
+                        o gaya ilustrasi
+                        o jenis ikon atau elemen visual
+                        o tata letak poster
                         6. Pastikan desain mendukung tujuan pembelajaran dan mudah dipahami dalam waktu kurang dari 5 detik.
-                        
                         Tampilkan hasil dalam format:
                         A. Struktur Poster
                         B. Teks Poster
@@ -328,13 +358,51 @@
                     </div>
 
                     <p><strong>Langkah 4. Tinjau dan Sempurnakan Prompt</strong><br>
-                    Evaluasi hasil yang diberikan ChatGPT. Jika diperlukan, lakukan prompt chaining untuk menyempurnakan hasil sebelum masuk ke tahap produksi.</p>
+                    Evaluasi hasil yang diberikan ChatGPT.<br>
+                    Periksa apakah:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Konten sudah sesuai tujuan pembelajaran</li>
+                        <li>Bahasa sesuai usia peserta didik</li>
+                        <li>Informasi sudah akurat</li>
+                        <li>Visual yang diusulkan relevan dengan materi</li>
+                    </ul>
+                    Jika diperlukan, lakukan prompt chaining untuk menyempurnakan hasil sebelum masuk ke tahap produksi.</p>
 
                     <p><strong>Langkah 5. Produksi Poster Menggunakan Platform AI</strong><br>
-                    Salin prompt yang telah disempurnakan ke platform AI pilihan (Canva AI, Midjourney, dll).</p>
+                    Salin prompt yang telah disempurnakan ke platform AI pilihan, seperti:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Canva AI</li>
+                        <li>ChatGPT Image Generation</li>
+                        <li>Gemini</li>
+                    </ul>
+                    Biarkan platform menghasilkan draft poster berdasarkan prompt yang telah dirancang.</p>
 
-                    <p><strong>Langkah 6-8. Penyuntingan, Evaluasi, & Revisi</strong><br>
-                    Perbaiki tata letak, sesuaikan warna dan tipografi. Evaluasi berdasarkan keterbacaan (waktu < 5 detik, jarak 1 meter), keakuratan materi, dan kesesuaian visual.</p>
+                    <p><strong>Langkah 6. Lakukan Penyuntingan dan Penyesuaian</strong><br>
+                    Setelah poster dihasilkan:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Perbaiki tata letak</li>
+                        <li>Sesuaikan warna</li>
+                        <li>Atur tipografi</li>
+                        <li>Periksa ukuran teks</li>
+                        <li>Tambahkan atau kurangi elemen visual jika diperlukan</li>
+                    </ul>
+                    Jika menggunakan Canva, Anda dapat manfaatkan fitur edit untuk menyempurnakan hasil yang dihasilkan AI.</p>
+                    
+                    <p><strong>Langkah 7. Evaluasi Kualitas Poster</strong><br>
+                    Sebelum digunakan dalam pembelajaran, lakukan evaluasi dengan mempertimbangkan pertanyaan berikut:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Apakah pesan utama dapat dipahami dalam waktu kurang dari 5 detik?</li>
+                        <li>Apakah teks mudah dibaca dari jarak sekitar 1 meter?</li>
+                        <li>Apakah informasi yang disajikan akurat?</li>
+                        <li>Apakah desain mendukung tujuan pembelajaran?</li>
+                        <li>Apakah visual sesuai dengan karakteristik peserta didik?</li>
+                        <li>Apakah poster sesuai dengan nilai dan konteks satuan pendidikan?</li>
+                    </ul></p>
+                    
+                    <p><strong>Langkah 8. Revisi dan Finalisasi</strong><br>
+                    Lakukan revisi berdasarkan hasil evaluasi.<br>
+                    Setelah dinilai layak, ekspor poster dalam format PNG, JPG, atau PDF untuk digunakan dalam pembelajaran maupun distribusi digital.<br>
+                    Alat Alternatif: Adobe Express, Piktochart, Microsoft Publisher, atau Google Slides dapat digunakan apabila Canva tidak tersedia.</p>
                 </div>
 
                 <!-- E.2. Presentasi Pembelajaran -->
@@ -343,20 +411,64 @@
                     <p>Slide presentasi memandu alur penyampaian materi secara terstruktur. Slide yang efektif bukan sekadar daftar poin melainkan visual yang mendukung narasi guru dan memfasilitasi pemahaman siswa.</p>
                     <p><strong>Alat Utama:</strong> Gamma (gamma.app)</p>
 
-                    <p>Gamma adalah platform berbasis AI yang mampu menghasilkan presentasi lengkap—struktur, konten, dan desain visual—hanya dari sebuah prompt atau outline. ChatGPT berperan merancang outline dan prompt optimal untuk Gamma.</p>
+                    <p>Gamma adalah platform berbasis AI yang mampu menghasilkan presentasi lengkap struktur, konten, dan desain visual hanya dari sebuah prompt atau outline. ChatGPT berperan merancang outline dan prompt optimal untuk Gamma.</p>
                     
-                    <h4 class="mt-4">Alur Kerja (Singkat):</h4>
-                    <p><strong>Langkah 1 & 2.</strong> Tentukan tujuan dan analisis materi/peserta didik.</p>
-                    <p><strong>Langkah 3.</strong> Gunakan ChatGPT untuk merancang outline (urutan slide, gagasan utama, aktivitas pemantik).</p>
-                    <p><strong>Langkah 4. Gunakan ChatGPT untuk Meta Prompting</strong></p>
+                    <h4 class="mt-4">Alur Kerja:</h4>
+                    <p><strong>Langkah 1. Tentukan Tujuan Pembelajaran</strong><br>
+                    Tentukan kompetensi yang harus dicapai peserta didik setelah mengikuti pembelajaran.<br>
+                    Tujuan pembelajaran akan menjadi dasar dalam menentukan isi, urutan slide, aktivitas belajar, dan visual yang digunakan.</p>
+                    
+                    <p><strong>Langkah 2. Analisis Materi dan Karakteristik Peserta Didik</strong><br>
+                    Identifikasi:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>konsep utama yang harus dipahami siswa</li>
+                        <li>tingkat kompleksitas materi</li>
+                        <li>karakteristik peserta didik</li>
+                        <li>pengetahuan prasyarat yang diperlukan</li>
+                        <li>bagian materi yang memerlukan visualisasi atau contoh</li>
+                    </ul>
+                    Analisis ini membantu menentukan struktur presentasi yang paling efektif.</p>
+                    
+                    <p><strong>Langkah 3. Gunakan ChatGPT untuk Merancang Outline Presentasi</strong><br>
+                    Berikan konteks pembelajaran secara lengkap kepada ChatGPT, meliputi:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>mata pelajaran</li>
+                        <li>kelas</li>
+                        <li>topik</li>
+                        <li>tujuan pembelajaran</li>
+                        <li>karakteristik peserta didik</li>
+                        <li>jumlah slide yang diinginkan</li>
+                    </ul>
+                    Minta ChatGPT menghasilkan:
+                    <ol style="margin-top: 0.5rem;">
+                        <li>Outline presentasi</li>
+                        <li>Urutan slide</li>
+                        <li>Gagasan utama setiap slide</li>
+                        <li>Aktivitas atau pertanyaan pemantik</li>
+                        <li>Rekomendasi visual pendukung</li>
+                    </ol>
+                    Pada tahap ini ChatGPT berfungsi sebagai perancang struktur pembelajaran.</p>
+                    
+                    <p><strong>Langkah 4. Gunakan ChatGPT untuk Meta Prompting</strong><br>
+                    Setelah outline selesai, minta ChatGPT menghasilkan prompt yang siap digunakan pada Gamma atau platform presentasi berbasis AI lainnya.<br>
+                    Prompt harus memuat:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>tujuan presentasi</li>
+                        <li>struktur slide</li>
+                        <li>gaya bahasa</li>
+                        <li>target audiens</li>
+                        <li>rekomendasi visual</li>
+                        <li>instruksi desain</li>
+                    </ul></p>
 
                     <div class="prompt-content-box" style="margin: 1.5rem 0;">
-                        <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Template Prompt (Gamma)</div>
+                        <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Prompt:</div>
                         <p style="margin-bottom: 0; white-space: pre-line;">Saya adalah guru [mata pelajaran] kelas [kelas].
                         Saya ingin membuat presentasi pembelajaran menggunakan Gamma tentang [topik].
-                        Tujuan pembelajaran: [tuliskan tujuan pembelajaran]
-                        Karakteristik peserta didik: [tuliskan usia atau karakteristik siswa]
-                        
+                        Tujuan pembelajaran:
+                        [tuliskan tujuan pembelajaran]
+                        Karakteristik peserta didik:
+                        [tuliskan usia atau karakteristik siswa]
                         Bertindaklah sebagai ahli desain pembelajaran, instructional designer, dan ahli presentasi pendidikan.
                         Buatkan:
                         1. Struktur presentasi yang sistematis.
@@ -365,9 +477,15 @@
                         4. Aktivitas atau pertanyaan pemantik yang relevan.
                         5. Saran visual untuk setiap slide.
                         6. Prompt lengkap yang siap digunakan pada Gamma.
-                        
-                        Prompt Gamma harus mencakup: tujuan presentasi, target audiens, jumlah slide, pembagian slide, gaya bahasa, gaya visual, rekomendasi ilustrasi, prinsip pembelajaran.
-                        
+                        Prompt Gamma harus mencakup:
+                        • tujuan presentasi
+                        • target audiens
+                        • jumlah slide
+                        • pembagian slide
+                        • gaya bahasa
+                        • gaya visual
+                        • rekomendasi ilustrasi
+                        • prinsip pembelajaran yang sesuai dengan usia peserta didik
                         Tampilkan hasil dalam format:
                         A. Struktur Presentasi
                         B. Outline Slide
@@ -375,28 +493,133 @@
                         D. Saran Penyempurnaan</p>
                     </div>
 
-                    <p><strong>Langkah 5-9.</strong> Tinjau prompt, hasilkan presentasi di Gamma, sesuaikan slide, evaluasi gagasan utama tiap slide, dan lakukan finalisasi/ekspor ke PPT atau PDF.</p>
+                    <p><strong>Langkah 5. Tinjau dan Sempurnakan Prompt</strong><br>
+                    Sebelum digunakan pada Gamma, lakukan evaluasi terhadap prompt yang telah dibuat.<br>
+                    Pastikan:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>seluruh tujuan pembelajaran terakomodasi</li>
+                        <li>urutan slide logis</li>
+                        <li>tingkat bahasa sesuai usia siswa</li>
+                        <li>visual yang diusulkan mendukung pembelajaran</li>
+                    </ul>
+                    Lakukan prompt chaining jika diperlukan untuk menyempurnakan hasil.</p>
+
+                    <p><strong>Langkah 6. Produksi Presentasi Menggunakan Gamma</strong><br>
+                    Buka Gamma kemudian pilih menu Generate Presentation.<br>
+                    Masukkan prompt hasil Meta Prompting yang telah disempurnakan.<br>
+                    Gamma akan menghasilkan draft presentasi secara otomatis berdasarkan instruksi yang diberikan.</p>
+
+                    <p><strong>Langkah 7. Lakukan Penyuntingan dan Penyesuaian</strong><br>
+                    Tinjau setiap slide yang dihasilkan.<br>
+                    Periksa:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>akurasi materi</li>
+                        <li>relevansi gambar</li>
+                        <li>keterbacaan teks</li>
+                        <li>konsistensi desain</li>
+                        <li>kesesuaian dengan konteks pembelajaran</li>
+                    </ul>
+                    Lakukan revisi apabila ditemukan bagian yang kurang sesuai.</p>
+
+                    <p><strong>Langkah 8. Evaluasi Kualitas Presentasi</strong><br>
+                    Sebelum digunakan dalam pembelajaran, lakukan evaluasi dengan mempertimbangkan pertanyaan berikut:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Apakah setiap slide memiliki satu gagasan utama?</li>
+                        <li>Apakah urutan slide mendukung alur belajar siswa?</li>
+                        <li>Apakah visual membantu memahami materi?</li>
+                        <li>Apakah teks tidak terlalu padat?</li>
+                        <li>Apakah presentasi mendukung pencapaian tujuan pembelajaran?</li>
+                        <li>Apakah konten telah diverifikasi dan akurat?</li>
+                    </ul></p>
+
+                    <p><strong>Langkah 9. Revisi dan Finalisasi</strong><br>
+                    Lakukan revisi berdasarkan hasil evaluasi.<br>
+                    Setelah dinilai layak, ekspor presentasi dalam format PPT atau PDF untuk digunakan dalam pembelajaran.<br>
+                    Alat Alternatif: Beautiful.ai, Tome, Canva Presentation, atau Google NotebookLM (gratis) dapat digunakan sebagai alternatif Gamma.</p>
                 </div>
 
                 <!-- E.3. Video Pembelajaran -->
                 <div class="media-type-section" style="margin-top: 3rem;">
                     <h3 class="text-xl font-bold mb-4" style="color: var(--color-primary-dark); border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem;">E.3. Video Pembelajaran</h3>
-                    <p>Video efektif untuk menjelaskan proses, mendemonstrasikan prosedur, atau menyampaikan narasi yang membutuhkan elemen temporal. Durasi optimal untuk siswa SMP adalah 3–7 menit (Guo et al., 2014).</p>
-                    <p><strong>Alat Utama:</strong> ChatGPT + Google Labs Flow (atau InVideo AI, Canva Video)</p>
+                    <p>Video adalah media paling kompleks namun paling imersif. Video efektif untuk menjelaskan proses, mendemonstrasikan prosedur, atau menyampaikan narasi yang membutuhkan elemen temporal. Durasi optimal untuk siswa SMP adalah 3–7 menit (Guo et al., 2014).</p>
+                    <p><strong>Alat Utama:</strong> ChatGPT + Google Labs Flow</p>
 
-                    <h4 class="mt-4">Alur Kerja (Singkat):</h4>
-                    <p><strong>Langkah 1-3.</strong> Tentukan tujuan, analisis karakteristik, dan pilih jenis video (eksplanasi, animasi, dll).</p>
-                    <p><strong>Langkah 4.</strong> ChatGPT merancang alur video, storyboard, aktivitas pemantik, dan estimasi durasi segmen.</p>
-                    <p><strong>Langkah 5. Gunakan ChatGPT untuk Meta Prompting</strong></p>
+                    <h4 class="mt-4">Alur Kerja:</h4>
+                    <p><strong>Langkah 1. Tentukan Tujuan Pembelajaran</strong><br>
+                    Tentukan kompetensi yang harus dicapai peserta didik setelah menonton video.<br>
+                    Tujuan pembelajaran akan menjadi dasar dalam menentukan isi video, jenis visual yang digunakan, serta cara penyampaian materi.<br>
+                    <em>Contoh:<br>"Siswa mampu menjelaskan proses fotosintesis dan faktor-faktor yang memengaruhinya."</em></p>
+
+                    <p><strong>Langkah 2. Analisis Materi dan Karakteristik Peserta Didik</strong><br>
+                    Identifikasi:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>konsep utama yang harus dipahami siswa</li>
+                        <li>tingkat kompleksitas materi</li>
+                        <li>karakteristik peserta didik</li>
+                        <li>bagian materi yang memerlukan visualisasi</li>
+                        <li>fenomena atau contoh yang dekat dengan kehidupan siswa</li>
+                    </ul>
+                    Tahap ini membantu menentukan bentuk video yang paling sesuai.</p>
+
+                    <p><strong>Langkah 3. Tentukan Jenis Video Pembelajaran</strong><br>
+                    Pilih jenis video yang paling sesuai dengan tujuan pembelajaran.<br>
+                    Contoh:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Video eksplanasi konsep</li>
+                        <li>Video demonstrasi prosedur</li>
+                        <li>Video berbasis studi kasus</li>
+                        <li>Video naratif</li>
+                        <li>Video berbasis fenomena</li>
+                        <li>Video animasi edukatif</li>
+                    </ul>
+                    Pemilihan jenis video harus didasarkan pada kebutuhan belajar siswa, bukan pada fitur teknologi yang tersedia.</p>
+
+                    <p><strong>Langkah 4. Gunakan ChatGPT untuk Merancang Struktur Video</strong><br>
+                    Berikan konteks pembelajaran secara lengkap kepada ChatGPT.<br>
+                    Minta ChatGPT menghasilkan:
+                    <ol style="margin-top: 0.5rem;">
+                        <li>Alur video</li>
+                        <li>Segmentasi video</li>
+                        <li>Storyboard sederhana</li>
+                        <li>Aktivitas pemantik</li>
+                        <li>Momen refleksi</li>
+                        <li>Estimasi durasi setiap segmen</li>
+                    </ol>
+                    Pada tahap ini ChatGPT membantu merancang pengalaman belajar yang akan disampaikan melalui video.</p>
+
+                    <p><strong>Langkah 5. Gunakan ChatGPT untuk Meta Prompting</strong><br>
+                    Setelah struktur video selesai, minta ChatGPT menghasilkan prompt produksi yang siap digunakan pada platform AI video seperti:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Google Labs Flow</li>
+                        <li>Veo</li>
+                        <li>Canva Video</li>
+                        <li>InVideo AI</li>
+                        <li>Pictory AI</li>
+                        <li>Platform video AI lainnya</li>
+                    </ul>
+                    Prompt harus memuat:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>tujuan video</li>
+                        <li>target audiens</li>
+                        <li>urutan adegan</li>
+                        <li>narasi</li>
+                        <li>gaya visual</li>
+                        <li>gaya animasi</li>
+                        <li>durasi</li>
+                        <li>transisi</li>
+                        <li>elemen audio</li>
+                    </ul></p>
 
                     <div class="prompt-content-box" style="margin: 1.5rem 0;">
-                        <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Template Prompt (Video)</div>
+                        <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Prompt:</div>
                         <p style="margin-bottom: 0; white-space: pre-line;">Saya adalah guru [mata pelajaran] kelas [kelas].
                         Saya ingin membuat video pembelajaran tentang [topik].
-                        Tujuan pembelajaran: [tuliskan tujuan pembelajaran]
-                        Karakteristik peserta didik: [tuliskan usia atau karakteristik siswa]
-                        Durasi video yang diinginkan: [tuliskan durasi]
-                        
+                        Tujuan pembelajaran:
+                        [tuliskan tujuan pembelajaran]
+                        Karakteristik peserta didik:
+                        [tuliskan usia atau karakteristik siswa]
+                        Durasi video yang diinginkan:
+                        [tuliskan durasi]
                         Bertindaklah sebagai ahli desain pembelajaran, instructional designer, penulis naskah edukasi, dan sutradara video pembelajaran.
                         Buatkan:
                         1. Struktur video pembelajaran.
@@ -407,9 +630,17 @@
                         6. Aktivitas pemantik pada awal video.
                         7. Refleksi pada akhir video.
                         8. Prompt lengkap yang siap digunakan pada platform AI Video.
-                        
-                        Prompt video harus mencakup: tujuan, audiens, durasi, urutan adegan, narasi, visual, animasi, transisi, gaya penyampaian, musik latar.
-                        
+                        Prompt video harus mencakup:
+                        • tujuan video
+                        • target audiens
+                        • durasi
+                        • urutan adegan
+                        • narasi
+                        • visual
+                        • animasi
+                        • transisi
+                        • gaya penyampaian
+                        • musik atau audio pendukung
                         Tampilkan hasil dalam format:
                         A. Struktur Video
                         B. Storyboard
@@ -418,27 +649,109 @@
                         E. Saran Penyempurnaan</p>
                     </div>
 
-                    <p><strong>Langkah 6-10.</strong> Evaluasi prompt, hasilkan video, periksa narasi dan timing, evaluasi prinsip segmentasi/modalitas, finalisasi.</p>
+                    <p><strong>Langkah 6. Tinjau dan Sempurnakan Prompt</strong><br>
+                    Sebelum digunakan pada platform AI video, lakukan evaluasi terhadap prompt yang telah dibuat.<br>
+                    Periksa apakah:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>seluruh tujuan pembelajaran sudah terakomodasi</li>
+                        <li>informasi sudah akurat</li>
+                        <li>bahasa sesuai usia siswa</li>
+                        <li>visual yang diusulkan relevan dengan materi</li>
+                        <li>nilai dan karakter sekolah telah diperhatikan</li>
+                    </ul>
+                    Lakukan prompt chaining apabila diperlukan untuk meningkatkan kualitas hasil.</p>
+
+                    <p><strong>Langkah 7. Produksi Video Menggunakan Platform AI</strong><br>
+                    Masukkan prompt hasil Meta Prompting ke platform AI video pilihan.<br>
+                    Platform akan menghasilkan draft video berdasarkan instruksi yang diberikan.<br>
+                    Guru tetap berperan sebagai editor dan pengambil keputusan terhadap hasil yang dihasilkan.</p>
+
+                    <p><strong>Langkah 8. Lakukan Penyuntingan dan Penyempurnaan</strong><br>
+                    Periksa dan sesuaikan:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>narasi</li>
+                        <li>visual</li>
+                        <li>transisi</li>
+                        <li>timing</li>
+                        <li>subtitle</li>
+                        <li>musik latar</li>
+                        <li>efek suara</li>
+                    </ul>
+                    Pastikan setiap elemen mendukung tujuan pembelajaran dan tidak mengganggu fokus siswa.</p>
+
+                    <p><strong>Langkah 9. Evaluasi Kualitas Video</strong><br>
+                    Sebelum digunakan dalam pembelajaran, lakukan evaluasi dengan mempertimbangkan pertanyaan berikut:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Apakah tujuan pembelajaran tercapai?</li>
+                        <li>Apakah setiap segmen memiliki fokus yang jelas?</li>
+                        <li>Apakah visual mendukung pemahaman konsep?</li>
+                        <li>Apakah durasi sesuai dengan karakteristik siswa?</li>
+                        <li>Apakah informasi yang disampaikan akurat?</li>
+                        <li>Apakah video memenuhi prinsip segmentasi, modalitas, dan personalisasi?</li>
+                    </ul></p>
+
+                    <p><strong>Langkah 10. Revisi dan Finalisasi</strong><br>
+                    Lakukan revisi berdasarkan hasil evaluasi.<br>
+                    Setelah dinilai layak, ekspor video dalam format yang sesuai dan distribusikan melalui LMS, website sekolah, atau platform pembelajaran yang digunakan.</p>
                 </div>
 
                 <!-- E.4. Kuis Interaktif -->
                 <div class="media-type-section" style="margin-top: 3rem;">
                     <h3 class="text-xl font-bold mb-4" style="color: var(--color-primary-dark); border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem;">E.4. Kuis Interaktif</h3>
-                    <p>Kuis interaktif berfungsi sebagai instrumen asesmen formatif yang memberikan umpan balik instan kepada siswa dan data berharga bagi guru. Kuis berbantuan AI memungkinkan pembuatan soal dengan variasi tingkat kognitif dalam waktu singkat.</p>
-                    <p><strong>Alat Utama:</strong> Quizizz AI (atau Kahoot, Wordwall)</p>
+                    <p>Kuis interaktif berfungsi sebagai instrumen asesmen formatif yang memberikan umpan balik instan kepada siswa dan data berharga bagi guru. Kuis berbantuan AI memungkinkan pembuatan soal dalam jumlah memadai dengan variasi tingkat kognitif dalam waktu singkat.</p>
+                    <p><strong>Alat Utama:</strong> Quizizz AI</p>
 
-                    <h4 class="mt-4">Alur Kerja (Singkat):</h4>
-                    <p><strong>Langkah 1 & 2.</strong> Tentukan tujuan pembelajaran dan identifikasi indikator soal serta tingkat kognitif (C1-C6).</p>
-                    <p><strong>Langkah 3.</strong> ChatGPT merancang blueprint soal dan distribusi tingkat kognitif.</p>
-                    <p><strong>Langkah 4. Gunakan ChatGPT untuk Meta Prompting</strong></p>
+                    <h4 class="mt-4">Alur Kerja:</h4>
+                    <p><strong>Langkah 1. Tentukan Tujuan Pembelajaran</strong><br>
+                    Tentukan kompetensi yang ingin diukur melalui kuis.<br>
+                    Pastikan tujuan pembelajaran telah dirumuskan secara jelas dan terukur sehingga dapat diterjemahkan menjadi indikator asesmen.<br>
+                    <em>Contoh:<br>"Siswa mampu menjelaskan Hukum Newton dan menerapkannya dalam situasi sehari-hari."</em></p>
+
+                    <p><strong>Langkah 2. Identifikasi Indikator dan Tingkat Kognitif</strong><br>
+                    Tentukan indikator yang akan diukur serta tingkat kognitif yang sesuai berdasarkan Taksonomi Bloom.<br>
+                    Contoh:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>C1 Mengingat konsep</li>
+                        <li>C2 Memahami konsep</li>
+                        <li>C3 Menerapkan konsep</li>
+                        <li>C4 Menganalisis kasus</li>
+                        <li>C5 Mengevaluasi solusi</li>
+                    </ul>
+                    Tahap ini membantu memastikan kuis tidak hanya mengukur hafalan.</p>
+
+                    <p><strong>Langkah 3. Gunakan ChatGPT untuk Merancang Blueprint Soal</strong><br>
+                    Berikan konteks pembelajaran secara lengkap kepada ChatGPT.<br>
+                    Minta ChatGPT menghasilkan:
+                    <ol style="margin-top: 0.5rem;">
+                        <li>Indikator soal</li>
+                        <li>Distribusi tingkat kognitif</li>
+                        <li>Blueprint asesmen</li>
+                        <li>Rekomendasi jumlah soal</li>
+                        <li>Format soal yang sesuai</li>
+                    </ol>
+                    Pada tahap ini ChatGPT membantu merancang asesmen sebelum menghasilkan soal.</p>
+
+                    <p><strong>Langkah 4. Gunakan ChatGPT untuk Meta Prompting</strong><br>
+                    Setelah blueprint selesai, minta ChatGPT menghasilkan prompt yang dapat digunakan untuk membuat bank soal yang berkualitas.<br>
+                    Prompt harus mencakup:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>tujuan pembelajaran</li>
+                        <li>indikator</li>
+                        <li>tingkat kognitif</li>
+                        <li>karakteristik peserta didik</li>
+                        <li>jumlah soal</li>
+                        <li>format soal</li>
+                        <li>kualitas distractor</li>
+                    </ul></p>
 
                     <div class="prompt-content-box" style="margin: 1.5rem 0;">
-                        <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Template Prompt (Kuis)</div>
+                        <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Prompt:</div>
                         <p style="margin-bottom: 0; white-space: pre-line;">Saya adalah guru [mata pelajaran] kelas [kelas].
                         Saya ingin membuat kuis interaktif tentang [topik].
-                        Tujuan pembelajaran: [tuliskan tujuan pembelajaran]
-                        Karakteristik peserta didik: [tuliskan usia atau karakteristik siswa]
-                        
+                        Tujuan pembelajaran:
+                        [tuliskan tujuan pembelajaran]
+                        Karakteristik peserta didik:
+                        [tuliskan usia atau karakteristik siswa]
                         Bertindaklah sebagai ahli asesmen pendidikan, instructional designer, dan pengembang soal.
                         Buatkan:
                         1. Analisis indikator pembelajaran yang perlu diukur.
@@ -446,9 +759,13 @@
                         3. Distribusi tingkat kognitif berdasarkan Taksonomi Bloom.
                         4. Rekomendasi jumlah soal.
                         5. Prompt lengkap untuk menghasilkan bank soal berkualitas.
-                        
-                        Prompt harus menghasilkan soal yang: sesuai tujuan, bervariasi tingkat kesulitannya, distractor yang logis, dapat mendeteksi miskonsepsi, mencakup soal HOTS.
-                        
+                        Prompt harus menghasilkan soal yang:
+                        • sesuai tujuan pembelajaran
+                        • memiliki tingkat kesulitan yang bervariasi
+                        • menggunakan bahasa yang jelas
+                        • memiliki distractor yang berkualitas
+                        • mampu mengidentifikasi miskonsepsi siswa
+                        • mencakup soal HOTS apabila diperlukan
                         Tampilkan hasil dalam format:
                         A. Blueprint Asesmen
                         B. Distribusi Tingkat Kognitif
@@ -456,7 +773,66 @@
                         D. Saran Penyempurnaan</p>
                     </div>
 
-                    <p><strong>Langkah 5-9.</strong> Hasilkan soal di ChatGPT, validasi distractor, impor massal ke Quizizz, uji coba, dan jadikan hasil analisis kuis sebagai bahan perbaikan instruksional.</p>
+                    <p><strong>Langkah 5. Hasilkan Bank Soal</strong><br>
+                    Gunakan prompt yang telah disusun untuk menghasilkan:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>soal pilihan ganda</li>
+                        <li>true or false</li>
+                        <li>studi kasus</li>
+                        <li>soal HOTS</li>
+                        <li>bentuk asesmen lainnya sesuai kebutuhan</li>
+                    </ul>
+                    Pastikan setiap soal dilengkapi dengan:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>kunci jawaban</li>
+                        <li>alasan jawaban</li>
+                        <li>indikator yang diukur</li>
+                    </ul></p>
+
+                    <p><strong>Langkah 6. Tinjau dan Validasi Soal</strong><br>
+                    Sebelum digunakan, lakukan evaluasi terhadap seluruh soal.<br>
+                    Periksa:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>kesesuaian dengan tujuan pembelajaran</li>
+                        <li>akurasi konsep</li>
+                        <li>kejelasan bahasa</li>
+                        <li>ketidakambiguan soal</li>
+                        <li>kualitas distractor</li>
+                        <li>kesesuaian tingkat kognitif</li>
+                    </ul>
+                    Lakukan revisi jika ditemukan kelemahan.</p>
+
+                    <p><strong>Langkah 7. Impor ke Platform Kuis</strong><br>
+                    Masukkan soal yang telah divalidasi ke platform pilihan seperti:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Quizizz</li>
+                        <li>Kahoot!</li>
+                        <li>Wordwall</li>
+                        <li>Google Forms</li>
+                        <li>Platform asesmen lainnya</li>
+                    </ul>
+                    Tambahkan gambar atau media pendukung jika diperlukan.</p>
+
+                    <p><strong>Langkah 8. Uji Coba dan Penyempurnaan</strong><br>
+                    Lakukan uji coba sebelum kuis digunakan secara luas.<br>
+                    Perhatikan:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>tingkat kesulitan soal</li>
+                        <li>kejelasan instruksi</li>
+                        <li>waktu pengerjaan</li>
+                        <li>stabilitas teknis platform</li>
+                    </ul>
+                    Lakukan revisi apabila ditemukan masalah.</p>
+
+                    <p><strong>Langkah 9. Analisis Hasil Kuis</strong><br>
+                    Setelah kuis digunakan, analisis hasil yang diperoleh untuk mengidentifikasi:
+                    <ul style="margin-top: 0.5rem;">
+                        <li>konsep yang telah dipahami siswa</li>
+                        <li>miskonsepsi yang masih muncul</li>
+                        <li>indikator yang belum tercapai</li>
+                        <li>kebutuhan tindak lanjut pembelajaran</li>
+                    </ul>
+                    Kuis tidak hanya berfungsi sebagai alat penilaian, tetapi juga sebagai sumber informasi untuk memperbaiki pembelajaran.</p>
                 </div>
 
                 <!-- Catatan Penting -->
@@ -466,7 +842,7 @@
                         <h4 style="margin: 0; color: #b45309;">Catatan Penting</h4>
                     </div>
                     <p style="margin-bottom:0; color: #78350f;">
-                        Setelah mengembangkan media apa pun, pastikan Anda membaca <strong>BAB 4</strong> sebelum menggunakannya di kelas. Dimensi etika—termasuk verifikasi konten, privasi siswa, dan kesesuaian nilai serta karakter sekolah—adalah bagian tak terpisahkan dari tanggung jawab profesional Anda.
+                        Setelah mengembangkan media apa pun, pastikan Anda membaca <strong>BAB 4</strong> sebelum menggunakannya di kelas. Dimensi etika termasuk verifikasi konten, privasi siswa, dan kesesuaian nilai serta karakter sekolah adalah bagian tak terpisahkan dari tanggung jawab profesional Anda.
                     </p>
                 </div>
 
@@ -498,7 +874,7 @@
                     <p><strong>Tujuan:</strong> Anda mampu menyelesaikan siklus pengembangan media dari awal hingga evaluasi menggunakan Model MAP-AI.</p>
                     <ol style="margin-bottom:0; color: #4c1d95;">
                         <li>Pilih satu jenis media: poster, presentasi, video, atau kuis.</li>
-                        <li>Ikuti seluruh langkah prosedur pengembangan (BAB 3 Bagian D).</li>
+                        <li>Ikuti seluruh langkah prosedur pengembangan (BAB 3D).</li>
                         <li>Lakukan minimal dua putaran revisi prompt.</li>
                         <li>Evaluasi media final menggunakan rubrik pada BAB 5.</li>
                         <li>Ceritakan proses pengembangan kepada rekan sejawat dan minta umpan balik.</li>
@@ -530,7 +906,7 @@
                     </div>
                     <div style="padding: var(--space-6); background: white;">
                         <ul style="margin-bottom:0;">
-                            <li>Lima prinsip pemanfaatan AI—tujuan, kontrol pedagogis, verifikasi, kontekstualisasi, dan iterasi—menjadi landasan seluruh praktik pengembangan media.</li>
+                            <li>Lima prinsip pemanfaatan AI tujuan, kontrol pedagogis, verifikasi, kontekstualisasi, dan iterasi menjadi landasan seluruh praktik pengembangan media.</li>
                             <li>Meta prompting menggunakan ChatGPT membantu guru mentransformasi niat pedagogis menjadi instruksi teknis yang optimal.</li>
                             <li>Model MAP-AI menyediakan alur kerja lima lapisan yang dapat diulang hingga media memenuhi standar kualitas.</li>
                             <li>Setiap jenis media (poster, presentasi, video, kuis) memiliki alat utama, alur kerja, dan contoh prompt yang dapat langsung diadaptasi.</li>
@@ -548,7 +924,7 @@
                         <ol style="margin-bottom:0; padding-left: 1.5rem;">
                             <li style="margin-bottom: 0.75rem;">Jenis media mana yang paling relevan dengan kebutuhan mengajar Anda saat ini? Mengapa?</li>
                             <li style="margin-bottom: 0.75rem;">Saat mengikuti alur kerja di bab ini, tahap mana yang menurut Anda paling menantang? Apa yang akan membantu Anda melewati tantangan itu?</li>
-                            <li>Bagaimana Anda akan memastikan bahwa media yang dihasilkan AI tetap mencerminkan judgment pedagogis Anda—bukan sekadar output mentah dari AI?</li>
+                            <li>Bagaimana Anda akan memastikan bahwa media yang dihasilkan AI tetap mencerminkan judgment pedagogis Anda bukan sekadar output mentah dari AI?</li>
                         </ol>
                     </div>
                 </div>

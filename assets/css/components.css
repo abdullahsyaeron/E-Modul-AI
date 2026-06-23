@@ -1036,3 +1036,34 @@
   .chapter-header h1 { font-size: var(--text-2xl); }
   .chapter-header { padding: var(--space-12) 0 var(--space-8); }
 }
+
+/* ============================================================
+   TABS & TIMELINE FOR BAB 3
+   ============================================================ */
+/* Tab Navigation */
+.materi-tabs-container { margin-top: 2rem; margin-bottom: 2rem; }
+.materi-tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem; }
+.tab-btn { background: transparent; border: none; padding: 0.75rem 1.25rem; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1rem; color: var(--color-text-light); cursor: pointer; border-radius: var(--radius-md) var(--radius-md) 0 0; transition: var(--transition); display: flex; align-items: center; gap: 0.5rem; position: relative; }
+.tab-btn:hover { color: var(--color-primary); background: rgba(14, 165, 233, 0.05); }
+.tab-btn.active { color: var(--color-primary-dark); background: rgba(14, 165, 233, 0.1); }
+.tab-btn.active::after { content: ''; position: absolute; bottom: -0.5rem; left: 0; width: 100%; height: 3px; background: var(--color-primary); border-radius: 3px 3px 0 0; }
+.tab-content { display: none; animation: fadeIn 0.4s ease-in-out; }
+.tab-content.active { display: block; }
+
+/* Tool Cards */
+.tool-card { display: inline-flex; align-items: center; gap: 1rem; background: white; padding: 1rem 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); margin-bottom: 1.5rem; }
+.tool-icon { width: 40px; height: 40px; background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+.tool-info h4 { margin: 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-text-light); }
+.tool-info p { margin: 0; font-weight: 600; color: var(--color-text); }
+
+/* Vertical Timeline */
+.timeline-container { position: relative; padding-left: 2.5rem; margin-top: 1.5rem; margin-bottom: 2rem; }
+.timeline-container::before { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 2px; background: var(--color-border); }
+.timeline-item { position: relative; margin-bottom: 2rem; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-number { position: absolute; left: -2.5rem; top: 0; width: 30px; height: 30px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 0 0 4px var(--color-bg-alt); z-index: 1; }
+.timeline-content { background: white; padding: 1.25rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); }
+.timeline-content h4 { margin-top: 0; margin-bottom: 0.75rem; color: var(--color-primary-dark); font-family: 'Outfit', sans-serif; }
+.timeline-content p:last-child { margin-bottom: 0; }
+.timeline-content ul, .timeline-content ol { margin-bottom: 0.5rem; }
+

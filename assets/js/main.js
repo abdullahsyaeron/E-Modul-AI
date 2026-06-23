@@ -279,4 +279,34 @@ document.addEventListener('DOMContentLoaded', function () {
   initScrollEffects();
   initReadingProgress();
   initSmoothScroll();
+  initTabs();
 });
+
+/* ============================================================
+   TABS NAVIGATION FOR BAB 3
+   ============================================================ */
+function initTabs() {
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  if (!tabBtns.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-tab');
+      if (!targetId) return;
+
+      const container = btn.closest('.materi-tabs-container');
+      if (!container) return;
+
+      // Remove active class from all buttons and contents
+      container.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      container.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      // Add active class
+      btn.classList.add('active');
+      const targetContent = document.getElementById(targetId);
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
+    });
+  });
+}
