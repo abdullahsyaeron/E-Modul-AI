@@ -11,6 +11,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const data = window.evaluasiData;
   const maxScore = 56; // 14 indikator * 4 poin maksimal
 
+  // Inject dynamic CSS for the Likert scale radio buttons
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .likert-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px; }
+    .eval-radio-scale { cursor: pointer; flex: 1; height: 100%; display: block; position: relative; }
+    .eval-radio-scale input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .eval-radio-content { 
+      height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+      padding: 10px; border-radius: 8px; border: 2px solid var(--color-border); background: white; 
+      color: var(--color-text-muted); transition: all 0.2s ease; text-align: center;
+    }
+    .eval-radio-scale:hover .eval-radio-content { background: var(--color-bg-alt); border-color: var(--color-text-muted); }
+    .eval-radio-scale input:checked + .eval-radio-content { 
+      background: rgba(14, 165, 233, 0.1); border-color: var(--color-primary); 
+      color: var(--color-primary-dark); box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2); 
+    }
+    .eval-radio-scale input:checked + .eval-radio-content .scale-val { color: var(--color-primary); }
+    .scale-val { font-size: 1.25rem; font-weight: bold; margin-bottom: 4px; color: var(--color-text-dark); transition: color 0.2s ease; }
+    .scale-text { font-size: 0.8rem; line-height: 1.3; }
+    @media (max-width: 640px) { .likert-options { grid-template-columns: repeat(2, 1fr); } }
+  `;
+  document.head.appendChild(style);
+
   // Render Form
   let html = '<form id="evaluasi-form">';
 
@@ -26,17 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dimensi.kriteria.forEach((k) => {
       html += `
-        <div class="eval-kriteria-item">
-          <div class="eval-kriteria-text" style="font-weight: 600; margin-bottom: 8px;">${k.indikator}</div>
-          <div class="eval-kriteria-options likert-options" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px;">
+        <div class="eval-kriteria-item" style="flex-direction: column; align-items: flex-start;">
+          <div class="eval-kriteria-text" style="font-weight: 600; margin-bottom: 8px; width: 100%;">${k.indikator}</div>
+          <div class="likert-options" style="width: 100%;">
       `;
       
       k.options.forEach(opt => {
           html += `
-            <label class="eval-radio" style="flex-direction: column; text-align: center; justify-content: center; padding: 10px; font-size: 0.9rem;">
+            <label class="eval-radio-scale">
               <input type="radio" name="kriteria_${k.id}" value="${opt.val}" required>
-              <div style="font-weight: bold; margin-bottom: 4px;">${opt.val}</div>
-              <span style="display: block; line-height: 1.2;">${opt.text}</span>
+              <div class="eval-radio-content">
+                <div class="scale-val">${opt.val}</div>
+                <div class="scale-text">${opt.text}</div>
+              </div>
             </label>
           `;
       });
