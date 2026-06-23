@@ -45,15 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       html += `
         <div class="prompt-card" data-category="${p.category}">
-          <div class="prompt-header">
-            <div class="prompt-icon"><i class="fas ${icon}"></i></div>
-            <h3 class="prompt-title">${p.title}</h3>
+          <div class="prompt-card-body">
+            <div class="prompt-card-meta">
+              <div class="prompt-icon" style="color: var(--color-accent); font-size: 1.25rem;"><i class="fas ${icon}"></i></div>
+            </div>
+            <h3 class="prompt-card-title">${p.title}</h3>
+            <p class="prompt-card-desc">${p.description}</p>
+            <div class="prompt-content-box">
+              ${formatPromptHTML(p.prompt)}
+            </div>
           </div>
-          <p class="prompt-desc">${p.description}</p>
-          <div class="prompt-body">
-            ${formatPromptHTML(p.prompt)}
-          </div>
-          <div class="prompt-footer">
+          <div class="prompt-card-footer">
             <button class="btn btn-sm btn-secondary btn-copy" data-text="${encodeURIComponent(p.prompt)}">
               <i class="fas fa-copy"></i> Salin Prompt
             </button>
