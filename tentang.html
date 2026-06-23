@@ -72,64 +72,68 @@
             <p class="section-desc max-w-3xl mx-auto">Latar belakang pengembangan, profil pengembang, dan referensi pustaka.</p>
         </div>
 
-        <div class="max-w-4xl mx-auto mt-12 space-y-12">
+        <div class="max-w-4xl mx-auto mt-12 space-y-8">
             
             <!-- Deskripsi Produk -->
-            <div class="content-body" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-                <h2 style="margin-top: 0;"><i class="fas fa-info-circle text-primary"></i> Deskripsi Produk</h2>
-                <p>
-                    E-Modul ini merupakan produk luaran penelitian pengembangan (Research and Development) yang dirancang khusus untuk membantu guru pada berbagai jenjang pendidikan dalam memahami, menerapkan, dan mengevaluasi penggunaan Artificial Intelligence (AI) untuk pengembangan media pembelajaran.
-                </p>
-                <p>
-                    Dalam konteks penelitian, produk ini diimplementasikan dan diuji secara empiris kepada guru-guru di SMP IT LHI Banguntapan sebagai subjek penelitian, untuk mengukur tingkat kevalidan, kepraktisan, dan keefektifannya.
-                </p>
+            <div class="profile-card text-left">
+                <div class="profile-header" style="padding: var(--space-6) var(--space-8); border-bottom: 1px solid rgba(255,255,255,0.2);">
+                    <h2 class="text-white m-0"><i class="fas fa-info-circle"></i> Deskripsi Produk</h2>
+                </div>
+                <div class="profile-body text-left" style="margin-top: 0;">
+                    <p class="text-lg mb-4">
+                        E-Modul ini merupakan produk luaran penelitian pengembangan (Research and Development) yang dirancang khusus untuk membantu guru pada berbagai jenjang pendidikan dalam memahami, menerapkan, dan mengevaluasi penggunaan Artificial Intelligence (AI) untuk pengembangan media pembelajaran.
+                    </p>
+                    <p class="text-lg text-muted">
+                        Dalam konteks penelitian, produk ini diimplementasikan dan diuji secara empiris kepada guru-guru di SMP IT LHI Banguntapan sebagai subjek penelitian, untuk mengukur tingkat kevalidan, kepraktisan, dan keefektifannya.
+                    </p>
+                </div>
             </div>
 
             <!-- Profil Pengembang -->
-            <div class="content-body" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-                <h2 style="margin-top: 0;"><i class="fas fa-user-graduate text-primary"></i> Profil Pengembang</h2>
-                <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--color-surface); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--color-primary);">
-                        <i class="fas fa-user"></i>
+            <div class="profile-card">
+                <div class="profile-header"></div>
+                <div class="profile-body">
+                    <div class="profile-avatar-wrapper">
+                        <i class="fas fa-user-graduate"></i>
                     </div>
-                    <div style="flex: 1; min-width: 250px;">
-                        <h3 style="margin-bottom: 0.5rem; margin-top: 0;">Pengembang Mahasiswa</h3>
-                        <p style="margin-bottom: 0;">Mahasiswa Peneliti Bidang Teknologi Pendidikan.<br>
-                        Sedang menyusun tugas akhir skripsi terkait integrasi teknologi kecerdasan buatan dalam memfasilitasi kinerja pedagogik guru di era digital.</p>
-                    </div>
+                    <h3 class="profile-name">Pengembang Mahasiswa</h3>
+                    <div class="profile-nim">Mahasiswa Peneliti Bidang Teknologi Pendidikan</div>
+                    <p class="profile-info max-w-2xl mx-auto mt-4 text-left">
+                        Sedang menyusun tugas akhir skripsi terkait integrasi teknologi kecerdasan buatan dalam memfasilitasi kinerja pedagogik guru di era digital.
+                    </p>
                 </div>
             </div>
 
             <!-- Referensi -->
-            <div class="content-body" id="referensi" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-                <h2 style="margin-top: 0;"><i class="fas fa-book text-primary"></i> Referensi Pustaka</h2>
-                <p>Materi dalam e-modul ini disusun berdasarkan sintesis dari berbagai sumber literatur terpercaya:</p>
-                <ul style="list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 1rem;">
-                    <li style="display: flex; gap: 1rem;">
-                        <i class="fas fa-check text-success" style="margin-top: 0.25rem;"></i>
-                        <div>
-                            <strong>Bates, A. W. (2019).</strong> <em>Teaching in a Digital Age: Guidelines for designing teaching and learning.</em> Tony Bates Associates Ltd.
+            <div class="profile-card text-left" id="referensi">
+                <div class="profile-header" style="padding: var(--space-6) var(--space-8); border-bottom: 1px solid rgba(255,255,255,0.2);">
+                    <h2 class="text-white m-0"><i class="fas fa-book"></i> Referensi Pustaka</h2>
+                </div>
+                <div class="profile-body text-left" style="margin-top: 0;">
+                    <p class="mb-6">Materi dalam e-modul ini disusun berdasarkan sintesis dari berbagai sumber literatur terpercaya:</p>
+                    <div class="referensi-list">
+                        <div class="referensi-item">
+                            <div>
+                                <strong>Bates, A. W. (2019).</strong> <em>Teaching in a Digital Age: Guidelines for designing teaching and learning.</em> Tony Bates Associates Ltd.
+                            </div>
                         </div>
-                    </li>
-                    <li style="display: flex; gap: 1rem;">
-                        <i class="fas fa-check text-success" style="margin-top: 0.25rem;"></i>
-                        <div>
-                            <strong>Holmes, W., Bialik, M., & Fadel, C. (2019).</strong> <em>Artificial Intelligence in Education: Promises and Implications for Teaching and Learning.</em> Center for Curriculum Redesign.
+                        <div class="referensi-item">
+                            <div>
+                                <strong>Holmes, W., Bialik, M., & Fadel, C. (2019).</strong> <em>Artificial Intelligence in Education: Promises and Implications for Teaching and Learning.</em> Center for Curriculum Redesign.
+                            </div>
                         </div>
-                    </li>
-                    <li style="display: flex; gap: 1rem;">
-                        <i class="fas fa-check text-success" style="margin-top: 0.25rem;"></i>
-                        <div>
-                            <strong>Mayer, R. E. (2014).</strong> <em>The Cambridge Handbook of Multimedia Learning.</em> Cambridge University Press.
+                        <div class="referensi-item">
+                            <div>
+                                <strong>Mayer, R. E. (2014).</strong> <em>The Cambridge Handbook of Multimedia Learning.</em> Cambridge University Press.
+                            </div>
                         </div>
-                    </li>
-                    <li style="display: flex; gap: 1rem;">
-                        <i class="fas fa-check text-success" style="margin-top: 0.25rem;"></i>
-                        <div>
-                            <strong>OpenAI (2023).</strong> <em>Educator considerations for ChatGPT.</em> OpenAI Documentation.
+                        <div class="referensi-item">
+                            <div>
+                                <strong>OpenAI (2023).</strong> <em>Educator considerations for ChatGPT.</em> OpenAI Documentation.
+                            </div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
 
         </div>

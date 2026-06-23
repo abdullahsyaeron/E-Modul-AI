@@ -163,6 +163,12 @@ button { cursor: pointer; background: none; }
 
 table { border-collapse: collapse; width: 100%; }
 
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ============================================================
    TYPOGRAPHY SCALE
    ============================================================ */

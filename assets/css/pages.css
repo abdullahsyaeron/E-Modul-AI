@@ -712,28 +712,50 @@
 /* ============================================================
    PROMPT PAGE
    ============================================================ */
-.prompt-search-bar {
+.prompt-filters-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+  .prompt-filters-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.prompt-search-wrapper {
   position: relative;
+  flex: 1;
   max-width: 480px;
 }
 
-.prompt-search-bar input {
+.prompt-search-input {
   width: 100%;
   padding: var(--space-3) var(--space-5) var(--space-3) var(--space-10);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-pill);
   font-size: var(--text-base);
-  background: white;
-  transition: border-color var(--transition-fast);
+  background: var(--color-bg-alt);
+  transition: all var(--transition-fast);
 }
 
-.prompt-search-bar input:focus {
+.prompt-search-input:focus {
   border-color: var(--color-accent);
+  background: white;
   outline: none;
   box-shadow: 0 0 0 3px rgba(14,165,233,0.1);
 }
 
-.prompt-search-bar .search-icon {
+.prompt-search-wrapper .search-icon {
   position: absolute;
   left: var(--space-4);
   top: 50%;
@@ -742,18 +764,17 @@
   font-size: 1rem;
 }
 
-.filter-tabs {
+.prompt-filters {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-bottom: var(--space-6);
 }
 
-.filter-tab {
+.filter-btn {
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-pill);
-  border: 2px solid var(--color-border);
-  background: white;
+  border: 2px solid transparent;
+  background: var(--color-bg-alt);
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
   color: var(--color-text-muted);
@@ -761,15 +782,15 @@
   transition: all var(--transition-fast);
 }
 
-.filter-tab:hover {
-  border-color: var(--color-accent);
+.filter-btn:hover {
+  background: rgba(14,165,233,0.1);
   color: var(--color-accent);
 }
 
-.filter-tab.active {
+.filter-btn.active {
   background: var(--color-primary);
-  border-color: var(--color-primary);
   color: white;
+  box-shadow: 0 2px 8px rgba(30,58,95,0.2);
 }
 
 .prompt-grid {
@@ -795,26 +816,28 @@
 .prompt-card:hover {
   border-color: var(--color-accent);
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .prompt-card-body {
-  padding: var(--space-5);
+  padding: var(--space-6);
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .prompt-card-meta {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
 }
 
 .prompt-card-title {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: var(--font-bold);
   color: var(--color-primary);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
   line-height: 1.4;
 }
 
@@ -822,14 +845,16 @@
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   line-height: 1.6;
+  margin-bottom: var(--space-5);
+  flex: 1;
 }
 
 .prompt-card-footer {
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-4) var(--space-6);
   border-top: 1px solid var(--color-border);
   background: var(--color-bg-alt);
   display: flex;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 .prompt-card-footer .btn { flex: 1; justify-content: center; }
@@ -1104,6 +1129,123 @@
 .skor-circle.cukup-layak .skor-label { color: #92400e; }
 .skor-circle.kurang-layak .skor-angka,
 .skor-circle.kurang-layak .skor-label { color: #991b1b; }
+
+/* Interactive Evaluasi Cards */
+.eval-dimensi-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-8);
+  overflow: hidden;
+}
+
+.eval-dimensi-header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  padding: var(--space-5) var(--space-6);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.eval-dimensi-header i {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.eval-dimensi-header h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  margin: 0;
+  color: white;
+}
+
+.eval-kriteria-list {
+  padding: var(--space-2) var(--space-6);
+}
+
+.eval-kriteria-item {
+  padding: var(--space-5) 0;
+  border-bottom: 1px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.eval-kriteria-item:last-child {
+  border-bottom: none;
+}
+
+.eval-kriteria-text {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.eval-kriteria-options {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.eval-radio {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.eval-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.eval-radio span {
+  display: block;
+  text-align: center;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-border);
+  background: white;
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.eval-radio:hover span {
+  background: var(--color-bg-alt);
+  border-color: var(--color-text-muted);
+}
+
+.eval-radio-yes input:checked + span {
+  background: var(--color-success-light);
+  border-color: var(--color-success);
+  color: #065f46;
+  box-shadow: 0 2px 8px rgba(16,185,129,0.2);
+}
+
+.eval-radio-no input:checked + span {
+  background: var(--color-danger-light);
+  border-color: var(--color-danger);
+  color: #991b1b;
+  box-shadow: 0 2px 8px rgba(239,68,68,0.2);
+}
+
+@media (min-width: 768px) {
+  .eval-kriteria-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .eval-kriteria-text {
+    flex: 2;
+  }
+  .eval-kriteria-options {
+    flex: 1;
+    min-width: 200px;
+  }
+}
 
 /* ============================================================
    TENTANG PAGE
