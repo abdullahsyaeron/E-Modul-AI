@@ -1,6 +1,7 @@
 /**
  * evaluasi-engine.js
  * Handles rendering of evaluation instrument and score calculation.
+ * Updated to handle 1-4 Likert scale options.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!container || !window.evaluasiData) return;
 
   const data = window.evaluasiData;
-  let totalBobot = 0;
+  const maxScore = 56; // 14 indikator * 4 poin maksimal
 
   // Render Form
   let html = '<form id="evaluasi-form">';
@@ -18,26 +19,29 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="eval-dimensi-card">
         <div class="eval-dimensi-header">
           <i class="fas ${dimensi.icon}"></i>
-          <h3>${dIndex + 1}. ${dimensi.dimensi}</h3>
+          <h3>Dimensi ${dIndex + 1} - ${dimensi.dimensi}</h3>
         </div>
         <div class="eval-kriteria-list">
     `;
 
     dimensi.kriteria.forEach((k) => {
-      totalBobot += k.bobot;
-      
       html += `
         <div class="eval-kriteria-item">
-          <div class="eval-kriteria-text">${k.pertanyaan}</div>
-          <div class="eval-kriteria-options">
-            <label class="eval-radio eval-radio-yes">
-              <input type="radio" name="kriteria_${k.id}" value="${k.bobot}" required>
-              <span>Ya</span>
+          <div class="eval-kriteria-text" style="font-weight: 600; margin-bottom: 8px;">${k.indikator}</div>
+          <div class="eval-kriteria-options likert-options" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px;">
+      `;
+      
+      k.options.forEach(opt => {
+          html += `
+            <label class="eval-radio" style="flex-direction: column; text-align: center; justify-content: center; padding: 10px; font-size: 0.9rem;">
+              <input type="radio" name="kriteria_${k.id}" value="${opt.val}" required>
+              <div style="font-weight: bold; margin-bottom: 4px;">${opt.val}</div>
+              <span style="display: block; line-height: 1.2;">${opt.text}</span>
             </label>
-            <label class="eval-radio eval-radio-no">
-              <input type="radio" name="kriteria_${k.id}" value="0" required>
-              <span>Tidak</span>
-            </label>
+          `;
+      });
+
+      html += `
           </div>
         </div>
       `;
@@ -74,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     const formData = new FormData(form);
     
-    // Check if all answered (should be handled by 'required' attribute, but just in case)
     let answered = 0;
     let totalQuestions = 0;
     
@@ -91,34 +94,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Calculate percentage
-    const finalScore = Math.round((score / totalBobot) * 100);
+    const percentage = Math.round((score / maxScore) * 100);
 
-    // Determine category
+    // Determine category based on interpretation table
+    // 85–100% Sangat Layak
+    // 70–84% Layak
+    // 55–69% Cukup Layak
+    // 40–54% Kurang Layak
+    // <40% Tidak Layak
+    
     let category = "";
     let colorClass = "";
     let message = "";
 
-    if (finalScore >= 85) {
+    if (percentage >= 85) {
       category = "Sangat Layak";
       colorClass = "score-great";
-      message = "Media pembelajaran AI Anda sangat baik dan siap diimplementasikan di kelas. Anda telah mempertimbangkan aspek pedagogik, konten, dan teknis dengan sangat matang.";
-    } else if (finalScore >= 70) {
-      category = "Layak dengan Revisi Kecil";
+      message = "Media ini sangat layak dan dapat langsung digunakan dalam pembelajaran. Kualitas instruksional, konten, media, etika, dan peran guru sangat optimal.";
+    } else if (percentage >= 70) {
+      category = "Layak";
       colorClass = "score-good";
-      message = "Media ini sudah baik, namun perhatikan kembali komponen yang Anda jawab 'Tidak'. Sedikit penyempurnaan akan membuat media ini lebih optimal.";
-    } else if (finalScore >= 50) {
-      category = "Kurang Layak (Perlu Revisi Besar)";
+      message = "Media ini layak digunakan dengan beberapa perbaikan minor. Cek kembali indikator yang mendapatkan skor 1 atau 2.";
+    } else if (percentage >= 55) {
+      category = "Cukup Layak";
+      colorClass = "score-average"; // Needs to be added or use warning color
+      message = "Media ini cukup layak, namun memerlukan perbaikan atau revisi pada beberapa bagian yang masih kurang sebelum digunakan di kelas.";
+    } else if (percentage >= 40) {
+      category = "Kurang Layak";
       colorClass = "score-poor";
-      message = "Media ini berisiko jika langsung digunakan. Silakan perbaiki aspek konten (halusinasi) dan pastikan kesesuaian dengan karakteristik siswa.";
+      message = "Media ini kurang layak digunakan. Terdapat masalah signifikan yang harus diatasi, terutama pada kesesuaian instruksional atau etika penggunaan AI.";
     } else {
       category = "Tidak Layak";
       colorClass = "score-poor";
-      message = "Media ini tidak memenuhi standar pedagogik. Disarankan untuk merancang ulang media dengan prompt yang lebih spesifik dan melakukan verifikasi manual secara menyeluruh.";
+      message = "Media ini tidak layak digunakan dalam pembelajaran. Disarankan untuk mengembangkan ulang media dari awal dengan memperhatikan kelima dimensi rubrik secara ketat.";
     }
 
     // Update UI
-    scoreVal.textContent = finalScore + "%";
-    scoreVal.className = "eval-score-val " + colorClass;
+    scoreVal.textContent = percentage + "% (" + score + "/" + maxScore + ")";
+    
+    // Set custom color class if score-average is not defined in css
+    if(colorClass === "score-average") {
+      scoreVal.className = "eval-score-val";
+      scoreVal.style.color = "#f59e0b"; // amber/warning
+    } else {
+      scoreVal.style.color = ""; // reset inline color
+      scoreVal.className = "eval-score-val " + colorClass;
+    }
+    
     scoreDesc.textContent = category;
     resultMsg.textContent = message;
 

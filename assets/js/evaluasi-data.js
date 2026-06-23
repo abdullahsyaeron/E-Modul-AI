@@ -1,88 +1,182 @@
 /**
  * evaluasi-data.js
  * Instrumen evaluasi kelayakan media pembelajaran berbasis AI.
- * Terdiri dari 3 dimensi utama: Pedagogik, Materi/Konten, dan Desain Visual.
+ * Menggunakan rubrik dengan 5 Dimensi dan 14 Indikator (Skala 1-4).
  */
 
 const evaluasiData = [
   {
-    dimensi: "Pedagogik & Instruksional",
-    id: "pedagogik",
-    icon: "fa-graduation-cap",
+    dimensi: "Kesesuaian Instruksional",
+    id: "instruksional",
+    icon: "fa-bullseye",
     kriteria: [
       {
-        id: "p1",
-        pertanyaan: "Apakah media pembelajaran secara jelas selaras dengan Tujuan Pembelajaran / Capaian Pembelajaran yang ingin dicapai?",
-        bobot: 1
+        id: "d1_1",
+        indikator: "Kesesuaian tujuan",
+        options: [
+          { val: 1, text: "Tidak sesuai" },
+          { val: 2, text: "Kurang sesuai" },
+          { val: 3, text: "Sesuai" },
+          { val: 4, text: "Sangat sesuai" }
+        ]
       },
       {
-        id: "p2",
-        pertanyaan: "Apakah media menyediakan interaktivitas atau memancing siswa untuk berpikir aktif (bukan sekadar membaca pasif)?",
-        bobot: 1
+        id: "d1_2",
+        indikator: "Kesesuaian materi",
+        options: [
+          { val: 1, text: "Tidak sesuai" },
+          { val: 2, text: "Kurang sesuai" },
+          { val: 3, text: "Sesuai" },
+          { val: 4, text: "Sangat sesuai" }
+        ]
       },
       {
-        id: "p3",
-        pertanyaan: "Apakah bahasa yang digunakan oleh AI sudah disesuaikan dengan tingkat usia, kognitif, dan karakteristik siswa?",
-        bobot: 1
-      },
-      {
-        id: "p4",
-        pertanyaan: "Apakah media memberikan kesempatan bagi siswa untuk melakukan refleksi atau evaluasi mandiri?",
-        bobot: 1
+        id: "d1_3",
+        indikator: "Kesesuaian karakteristik siswa",
+        options: [
+          { val: 1, text: "Tidak sesuai" },
+          { val: 2, text: "Kurang sesuai" },
+          { val: 3, text: "Sesuai" },
+          { val: 4, text: "Sangat sesuai" }
+        ]
       }
     ]
   },
   {
-    dimensi: "Keakuratan Materi & Konten",
+    dimensi: "Kualitas Konten",
     id: "konten",
-    icon: "fa-book",
+    icon: "fa-book-open",
     kriteria: [
       {
-        id: "k1",
-        pertanyaan: "Apakah seluruh fakta, data, dan konsep yang di-generate oleh AI telah diverifikasi kebenarannya oleh guru (bebas halusinasi)?",
-        bobot: 1.5 // Bobot lebih tinggi karena krusial
+        id: "d2_1",
+        indikator: "Akurasi informasi",
+        options: [
+          { val: 1, text: "Banyak kesalahan" },
+          { val: 2, text: "Beberapa kesalahan" },
+          { val: 3, text: "Hampir seluruhnya benar" },
+          { val: 4, text: "Seluruhnya benar" }
+        ]
       },
       {
-        id: "k2",
-        pertanyaan: "Apakah materi bebas dari bias budaya, gender, atau stereotip negatif yang mungkin dibawa oleh algoritma AI?",
-        bobot: 1
+        id: "d2_2",
+        indikator: "Kelengkapan materi",
+        options: [
+          { val: 1, text: "Sangat kurang" },
+          { val: 2, text: "Kurang" },
+          { val: 3, text: "Cukup" },
+          { val: 4, text: "Sangat lengkap" }
+        ]
       },
       {
-        id: "k3",
-        pertanyaan: "Apakah contoh atau studi kasus yang disajikan relevan dengan konteks lokal dan kehidupan keseharian siswa di Indonesia?",
-        bobot: 1
-      },
-      {
-        id: "k4",
-        pertanyaan: "Apakah alur penyajian materi logis dan sistematis (dari mudah ke sulit, atau dari konkret ke abstrak)?",
-        bobot: 1
+        id: "d2_3",
+        indikator: "Kejelasan penyajian",
+        options: [
+          { val: 1, text: "Tidak jelas" },
+          { val: 2, text: "Kurang jelas" },
+          { val: 3, text: "Jelas" },
+          { val: 4, text: "Sangat jelas" }
+        ]
       }
     ]
   },
   {
-    dimensi: "Desain Visual & Teknis",
-    id: "visual",
+    dimensi: "Kualitas Media",
+    id: "media",
     icon: "fa-palette",
     kriteria: [
       {
-        id: "v1",
-        pertanyaan: "Apakah gambar/ilustrasi dari AI (Midjourney/Canva) relevan dengan teks materi dan membantu pemahaman, bukan sekadar dekorasi?",
-        bobot: 1
+        id: "d3_1",
+        indikator: "Keterbacaan",
+        options: [
+          { val: 1, text: "Buruk" },
+          { val: 2, text: "Kurang" },
+          { val: 3, text: "Baik" },
+          { val: 4, text: "Sangat baik" }
+        ]
       },
       {
-        id: "v2",
-        pertanyaan: "Apakah teks mudah dibaca (ukuran font cukup, kontras warna antara teks dan background jelas)?",
-        bobot: 1
+        id: "d3_2",
+        indikator: "Desain visual",
+        options: [
+          { val: 1, text: "Tidak menarik" },
+          { val: 2, text: "Kurang menarik" },
+          { val: 3, text: "Menarik" },
+          { val: 4, text: "Sangat menarik" }
+        ]
       },
       {
-        id: "v3",
-        pertanyaan: "Apakah media tidak memuat terlalu banyak informasi dalam satu halaman/slide (menghindari Cognitive Overload)?",
-        bobot: 1
+        id: "d3_3",
+        indikator: "Kemudahan digunakan",
+        options: [
+          { val: 1, text: "Sulit" },
+          { val: 2, text: "Agak sulit" },
+          { val: 3, text: "Mudah" },
+          { val: 4, text: "Sangat mudah" }
+        ]
+      }
+    ]
+  },
+  {
+    dimensi: "Etika Penggunaan AI",
+    id: "etika",
+    icon: "fa-balance-scale",
+    kriteria: [
+      {
+        id: "d4_1",
+        indikator: "Verifikasi fakta",
+        options: [
+          { val: 1, text: "Tidak dilakukan" },
+          { val: 2, text: "Sebagian" },
+          { val: 3, text: "Hampir seluruhnya" },
+          { val: 4, text: "Seluruhnya" }
+        ]
       },
       {
-        id: "v4",
-        pertanyaan: "Jika menggunakan AI Audio/Video (HeyGen/ElevenLabs), apakah suara narator terdengar jelas, intonasinya tepat, dan tidak mengganggu konsentrasi?",
-        bobot: 1
+        id: "d4_2",
+        indikator: "Privasi data",
+        options: [
+          { val: 1, text: "Berisiko" },
+          { val: 2, text: "Ada kekurangan" },
+          { val: 3, text: "Hampir sesuai" },
+          { val: 4, text: "Sepenuhnya sesuai" }
+        ]
+      },
+      {
+        id: "d4_3",
+        indikator: "Hak cipta dan atribusi",
+        options: [
+          { val: 1, text: "Tidak jelas" },
+          { val: 2, text: "Kurang jelas" },
+          { val: 3, text: "Cukup jelas" },
+          { val: 4, text: "Sangat jelas" }
+        ]
+      }
+    ]
+  },
+  {
+    dimensi: "Kontribusi Pedagogis Guru",
+    id: "pedagogis",
+    icon: "fa-chalkboard-teacher",
+    kriteria: [
+      {
+        id: "d5_1",
+        indikator: "Modifikasi output AI",
+        options: [
+          { val: 1, text: "Tidak ada" },
+          { val: 2, text: "Sedikit" },
+          { val: 3, text: "Cukup banyak" },
+          { val: 4, text: "Substansial" }
+        ]
+      },
+      {
+        id: "d5_2",
+        indikator: "Kontekstualisasi",
+        options: [
+          { val: 1, text: "Tidak ada" },
+          { val: 2, text: "Kurang" },
+          { val: 3, text: "Baik" },
+          { val: 4, text: "Sangat baik" }
+        ]
       }
     ]
   }
