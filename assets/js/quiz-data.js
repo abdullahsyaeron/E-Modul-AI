@@ -6,59 +6,59 @@
 const quizData = {
   bab1: [
     {
-      question: "Apa definisi paling tepat untuk Artificial Intelligence (AI) dalam konteks modern?",
+      question: "Seorang guru menggunakan AI untuk membuat infografis yang sangat menarik secara visual. Namun setelah digunakan, siswa tetap mengalami kesulitan memahami materi. Berdasarkan konsep media pembelajaran, penyebab yang paling mungkin adalah...",
       options: [
-        "Robot fisik yang dapat bergerak dan berbicara layaknya manusia secara sempurna",
-        "Sistem komputer yang mampu melakukan tugas yang biasanya membutuhkan kecerdasan manusia",
-        "Aplikasi kalkulator canggih yang hanya bisa memproses data angka dalam jumlah besar",
-        "Jaringan internet yang menghubungkan seluruh komputer di dunia tanpa campur tangan manusia"
+        "Media tidak menggunakan AI terbaru",
+        "Media tidak dirancang berdasarkan kebutuhan belajar siswa",
+        "Desain visual terlalu sederhana",
+        "Guru kurang menggunakan animasi"
       ],
-      correct: 1,
-      explanation: "AI dalam konteks modern merujuk pada sistem komputer atau perangkat lunak yang dirancang untuk meniru fungsi kognitif manusia seperti belajar, bernalar, dan memecahkan masalah."
+      correct: 1, // B is index 1
+      explanation: "Media pembelajaran harus dirancang berdasarkan tujuan pembelajaran dan karakteristik peserta didik, bukan sekadar menarik secara visual."
     },
     {
-      question: "Manakah dari berikut ini yang BUKAN merupakan contoh penerapan AI dalam kehidupan sehari-hari?",
+      question: "Guru A menggunakan AI untuk membuat poster, sedangkan Guru B menggunakan AI untuk membuat video. Kriteria utama yang seharusnya menentukan pilihan jenis media tersebut adalah...",
       options: [
-        "Sistem rekomendasi film pada platform streaming seperti Netflix",
-        "Asisten suara virtual seperti Siri atau Google Assistant",
-        "Mesin ketik manual tradisional",
-        "Fitur pengenalan wajah pada smartphone"
+        "Popularitas platform AI",
+        "Kemudahan penggunaan aplikasi",
+        "Kesesuaian media dengan karakteristik materi dan tujuan pembelajaran",
+        "Jumlah fitur AI yang tersedia"
       ],
-      correct: 2,
-      explanation: "Mesin ketik manual murni merupakan perangkat mekanis tanpa komponen komputasi apalagi kecerdasan buatan."
+      correct: 2, // C is index 2
+      explanation: "Kriteria utama dalam memilih media adalah kesesuaiannya dengan materi dan tujuan pembelajaran yang ingin dicapai."
     },
     {
-      question: "Apa yang membedakan 'Generative AI' dengan AI tradisional?",
+      question: "Perhatikan pernyataan berikut:\n1. AI dapat mempercepat produksi media.\n2. AI dapat menggantikan seluruh keputusan pembelajaran guru.\n3. AI membantu mengatasi keterbatasan teknis guru.\n4. AI perlu diawasi dan diverifikasi oleh guru.\nPernyataan yang benar adalah...",
       options: [
-        "Generative AI hanya bisa menganalisis data, sedangkan AI tradisional bisa membuat data baru",
-        "Generative AI mampu menciptakan konten baru (teks, gambar, audio) dari prompt, bukan sekadar memilah atau mengklasifikasi data",
-        "Generative AI membutuhkan robot fisik untuk bekerja, sedangkan AI tradisional hanya berupa software",
-        "Tidak ada perbedaan, keduanya adalah istilah yang sama"
+        "1 dan 2",
+        "1, 3, dan 4",
+        "2 dan 3",
+        "Semua benar"
       ],
-      correct: 1,
-      explanation: "Keunikan Generative AI (seperti ChatGPT atau Midjourney) adalah kemampuannya menghasilkan/menciptakan output (konten) yang sama sekali baru berdasarkan pola yang telah dipelajarinya."
+      correct: 1, // B is index 1
+      explanation: "Pernyataan 2 salah, karena AI adalah asisten, sedangkan keputusan pedagogis tetap berada sepenuhnya di tangan guru. Pernyataan 1, 3, dan 4 benar."
     },
     {
-      question: "Bagaimana cara kerja dasar dari sebagian besar model AI modern seperti Large Language Models (LLM)?",
+      question: "Seorang guru meminta AI membuat media pembelajaran tanpa menjelaskan karakteristik siswa maupun tujuan pembelajaran. Risiko terbesar dari tindakan tersebut adalah...",
       options: [
-        "Mencari jawaban secara langsung di Google Search dan menyalinnya",
-        "Memprediksi kata selanjutnya berdasarkan pola statistik dari miliaran data teks yang telah dipelajarinya",
-        "Memiliki database berisi semua jawaban yang sudah diprogram secara manual oleh manusia",
-        "Menghubungi pakar manusia secara real-time untuk menjawab pertanyaan"
+        "Proses pembuatan menjadi lebih lama",
+        "Media tidak relevan dengan kebutuhan belajar siswa",
+        "AI tidak dapat menghasilkan output",
+        "File media menjadi terlalu besar"
       ],
-      correct: 1,
-      explanation: "LLM seperti ChatGPT bekerja menggunakan prinsip probabilitas statistik; mereka memprediksi token/kata apa yang paling masuk akal muncul selanjutnya berdasarkan konteks prompt dan data latihannya."
+      correct: 1, // B is index 1
+      explanation: "Tanpa konteks yang spesifik (karakteristik siswa dan tujuan), AI akan menghasilkan output umum yang kemungkinan besar tidak relevan dengan kebutuhan belajar di kelas tersebut."
     },
     {
-      question: "Dalam konteks pendidikan, apa keuntungan utama menggunakan AI?",
+      question: "Menurut Anda, peran utama guru dalam penggunaan AI adalah...",
       options: [
-        "Menggantikan peran guru sepenuhnya di kelas",
-        "Membuat siswa tidak perlu lagi belajar karena AI bisa mengerjakan semua tugas",
-        "Membantu personalisasi pembelajaran dan mempercepat pembuatan materi ajar bagi guru",
-        "Membuat biaya pendidikan menjadi sangat mahal karena lisensi software"
+        "Operator teknologi",
+        "Pengawas penggunaan perangkat",
+        "Pengambil keputusan pedagogis",
+        "Pengguna aplikasi"
       ],
-      correct: 2,
-      explanation: "AI berfungsi sebagai 'co-pilot' yang membantu guru bekerja lebih efisien (misal: membuat RPP, soal kuis, ilustrasi) dan memungkinkan adaptasi materi sesuai kebutuhan siswa."
+      correct: 2, // C is index 2
+      explanation: "Peran utama guru bukan sekadar menjadi operator teknis, melainkan pengambil keputusan pedagogis yang menentukan tujuan dan relevansi konten yang dihasilkan AI."
     }
   ],
   
