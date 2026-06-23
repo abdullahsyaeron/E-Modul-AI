@@ -354,4 +354,12 @@ function initSidebarScrollspy() {
   sections.forEach(section => {
     observer.observe(section);
   });
+
+  // Default to first item active if none are active
+  setTimeout(() => {
+    const hasActive = document.querySelector('.sidebar-nav-item a.active');
+    if (!hasActive && sidebarLinks.length > 0) {
+      sidebarLinks[0].classList.add('active');
+    }
+  }, 100);
 }
