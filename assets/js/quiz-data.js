@@ -180,59 +180,89 @@ const quizData = {
 
   bab4: [
     {
-      question: "Langkah PERTAMA yang paling esensial sebelum menggunakan AI untuk membuat media pembelajaran adalah?",
-      options: [
-        "Membeli lisensi AI termahal",
-        "Menentukan Tujuan Pembelajaran dan mengidentifikasi karakteristik siswa",
-        "Mencari gambar di Google",
-        "Mencetak buku panduan"
-      ],
+      question: "BENAR atau SALAH: Selama informasi berasal dari AI yang populer, guru tidak perlu melakukan pengecekan ulang.",
+      options: ["Benar", "Salah"],
       correct: 1,
-      explanation: "AI hanyalah alat (tool). Tanpa rumusan tujuan pembelajaran (kompetensi dasar/indikator) yang jelas, output AI tidak akan memiliki arah pedagogik yang benar."
+      explanation: "Guru wajib memverifikasi (fact-checking) semua informasi dari AI generatif manapun, karena AI rentan berhalusinasi atau memberikan fakta yang salah."
     },
     {
-      question: "Jika Anda ingin membuat modul berbasis teks, bagaimana alur penggunaan AI yang paling disarankan?",
-      options: [
-        "Minta AI membuat semuanya dalam 1 prompt pendek, lalu langsung cetak",
-        "Gunakan pendekatan bertahap: minta AI buatkan silabus/outline dulu, revisi outline, lalu minta AI kembangkan per sub-bab",
-        "Suruh siswa yang membuat modulnya menggunakan AI",
-        "Salin langsung artikel dari Wikipedia"
-      ],
-      correct: 1,
-      explanation: "Pendekatan 'Step-by-step' (membuat outline dulu sebelum konten penuh) meminimalkan risiko AI berhalusinasi dan memberikan kontrol lebih besar bagi guru untuk mengoreksi struktur."
+      question: "BENAR atau SALAH: Jika identitas siswa disamarkan menjadi Siswa A, Siswa B, dan Siswa C, risiko pelanggaran privasi dapat dikurangi.",
+      options: ["Benar", "Salah"],
+      correct: 0,
+      explanation: "Menganonimkan data (de-identifikasi) sebelum memasukkannya ke platform AI adalah langkah krusial untuk melindungi privasi siswa."
     },
     {
-      question: "Dalam pembuatan media Video Pembelajaran, AI dapat membantu dalam tahapan apa saja?",
+      question: "BENAR atau SALAH: Semakin banyak AI digunakan dalam pembelajaran, semakin kecil peran guru.",
+      options: ["Benar", "Salah"],
+      correct: 1,
+      explanation: "Peran guru tidak mengecil, melainkan bergeser dari sekadar pembuat konten teknis menjadi perancang pembelajaran, kurator, dan pengambil keputusan pedagogis."
+    },
+    {
+      question: "BENAR atau SALAH: Output AI yang sesuai secara akademik belum tentu sesuai dengan nilai dan budaya sekolah.",
+      options: ["Benar", "Salah"],
+      correct: 0,
+      explanation: "Kebenaran akademis berbeda dengan kesesuaian norma/akidah. Guru harus memastikan konten AI selaras dengan karakter dan budaya spesifik sekolah."
+    },
+    {
+      question: "BENAR atau SALAH: Guru tetap bertanggung jawab terhadap dampak penggunaan media yang dikembangkan dengan bantuan AI.",
+      options: ["Benar", "Salah"],
+      correct: 0,
+      explanation: "Tanggung jawab profesional dan etis terhadap proses dan hasil belajar siswa tetap sepenuhnya berada di tangan guru, bukan pada mesin AI."
+    },
+    {
+      question: "Seorang guru menggunakan ChatGPT untuk membuat soal evaluasi. Setelah digunakan, ditemukan beberapa jawaban benar yang sebenarnya tidak sesuai dengan referensi resmi. Tanggung jawab utama atas kesalahan tersebut berada pada...",
       options: [
-        "Hanya saat merekam video",
-        "Hanya saat mengedit video",
-        "Menulis skrip (ChatGPT), membuat storyboard visual (Midjourney), hingga men-generate video/suara narator (HeyGen/ElevenLabs)",
-        "AI tidak bisa digunakan untuk membuat video"
+        "Pengembang ChatGPT",
+        "Platform AI yang digunakan",
+        "Guru sebagai pengguna dan validator media",
+        "Siswa yang mengerjakan soal"
       ],
       correct: 2,
-      explanation: "AI dapat dilibatkan secara end-to-end dalam produksi video: mulai dari pra-produksi (ideasi, skrip), produksi (generasi aset visual/audio), hingga pasca-produksi (editing otomatis)."
+      explanation: "Dalam penggunaan AI untuk pendidikan, tanggung jawab profesional tidak berpindah kepada teknologi. Guru tetap bertanggung jawab terhadap akurasi konten yang digunakan dalam pembelajaran."
     },
     {
-      question: "Bagaimana cara terbaik mengintegrasikan hasil gambar dari AI (misal Canva AI) ke dalam presentasi kelas?",
+      question: "Perhatikan tindakan berikut:\n1. Memasukkan daftar nilai siswa ke ChatGPT untuk dianalisis.\n2. Mengganti identitas siswa menjadi kode anonim sebelum dianalisis.\n3. Memverifikasi fakta yang dihasilkan AI sebelum digunakan.\n4. Menggunakan output AI tanpa revisi karena berasal dari platform terpercaya.\nTindakan yang mencerminkan penggunaan AI secara etis adalah...",
       options: [
-        "Memasukkan semua gambar acak tanpa keterangan",
-        "Memastikan gambar relevan dengan teks, memiliki resolusi baik, dan menambah pemahaman konsep (bukan sekadar dekorasi)",
-        "Membuat gambar yang penuh dengan teks agar siswa sibuk membaca",
-        "Menjadikan gambar sebagai background yang menutupi teks materi utama"
+        "1 dan 4",
+        "2 dan 3",
+        "1 dan 3",
+        "2 dan 4"
       ],
       correct: 1,
-      explanation: "Prinsip multimedia dalam pembelajaran (Mayer) menyatakan bahwa elemen visual harus selaras dengan teks dan berfungsi memfasilitasi pemrosesan kognitif, bukan menjadi distraksi."
+      explanation: "Prinsip etika AI menuntut perlindungan privasi siswa (tindakan 2) dan keharusan verifikasi terhadap seluruh output yang dihasilkan AI (tindakan 3)."
     },
     {
-      question: "Setelah AI selesai meng-generate media pembelajaran, apa peran guru selanjutnya?",
+      question: "Seorang guru menggunakan AI untuk membuat presentasi tentang keberagaman budaya Indonesia. Setelah ditinjau, beberapa ilustrasi yang dihasilkan menampilkan stereotip terhadap kelompok budaya tertentu. Apa tindakan yang paling tepat?",
       options: [
-        "Langsung membagikannya ke siswa tanpa dibaca",
-        "Menghapusnya kembali",
-        "Bertindak sebagai Kurator: memverifikasi fakta, menyesuaikan konteks lokal, dan memastikan keselarasan dengan kurikulum",
-        "Mengganti nama AI menjadi namanya sendiri agar terlihat pintar"
+        "Menggunakan presentasi tersebut karena informasi utamanya benar.",
+        "Menghapus seluruh presentasi dan tidak menggunakan AI lagi.",
+        "Merevisi atau mengganti ilustrasi yang berpotensi menimbulkan bias.",
+        "Mengabaikan ilustrasi karena siswa lebih fokus pada teks."
       ],
       correct: 2,
-      explanation: "Human-in-the-loop sangat penting. AI bisa salah (halusinasi). Guru harus mengkurasi, memvalidasi kebenaran materi, dan memberikan sentuhan humanis/kontekstual sebelum digunakan di kelas."
+      explanation: "Guru harus mengevaluasi output AI dari aspek akurasi maupun bias yang mungkin muncul akibat data pelatihan AI. Mengganti visual yang bias adalah langkah korektif yang wajib."
+    },
+    {
+      question: "Sebuah video pembelajaran yang dibuat dengan AI memiliki desain visual yang sangat menarik. Namun isi materi tidak sepenuhnya mendukung tujuan pembelajaran yang telah ditetapkan. Berdasarkan prinsip etika dan desain pembelajaran, keputusan terbaik adalah...",
+      options: [
+        "Tetap menggunakan video karena menarik perhatian siswa.",
+        "Mengurangi durasi video.",
+        "Merevisi konten agar selaras dengan tujuan pembelajaran.",
+        "Menambahkan lebih banyak animasi."
+      ],
+      correct: 2,
+      explanation: "Aspek estetika tidak boleh mengalahkan keselarasan instruksional. Media yang baik pertama-tama harus mendukung pencapaian tujuan pembelajaran."
+    },
+    {
+      question: "Manakah situasi berikut yang menunjukkan hilangnya judgment pedagogis guru?",
+      options: [
+        "Guru menggunakan AI untuk membuat draft media lalu melakukan revisi.",
+        "Guru meminta rekan sejawat meninjau media yang dibuat.",
+        "Guru menggunakan seluruh output AI tanpa mengevaluasi kesesuaiannya.",
+        "Guru memverifikasi fakta dari sumber lain."
+      ],
+      correct: 2,
+      explanation: "Hilangnya judgment (penilaian kritis) pedagogis terjadi ketika guru menyerahkan keputusan instruksional kepada AI secara mentah tanpa proses evaluasi profesional."
     }
   ],
 
