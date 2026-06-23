@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 2: Jenis AI untuk Media Pembelajaran - E-Modul AI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-body bg-alt">
+
+    <div id="reading-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                    <i class="fas fa-robot text-primary"></i>
+                </div>
+                <div>
+                    <span class="brand-name">E-Modul AI</span>
+                    <span class="brand-sub">Media Pembelajaran</span>
+                </div>
+            </a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="navbar-mobile" id="navbar-mobile">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a>
+        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
+        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
+        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a>
+    </div>
+
+    <!-- Chapter Header -->
+    <header class="chapter-header">
+        <div class="container-narrow">
+            <div class="breadcrumb mb-4" style="padding-block: 0;">
+                <a href="index.html" style="color: rgba(255,255,255,0.7);">Dashboard</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <a href="materi.html" style="color: rgba(255,255,255,0.7);">Materi</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <span class="current" style="color: white;">BAB 2</span>
+            </div>
+            
+            <div class="chapter-num">
+                <i class="fas fa-bookmark text-accent-light"></i> BAB 2
+            </div>
+            <h1>Jenis AI untuk Media Pembelajaran</h1>
+            
+            <div class="chapter-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> Estimasi Waktu: 20 Menit</div>
+                <div class="meta-item"><i class="fas fa-book-open"></i> Eksplorasi Tools</div>
+            </div>
+
+            <div class="chapter-tujuan">
+                <h3>Capaian Pembelajaran Bab Ini:</h3>
+                <ul>
+                    <li>Mengenali kategori Generative AI berdasarkan format outputnya.</li>
+                    <li>Mengidentifikasi platform AI spesifik untuk teks, gambar, audio, dan video.</li>
+                    <li>Mampu memilih AI tool yang tepat sesuai dengan tujuan pembuatan media pembelajaran.</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container section pt-8">
+        <div class="materi-layout">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="materi-sidebar hide-mobile">
+                <div class="sidebar-header">Daftar Materi</div>
+                <div class="sidebar-nav-list">
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab1.html">
+                            <span class="bab-badge">1</span> Konsep Dasar AI
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab2.html" class="active">
+                            <span class="bab-badge">2</span> Jenis AI Media
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab3.html">
+                            <span class="bab-badge">3</span> Prompt Engineering
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab4.html">
+                            <span class="bab-badge">4</span> Implementasi Praktis
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab5.html">
+                            <span class="bab-badge">5</span> Etika Penggunaan
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="materi-main content-body">
+                
+                <h2>1. Text-to-Text AI (AI Berbasis Teks)</h2>
+                <p>
+                    Ini adalah jenis AI yang paling fundamental dan serbaguna. Anda memberikan prompt berupa teks, dan AI membalasnya dengan teks. Platform ini sangat ahli dalam merangkum, menulis, menerjemahkan, dan bahkan menyusun logika soal evaluasi.
+                </p>
+                
+                <h4>Tools Populer:</h4>
+                <ul>
+                    <li><strong>ChatGPT (OpenAI):</strong> Sangat baik untuk brainstorming, menyusun draf materi pelajaran, membuat skrip video, dan menyusun kuis.</li>
+                    <li><strong>Claude (Anthropic):</strong> Unggul dalam memproses dokumen panjang dan memiliki gaya penulisan yang lebih natural dan lebih aman.</li>
+                    <li><strong>Google Gemini:</strong> Terintegrasi kuat dengan ekosistem Google (Docs, Gmail) dan memiliki kemampuan akses informasi real-time dari internet yang sangat baik.</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Contoh Penggunaan:</strong> Meminta ChatGPT untuk mengubah teks ilmiah yang rumit tentang "Sistem Pencernaan" menjadi sebuah cerita petualangan interaktif agar lebih mudah dipahami oleh siswa SMP.
+                </div>
+
+                <h2>2. Text-to-Image AI (AI Penghasil Gambar)</h2>
+                <p>
+                    AI jenis ini dapat menghasilkan gambar, ilustrasi, atau lukisan digital yang benar-benar baru berdasarkan deskripsi teks yang Anda berikan. Ini memecahkan masalah bagi guru yang kesulitan mencari gambar yang persis sesuai kebutuhan di Google Images (yang sering terhalang masalah resolusi atau hak cipta).
+                </p>
+
+                <h4>Tools Populer:</h4>
+                <ul>
+                    <li><strong>Midjourney:</strong> Menghasilkan gambar dengan kualitas paling artistik dan fotorealistik, namun harus diakses melalui Discord.</li>
+                    <li><strong>Canva AI (Magic Media):</strong> Sangat praktis karena terintegrasi langsung di dalam Canva. Cocok untuk membuat ilustrasi slide presentasi.</li>
+                    <li><strong>DALL-E 3 (OpenAI):</strong> Terintegrasi di ChatGPT Plus, sangat pintar dalam menerjemahkan prompt rumit menjadi gambar yang sangat akurat secara logika visual.</li>
+                </ul>
+
+                <h2>3. Text-to-Audio / Music AI (AI Audio)</h2>
+                <p>
+                    Mencakup dua jenis: Text-to-Speech (mengubah teks menjadi suara narator manusia) dan Music Generation (membuat lagu dari deskripsi teks).
+                </p>
+
+                <h4>Tools Populer:</h4>
+                <ul>
+                    <li><strong>ElevenLabs:</strong> Rajanya Text-to-Speech saat ini. Menghasilkan suara manusia yang sangat natural, lengkap dengan intonasi emosi dan pernapasan. Sangat cocok untuk mengisi suara (voice-over) video pembelajaran.</li>
+                    <li><strong>Suno AI / Udio:</strong> Dapat menghasilkan lagu lengkap dengan vokal dan instrumen hanya dari teks. Sangat berguna untuk membuat "Lagu Hafalan" bagi siswa (misal: lagu untuk menghafal tabel periodik unsur).</li>
+                </ul>
+
+                <h2>4. Text-to-Video & Presentation AI</h2>
+                <p>
+                    AI yang mengubah teks atau dokumen langsung menjadi format video jadi atau slide presentasi lengkap.
+                </p>
+
+                <h4>Tools Populer:</h4>
+                <ul>
+                    <li><strong>HeyGen / Synthesia:</strong> Memungkinkan Anda mengetik teks materi, lalu avatar fotorealistik manusia akan "membacakan" teks tersebut di dalam video layaknya presenter berita.</li>
+                    <li><strong>Gamma.app / Tome:</strong> Anda hanya perlu mengetik judul materi (misal: "Sejarah Perang Diponegoro"), dan platform ini akan men-generate slide presentasi lengkap (teks materi, layout, dan gambar ilustrasi pendukung) dalam hitungan detik.</li>
+                </ul>
+
+                <blockquote>
+                    "Jangan gunakan semua AI sekaligus. Mulailah dari AI Teks (ChatGPT) untuk menyusun struktur materi, baru kemudian gunakan AI Gambar atau Presentasi untuk memvisualisasikannya."
+                </blockquote>
+
+                <!-- Quiz Container -->
+                <div id="quiz-container" data-bab="bab2" class="mt-12">
+                    <!-- Quiz Engine akan me-render kuis di sini -->
+                </div>
+
+                <!-- Navigation -->
+                <div class="chapter-nav">
+                    <a href="materi-bab1.html" class="chapter-nav-btn prev">
+                        <i class="fas fa-arrow-left text-accent" style="font-size: 1.5rem;"></i>
+                        <div>
+                            <span class="nav-label">Bab Sebelumnya</span>
+                            <span class="nav-title">Konsep Dasar AI</span>
+                        </div>
+                    </a>
+                    <a href="materi-bab3.html" class="chapter-nav-btn next">
+                        <div>
+                            <span class="nav-label">Bab Selanjutnya</span>
+                            <span class="nav-title">Prompt Engineering</span>
+                        </div>
+                        <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
+                    </a>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name">
+                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                    </span>
+                    <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Pintasan</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="materi.html">Materi Belajar</a></li>
+                        <li><a href="prompt.html">Kumpulan Prompt</a></li>
+                        <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="fas fa-heart text-danger"></i> di Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/quiz-data.js"></script>
+    <script src="assets/js/quiz-engine.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
