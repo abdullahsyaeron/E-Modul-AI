@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 4: Implementasi Praktis - E-Modul AI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-body bg-alt">
+
+    <div id="reading-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                    <i class="fas fa-robot text-primary"></i>
+                </div>
+                <div>
+                    <span class="brand-name">E-Modul AI</span>
+                    <span class="brand-sub">Media Pembelajaran</span>
+                </div>
+            </a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="navbar-mobile" id="navbar-mobile">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a>
+        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
+        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
+        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a>
+    </div>
+
+    <!-- Chapter Header -->
+    <header class="chapter-header">
+        <div class="container-narrow">
+            <div class="breadcrumb mb-4" style="padding-block: 0;">
+                <a href="index.html" style="color: rgba(255,255,255,0.7);">Dashboard</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <a href="materi.html" style="color: rgba(255,255,255,0.7);">Materi</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <span class="current" style="color: white;">BAB 4</span>
+            </div>
+            
+            <div class="chapter-num">
+                <i class="fas fa-bookmark text-accent-light"></i> BAB 4
+            </div>
+            <h1>Implementasi AI dalam Media Pembelajaran</h1>
+            
+            <div class="chapter-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> Estimasi Waktu: 30 Menit</div>
+                <div class="meta-item"><i class="fas fa-book-open"></i> Praktik & Studi Kasus</div>
+            </div>
+
+            <div class="chapter-tujuan">
+                <h3>Capaian Pembelajaran Bab Ini:</h3>
+                <ul>
+                    <li>Memahami alur kerja (workflow) pembuatan media berbasis AI dari awal hingga akhir.</li>
+                    <li>Mampu merancang modul tekstual, presentasi, dan video pembelajaran dengan bantuan AI.</li>
+                    <li>Menerapkan prinsip 'Human-in-the-Loop' sebagai kurator akhir.</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container section pt-8">
+        <div class="materi-layout">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="materi-sidebar hide-mobile">
+                <div class="sidebar-header">Daftar Materi</div>
+                <div class="sidebar-nav-list">
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab1.html">
+                            <span class="bab-badge">1</span> Konsep Dasar AI
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab2.html">
+                            <span class="bab-badge">2</span> Jenis AI Media
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab3.html">
+                            <span class="bab-badge">3</span> Prompt Engineering
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab4.html" class="active">
+                            <span class="bab-badge">4</span> Implementasi Praktis
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab5.html">
+                            <span class="bab-badge">5</span> Etika Penggunaan
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="materi-main content-body">
+                
+                <h2>1. Alur Kerja (Workflow) Pembuatan Media</h2>
+                <p>
+                    Kesalahan terbesar yang sering dilakukan pemula adalah meminta AI untuk membuat materi utuh secara langsung dalam satu klik. Hal ini sering menghasilkan materi yang dangkal, tidak terstruktur, dan berpotensi halusinasi. Alur kerja yang benar haruslah bertahap (step-by-step).
+                </p>
+
+                <div class="highlight-box">
+                    <ol>
+                        <li><strong>Identifikasi Tujuan:</strong> Tentukan Kompetensi Dasar/Tujuan Pembelajaran dan target audiens (siswa kelas berapa).</li>
+                        <li><strong>Pembuatan Outline (Kerangka):</strong> Minta AI membuatkan struktur daftar isi/sub-bab materi terlebih dahulu.</li>
+                        <li><strong>Review Guru (Tahap 1):</strong> Guru mengoreksi outline tersebut. Tambah, kurangi, atau ubah urutan sub-bab agar sesuai kurikulum.</li>
+                        <li><strong>Pengembangan Konten:</strong> Minta AI menjabarkan materi per satu sub-bab (jangan semua sekaligus).</li>
+                        <li><strong>Review Guru (Tahap 2):</strong> Guru memverifikasi fakta dan menyesuaikan gaya bahasa.</li>
+                        <li><strong>Visualisasi:</strong> Gunakan AI gambar/presentasi untuk memperkaya teks materi.</li>
+                    </ol>
+                </div>
+
+                <h2>2. Studi Kasus 1: Membuat Slide Presentasi (PPT)</h2>
+                <p>
+                    Anda akan mengajar tentang "Daur Air" (Siklus Hidrologi) untuk kelas 5 SD. Berikut cara menggabungkan beberapa AI:
+                </p>
+                <ul>
+                    <li><strong>Langkah 1 (ChatGPT):</strong> Gunakan prompt: <em>"Buatkan skrip slide presentasi 5 halaman tentang Siklus Hidrologi untuk anak kelas 5 SD. Setiap slide harus memiliki: Judul, 3 Poin Teks singkat, dan ide gambar visual apa yang cocok untuk slide tersebut."</em></li>
+                    <li><strong>Langkah 2 (Canva AI):</strong> Buka Canva, gunakan fitur Text-to-Image. Masukkan ide visual dari ChatGPT, contoh: <em>"Ilustrasi kartun anak-anak tentang matahari yang memanaskan air laut sehingga menguap ke udara, gaya watercolor ceria."</em></li>
+                    <li><strong>Langkah 3 (Human Assembly):</strong> Masukkan teks dari ChatGPT dan gambar dari Canva AI ke dalam template slide Anda. Sesuaikan letaknya.</li>
+                </ul>
+
+                <h2>3. Studi Kasus 2: Membuat Video Pembelajaran (Avatar)</h2>
+                <p>
+                    Jika Anda tidak nyaman tampil di depan kamera, Anda bisa menggunakan AI Video:
+                </p>
+                <ul>
+                    <li><strong>Skrip (Claude/ChatGPT):</strong> Minta AI membuatkan naskah monolog berdurasi 2 menit tentang "Pahlawan Nasional".</li>
+                    <li><strong>Video Generator (HeyGen/Synthesia):</strong> Buat proyek baru, pilih karakter avatar digital yang terlihat profesional (misal: memakai batik), lalu paste naskah dari ChatGPT ke dalam kolom teks.</li>
+                    <li><strong>Generate:</strong> Avatar akan membaca teks tersebut dengan gerakan bibir (lip-sync) dan gestur yang natural. Anda bisa mengunduh videonya dan menambahkannya ke YouTube atau Google Classroom.</li>
+                </ul>
+
+                <h2>4. Konsep "Human-in-the-Loop"</h2>
+                <p>
+                    Prinsip terpenting dalam implementasi AI adalah <strong>Human-in-the-Loop (Manusia di dalam lingkaran proses)</strong>. AI bertindak sebagai "Drafter" (pembuat draf/konsep awal), namun Guru tetap menjadi "Editor in Chief" (Pemred).
+                </p>
+                
+                <p>Anda HARUS memastikan:</p>
+                <ul>
+                    <li><strong>Akurasi Fakta:</strong> AI tidak tahu fakta, ia hanya memprediksi kata. Apakah tahun kejadian sejarahnya benar? Apakah rumus fisikanya tepat?</li>
+                    <li><strong>Kesesuaian Konteks Lokal:</strong> Jika AI memberikan contoh apel dan musim salju, ubah menjadi contoh mangga dan musim hujan agar relevan dengan keseharian siswa di Indonesia.</li>
+                    <li><strong>Sentuhan Emosional:</strong> AI tidak memiliki empati. Tambahkan kalimat pembuka yang menyapa siswa dengan hangat, atau sisipkan humor khas Anda yang biasa disukai siswa di kelas.</li>
+                </ul>
+
+                <!-- Quiz Container -->
+                <div id="quiz-container" data-bab="bab4" class="mt-12">
+                    <!-- Quiz Engine akan me-render kuis di sini -->
+                </div>
+
+                <!-- Navigation -->
+                <div class="chapter-nav">
+                    <a href="materi-bab3.html" class="chapter-nav-btn prev">
+                        <i class="fas fa-arrow-left text-accent" style="font-size: 1.5rem;"></i>
+                        <div>
+                            <span class="nav-label">Bab Sebelumnya</span>
+                            <span class="nav-title">Prompt Engineering</span>
+                        </div>
+                    </a>
+                    <a href="materi-bab5.html" class="chapter-nav-btn next">
+                        <div>
+                            <span class="nav-label">Bab Selanjutnya</span>
+                            <span class="nav-title">Etika Penggunaan</span>
+                        </div>
+                        <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
+                    </a>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name">
+                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                    </span>
+                    <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Pintasan</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="materi.html">Materi Belajar</a></li>
+                        <li><a href="prompt.html">Kumpulan Prompt</a></li>
+                        <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="fas fa-heart text-danger"></i> di Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/quiz-data.js"></script>
+    <script src="assets/js/quiz-engine.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
