@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 5: Etika dan Batasan Penggunaan AI - E-Modul AI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-body bg-alt">
+
+    <div id="reading-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                    <i class="fas fa-robot text-primary"></i>
+                </div>
+                <div>
+                    <span class="brand-name">E-Modul AI</span>
+                    <span class="brand-sub">Media Pembelajaran</span>
+                </div>
+            </a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="navbar-mobile" id="navbar-mobile">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a>
+        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
+        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
+        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a>
+    </div>
+
+    <!-- Chapter Header -->
+    <header class="chapter-header">
+        <div class="container-narrow">
+            <div class="breadcrumb mb-4" style="padding-block: 0;">
+                <a href="index.html" style="color: rgba(255,255,255,0.7);">Dashboard</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <a href="materi.html" style="color: rgba(255,255,255,0.7);">Materi</a>
+                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
+                <span class="current" style="color: white;">BAB 5</span>
+            </div>
+            
+            <div class="chapter-num">
+                <i class="fas fa-bookmark text-accent-light"></i> BAB 5
+            </div>
+            <h1>Etika dan Batasan Penggunaan AI</h1>
+            
+            <div class="chapter-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> Estimasi Waktu: 15 Menit</div>
+                <div class="meta-item"><i class="fas fa-book-open"></i> Kesadaran Digital (Digital Literacy)</div>
+            </div>
+
+            <div class="chapter-tujuan">
+                <h3>Capaian Pembelajaran Bab Ini:</h3>
+                <ul>
+                    <li>Memahami fenomena AI Hallucination dan cara memitigasinya.</li>
+                    <li>Menyadari isu privasi data dan perlindungan informasi siswa.</li>
+                    <li>Mampu mengajarkan etika penggunaan AI kepada siswa di kelas.</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container section pt-8">
+        <div class="materi-layout">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="materi-sidebar hide-mobile">
+                <div class="sidebar-header">Daftar Materi</div>
+                <div class="sidebar-nav-list">
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab1.html">
+                            <span class="bab-badge">1</span> Konsep Dasar AI
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab2.html">
+                            <span class="bab-badge">2</span> Jenis AI Media
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab3.html">
+                            <span class="bab-badge">3</span> Prompt Engineering
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab4.html">
+                            <span class="bab-badge">4</span> Implementasi Praktis
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="materi-bab5.html" class="active">
+                            <span class="bab-badge">5</span> Etika Penggunaan
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="materi-main content-body">
+                
+                <h2>1. Waspada "AI Hallucination" (Halusinasi AI)</h2>
+                <p>
+                    <span class="key-term">AI Hallucination</span> adalah kondisi di mana AI memberikan jawaban yang terdengar sangat meyakinkan, terstruktur dengan tata bahasa yang sempurna, namun secara faktual <strong>salah total</strong> atau bahkan merujuk pada sumber/buku yang sebenarnya tidak pernah ada.
+                </p>
+                <p>
+                    Mengapa ini terjadi? Karena LLM seperti ChatGPT bukanlah mesin pencari (search engine) yang mengambil data dari database fakta mutlak. Mereka adalah "mesin probabilitas kata". Jika AI tidak tahu jawabannya, algoritma mereka akan cenderung "mengarang" kalimat yang secara statistik paling mendekati kebenaran.
+                </p>
+
+                <div class="highlight-box" style="border-left-color: var(--color-danger);">
+                    <i class="fas fa-exclamation-triangle text-danger text-2xl mb-2"></i>
+                    <p style="margin-bottom:0;"><strong>Tindakan Guru:</strong> Selalu lakukan verifikasi silang (cross-check) terhadap angka, nama tokoh sejarah, kutipan, dan referensi jurnal yang diberikan oleh AI sebelum memasukkannya ke dalam modul pembelajaran.</p>
+                </div>
+
+                <h2>2. Privasi dan Keamanan Data Siswa</h2>
+                <p>
+                    Banyak platform AI versi gratis (termasuk ChatGPT Free) secara default menggunakan teks percakapan Anda (prompt) untuk melatih model AI mereka di masa depan.
+                </p>
+                <p>
+                    Oleh karena itu, <strong>SANGAT DILARANG</strong> memasukkan data pribadi atau sensitif siswa ke dalam platform AI publik. Contoh data yang tidak boleh dimasukkan:
+                </p>
+                <ul>
+                    <li>Nama lengkap siswa beserta NISN.</li>
+                    <li>Daftar nilai rapor lengkap.</li>
+                    <li>Catatan bimbingan konseling (BK) atau kondisi psikologis siswa.</li>
+                    <li>Foto asli wajah siswa (ke dalam platform AI gambar).</li>
+                </ul>
+                <p>
+                    <em>Solusi:</em> Jika Anda ingin meminta AI menganalisis data nilai kelas, gunakan inisial atau sebut saja "Siswa A, Siswa B", dan hapus segala atribut yang mengidentifikasi sekolah secara spesifik.
+                </p>
+
+                <h2>3. Isu Hak Cipta (Copyright)</h2>
+                <p>
+                    Gambar atau musik yang dihasilkan oleh AI dilatih menggunakan jutaan karya seni milik seniman asli di internet (seringkali tanpa izin langsung). Hukum hak cipta terkait karya AI saat ini masih menjadi perdebatan global.
+                </p>
+                <p>
+                    Untuk keperluan <strong>pendidikan non-komersial</strong> (digunakan di dalam kelas), penggunaan gambar/audio AI sangat aman (masuk ranah <em>Fair Use</em>). Namun secara etika, Anda disarankan untuk mencantumkan atribusi sederhana, misalnya: <em>"Ilustrasi dihasilkan menggunakan Midjourney/Canva AI"</em> di sudut slide presentasi Anda.
+                </p>
+
+                <h2>4. Mengajarkan Etika AI kepada Siswa</h2>
+                <p>
+                    Sebagai pendidik, alih-alih melarang penggunaan AI sepenuhnya (yang mana sangat sulit dikontrol), lebih baik kita mengajarkan <strong>Literasi AI</strong> kepada siswa:
+                </p>
+                <ul>
+                    <li><strong>AI sebagai Tutor, bukan Joki:</strong> Ajarkan siswa untuk menggunakan AI sebagai teman diskusi ("Tolong jelaskan rumus ini dengan bahasa sederhana") bukan sebagai joki tugas ("Buatkan esai 500 kata tentang sejarah kemerdekaan").</li>
+                    <li><strong>Kewajiban Sitasi:</strong> Biasakan siswa untuk mendeklarasikan bagian mana dari tugas mereka yang dibantu oleh AI.</li>
+                    <li><strong>Pemikiran Kritis (Critical Thinking):</strong> Ajak siswa menganalisis hasil output AI. Tanyakan di kelas: "Menurut kalian, apakah jawaban ChatGPT ini 100% benar? Mari kita cek di buku paket."</li>
+                </ul>
+
+                <blockquote>
+                    "Teknologi hanyalah alat. Karakter, empati, dan keteladanan seorang gurulah yang sesungguhnya membentuk masa depan siswa."
+                </blockquote>
+
+                <!-- Quiz Container -->
+                <div id="quiz-container" data-bab="bab5" class="mt-12">
+                    <!-- Quiz Engine akan me-render kuis di sini -->
+                </div>
+
+                <!-- Navigation -->
+                <div class="chapter-nav">
+                    <a href="materi-bab4.html" class="chapter-nav-btn prev">
+                        <i class="fas fa-arrow-left text-accent" style="font-size: 1.5rem;"></i>
+                        <div>
+                            <span class="nav-label">Bab Sebelumnya</span>
+                            <span class="nav-title">Implementasi Praktis</span>
+                        </div>
+                    </a>
+                    <a href="prompt.html" class="chapter-nav-btn next">
+                        <div>
+                            <span class="nav-label">Selanjutnya</span>
+                            <span class="nav-title">Kumpulan Prompt</span>
+                        </div>
+                        <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
+                    </a>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name">
+                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                    </span>
+                    <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Pintasan</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="materi.html">Materi Belajar</a></li>
+                        <li><a href="prompt.html">Kumpulan Prompt</a></li>
+                        <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="fas fa-heart text-danger"></i> di Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/quiz-data.js"></script>
+    <script src="assets/js/quiz-engine.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
