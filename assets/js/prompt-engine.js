@@ -83,7 +83,42 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-icon').innerHTML = `<i class="fas ${icon}"></i>`;
         document.getElementById('modal-title').innerText = p.title;
         document.getElementById('modal-desc').innerText = p.description;
-        document.getElementById('modal-prompt-box').innerHTML = formatPromptHTML(p.prompt);
+        
+        let contentHtml = '';
+        
+        if (p.guide) {
+          contentHtml += `
+            <div style="background: rgba(14, 165, 233, 0.05); border-left: 4px solid var(--color-primary); padding: 15px; margin-bottom: 20px; border-radius: 4px;">
+              <h4 style="color: var(--color-primary-dark); margin-bottom: 10px; font-weight: bold;"><i class="fas fa-info-circle"></i> Panduan Penggunaan</h4>
+              <div style="font-size: 0.9rem; line-height: 1.5; color: var(--color-text);">${formatPromptHTML(p.guide)}</div>
+            </div>
+          `;
+        }
+
+        contentHtml += `
+          <h4 style="margin-bottom: 10px; font-weight: bold;"><i class="fas fa-terminal text-muted"></i> Prompt Utama <span style="font-size: 0.8rem; font-weight: normal; color: var(--color-text-muted);">(Klik Salin di bawah untuk menyalin bagian ini saja)</span></h4>
+          <div style="background: var(--color-bg-alt); padding: 15px; border-radius: 8px; border: 1px solid var(--color-border); margin-bottom: 20px; font-family: monospace; font-size: 0.9rem;">${formatPromptHTML(p.prompt)}</div>
+        `;
+
+        if (p.exampleInput) {
+          contentHtml += `
+            <h4 style="margin-bottom: 10px; font-weight: bold;"><i class="fas fa-keyboard text-muted"></i> Contoh Input Data Anda</h4>
+            <div style="background: white; padding: 15px; border-radius: 8px; border: 1px dashed var(--color-border); margin-bottom: 20px; font-size: 0.9rem; color: var(--color-text-muted);">${formatPromptHTML(p.exampleInput)}</div>
+          `;
+        }
+
+        if (p.exampleOutput) {
+          contentHtml += `
+            <h4 style="margin-bottom: 10px; font-weight: bold;"><i class="fas fa-robot text-muted"></i> Contoh Hasil dari AI</h4>
+            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.9rem; color: #334155; border-left: 4px solid #10b981;">${formatPromptHTML(p.exampleOutput)}</div>
+          `;
+        }
+
+        document.getElementById('modal-prompt-box').innerHTML = contentHtml;
+        document.getElementById('modal-prompt-box').style.background = 'transparent';
+        document.getElementById('modal-prompt-box').style.border = 'none';
+        document.getElementById('modal-prompt-box').style.padding = '0';
+
         btnCopyModal.setAttribute('data-text', encodeURIComponent(p.prompt));
 
         modal.style.display = 'flex';

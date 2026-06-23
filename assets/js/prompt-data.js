@@ -220,7 +220,38 @@ F. Layout dan Hierarki Informasi
 G. Elemen Visual Utama
 H. Hal yang Harus Dihindari
 I. Panduan Konsistensi Antar Media
-J. Design Brief Final`
+J. Design Brief Final`,
+    exampleInput: `Mata Pelajaran: IPA
+Kelas: VIII SMP
+Topik: Sistem Pernapasan Manusia
+Tujuan Pembelajaran: Siswa mampu mengidentifikasi organ-organ sistem pernapasan manusia dan menjelaskan fungsi masing-masing organ.
+Karakteristik Peserta Didik:
+- Usia 13–14 tahun
+- Menyukai visual menarik
+- Tingkat literasi sedang
+- Mudah terdistraksi oleh teks yang terlalu panjang
+Referensi:
+- Poster infografis pendidikan modern
+- Warna biru dan putih
+- Flat illustration
+- Layout bersih dan minimalis`,
+    exampleOutput: `A. Ringkasan Kebutuhan Visual
+Materi memerlukan visualisasi organ tubuh yang jelas dan mudah dikenali. Konsep bersifat konkret sehingga ilustrasi anatomi sederhana lebih efektif dibanding teks panjang.
+
+B. Design Direction
+Educational Modern Infographic, Clean, Friendly, Scientific, Student-Centered
+
+C. Moodboard Deskriptif
+Nuansa: profesional, edukatif, bersih, modern, terpercaya. Kesan yang ingin dibangun: "Belajar sains itu mudah dan menarik."
+
+D. Palet Warna
+Warna Utama: Biru Muda, Biru Tua, Putih. Warna Aksen: Hijau Mint. Alasan: Membangun kesan ilmiah, bersih, dan nyaman dibaca.
+
+E. Tipografi
+Judul: Poppins Bold. Isi: Open Sans. Karakter: Modern, ramah, mudah dibaca.
+
+F. Layout
+Hero Visual di bagian atas, Organ Pernapasan di tengah, Fungsi Organ dalam bentuk card, Fakta Menarik di bagian bawah.`
   },
 
   // ================= KATEGORI: PRODUKSI MEDIA PEMBELAJARAN =================
@@ -228,7 +259,7 @@ J. Design Brief Final`
     id: 'p1',
     category: 'produksi',
     title: 'Poster Pembelajaran Informatif (Canva AI)',
-    description: 'Menghasilkan rancangan poster pembelajaran informatif, siap pakai untuk Canva atau Image Generator.',
+    description: 'Menghasilkan rancangan poster pembelajaran informatif, siap pakai untuk Canva. Prompt ini memanfaatkan ChatGPT sebagai Meta Prompting Tool.',
     prompt: `Saya adalah guru [mata pelajaran] kelas [kelas].
 Saya ingin membuat poster pembelajaran tentang:
 [topik]
@@ -278,9 +309,24 @@ B. Struktur Poster
 C. Hierarki Informasi
 D. Teks Poster
 E. Prompt Visual Siap Pakai
-F. Panduan Desain
-
-Catatan: Setelah ini, saya dapat memberikan instruksi "Buat informasi yang ada menjadi sebuah prompt ilustrasi yang baik, detail, dan lengkap".`
+F. Panduan Desain`,
+    guide: `1. Salin dan Masukkan teks Prompt Utama di atas ke Chat GPT.
+2. Setelah itu, berikan informasi kelas, topik, dll Anda (seperti pada Contoh Input) tepat di bawahnya di dalam kolom chat yang sama.
+3. Setelah Chat GPT me-generate informasi pelengkap poster Anda, berikan instruksi lanjutan:
+   **"Buat informasi yang ada menjadi sebuah prompt yang baik, detail, dan lengkap"**
+4. Hasil akhir berupa prompt panjang siap dieksekusi oleh AI Generator gambar.`,
+    exampleInput: `Mata Pelajaran: IPA Kelas: VIII SMP Topik: Sistem Pernapasan Manusia Tujuan Pembelajaran: Siswa mampu mengidentifikasi organ-organ sistem pernapasan manusia dan menjelaskan fungsi masing-masing organ. Karakteristik Peserta Didik: Usia 13–14 tahun Literasi sedang Menyukai visual menarik Mudah bosan dengan teks panjang`,
+    exampleOutput: `(Hasil setelah instruksi pembuatan prompt akhir):
+Saya adalah guru IPA kelas VIII SMP. Saya ingin membuat poster pembelajaran yang informatif, menarik secara visual...
+Tujuan pembelajaran: Siswa mampu mengidentifikasi organ-organ sistem pernapasan manusia...
+Prinsip desain yang harus digunakan: Visual lebih dominan, Terapkan prinsip Cognitive Load Theory...
+Struktur poster yang harus dibuat:
+A. Header (Judul menarik)
+B. Visual Utama (Ilustrasi anatomi)
+C. Organ dan Fungsi (Hidung, Faring, Laring...)
+D. Alur Perjalanan Udara
+E. Fakta Menarik
+... (dan seterusnya hingga prompt ilustrasi siap pakai untuk Canva AI)`
   },
   {
     id: 'p2',
@@ -338,7 +384,31 @@ C. Outline Slide
 D. Aktivitas dan Pertanyaan Pemantik
 E. Prompt Gamma Siap Pakai
 F. Panduan Desain
-G. Checklist Evaluasi`
+G. Checklist Evaluasi`,
+    guide: `1. Masukkan Prompt Utama ke Chat GPT.
+2. Kemudian masukkan input Anda spesifik (seperti pada Contoh Input) di chat yang sama.
+3. Setelah Chat GPT membalas dengan kerangka slide presentasi, ketik instruksi ini: 
+   **"Buat informasi yang ada menjadi sebuah prompt yang baik, detail, dan lengkap"**
+4. Salin hasil prompt utuh tersebut, lalu tempel (paste) langsung ke dalam Gamma.app untuk melakukan generate presentasi otomatis.`,
+    exampleInput: `Mata Pelajaran: IPS
+Kelas: VIII SMP
+Topik: Revolusi Industri dan Dampaknya
+Tujuan Pembelajaran: Siswa mampu menjelaskan pengertian Revolusi Industri, faktor penyebabnya, serta dampaknya.
+Karakteristik Peserta Didik: Usia 13–14 tahun, Menyukai visual dan contoh nyata, Literasi sedang.`,
+    exampleOutput: `SPESIFIKASI PRESENTASI:
+· Platform: Gamma
+· Maksimal 10 slide
+· Setiap slide hanya memiliki satu gagasan utama
+· Teks ringkas dan mudah dipahami
+
+STRUKTUR PRESENTASI:
+SLIDE 1 — COVER
+Judul: "Revolusi Industri dan Dampaknya"
+Visual: Ilustrasi pabrik abad ke-18
+
+SLIDE 2 — PEMANTIK
+Pertanyaan: "Bagaimana pakaian yang kita gunakan bisa diproduksi dalam jumlah banyak?"
+...`
   },
   {
     id: 'p3',
@@ -400,7 +470,27 @@ C. Storyboard
 D. Narasi Video
 E. Aktivitas dan Refleksi
 F. Prompt AI Video Siap Pakai
-G. Checklist Evaluasi`
+G. Checklist Evaluasi`,
+    guide: `1. Masukkan Prompt Utama ke Chat GPT.
+2. Kirim detail topik, tujuan, durasi (seperti pada Contoh Input).
+3. Setelah kerangka storyboard dikonfirmasi oleh ChatGPT, perintahkan kembali: 
+   **"Buat informasi yang ada menjadi sebuah prompt yang baik, detail, dan lengkap"**
+4. Hasil akhirnya akan mencakup narasi sulih suara (Voice Over) dan *image prompt* yang bisa digunakan pada tools AI Video (misalnya Google Flow, HeyGen, dsb).`,
+    exampleInput: `Mata Pelajaran: IPA
+Kelas: VIII SMP
+Topik: Fotosintesis
+Tujuan: Siswa mampu menjelaskan proses fotosintesis dan faktor-faktor yang memengaruhinya.
+Durasi: 5 menit`,
+    exampleOutput: `SEGMENT 1 — PEMBUKA (0:00–0:30)
+Narasi: "Pernahkah kalian berpikir bagaimana tumbuhan mendapatkan makanan?"
+Visual: Tumbuhan hijau di taman, Matahari bersinar, Time-lapse biji tumbuh.
+
+SEGMENT 2 — APA ITU FOTOSINTESIS? (0:30–1:15)
+Narasi: "Fotosintesis adalah proses tumbuhan membuat makanan sendiri..."
+Visual: Animasi air naik dari akar, CO2 masuk ke daun.
+
+PROMPT AI VIDEO:
+Prompt Segment 1: "Modern educational animation, green plant growing under bright morning sunlight, time-lapse seed germination, colorful garden environment..."`
   }
 ];
 
