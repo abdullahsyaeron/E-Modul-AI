@@ -280,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initReadingProgress();
   initSmoothScroll();
   initTabs();
+  initSidebarScrollspy();
 });
 
 /* ============================================================
@@ -308,5 +309,49 @@ function initTabs() {
         targetContent.classList.add('active');
       }
     });
+  });
+}
+
+/* ============================================================
+   SIDEBAR SCROLLSPY (Intersection Observer)
+   ============================================================ */
+function initSidebarScrollspy() {
+  const sidebarLinks = document.querySelectorAll('.sidebar-nav-item a');
+  if (sidebarLinks.length === 0) return;
+
+  // Collect all target sections based on href attributes
+  const sections = Array.from(sidebarLinks).map(link => {
+    const targetId = link.getAttribute('href');
+    if (targetId && targetId.startsWith('#')) {
+      return document.querySelector(targetId);
+    }
+    return null;
+  }).filter(Boolean);
+
+  if (sections.length === 0) return;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -60% 0px', // Trigger when section is in the upper middle of viewport
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Remove active class from all links
+        sidebarLinks.forEach(link => link.classList.remove('active'));
+        
+        // Add active class to the intersecting link
+        const activeLink = document.querySelector(`.sidebar-nav-item a[href="#${entry.target.id}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    observer.observe(section);
   });
 }
