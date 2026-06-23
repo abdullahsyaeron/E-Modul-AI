@@ -1437,3 +1437,50 @@
   min-width: 24px;
 }
 .referensi-item:last-child { border-bottom: none; }
+
+/* Custom CSS for Evaluasi Likert Scale (Extracted from evaluasi-engine.js) */
+.likert-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 15px; }
+.eval-radio-scale { cursor: pointer; flex: 1; height: 100%; display: block; position: relative; }
+.eval-radio-scale input { position: absolute; opacity: 0; width: 0; height: 0; }
+.eval-radio-content { 
+  height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+  padding: 15px 10px; border-radius: 12px; border: 2px solid #e2e8f0; background: white; 
+  color: #64748b; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.eval-radio-scale:hover .eval-radio-content { 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-color: #cbd5e1;
+}
+
+/* Unique colors for each scale */
+.eval-radio-scale input[value="1"]:checked + .eval-radio-content { 
+  background: #fef2f2; border-color: #ef4444; color: #991b1b; 
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15); 
+}
+.eval-radio-scale input[value="1"]:checked + .eval-radio-content .scale-val { color: #dc2626; }
+
+.eval-radio-scale input[value="2"]:checked + .eval-radio-content { 
+  background: #fffbeb; border-color: #f59e0b; color: #92400e; 
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15); 
+}
+.eval-radio-scale input[value="2"]:checked + .eval-radio-content .scale-val { color: #d97706; }
+
+.eval-radio-scale input[value="3"]:checked + .eval-radio-content { 
+  background: #f0fdf4; border-color: #22c55e; color: #166534; 
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15); 
+}
+.eval-radio-scale input[value="3"]:checked + .eval-radio-content .scale-val { color: #16a34a; }
+
+.eval-radio-scale input[value="4"]:checked + .eval-radio-content { 
+  background: #eff6ff; border-color: #3b82f6; color: #1e3a8a; 
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15); 
+}
+.eval-radio-scale input[value="4"]:checked + .eval-radio-content .scale-val { color: #2563eb; }
+
+.scale-val { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; color: #334155; transition: color 0.2s ease; font-family: var(--font-heading); }
+.scale-text { font-size: 0.85rem; line-height: 1.3; font-weight: 500; }
+
+@media (max-width: 640px) { .likert-options { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
