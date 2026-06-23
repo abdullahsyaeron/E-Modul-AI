@@ -14,23 +14,55 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inject dynamic CSS for the Likert scale radio buttons
   const style = document.createElement('style');
   style.innerHTML = `
-    .likert-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px; }
+    .likert-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 15px; }
     .eval-radio-scale { cursor: pointer; flex: 1; height: 100%; display: block; position: relative; }
     .eval-radio-scale input { position: absolute; opacity: 0; width: 0; height: 0; }
     .eval-radio-content { 
       height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; 
-      padding: 10px; border-radius: 8px; border: 2px solid var(--color-border); background: white; 
-      color: var(--color-text-muted); transition: all 0.2s ease; text-align: center;
+      padding: 15px 10px; border-radius: 12px; border: 2px solid #e2e8f0; background: white; 
+      color: #64748b; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
-    .eval-radio-scale:hover .eval-radio-content { background: var(--color-bg-alt); border-color: var(--color-text-muted); }
-    .eval-radio-scale input:checked + .eval-radio-content { 
-      background: rgba(14, 165, 233, 0.1); border-color: var(--color-primary); 
-      color: var(--color-primary-dark); box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2); 
+    
+    .eval-radio-scale:hover .eval-radio-content { 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-color: #cbd5e1;
     }
-    .eval-radio-scale input:checked + .eval-radio-content .scale-val { color: var(--color-primary); }
-    .scale-val { font-size: 1.25rem; font-weight: bold; margin-bottom: 4px; color: var(--color-text-dark); transition: color 0.2s ease; }
-    .scale-text { font-size: 0.8rem; line-height: 1.3; }
-    @media (max-width: 640px) { .likert-options { grid-template-columns: repeat(2, 1fr); } }
+    
+    /* Unique colors for each scale */
+    .eval-radio-scale input[value="1"]:checked + .eval-radio-content { 
+      background: #fef2f2; border-color: #ef4444; color: #991b1b; 
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15); 
+    }
+    .eval-radio-scale input[value="1"]:checked + .eval-radio-content .scale-val { color: #dc2626; }
+    
+    .eval-radio-scale input[value="2"]:checked + .eval-radio-content { 
+      background: #fffbeb; border-color: #f59e0b; color: #92400e; 
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15); 
+    }
+    .eval-radio-scale input[value="2"]:checked + .eval-radio-content .scale-val { color: #d97706; }
+    
+    .eval-radio-scale input[value="3"]:checked + .eval-radio-content { 
+      background: #f0fdf4; border-color: #22c55e; color: #166534; 
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15); 
+    }
+    .eval-radio-scale input[value="3"]:checked + .eval-radio-content .scale-val { color: #16a34a; }
+    
+    .eval-radio-scale input[value="4"]:checked + .eval-radio-content { 
+      background: #eff6ff; border-color: #3b82f6; color: #1e3a8a; 
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15); 
+    }
+    .eval-radio-scale input[value="4"]:checked + .eval-radio-content .scale-val { color: #2563eb; }
+
+    .scale-val { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; color: #334155; transition: color 0.2s ease; font-family: var(--font-heading); }
+    .scale-text { font-size: 0.85rem; line-height: 1.3; font-weight: 500; }
+    
+    .eval-kriteria-item { border-bottom: 1px solid #f1f5f9; padding: 24px 0; }
+    .eval-kriteria-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .eval-kriteria-text { font-size: 1.1rem; color: #0f172a; line-height: 1.5; }
+    
+    @media (max-width: 640px) { .likert-options { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
   `;
   document.head.appendChild(style);
 
@@ -39,19 +71,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   data.forEach((dimensi, dIndex) => {
     html += `
-      <div class="eval-dimensi-card">
-        <div class="eval-dimensi-header">
-          <i class="fas ${dimensi.icon}"></i>
-          <h3>Dimensi ${dIndex + 1} - ${dimensi.dimensi}</h3>
+      <div class="eval-dimensi-card" style="border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.04); margin-bottom: 30px;">
+        <div class="eval-dimensi-header" style="background: linear-gradient(135deg, #0f172a, #1e293b); padding: 20px 24px;">
+          <i class="fas ${dimensi.icon}" style="color: #38bdf8;"></i>
+          <h3 style="margin: 0; color: white; font-size: 1.25rem;">Dimensi ${dIndex + 1} &mdash; ${dimensi.dimensi}</h3>
         </div>
-        <div class="eval-kriteria-list">
+        <div class="eval-kriteria-list" style="padding: 10px 24px 24px 24px; background: #fafafa;">
     `;
 
-    dimensi.kriteria.forEach((k) => {
+    dimensi.kriteria.forEach((k, kIndex) => {
       html += `
         <div class="eval-kriteria-item" style="flex-direction: column; align-items: flex-start;">
-          <div class="eval-kriteria-text" style="font-weight: 600; margin-bottom: 8px; width: 100%;">${k.indikator}</div>
-          <div class="likert-options" style="width: 100%;">
+          <div class="eval-kriteria-text" style="font-weight: 600; margin-bottom: 12px; width: 100%;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #e0f2fe; color: #0369a1; font-size: 0.85rem; font-weight: bold; margin-right: 10px; vertical-align: top; margin-top: 2px;">${kIndex + 1}</span>
+            <span style="display: inline-block; width: calc(100% - 45px);">${k.indikator}</span>
+          </div>
+          <div class="likert-options" style="width: 100%; padding-left: 38px;">
       `;
       
       k.options.forEach(opt => {
