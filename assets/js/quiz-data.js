@@ -64,59 +64,59 @@ const quizData = {
   
   bab2: [
     {
-      question: "Platform AI mana yang paling tepat digunakan jika Anda ingin membuat ilustrasi visual/gambar untuk presentasi pelajaran Sejarah?",
+      question: "Guru ingin menjelaskan proses fotosintesis yang melibatkan tahapan dan perubahan yang berlangsung secara berurutan. Media yang paling tepat adalah...",
       options: [
-        "ChatGPT",
-        "Midjourney atau Canva Text-to-Image",
-        "Suno AI",
-        "Grammarly"
+        "Poster",
+        "Video pembelajaran",
+        "Tabel teks",
+        "Brosur"
       ],
       correct: 1,
-      explanation: "Midjourney dan Canva Text-to-Image adalah contoh Generative AI berbasis gambar (Image Generation) yang tepat untuk membuat ilustrasi visual."
+      explanation: "Proses yang melibatkan tahapan dan perubahan (dinamis) paling efektif dijelaskan menggunakan media berbasis waktu seperti video pembelajaran."
     },
     {
-      question: "Apa fungsi utama dari AI berbasis Audio/Musik seperti Suno AI atau ElevenLabs?",
+      question: "AI menghasilkan informasi berikut:\n\"Indonesia memiliki 40 provinsi sejak tahun 2020.\"\nGuru langsung memasukkan informasi tersebut ke media pembelajaran. Kesalahan utama guru adalah...",
       options: [
-        "Membuat ringkasan dokumen teks yang panjang",
-        "Menerjemahkan teks menjadi suara narasi yang natural (Text-to-Speech) atau membuat musik dari teks",
-        "Mengedit foto profil siswa agar terlihat profesional",
-        "Menghitung nilai rata-rata ujian siswa secara otomatis"
+        "Tidak menggunakan platform AI premium",
+        "Tidak menerapkan prinsip verifikasi",
+        "Terlalu percaya pada teknologi",
+        "Tidak menggunakan gambar"
       ],
       correct: 1,
-      explanation: "Tools seperti ElevenLabs unggul dalam Text-to-Speech (suara narator), sedangkan Suno AI dapat menciptakan lagu lengkap berdasarkan lirik atau deskripsi teks."
+      explanation: "AI rentan mengalami halusinasi atau memberikan fakta yang salah. Guru wajib memverifikasi semua informasi faktual yang dihasilkan oleh AI sebelum menggunakannya."
     },
     {
-      question: "Jika seorang guru Bahasa Inggris ingin meminta AI membuatkan cerita pendek berserta soal pemahaman bacaan (reading comprehension), tool mana yang paling efisien?",
+      question: "Mengapa kualitas prompt sangat memengaruhi kualitas output AI?",
       options: [
-        "DALL-E 3",
-        "HeyGen",
-        "ChatGPT atau Claude",
-        "Remove.bg"
+        "Karena AI hanya bekerja berdasarkan instruksi yang diterima",
+        "Karena AI selalu menghasilkan jawaban berbeda",
+        "Karena AI tidak memiliki data",
+        "Karena AI hanya memahami bahasa Inggris"
+      ],
+      correct: 0,
+      explanation: "AI generatif beroperasi sangat bergantung pada instruksi spesifik (prompt). Kualitas dan relevansi output berbanding lurus dengan kejelasan instruksi yang diberikan."
+    },
+    {
+      question: "Guru menemukan bahwa gambar yang dihasilkan AI menampilkan representasi budaya yang stereotipikal. Kasus ini menunjukkan keterbatasan AI berupa...",
+      options: [
+        "Halusinasi",
+        "Prompt error",
+        "Bias data",
+        "Gangguan sistem"
       ],
       correct: 2,
-      explanation: "ChatGPT dan Claude adalah Large Language Models (AI Teks) yang sangat mumpuni dalam membuat narasi (cerita), menyusun soal evaluasi, dan memberikan kunci jawaban."
+      explanation: "AI mempelajari pola dari data latihannya. Jika data tersebut mengandung bias budaya atau stereotip, AI akan mereproduksinya dalam gambar yang dihasilkan (bias data)."
     },
     {
-      question: "Apa kemampuan utama dari platform seperti HeyGen atau Synthesia dalam konteks media pembelajaran?",
+      question: "Manakah tindakan yang paling tepat ketika menggunakan AI dalam pengembangan media?",
       options: [
-        "Membuat video presenter virtual (avatar) yang berbicara sesuai skrip teks yang kita ketik",
-        "Mendeteksi plagiarisme pada esai siswa",
-        "Membuat mind map secara otomatis",
-        "Mendesain logo sekolah"
+        "Menggunakan output AI tanpa revisi",
+        "Menjadikan output AI sebagai draft awal yang diverifikasi",
+        "Menyalin seluruh hasil AI",
+        "Menghilangkan proses evaluasi"
       ],
-      correct: 0,
-      explanation: "Platform AI Video Generatif seperti HeyGen dan Synthesia dapat mengubah skrip teks menjadi video avatar fotorealistik yang membacakan materi layaknya manusia asli."
-    },
-    {
-      question: "Guru Budi ingin membuat slide presentasi lengkap dengan desain, teks materi, dan gambar hanya dengan memasukkan topik 'Sistem Tata Surya'. Platform AI apa yang sebaiknya ia gunakan?",
-      options: [
-        "Gamma.app atau Tome",
-        "Midjourney",
-        "ElevenLabs",
-        "Microsoft Excel"
-      ],
-      correct: 0,
-      explanation: "Gamma.app dan Tome adalah platform AI khusus untuk pembuatan presentasi utuh. Mereka mengombinasikan generasi teks, pencarian layout, dan pembuatan gambar sekaligus dalam satu prompt."
+      correct: 1,
+      explanation: "AI sebaiknya diposisikan sebagai asisten (co-pilot) untuk mempercepat pembuatan draft awal. Guru tetap harus mengevaluasi, memverifikasi, dan menyempurnakannya."
     }
   ],
 
