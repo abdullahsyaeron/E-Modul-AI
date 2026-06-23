@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAB 4: Implementasi Praktis - E-Modul AI</title>
+    <title>BAB 4: Etika AI - E-Modul AI</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,19 +74,20 @@
             <div class="chapter-num">
                 <i class="fas fa-bookmark text-accent-light"></i> BAB 4
             </div>
-            <h1>Implementasi AI dalam Media Pembelajaran</h1>
+            <h1>Etika dan Tanggung Jawab Penggunaan AI dalam Pengembangan Media Pembelajaran</h1>
             
-            <div class="chapter-meta">
-                <div class="meta-item"><i class="fas fa-clock"></i> Estimasi Waktu: 30 Menit</div>
-                <div class="meta-item"><i class="fas fa-book-open"></i> Praktik & Studi Kasus</div>
-            </div>
+            <p style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
+                Bab ini membahas dimensi yang sering luput dari perhatian ketika guru mulai menggunakan AI: tanggung jawab etis dan profesional. Setelah memahami cara menggunakan AI secara teknis di BAB 3, kini saatnya Anda mempertimbangkan bagaimana menggunakannya secara bijak, aman, dan bertanggung jawab.
+            </p>
 
-            <div class="chapter-tujuan">
-                <h3>Capaian Pembelajaran Bab Ini:</h3>
+            <div class="chapter-tujuan mt-8">
+                <h3><i class="fas fa-bullseye text-accent-light"></i> Tujuan Pembelajaran Bab Ini:</h3>
                 <ul>
-                    <li>Memahami alur kerja (workflow) pembuatan media berbasis AI dari awal hingga akhir.</li>
-                    <li>Mampu merancang modul tekstual, presentasi, dan video pembelajaran dengan bantuan AI.</li>
-                    <li>Menerapkan prinsip 'Human-in-the-Loop' sebagai kurator akhir.</li>
+                    <li>Menjelaskan kedudukan etika dalam pemanfaatan AI untuk pengembangan media pembelajaran.</li>
+                    <li>Mengidentifikasi tanggung jawab guru pada setiap tahap pengembangan media berbantuan AI.</li>
+                    <li>Mengenali risiko etis utama dan mengambil langkah pencegahan yang konkret.</li>
+                    <li>Menerapkan pedoman praktis penggunaan AI yang etis dan bertanggung jawab.</li>
+                    <li>Menggunakan checklist etika sebelum media digunakan di kelas.</li>
                 </ul>
             </div>
         </div>
@@ -101,22 +102,37 @@
                 <div class="sidebar-nav-list">
                     <div class="sidebar-nav-item">
                         <a href="#sub1">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">1</span> Workflow AI
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">A</span> Kedudukan Etika
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub2">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">2</span> Studi Kasus: Slide
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">B</span> Tahapan Pengembangan
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub3">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">3</span> Studi Kasus: Video
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">C</span> Tanggung Jawab
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub4">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">4</span> Human-in-the-Loop
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">D</span> Risiko Etis
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="#sub5">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">E</span> Pedoman Praktis
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="#sub6">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">F</span> Studi Kasus
+                        </a>
+                    </div>
+                    <div class="sidebar-nav-item">
+                        <a href="#sub7">
+                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">G</span> Checklist Etika
                         </a>
                     </div>
                 </div>
@@ -124,73 +140,368 @@
 
             <!-- Main Content -->
             <main class="materi-main content-body">
+
+                <!-- Pertanyaan Pemantik -->
+                <div class="highlight-box" style="background: linear-gradient(135deg, rgba(16,185,129,0.06), rgba(30,58,95,0.04)); border: 1px solid rgba(16,185,129,0.2);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <i class="fas fa-lightbulb text-success text-2xl"></i>
+                        <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
+                    </div>
+                    <p>Apakah menurut Anda semua konten yang dihasilkan AI otomatis aman digunakan di kelas? Apa yang membuat sebuah konten "aman" atau "tidak aman" untuk peserta didik?</p>
+                    <p style="margin-bottom:0;">Jika Anda menggunakan AI untuk membuat soal ulangan dan ternyata ada soal yang faktanya salah, siapa yang bertanggung jawab terhadap dampaknya kepada siswa?</p>
+                </div>
                 
-                <h2 id="sub1" style="scroll-margin-top: 100px;">1. Alur Kerja (Workflow) Pembuatan Media</h2>
-                <p>
-                    Kesalahan terbesar yang sering dilakukan pemula adalah meminta AI untuk membuat materi utuh secara langsung dalam satu klik. Hal ini sering menghasilkan materi yang dangkal, tidak terstruktur, dan berpotensi halusinasi. Alur kerja yang benar haruslah bertahap (step-by-step).
+                <p class="mt-6 mb-8">
+                    Pembahasan dalam bab ini disusun dengan merujuk pada prinsip-prinsip dalam bidang Teknologi Pendidikan, terutama yang berkaitan dengan desain, pengembangan, pemanfaatan, pengelolaan, dan evaluasi sumber belajar (Seels & Richey, 1994; Januszewski & Molenda, 2008; AECT, 1994). Prinsip tersebut diterjemahkan ke dalam konteks tanggung jawab guru dalam menggunakan AI untuk mengembangkan media pembelajaran secara aman, akurat, transparan, dan sesuai dengan nilai sekolah.
                 </p>
 
-                <div class="highlight-box">
-                    <ol>
-                        <li><strong>Identifikasi Tujuan:</strong> Tentukan Kompetensi Dasar/Tujuan Pembelajaran dan target audiens (siswa kelas berapa).</li>
-                        <li><strong>Pembuatan Outline (Kerangka):</strong> Minta AI membuatkan struktur daftar isi/sub-bab materi terlebih dahulu.</li>
-                        <li><strong>Review Guru (Tahap 1):</strong> Guru mengoreksi outline tersebut. Tambah, kurangi, atau ubah urutan sub-bab agar sesuai kurikulum.</li>
-                        <li><strong>Pengembangan Konten:</strong> Minta AI menjabarkan materi per satu sub-bab (jangan semua sekaligus).</li>
-                        <li><strong>Review Guru (Tahap 2):</strong> Guru memverifikasi fakta dan menyesuaikan gaya bahasa.</li>
-                        <li><strong>Visualisasi:</strong> Gunakan AI gambar/presentasi untuk memperkaya teks materi.</li>
+                <h2 id="sub1" style="scroll-margin-top: 100px;">A. Kedudukan Etika dalam Penggunaan AI untuk Media Pembelajaran</h2>
+                <p>
+                    Penggunaan AI tidak cukup hanya dilihat dari sisi efisiensi dan kemudahan produksi. Guru tetap bertanggung jawab penuh terhadap tujuan pembelajaran yang ingin dicapai, kebenaran isi yang disampaikan, kesesuaian media dengan karakteristik siswa, dan dampak media terhadap proses belajar. Tanggung jawab ini tidak berpindah kepada AI, betapapun canggihnya teknologi tersebut.
+                </p>
+                <p>
+                    Definisi Teknologi Pendidikan yang dirumuskan AECT (1994) menekankan bahwa praktik Teknologi Pendidikan adalah praktik etis melibatkan pertimbangan moral dalam setiap keputusan tentang pemilihan, pengembangan, dan penggunaan sumber belajar. Prinsip ini relevan langsung bagi guru, yaitu setiap kali Anda menggunakan AI untuk mengembangkan media, Anda sedang membuat keputusan yang berdampak pada pengalaman belajar peserta didik.
+                </p>
+                <p>
+                    Di sinilah kontribusi pedagogis guru menjadi tidak tergantikan. AI dapat menghasilkan draft konten dalam hitungan detik, tetapi hanya Anda yang tahu, apakah konten ini sesuai dengan tingkat perkembangan siswa Anda? Apakah bahasanya cocok dengan konteks budaya mereka? Apakah nilainya selaras dengan karakter yang sedang dibentuk di sekolah ini?
+                </p>
+
+                <h2 id="sub2" style="scroll-margin-top: 100px;">B. Prinsip Etis Berdasarkan Tahapan Pengembangan Media Pembelajaran</h2>
+                <p>
+                    Berikut ini adalah panduan etis yang disusun berdasarkan lima tahapan pengembangan media pembelajaran. Lima tahapan ini mencerminkan kawasan utama dalam Teknologi Pendidikan: desain, pengembangan, pemanfaatan, pengelolaan, dan evaluasi (Seels & Richey, 1994).
+                </p>
+
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h4>Tahap Perancangan</h4>
+                            <p>Pada tahap ini, pastikan bahwa tujuan pembelajaran, karakteristik siswa, pemilihan media, dan penggunaan AI selaras secara pedagogis. Pertanyaan panduan: apakah penggunaan AI ini benar-benar berangkat dari kebutuhan belajar siswa atau sekadar karena terlihat modern dan menarik?</p>
+                            <p>AI tidak boleh digunakan hanya karena sedang populer. Setiap penggunaan AI harus dapat dinilai berdasarkan tujuan pembelajaran yang spesifik. Jika tujuan dapat dicapai dengan cara yang lebih sederhana dan tidak memerlukan AI, maka pilihan itu yang lebih tepat.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h4>Tahap Pengembangan</h4>
+                            <p>Anda bertanggung jawab terhadap kualitas seluruh konten yang dikembangkan terlepas dari apakah konten tersebut dihasilkan AI atau tidak. Ini mencakup: akurasi materi, kesesuaian visual dengan nilai dan karakter sekolah, keterbacaan teks, penggunaan aset yang memiliki izin, dan kualitas teknis media secara keseluruhan.</p>
+                            <p>Perlakukan output AI sebagai draf awal yang perlu diverifikasi dan direvisi bukan sebagai produk final. Anda adalah editor dan kurator, bukan sekadar pengguna pasif.</p>
+                            
+                            <div class="highlight-box mt-4" style="background: rgba(14, 165, 233, 0.05); border: 1px solid rgba(14, 165, 233, 0.3); border-left: 4px solid var(--color-primary);">
+                                <h4 style="margin-top: 0; margin-bottom: 8px; color: var(--color-primary-dark);"><i class="fas fa-info-circle"></i> Catatan Penting</h4>
+                                <p style="margin-bottom: 0;">Verifikasi semua fakta, angka, kutipan, ayat Al-Qur'an, hadis, dan data statistik yang dihasilkan AI sebelum dimasukkan ke dalam media. AI dapat menghasilkan informasi yang tampak meyakinkan namun tidak akurat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h4>Tahap Pemanfaatan</h4>
+                            <p>Ketika media berbantuan AI digunakan di kelas, pastikan penggunaannya mendukung bukan menggantikan peran pedagogis Anda. Media adalah alat untuk memfasilitasi belajar, bukan pengganti interaksi guru dan siswa.</p>
+                            <p>Perhatikan pula bahwa media tidak boleh menimbulkan ketergantungan pasif siswa terhadap teknologi, dan tidak boleh menyesatkan siswa dengan konten yang tidak diverifikasi. Jika Anda menyadari ada kesalahan dalam media setelah digunakan, perbaiki dan sampaikan koreksi kepada siswa.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h4>Tahap Pengelolaan</h4>
+                            <p>Guru dan sekolah perlu mengatur penggunaan platform AI secara sistematis, mencakup: akun yang digunakan, data yang boleh dan tidak boleh dimasukkan, arsip media yang dikembangkan, serta kebijakan privasi dan keamanan data.</p>
+                            
+                            <div class="highlight-box mt-4" style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.3); border-left: 4px solid var(--color-danger);">
+                                <h4 style="margin-top: 0; margin-bottom: 8px; color: #b91c1c;"><i class="fas fa-exclamation-triangle"></i> Perhatian Etis</h4>
+                                <p style="margin-bottom: 0;">Data pribadi siswa termasuk nama lengkap, NISN, foto, nilai, atau informasi identitas lainnya tidak boleh dimasukkan ke dalam sistem AI publik. Platform AI umumnya menyimpan data input untuk keperluan pelatihan model. Memasukkan data siswa ke dalamnya dapat melanggar privasi dan berpotensi melanggar peraturan perlindungan data.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h4>Tahap Evaluasi</h4>
+                            <p>Media berbantuan AI harus dievaluasi secara menyeluruh tidak hanya dari sisi estetika teknis, tetapi juga dari sisi keselarasan instruksional, akurasi konten, kesesuaian usia, kesesuaian nilai dan karakter sekolah, kontribusi pedagogis guru, dan dampaknya terhadap pembelajaran siswa. Rubrik evaluasi lengkap tersedia di BAB 5.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="sub3" style="scroll-margin-top: 100px;">C. Tanggung Jawab Guru dalam Penggunaan AI</h2>
+                <p>Berikut delapan bentuk tanggung jawab yang perlu Anda pegang sebagai guru yang memanfaatkan AI dalam pengembangan media.</p>
+
+                <div style="background: white; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; margin: 1.5rem 0;">
+                    <ol style="margin: 0; padding-left: 1.5rem; color: var(--color-text);">
+                        <li class="mb-3"><strong>Tanggung Jawab terhadap Peserta Didik:</strong> Media yang Anda kembangkan harus mengutamakan kepentingan belajar siswa bukan sekadar menghasilkan konten yang impresif secara visual. Pastikan media mendukung pencapaian tujuan pembelajaran, sesuai usia, dan tidak membahayakan kesehatan psikologis maupun nilai-nilai yang sedang dibentuk pada diri siswa.</li>
+                        <li class="mb-3"><strong>Tanggung Jawab terhadap Kebenaran Informasi:</strong> Setiap fakta, konsep, prosedur, atau klaim dalam media yang Anda buat termasuk gambar, grafik, dan soal kuis wajib diverifikasi dari sumber primer atau referensi yang terpercaya. Guru bertanggung jawab penuh atas akurasi konten yang disampaikan kepada siswa, tidak peduli dari mana asalnya.</li>
+                        <li class="mb-3"><strong>Tanggung Jawab terhadap Privasi dan Keamanan Data:</strong> Jangan memasukkan data identitas siswa ke dalam platform AI. Gunakan data anonim atau data hipotetis ketika memerlukan contoh dalam prompt. Pastikan platform yang Anda gunakan memiliki kebijakan privasi yang jelas dan sesuai dengan regulasi yang berlaku.</li>
+                        <li class="mb-3"><strong>Tanggung Jawab terhadap Hak Cipta dan Atribusi:</strong> Konten yang dihasilkan AI termasuk gambar, teks, dan audio memiliki status hak cipta yang kompleks. Gunakan aset AI sesuai ketentuan platform. Berikan atribusi yang jelas apabila media yang Anda kembangkan menggunakan sumber eksternal. Hindari mengklaim karya yang sepenuhnya dihasilkan AI sebagai karya orisinal Anda tanpa kontribusi intelektual yang nyata.</li>
+                        <li class="mb-3"><strong>Tanggung Jawab terhadap Keadilan Akses dan Inklusivitas:</strong> Perhatikan bahwa tidak semua siswa dan guru memiliki akses yang sama terhadap teknologi. Pastikan media yang Anda kembangkan dapat diakses oleh semua siswa termasuk mereka yang memiliki keterbatasan akses perangkat atau koneksi internet. Jangan biarkan ketimpangan teknologi memperlebar kesenjangan belajar.</li>
+                        <li class="mb-3"><strong>Tanggung Jawab terhadap Nilai, Budaya, dan Konteks Lembaga:</strong> Media yang Anda kembangkan harus selaras dengan nilai, visi, misi, dan budaya lembaga pendidikan Anda. Periksa seluruh elemen visual, teks, audio, dan pesan yang disampaikan. Konten yang "netral" secara umum bisa jadi tidak tepat dalam konteks sekolah dengan nilai dan karakter tertentu.</li>
+                        <li class="mb-3"><strong>Tanggung Jawab terhadap Kompetensi Profesional Guru:</strong> Penggunaan AI sebaiknya mendorong Anda untuk terus mengembangkan kompetensi bukan untuk menghindari proses berpikir instruksional. Semakin Anda memahami prinsip desain instruksional, semakin baik pula Anda dalam memberikan panduan kepada AI dan mengevaluasi outputnya secara kritis.</li>
+                        <li style="margin-bottom:0;"><strong>Tanggung Jawab terhadap Transparansi Penggunaan AI:</strong> Bersikaplah terbuka kepada siswa, orang tua, dan pimpinan sekolah tentang penggunaan AI dalam pengembangan media Anda. Transparansi ini bukan hanya soal kejujuran, tetapi juga memberikan contoh nyata penggunaan teknologi yang etis kepada siswa.</li>
                     </ol>
                 </div>
 
-                <h2 id="sub2" style="scroll-margin-top: 100px;">2. Studi Kasus 1: Membuat Slide Presentasi (PPT)</h2>
-                <p>
-                    Anda akan mengajar tentang "Daur Air" (Siklus Hidrologi) untuk kelas 5 SD. Berikut cara menggabungkan beberapa AI:
-                </p>
-                <ul>
-                    <li><strong>Langkah 1 (ChatGPT):</strong> Gunakan prompt: <em>"Buatkan skrip slide presentasi 5 halaman tentang Siklus Hidrologi untuk anak kelas 5 SD. Setiap slide harus memiliki: Judul, 3 Poin Teks singkat, dan ide gambar visual apa yang cocok untuk slide tersebut."</em></li>
-                    <li><strong>Langkah 2 (Canva AI):</strong> Buka Canva, gunakan fitur Text-to-Image. Masukkan ide visual dari ChatGPT, contoh: <em>"Ilustrasi kartun anak-anak tentang matahari yang memanaskan air laut sehingga menguap ke udara, gaya watercolor ceria."</em></li>
-                    <li><strong>Langkah 3 (Human Assembly):</strong> Masukkan teks dari ChatGPT dan gambar dari Canva AI ke dalam template slide Anda. Sesuaikan letaknya.</li>
-                </ul>
+                <h2 id="sub4" style="scroll-margin-top: 100px;">D. Risiko Etis Penggunaan AI dalam Pengembangan Media</h2>
+                <p>Memahami risiko bukan berarti menghindari teknologi melainkan mempersiapkan diri untuk menggunakannya secara lebih bijak. Berikut delapan risiko utama dan cara mengatasinya.</p>
 
-                <h2 id="sub3" style="scroll-margin-top: 100px;">3. Studi Kasus 2: Membuat Video Pembelajaran (Avatar)</h2>
-                <p>
-                    Jika Anda tidak nyaman tampil di depan kamera, Anda bisa menggunakan AI Video:
-                </p>
-                <ul>
-                    <li><strong>Skrip (Claude/ChatGPT):</strong> Minta AI membuatkan naskah monolog berdurasi 2 menit tentang "Pahlawan Nasional".</li>
-                    <li><strong>Video Generator (HeyGen/Synthesia):</strong> Buat proyek baru, pilih karakter avatar digital yang terlihat profesional (misal: memakai batik), lalu paste naskah dari ChatGPT ke dalam kolom teks.</li>
-                    <li><strong>Generate:</strong> Avatar akan membaca teks tersebut dengan gerakan bibir (lip-sync) dan gestur yang natural. Anda bisa mengunduh videonya dan menambahkannya ke YouTube atau Google Classroom.</li>
-                </ul>
+                <div class="table-responsive my-6">
+                    <table class="table-bordered" style="width: 100%; border-collapse: collapse; margin-bottom: 0;">
+                        <thead>
+                            <tr style="background-color: rgba(14,165,233,0.1);">
+                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 25%;">Risiko</th>
+                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 40%;">Deskripsi</th>
+                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 35%;">Solusi Konkret</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-danger); font-weight: 600;">Halusinasi Informasi</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">AI menghasilkan fakta yang tampak meyakinkan namun tidak akurat</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Verifikasi semua fakta dari sumber primer sebelum media digunakan</td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-warning); font-weight: 600;">Bias dalam Output AI</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Konten AI mungkin mengandung bias budaya, gender, atau ideologis</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Periksa output secara kritis; sesuaikan dengan nilai dan karakter sekolah</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-danger); font-weight: 600;">Pelanggaran Privasi Siswa</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Data siswa yang dimasukkan ke AI dapat bocor atau disalahgunakan</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Jangan masukkan data identitas siswa ke platform AI publik</td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-primary-dark); font-weight: 600;">Pelanggaran Hak Cipta</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Aset AI mungkin mengandung elemen yang terlindungi hak cipta</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Gunakan aset sesuai ketentuan platform; berikan atribusi yang tepat</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-warning); font-weight: 600;">Ketergantungan pada Output Mentah</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Guru menggunakan output AI tanpa verifikasi atau modifikasi</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Perlakukan output AI sebagai draf awal; selalu sunting dan sesuaikan</td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-danger); font-weight: 600;">Hilangnya Judgment Pedagogis</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Guru membiarkan AI menentukan isi dan pendekatan pembelajaran</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Pegang kendali instruksional; gunakan AI hanya untuk aspek teknis</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-danger); font-weight: 600;">Ketidaksesuaian Nilai dan Karakter Sekolah</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Konten AI tidak sesuai akidah, visual tidak sesuai syariat</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Gunakan checklist nilai dan karakter sekolah sebelum media digunakan</td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-primary-dark); font-weight: 600;">Kesenjangan Akses Teknologi</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Tidak semua siswa dapat mengakses media berbasis teknologi tinggi</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Siapkan alternatif media; perhatikan keadilan akses dalam desain</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                <h2 id="sub4" style="scroll-margin-top: 100px;">4. Konsep "Human-in-the-Loop"</h2>
-                <p>
-                    Prinsip terpenting dalam implementasi AI adalah <strong>Human-in-the-Loop (Manusia di dalam lingkaran proses)</strong>. AI bertindak sebagai "Drafter" (pembuat draf/konsep awal), namun Guru tetap menjadi "Editor in Chief" (Pemred).
-                </p>
+                <h2 id="sub5" style="scroll-margin-top: 100px;">E. Pedoman Praktis Penggunaan AI yang Etis dan Bertanggung Jawab</h2>
+                <p>Pedoman berikut dapat Anda jadikan panduan operasional dalam setiap sesi pengembangan media berbantuan AI.</p>
                 
-                <p>Anda HARUS memastikan:</p>
-                <ul>
-                    <li><strong>Akurasi Fakta:</strong> AI tidak tahu fakta, ia hanya memprediksi kata. Apakah tahun kejadian sejarahnya benar? Apakah rumus fisikanya tepat?</li>
-                    <li><strong>Kesesuaian Konteks Lokal:</strong> Jika AI memberikan contoh apel dan musim salju, ubah menjadi contoh mangga dan musim hujan agar relevan dengan keseharian siswa di Indonesia.</li>
-                    <li><strong>Sentuhan Emosional:</strong> AI tidak memiliki empati. Tambahkan kalimat pembuka yang menyapa siswa dengan hangat, atau sisipkan humor khas Anda yang biasa disukai siswa di kelas.</li>
-                </ul>
+                <div style="background: white; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; margin: 1.5rem 0;">
+                    <ol style="margin: 0; padding-left: 1.5rem; color: var(--color-text);">
+                        <li class="mb-2">Selalu mulai dari tujuan pembelajaran. Penggunaan AI harus berangkat dari kebutuhan belajar, bukan dari keinginan bereksperimen.</li>
+                        <li class="mb-2">Jangan memasukkan data pribadi siswa ke dalam platform AI. Gunakan data anonim atau hipotetis dalam prompt.</li>
+                        <li class="mb-2">Verifikasi seluruh fakta, angka, kutipan, ayat, hadis, dan informasi konseptual dari sumber yang terpercaya.</li>
+                        <li class="mb-2">Gunakan AI sebagai asisten, bukan sebagai pengganti keputusan Anda. Anda yang menentukan apa yang layak digunakan di kelas.</li>
+                        <li class="mb-2">Cantumkan keterangan penggunaan AI secara proporsional misalnya "dikembangkan dengan bantuan AI, diedit oleh guru."</li>
+                        <li class="mb-2">Sesuaikan visual, bahasa, dan pesan dengan nilai dan karakter yang dianut satuan pendidikan.</li>
+                        <li class="mb-2">Simpan dokumentasi prompt, revisi, dan sumber rujukan untuk keperluan akuntabilitas.</li>
+                        <li class="mb-2">Evaluasi media menggunakan rubrik sebelum digunakan di kelas.</li>
+                        <li class="mb-2">Diskusikan penggunaan AI dengan rekan sejawat terutama jika media akan digunakan secara luas di sekolah.</li>
+                        <li style="margin-bottom:0;">Ikuti kebijakan sekolah terkait teknologi, privasi, publikasi konten, dan penggunaan platform digital.</li>
+                    </ol>
+                </div>
+
+                <h2 id="sub6" style="scroll-margin-top: 100px;">F. Studi Kasus Singkat</h2>
+
+                <div class="materi-tabs-container">
+                    <div class="materi-tabs">
+                        <button class="tab-btn active" data-tab="tab-kasus1"><i class="fas fa-file-alt"></i> Kasus 1</button>
+                        <button class="tab-btn" data-tab="tab-kasus2"><i class="fas fa-user-shield"></i> Kasus 2</button>
+                        <button class="tab-btn" data-tab="tab-kasus3"><i class="fas fa-image"></i> Kasus 3</button>
+                    </div>
+
+                    <div id="tab-kasus1" class="tab-content active">
+                        <div class="highlight-box" style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.2); border-left: 4px solid var(--color-danger);">
+                            <h3 class="mt-0 text-xl font-bold" style="color: #b91c1c;">Kasus 1: Poster dengan Konten yang Belum Diverifikasi</h3>
+                            <p><strong>Situasi:</strong> Bu Rina, guru IPA kelas VII, menggunakan ChatGPT untuk membuat struktur konten poster tentang siklus air. Poster dihasilkan dengan cepat dan tampilannya menarik. Bu Rina langsung mencetak dan menempel poster di kelas tanpa membaca ulang isi detailnya.</p>
+                            <p><strong>Masalah Etis:</strong> Satu data dalam poster ternyata tidak akurat angka persentase air tawar di bumi yang disebutkan AI berbeda dari sumber ilmiah yang sahih. Siswa mempelajari fakta yang keliru selama dua minggu.</p>
+                            <p><strong>Analisis:</strong> Ini adalah masalah pada tahap pengembangan dan pemanfaatan. Bu Rina melewatkan langkah verifikasi konten dan tidak menjalankan prinsip kontrol pedagogis.</p>
+                            <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px solid rgba(16,185,129,0.3);">
+                                <p style="margin: 0; color: #047857;"><strong><i class="fas fa-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Sebelum mencetak, Bu Rina seharusnya membaca ulang seluruh konten poster, memverifikasi data dari buku teks atau sumber ilmiah, dan menyunting bagian yang tidak akurat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-kasus2" class="tab-content">
+                        <div class="highlight-box" style="background: rgba(245, 158, 11, 0.03); border: 1px solid rgba(245, 158, 11, 0.2); border-left: 4px solid var(--color-warning);">
+                            <h3 class="mt-0 text-xl font-bold" style="color: #b45309;">Kasus 2: Data Siswa Dimasukkan ke ChatGPT</h3>
+                            <p><strong>Situasi:</strong> Pak Dimas, guru Matematika, ingin menganalisis pola kesalahan siswa dalam ulangan harian. Ia memasukkan nama dan nilai siswa ke ChatGPT dan meminta analisis serta rekomendasi tindak lanjut.</p>
+                            <p><strong>Masalah Etis:</strong> Data identitas dan nilai siswa adalah informasi pribadi yang seharusnya tidak dimasukkan ke platform AI publik. Platform AI umumnya menyimpan input untuk keperluan pelatihan model.</p>
+                            <p><strong>Analisis:</strong> Ini adalah pelanggaran pada tahap pengelolaan menyangkut privasi data siswa dan keamanan informasi.</p>
+                            <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px solid rgba(16,185,129,0.3);">
+                                <p style="margin: 0; color: #047857;"><strong><i class="fas fa-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Pak Dimas seharusnya menggunakan data anonim (misalnya Siswa A, B, C) atau deskripsi pola kesalahan secara umum tanpa identitas. Data nilai siswa diolah secara lokal tanpa melibatkan platform AI publik.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-kasus3" class="tab-content">
+                        <div class="highlight-box" style="background: rgba(139, 92, 246, 0.03); border: 1px solid rgba(139, 92, 246, 0.2); border-left: 4px solid var(--color-primary);">
+                            <h3 class="mt-0 text-xl font-bold" style="color: #5b21b6;">Kasus 3: Gambar AI yang Tidak Sesuai Nilai Sekolah</h3>
+                            <p><strong>Situasi:</strong> Bu Hasna membuat presentasi IPS tentang keragaman budaya Indonesia menggunakan Gamma. AI menghasilkan beberapa ilustrasi yang menarik, tetapi satu gambar menampilkan figur perempuan dengan pakaian yang tidak sesuai dengan nilai dan norma yang dipegang satuan pendidikan.</p>
+                            <p><strong>Masalah Etis:</strong> Konten visual yang tidak selaras dengan nilai lembaga dapat mengirimkan pesan yang tidak konsisten kepada siswa dan bertentangan dengan nilai serta karakter yang dibentuk satuan pendidikan.</p>
+                            <p><strong>Analisis:</strong> Ini adalah masalah pada tahap pengembangan menyangkut verifikasi kesesuaian visual dengan nilai dan visi lembaga pendidikan.</p>
+                            <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px solid rgba(16,185,129,0.3);">
+                                <p style="margin: 0; color: #047857;"><strong><i class="fas fa-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Bu Hasna seharusnya memeriksa setiap ilustrasi sebelum presentasi digunakan. Gambar yang tidak sesuai diganti baik dengan mengedit manual, mencari gambar alternatif, atau menggunakan ilustrasi abstrak yang tidak menampilkan figur manusia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="sub7" style="scroll-margin-top: 100px;">G. Checklist Etika Sebelum Media Digunakan</h2>
+                <p>Gunakan daftar cek ini setiap kali Anda selesai mengembangkan media berbantuan AI dan sebelum menggunakannya di kelas.</p>
+
+                <div class="table-responsive my-6">
+                    <table class="table-bordered" style="width: 100%; border-collapse: collapse; margin-bottom: 0;">
+                        <thead>
+                            <tr style="background-color: rgba(14,165,233,0.1);">
+                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: center; width: 5%;">No.</th>
+                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 65%;">Pertanyaan Pemeriksaan</th>
+                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: center; width: 15%;">Ya</th>
+                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: center; width: 15%;">Perlu Revisi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">1</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah media selaras dengan tujuan pembelajaran yang ditetapkan?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">2</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah seluruh fakta, angka, dan klaim telah diverifikasi dari sumber terpercaya?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">3</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah tidak ada data pribadi siswa yang dimasukkan dalam proses pengembangan?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">4</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah aset yang digunakan sesuai ketentuan hak cipta dan atribusi?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">5</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah bahasa dan kompleksitas sesuai dengan usia dan karakteristik siswa?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">6</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah konten dan visual sesuai dengan nilai, budaya, dan karakter yang dianut satuan pendidikan?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">7</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah media dapat diakses oleh semua siswa dengan kondisi teknologi yang beragam?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">8</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah penggunaan AI dalam media ini dicantumkan secara transparan?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">9</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah terdapat kontribusi pedagogis guru yang substansial bukan sekadar output mentah AI?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                            <tr style="background-color: var(--color-bg-alt);">
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">10</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah media telah dievaluasi dan dinilai layak sebelum digunakan di kelas?</td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><em>Jika salah satu poin dijawab "Perlu Revisi," tunda penggunaan media dan lakukan perbaikan terlebih dahulu.</em></p>
+
+                <!-- Aktivitas Singkat -->
+                <div class="highlight-box mt-8" style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.3); border-left: 4px solid #8b5cf6;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <i class="fas fa-tasks text-xl" style="color: #8b5cf6;"></i>
+                        <h4 style="margin: 0; color: #5b21b6;">Aktivitas Singkat</h4>
+                    </div>
+                    <p style="margin-bottom:0;">Ambil satu media yang pernah Anda kembangkan (berbantuan AI atau tidak). Coba jalankan checklist di atas. Berapa banyak poin yang sudah terpenuhi? Apa yang perlu diperbaiki?</p>
+                </div>
+
+                <hr style="margin: var(--space-8) 0; border: none; border-top: 1px solid var(--color-border);">
+
+                <!-- Rangkuman -->
+                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="background: var(--color-primary); padding: var(--space-4) var(--space-6);">
+                        <h3 style="margin: 0; color: white;"><i class="fas fa-clipboard-list"></i> Rangkuman BAB 4</h3>
+                    </div>
+                    <div style="padding: var(--space-6); background: white;">
+                        <ul style="margin-bottom:0;">
+                            <li>Penggunaan AI dalam pendidikan bukan hanya persoalan teknis ia menyangkut tanggung jawab etis dan profesional guru di setiap tahap pengembangan media.</li>
+                            <li>Lima tahapan pengembangan media (perancangan, pengembangan, pemanfaatan, pengelolaan, evaluasi) masing-masing memiliki dimensi etis yang perlu diperhatikan.</li>
+                            <li>Delapan bentuk tanggung jawab guru mencakup: peserta didik, kebenaran informasi, privasi data, hak cipta, keadilan akses, nilai lembaga, kompetensi profesional, dan transparansi.</li>
+                            <li>Risiko utama halusinasi, bias, pelanggaran privasi, ketergantungan pada output mentah dapat diminimalkan dengan langkah-langkah konkret yang telah diuraikan.</li>
+                            <li>Checklist etika adalah alat praktis yang harus digunakan sebelum media apa pun digunakan di kelas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Refleksi -->
+                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="background: var(--color-accent); padding: var(--space-4) var(--space-6);">
+                        <h3 style="margin: 0; color: white;"><i class="fas fa-comment-dots"></i> Refleksi BAB 4</h3>
+                    </div>
+                    <div style="padding: var(--space-6); background: white;">
+                        <ol style="margin-bottom:0; padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.75rem;">Dari delapan bentuk tanggung jawab yang dibahas, mana yang menurut Anda paling sering terabaikan dalam praktik sehari-hari? Apa yang bisa Anda lakukan untuk mengatasinya?</li>
+                            <li style="margin-bottom: 0.75rem;">Apakah Anda pernah mengalami situasi di mana penggunaan teknologi AI maupun lainnya menghadirkan dilema etis? Bagaimana Anda menghadapinya?</li>
+                            <li>Bagaimana Anda akan menjelaskan kepada siswa tentang penggunaan AI dalam media yang Anda buat, agar transparansi ini justru menjadi pembelajaran yang bermakna bagi mereka?</li>
+                        </ol>
+                    </div>
+                </div>
 
                 <!-- Quiz Container -->
-                <div id="quiz-container" data-bab="bab4" class="mt-12">
+                <div id="quiz-container" data-bab="bab4">
                     <!-- Quiz Engine akan me-render kuis di sini -->
                 </div>
 
                 <!-- Navigation -->
-                <div class="chapter-nav">
+                <div class="chapter-nav mt-8">
                     <a href="materi-bab3.html" class="chapter-nav-btn prev">
                         <i class="fas fa-arrow-left text-accent" style="font-size: 1.5rem;"></i>
-                        <div>
+                        <div style="text-align: right;">
                             <span class="nav-label">Bab Sebelumnya</span>
-                            <span class="nav-title">Prompt Engineering</span>
+                            <span class="nav-title">BAB 3: Pengembangan Media</span>
                         </div>
                     </a>
+                    
                     <a href="materi-bab5.html" class="chapter-nav-btn next">
                         <div>
                             <span class="nav-label">Bab Selanjutnya</span>
-                            <span class="nav-title">Etika Penggunaan</span>
+                            <span class="nav-title">BAB 5: Evaluasi Media</span>
                         </div>
                         <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
                     </a>
