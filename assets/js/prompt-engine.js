@@ -38,10 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     data.forEach(p => {
       // Icon logic based on category
       let icon = 'fa-magic';
-      if (p.category === 'perencanaan') icon = 'fa-file-alt';
-      else if (p.category === 'materi') icon = 'fa-book-open';
-      else if (p.category === 'evaluasi') icon = 'fa-clipboard-check';
-      else if (p.category === 'interaksi') icon = 'fa-users';
+      if (p.category === 'analisis') icon = 'fa-search-plus';
+      else if (p.category === 'produksi') icon = 'fa-photo-video';
 
       html += `
         <div class="prompt-card" data-category="${p.category}">
@@ -79,10 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Determine icon
         let icon = 'fa-magic';
-        if (p.category === 'perencanaan') icon = 'fa-file-alt';
-        else if (p.category === 'materi') icon = 'fa-book-open';
-        else if (p.category === 'evaluasi') icon = 'fa-clipboard-check';
-        else if (p.category === 'interaksi') icon = 'fa-users';
+        if (p.category === 'analisis') icon = 'fa-search-plus';
+        else if (p.category === 'produksi') icon = 'fa-photo-video';
 
         document.getElementById('modal-icon').innerHTML = `<i class="fas ${icon}"></i>`;
         document.getElementById('modal-title').innerText = p.title;
