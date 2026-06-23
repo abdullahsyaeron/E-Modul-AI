@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluasi Media - E-Modul AI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-body bg-alt">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                    <i class="fas fa-robot text-primary"></i>
+                </div>
+                <div>
+                    <span class="brand-name">E-Modul AI</span>
+                    <span class="brand-sub">Media Pembelajaran</span>
+                </div>
+            </a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link active"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="navbar-mobile" id="navbar-mobile">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="materi.html" class="nav-link"><i class="fas fa-book"></i> Materi</a>
+        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
+        <a href="evaluasi.html" class="nav-link active"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
+        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a>
+    </div>
+
+    <div class="container section">
+        
+        <div class="breadcrumb">
+            <a href="index.html">Dashboard</a>
+            <i class="fas fa-chevron-right sep"></i>
+            <span class="current">Evaluasi Media</span>
+        </div>
+
+        <div class="section-header mt-8 text-center">
+            <div class="section-label">Instrumen Penilaian</div>
+            <h1 class="section-title text-5xl">Evaluasi Kelayakan Media AI</h1>
+            <p class="section-desc max-w-3xl mx-auto">Gunakan instrumen ini setelah Anda selesai membuat media pembelajaran menggunakan AI. Jawab secara objektif untuk mengetahui apakah media Anda sudah layak digunakan di dalam kelas.</p>
+        </div>
+
+        <div class="evaluasi-wrapper max-w-3xl mx-auto">
+            
+            <!-- Evaluasi Form Container -->
+            <div id="evaluasi-form-container">
+                <!-- Rendered via JS -->
+            </div>
+
+            <!-- Evaluasi Result Container (Hidden by default) -->
+            <div class="eval-result-box mt-8" id="evaluasi-result">
+                <h3 class="text-2xl mb-2">Hasil Evaluasi</h3>
+                <div class="eval-score-val" id="eval-score-val">0%</div>
+                <div class="eval-score-desc" id="eval-score-desc">Kategori</div>
+                <p id="eval-score-msg" class="text-muted mt-2"></p>
+                
+                <div class="mt-6 text-center">
+                    <button class="btn btn-secondary" onclick="window.location.reload();">
+                        <i class="fas fa-redo"></i> Evaluasi Ulang
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name">
+                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                    </span>
+                    <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Pintasan</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="materi.html">Materi Belajar</a></li>
+                        <li><a href="prompt.html">Kumpulan Prompt</a></li>
+                        <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Kontak & Info</h4>
+                    <ul>
+                        <li><a href="tentang.html">Tentang Pengembang</a></li>
+                        <li><a href="tentang.html#referensi">Referensi</a></li>
+                        <li><a href="#">Bantuan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="fas fa-heart text-danger"></i> di Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/evaluasi-data.js"></script>
+    <script src="assets/js/evaluasi-engine.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
