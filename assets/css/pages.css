@@ -2051,5 +2051,62 @@
   }
 }
 
-@media (max-width: 640px) { .likert-options { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
+/* ============================================================
+   RESPONSIVE ADAPTIVE PADDING & TOUCH-FRIENDLY AUDIT RULES
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Adaptive Card Padding */
+  .profile-header,
+  .eval-dimensi-header {
+    padding: 16px 20px !important;
+  }
+  
+  .profile-body,
+  .eval-kriteria-list {
+    padding: 16px 20px !important;
+  }
+  
+  .quick-card {
+    padding: 20px !important;
+  }
+  
+  /* Make all tables horizontally scrollable on mobile without overflow */
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 640px) { 
+  .likert-options { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+  } 
+}
+
+@media (max-width: 480px) {
+  /* Ultra-compact padding for small screens (<480px) */
+  .profile-header,
+  .eval-dimensi-header {
+    padding: 14px 16px !important;
+  }
+  
+  .profile-body,
+  .eval-kriteria-list {
+    padding: 14px 16px !important;
+  }
+  
+  /* Likert scale 1 full vertical column for touch-friendly tapping */
+  .likert-options {
+    grid-template-columns: 1fr !important;
+    padding-left: 0 !important;
+    margin-top: 12px;
+  }
+  
+  .eval-kriteria-text {
+    margin-bottom: 8px;
+  }
+}
 

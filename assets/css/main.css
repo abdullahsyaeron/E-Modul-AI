@@ -55,17 +55,17 @@
   --font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
   
-  /* Font sizes (Apple scaling) */
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-base: 17px;
-  --text-lg: 21px;
-  --text-xl: 24px;
-  --text-2xl: 28px;
-  --text-3xl: 34px;
-  --text-4xl: 40px;
-  --text-5xl: 56px;
-  --text-6xl: 72px;
+  /* Font sizes — Fluid Typography (clamp scale) */
+  --text-xs: clamp(0.7rem, 1.5vw, 0.75rem);
+  --text-sm: clamp(0.8125rem, 1.8vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 2vw, 1.0625rem);
+  --text-lg: clamp(1.0625rem, 2.5vw, 1.3125rem);
+  --text-xl: clamp(1.25rem, 3vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 4vw, 1.75rem);
+  --text-3xl: clamp(1.75rem, 5vw, 2.125rem);
+  --text-4xl: clamp(2rem, 6vw, 2.5rem);
+  --text-5xl: clamp(2.5rem, 8vw, 3.5rem);
+  --text-6xl: clamp(3rem, 10vw, 4.5rem);
   
   /* Font weights (Apple removes 500) */
   --font-normal: 400;
