@@ -22,12 +22,12 @@ function initLenis() {
   }
 }
 /**
- * main.js â€” Shared JavaScript for E-Modul AI website
+ * main.js — Shared JavaScript for E-Modul AI website
  * Handles: navbar toggle, active nav detection, scroll effects, progress bar
  */
 
 /* ============================================================
-   NAVBAR â€” Mobile Toggle
+   NAVBAR — Mobile Toggle
    ============================================================ */
 function initNavbar() {
   const toggle = document.getElementById('navbar-toggle');
@@ -90,7 +90,7 @@ function initActiveNav() {
 }
 
 /* ============================================================
-   SCROLL EFFECTS â€” Navbar shadow + Back-to-top
+   SCROLL EFFECTS — Navbar shadow + Back-to-top
    ============================================================ */
 function initScrollEffects() {
   const backToTop = document.getElementById('back-to-top');
