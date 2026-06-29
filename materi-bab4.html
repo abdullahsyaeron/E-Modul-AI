@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/apple-theme.css">
 </head>
 <body class="page-body bg-alt">
 
@@ -40,7 +41,7 @@
                 <li><a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a></li>
                 <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
                 <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
-                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a></li>
             </ul>
             
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
@@ -53,45 +54,15 @@
 
     <!-- Mobile Navigation -->
     <div class="navbar-mobile" id="navbar-mobile">
+    <style>#navbar-mobile { display: none !important; }</style>
         <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
         <a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a>
         <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
         <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
-        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a>
+        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a>
     </div>
 
     <!-- Chapter Header -->
-    <header class="chapter-header">
-        <div class="container-narrow">
-            <div class="breadcrumb mb-4" style="padding-block: 0;">
-                <a href="index.html" style="color: rgba(255,255,255,0.7);">Dashboard</a>
-                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
-                <a href="materi.html" style="color: rgba(255,255,255,0.7);">Materi</a>
-                <i class="fas fa-chevron-right sep" style="color: rgba(255,255,255,0.4);"></i>
-                <span class="current" style="color: white;">BAB 4</span>
-            </div>
-            
-            <div class="chapter-num">
-                <i class="fas fa-bookmark text-accent-light"></i> BAB 4
-            </div>
-            <h1>Etika dan Tanggung Jawab Penggunaan AI dalam Pengembangan Media Pembelajaran</h1>
-            
-            <p style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
-                Bab ini membahas dimensi yang sering luput dari perhatian ketika guru mulai menggunakan AI: tanggung jawab etis dan profesional. Setelah memahami cara menggunakan AI secara teknis di BAB 3, kini saatnya Anda mempertimbangkan bagaimana menggunakannya secara bijak, aman, dan bertanggung jawab.
-            </p>
-
-            <div class="chapter-tujuan mt-8">
-                <h3><i class="fas fa-bullseye text-accent-light"></i> Tujuan Pembelajaran Bab Ini:</h3>
-                <ul>
-                    <li>Menjelaskan kedudukan etika dalam pemanfaatan AI untuk pengembangan media pembelajaran.</li>
-                    <li>Mengidentifikasi tanggung jawab guru pada setiap tahap pengembangan media berbantuan AI.</li>
-                    <li>Mengenali risiko etis utama dan mengambil langkah pencegahan yang konkret.</li>
-                    <li>Menerapkan pedoman praktis penggunaan AI yang etis dan bertanggung jawab.</li>
-                    <li>Menggunakan checklist etika sebelum media digunakan di kelas.</li>
-                </ul>
-            </div>
-        </div>
-    </header>
 
     <div class="container section pt-8">
         <div class="materi-layout">
@@ -141,6 +112,30 @@
 
             <!-- Main Content -->
             <main class="materi-main content-body">
+
+                <div class="chapter-content-header" style="margin-bottom: 2rem;">
+                    <div class="chapter-num" style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">
+                        <i class="fas fa-bookmark text-accent"></i> BAB 4
+                    </div>
+                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-text);">Etika dan Tanggung Jawab Penggunaan AI dalam Pengembangan Media Pembelajaran</h1>
+                    
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 2rem;">
+                        Bab ini membahas dimensi yang sering luput dari perhatian ketika guru mulai menggunakan AI: tanggung jawab etis dan profesional. Setelah memahami cara menggunakan AI secara teknis di BAB 3, kini saatnya Anda mempertimbangkan bagaimana menggunakannya secara bijak, aman, dan bertanggung jawab.
+                    </p>
+
+                    <div class="chapter-tujuan" style="background: var(--apple-bg-card); border: 1px solid var(--apple-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+                        <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--color-text); display: flex; align-items: center; gap: 8px; margin-bottom: 1rem;">
+                            <i class="fas fa-bullseye text-accent"></i> Tujuan Pembelajaran Bab Ini:
+                        </h3>
+                        <ul style="margin-bottom: 0; padding-left: 1.5rem; color: var(--color-text-muted);">
+                            <li style="margin-bottom: 0.5rem;">Menjelaskan kedudukan etika dalam pemanfaatan AI untuk pengembangan media pembelajaran.</li>
+                            <li style="margin-bottom: 0.5rem;">Mengidentifikasi tanggung jawab guru pada setiap tahap pengembangan media berbantuan AI.</li>
+                            <li style="margin-bottom: 0.5rem;">Mengenali risiko etis utama dan mengambil langkah pencegahan yang konkret.</li>
+                            <li style="margin-bottom: 0.5rem;">Menerapkan pedoman praktis penggunaan AI yang etis dan bertanggung jawab.</li>
+                            <li>Menggunakan checklist etika sebelum media digunakan di kelas.</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <!-- Pertanyaan Pemantik -->
                 <div class="highlight-box" style="background: linear-gradient(135deg, rgba(16,185,129,0.06), rgba(30,58,95,0.04)); border: 1px solid rgba(16,185,129,0.2);">
@@ -532,11 +527,6 @@
                         <li><a href="evaluasi.html">Evaluasi Media</a></li>
                     </ul>
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
-                <p>Desain dan Pengembangan dengan <i class="fas fa-heart text-danger"></i> di Indonesia.</p>
             </div>
         </div>
     </footer>

@@ -1,0 +1,417 @@
+/* 
+    APPLE-COMPONENTS.CSS
+    UI Components for the Apple-style Redesign (V-MASTER).
+*/
+
+/* ==========================================================================
+   TOP NAVBAR (Glassmorphism)
+   ========================================================================== */
+.navbar-glass {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(242, 242, 247, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--app-padding);
+}
+
+@media (prefers-color-scheme: dark) {
+    .navbar-glass {
+        background-color: rgba(28, 28, 30, 0.7);
+    }
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--text-md);
+    color: var(--color-text-primary);
+}
+
+.navbar-brand .logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--color-accent);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navbar-nav a {
+    color: var(--color-text-primary);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.navbar-nav a:hover, .navbar-nav a.active {
+    color: var(--color-accent);
+}
+
+/* ==========================================================================
+   HAMBURGER MENU (Mobile)
+   ========================================================================== */
+.hamburger-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    padding: 8px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+    padding: 20px var(--app-padding);
+    flex-direction: column;
+    gap: 16px;
+    z-index: 999;
+    box-shadow: var(--shadow-md);
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav { display: none; }
+    .hamburger-btn { display: block; }
+}
+
+/* ==========================================================================
+   BUTTONS (Capsule & Shrink)
+   ========================================================================== */
+.ios-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--ui-radius); /* 9999px */
+    font-weight: 600;
+    font-size: var(--text-base);
+    cursor: pointer;
+    transition: transform var(--transition-spring), background-color var(--transition-fast);
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: var(--color-accent);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.ios-btn:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.ios-btn:active {
+    transform: scale(0.96); /* Haptic shrink effect */
+}
+
+.ios-btn.secondary {
+    background-color: var(--color-bg-base);
+    color: var(--color-accent);
+}
+
+.ios-btn.secondary:hover {
+    background-color: #E5E5EA;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ios-btn.secondary:hover {
+        background-color: #2C2C2E;
+    }
+}
+
+/* ==========================================================================
+   QUIZ / EVAL OPTIONS (Full Card)
+   ========================================================================== */
+.quiz-option-card {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    cursor: pointer;
+    transition: all var(--transition-spring);
+    margin-bottom: 12px;
+    width: 100%;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+
+.quiz-option-card:hover {
+    border-color: rgba(0, 122, 255, 0.4);
+    background-color: var(--color-accent-light);
+}
+
+/* Hide actual radio button */
+.quiz-option-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Selected State */
+.quiz-option-card:has(input[type="radio"]:checked) {
+    border: 2px solid var(--color-accent);
+    background-color: var(--color-accent-light);
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+}
+
+.quiz-option-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.quiz-option-letter {
+    font-weight: bold;
+    color: var(--color-accent);
+    background: var(--color-bg-base);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.quiz-option-card:has(input[type="radio"]:checked) .quiz-option-letter {
+    background: var(--color-accent);
+    color: white;
+}
+
+.quiz-option-text {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   SEARCH BAR (Capsule)
+   ========================================================================== */
+.search-capsule-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-capsule {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    background-color: var(--color-bg-sidebar); /* Matches Apple's subtle gray */
+    color: var(--color-text-primary);
+    font-size: var(--text-base);
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.search-capsule:focus {
+    border-color: var(--color-accent);
+    background-color: var(--color-bg-card);
+    box-shadow: 0 0 0 4px var(--color-accent-light);
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   DYNAMIC ISLAND TOAST NOTIFICATION
+   ========================================================================== */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none; /* Let clicks pass through */
+}
+
+.toast-dynamic {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: var(--text-sm);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    
+    /* Animation initial state */
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+    transition: all var(--transition-spring);
+}
+
+@media (prefers-color-scheme: dark) {
+    .toast-dynamic {
+        background-color: #2C2C2E;
+        color: #FFFFFF;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+.toast-dynamic.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* ==========================================================================
+   MODAL SPRING (Scale Up)
+   ========================================================================== */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+}
+
+.modal-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-spring {
+    background-color: var(--color-bg-card);
+    border-radius: 24px;
+    width: 90%;
+    max-width: 500px;
+    padding: 32px;
+    box-shadow: var(--shadow-floating);
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform var(--transition-spring), opacity var(--transition-fast);
+}
+
+.modal-backdrop.open .modal-spring {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* ==========================================================================
+   CALLOUTS (Rounded-2xl, soft background)
+   ========================================================================== */
+.callout-apple {
+    background-color: var(--color-accent-light); /* very soft blue */
+    border-radius: 24px; /* rounded-2xl equivalent */
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.callout-apple.success {
+    background-color: rgba(52, 199, 89, 0.1); /* soft green */
+}
+
+.callout-apple.warning {
+    background-color: rgba(255, 149, 0, 0.1); /* soft orange */
+}
+
+.callout-icon {
+    flex-shrink: 0;
+    color: var(--color-accent);
+}
+
+.callout-apple.success .callout-icon {
+    color: var(--color-success);
+}
+.callout-apple.warning .callout-icon {
+    color: var(--color-warning);
+}
+
+.callout-content {
+    flex: 1;
+}
+
+.callout-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   BASE CARDS & FOOTER
+   ========================================================================== */
+.ios-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    padding: 24px;
+    transition: transform var(--transition-spring), box-shadow var(--transition-spring);
+    box-shadow: var(--shadow-sm);
+}
+
+.ios-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.apple-footer {
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-base);
+    padding: 24px var(--app-padding);
+    margin-top: 60px;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.apple-footer a {
+    color: var(--color-text-secondary);
+}
+.apple-footer a:hover {
+    color: var(--color-text-primary);
+}

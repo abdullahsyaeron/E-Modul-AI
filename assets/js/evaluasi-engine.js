@@ -15,10 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
   let html = '<form id="evaluasi-form">';
 
   data.forEach((dimensi, dIndex) => {
+    // Map FontAwesome icon to Lucide equivalent if needed, or use a default
+    // evaluasi-data.js probably has FontAwesome icons like 'fa-bullseye', etc.
+    let lucideIcon = 'check-circle';
+    if (dimensi.icon.includes('bullseye')) lucideIcon = 'target';
+    else if (dimensi.icon.includes('book')) lucideIcon = 'book-open';
+    else if (dimensi.icon.includes('child')) lucideIcon = 'user';
+    else if (dimensi.icon.includes('laptop-code')) lucideIcon = 'monitor-play';
+    else if (dimensi.icon.includes('shield-alt')) lucideIcon = 'shield';
+    else if (dimensi.icon.includes('chalkboard-teacher')) lucideIcon = 'presentation';
+    else if (dimensi.icon.includes('hands-helping')) lucideIcon = 'handshake';
+    
     html += `
-      <div class="eval-dimensi-card" style="border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.04); margin-bottom: 30px;">
-        <div class="eval-dimensi-header" style="background: linear-gradient(135deg, #0f172a, #1e293b); padding: 20px 24px;">
-          <i class="fas ${dimensi.icon}" style="color: #38bdf8;"></i>
+      <div class="eval-dimensi-card" style="border-radius: 24px; overflow: hidden; border: none; box-shadow: 0 4px 24px rgba(0,0,0,0.04); margin-bottom: 30px;">
+        <div class="eval-dimensi-header" style="background: linear-gradient(135deg, #0f172a, #1e293b); padding: 20px 24px; display: flex; align-items: center; gap: 12px;">
+          <i data-lucide="${lucideIcon}" style="color: #38bdf8;"></i>
           <h3 style="margin: 0; color: white; font-size: 1.25rem;">Dimensi ${dIndex + 1} &mdash; ${dimensi.dimensi}</h3>
         </div>
         <div class="eval-kriteria-list" style="padding: 10px 24px 24px 24px; background: #fafafa;">
@@ -36,11 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
       
       k.options.forEach(opt => {
           html += `
-            <label class="eval-radio-scale">
+            <label class="quiz-option-card">
               <input type="radio" name="kriteria_${k.id}" value="${opt.val}" required>
-              <div class="eval-radio-content">
-                <div class="scale-val">${opt.val}</div>
-                <div class="scale-text">${opt.text}</div>
+              <div class="quiz-option-content">
+                <div class="quiz-option-letter">${opt.val}</div>
+                <div class="quiz-option-text">${opt.text}</div>
               </div>
             </label>
           `;
@@ -60,14 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   html += `
       <div class="text-center mt-8">
-        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 400px;">
-          <i class="fas fa-calculator"></i> Hitung Kelayakan Media
+        <button type="submit" class="ios-btn" style="width: 100%; max-width: 400px; background: var(--color-accent); color: white; border: none; padding: 16px 24px; border-radius: 16px; font-weight: 600; font-size: 16px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+          <i data-lucide="calculator" size="20"></i> Hitung Kelayakan Media
         </button>
       </div>
     </form>
   `;
 
   container.innerHTML = html;
+  
+  if (window.lucide) {
+      window.lucide.createIcons({ root: container });
+  }
 
   // Handle Form Submission
   const form = document.getElementById('evaluasi-form');
