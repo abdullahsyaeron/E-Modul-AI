@@ -8,16 +8,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/pages.css?v=2.1">
-    <link rel="stylesheet" href="assets/css/apple-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=clean3">
+    <link rel="stylesheet" href="assets/css/components.css?v=clean3">
+    <link rel="stylesheet" href="assets/css/pages.css?v=clean3">
 </head>
 <body class="page-body bg-alt">
 
@@ -26,7 +25,7 @@
         <div class="navbar-inner">
             <a href="index.html" class="navbar-brand">
                 <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
-                    <i class="fas fa-robot text-primary"></i>
+                    <i class="ph ph-robot text-primary"></i>
                 </div>
                 <div>
                     <span class="brand-name">E-Modul AI</span>
@@ -35,11 +34,11 @@
             </a>
             
             <ul class="navbar-nav" id="navbar-nav">
-                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="materi.html" class="nav-link"><i class="fas fa-book"></i> Materi</a></li>
-                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
-                <li><a href="evaluasi.html" class="nav-link active"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
-                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a></li>
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link">Materi</a></li>
+                <li><a href="prompt.html" class="nav-link">Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link active">Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link">Tentang</a></li>
             </ul>
             
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
@@ -52,23 +51,34 @@
 
     <!-- Mobile Navigation -->
     <div class="navbar-mobile" id="navbar-mobile">
-    <style>#navbar-mobile { display: none !important; }</style>
-        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
-        <a href="materi.html" class="nav-link"><i class="fas fa-book"></i> Materi</a>
-        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
-        <a href="evaluasi.html" class="nav-link active"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
-        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="materi.html" class="nav-link">Materi</a>
+        <a href="prompt.html" class="nav-link">Prompt</a>
+        <a href="evaluasi.html" class="nav-link active">Evaluasi</a>
+        <a href="tentang.html" class="nav-link">Tentang</a>
     </div>
 
-    <div class="container section">
+    <!-- HERO TILE -->
+    <section class="hero-section tile tile-light" style="padding-top: 140px; padding-bottom: 60px; min-height: auto; background-image: none; animation: none;">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Dashboard</a>
+                <i class="ph ph-caret-right sep"></i>
+                <span class="current">Evaluasi Media</span>
+            </div>
 
-        <div class="section-header mt-8 text-center">
-            <div class="section-label">Instrumen Penilaian</div>
-            <h1 class="section-title text-5xl">Evaluasi Kelayakan Media AI</h1>
-            <p class="section-desc max-w-3xl mx-auto">Gunakan instrumen ini setelah Anda selesai membuat media pembelajaran menggunakan AI. Jawab secara objektif untuk mengetahui apakah media Anda sudah layak digunakan di dalam kelas.</p>
+            <div class="section-header mt-8 text-center">
+                <div class="section-label">Instrumen Penilaian</div>
+                <h1 class="hero-title">Evaluasi Kelayakan Media AI</h1>
+                <p class="hero-desc max-w-3xl mx-auto">Gunakan instrumen ini setelah Anda selesai membuat media pembelajaran menggunakan AI. Jawab secara objektif untuk mengetahui apakah media Anda sudah layak digunakan di dalam kelas.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="evaluasi-wrapper max-w-3xl mx-auto">
+    <!-- CONTENT TILE -->
+    <section class="section tile tile-parchment">
+        <div class="container">
+            <div class="evaluasi-wrapper max-w-3xl mx-auto">
             
             <!-- Evaluasi Form Container -->
             <div id="evaluasi-form-container">
@@ -84,14 +94,14 @@
                 
                 <div class="mt-6 text-center">
                     <button class="btn btn-secondary" onclick="window.location.reload();">
-                        <i class="fas fa-redo"></i> Evaluasi Ulang
+                        <i class="ph ph-arrow-clockwise"></i> Evaluasi Ulang
                     </button>
                 </div>
             </div>
 
+            </div>
         </div>
-
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer mt-auto">
@@ -99,7 +109,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <span class="brand-name">
-                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                        <i class="ph ph-robot text-accent-light"></i> E-Modul AI
                     </span>
                     <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
                 </div>
@@ -123,17 +133,32 @@
                     </ul>
                 </div>
             </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="ph ph-heart text-danger ph-fill"></i> di Indonesia.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Kembali ke atas">
-        <i class="fas fa-arrow-up"></i>
+        <i class="ph ph-arrow-up"></i>
     </button>
 
     <!-- Scripts -->
     <script src="assets/js/evaluasi-data.js?v=2.2"></script>
     <script src="assets/js/evaluasi-engine.js?v=2.2"></script>
-    <script src="assets/js/main.js?v=2.2"></script>
+    <script src="assets/js/main.js?v=premium"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

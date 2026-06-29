@@ -8,16 +8,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
-    <link rel="stylesheet" href="assets/css/apple-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=clean3">
+    <link rel="stylesheet" href="assets/css/components.css?v=clean3">
+    <link rel="stylesheet" href="assets/css/pages.css?v=clean3">
 </head>
 <body class="page-body bg-alt">
 
@@ -28,7 +27,7 @@
         <div class="navbar-inner">
             <a href="index.html" class="navbar-brand">
                 <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
-                    <i class="fas fa-robot text-primary"></i>
+                    <i class="ph ph-robot text-primary"></i>
                 </div>
                 <div>
                     <span class="brand-name">E-Modul AI</span>
@@ -37,11 +36,11 @@
             </a>
             
             <ul class="navbar-nav" id="navbar-nav">
-                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a></li>
-                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
-                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
-                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a></li>
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link active">Materi</a></li>
+                <li><a href="prompt.html" class="nav-link">Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link">Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link">Tentang</a></li>
             </ul>
             
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
@@ -54,17 +53,51 @@
 
     <!-- Mobile Navigation -->
     <div class="navbar-mobile" id="navbar-mobile">
-    <style>#navbar-mobile { display: none !important; }</style>
-        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
-        <a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a>
-        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
-        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
-        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="materi.html" class="nav-link active">Materi</a>
+        <a href="prompt.html" class="nav-link">Prompt</a>
+        <a href="evaluasi.html" class="nav-link">Evaluasi</a>
+        <a href="tentang.html" class="nav-link">Tentang</a>
     </div>
 
     <!-- Chapter Header -->
+    <!-- HERO TILE -->
+    <section class="hero-section tile tile-light" style="padding-top: 140px; padding-bottom: 60px; min-height: auto; background-image: none; animation: none;">
+        <div class="container">
+            <div class="breadcrumb mb-4" style="padding-block: 0;">
+                <a href="index.html" style="">Dashboard</a>
+                <i class="ph ph-caret-right sep" style=""></i>
+                <a href="materi.html" style="">Materi</a>
+                <i class="ph ph-caret-right sep" style=""></i>
+                <span class="current" >BAB 4</span>
+            </div>
+            
+            <div class="chapter-num">
+                <i class="ph ph-book-openmark text-accent-light"></i> BAB 4
+            </div>
+            <h1 class="hero-title text-left">Etika dan Tanggung Jawab Penggunaan AI dalam Pengembangan Media Pembelajaran</h1>
+            
+            <p style="color: var(--color-text-muted); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
+                Bab ini membahas dimensi yang sering luput dari perhatian ketika guru mulai menggunakan AI: tanggung jawab etis dan profesional. Setelah memahami cara menggunakan AI secara teknis di BAB 3, kini saatnya Anda mempertimbangkan bagaimana menggunakannya secara bijak, aman, dan bertanggung jawab.
+            </p>
 
-    <div class="container section pt-8">
+            <div class="chapter-tujuan mt-8">
+                <h3><i class="ph ph-target text-accent-light"></i> Tujuan Pembelajaran Bab Ini:</h3>
+                <ul>
+                    <li>Menjelaskan kedudukan etika dalam pemanfaatan AI untuk pengembangan media pembelajaran.</li>
+                    <li>Mengidentifikasi tanggung jawab guru pada setiap tahap pengembangan media berbantuan AI.</li>
+                    <li>Mengenali risiko etis utama dan mengambil langkah pencegahan yang konkret.</li>
+                    <li>Menerapkan pedoman praktis penggunaan AI yang etis dan bertanggung jawab.</li>
+                    <li>Menggunakan checklist etika sebelum media digunakan di kelas.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT TILE -->
+    <section class="section tile tile-parchment">
+
+    <div class="container pt-8">
         <div class="materi-layout">
             
             <!-- Sidebar Navigation -->
@@ -104,7 +137,7 @@
 
                     <div class="sidebar-nav-item" style="margin-top: 15px; border-top: 1px dashed var(--color-border); padding-top: 15px;">
                         <a href="#quiz-container" style="color: var(--color-accent); font-weight: 600;">
-                            <i class="fas fa-tasks"></i> Kuis Evaluasi
+                            <i class="ph ph-check-square"></i> Kuis Evaluasi
                         </a>
                     </div>
                 </div>
@@ -113,34 +146,10 @@
             <!-- Main Content -->
             <main class="materi-main content-body">
 
-                <div class="chapter-content-header" style="margin-bottom: 2rem;">
-                    <div class="chapter-num" style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">
-                        <i class="fas fa-bookmark text-accent"></i> BAB 4
-                    </div>
-                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-text);">Etika dan Tanggung Jawab Penggunaan AI dalam Pengembangan Media Pembelajaran</h1>
-                    
-                    <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 2rem;">
-                        Bab ini membahas dimensi yang sering luput dari perhatian ketika guru mulai menggunakan AI: tanggung jawab etis dan profesional. Setelah memahami cara menggunakan AI secara teknis di BAB 3, kini saatnya Anda mempertimbangkan bagaimana menggunakannya secara bijak, aman, dan bertanggung jawab.
-                    </p>
-
-                    <div class="chapter-tujuan" style="background: var(--apple-bg-card); border: 1px solid var(--apple-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
-                        <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--color-text); display: flex; align-items: center; gap: 8px; margin-bottom: 1rem;">
-                            <i class="fas fa-bullseye text-accent"></i> Tujuan Pembelajaran Bab Ini:
-                        </h3>
-                        <ul style="margin-bottom: 0; padding-left: 1.5rem; color: var(--color-text-muted);">
-                            <li style="margin-bottom: 0.5rem;">Menjelaskan kedudukan etika dalam pemanfaatan AI untuk pengembangan media pembelajaran.</li>
-                            <li style="margin-bottom: 0.5rem;">Mengidentifikasi tanggung jawab guru pada setiap tahap pengembangan media berbantuan AI.</li>
-                            <li style="margin-bottom: 0.5rem;">Mengenali risiko etis utama dan mengambil langkah pencegahan yang konkret.</li>
-                            <li style="margin-bottom: 0.5rem;">Menerapkan pedoman praktis penggunaan AI yang etis dan bertanggung jawab.</li>
-                            <li>Menggunakan checklist etika sebelum media digunakan di kelas.</li>
-                        </ul>
-                    </div>
-                </div>
-
                 <!-- Pertanyaan Pemantik -->
                 <div class="highlight-box" style="background: linear-gradient(135deg, rgba(16,185,129,0.06), rgba(30,58,95,0.04)); border: 1px solid rgba(16,185,129,0.2);">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <i class="fas fa-lightbulb text-success text-2xl"></i>
+                        <i class="ph ph-lightbulb text-success text-2xl"></i>
                         <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
                     </div>
                     <p>Apakah menurut Anda semua konten yang dihasilkan AI otomatis aman digunakan di kelas? Apa yang membuat sebuah konten "aman" atau "tidak aman" untuk peserta didik?</p>
@@ -185,7 +194,7 @@
                             <p>Perlakukan output AI sebagai draf awal yang perlu diverifikasi dan direvisi bukan sebagai produk final. Anda adalah editor dan kurator, bukan sekadar pengguna pasif.</p>
                             
                             <div class="highlight-box mt-4" style="background: rgba(14, 165, 233, 0.05); border: 1px solid rgba(14, 165, 233, 0.3); border-left: 4px solid var(--color-primary);">
-                                <h4 style="margin-top: 0; margin-bottom: 8px; color: var(--color-primary-dark);"><i class="fas fa-info-circle"></i> Catatan Penting</h4>
+                                <h4 style="margin-top: 0; margin-bottom: 8px; color: var(--color-primary-dark);"><i class="ph ph-info"></i> Catatan Penting</h4>
                                 <p style="margin-bottom: 0;">Verifikasi semua fakta, angka, kutipan, ayat Al-Qur'an, hadis, dan data statistik yang dihasilkan AI sebelum dimasukkan ke dalam media. AI dapat menghasilkan informasi yang tampak meyakinkan namun tidak akurat.</p>
                             </div>
                         </div>
@@ -207,7 +216,7 @@
                             <p>Guru dan sekolah perlu mengatur penggunaan platform AI secara sistematis, mencakup: akun yang digunakan, data yang boleh dan tidak boleh dimasukkan, arsip media yang dikembangkan, serta kebijakan privasi dan keamanan data.</p>
                             
                             <div class="highlight-box mt-4" style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.3); border-left: 4px solid var(--color-danger);">
-                                <h4 style="margin-top: 0; margin-bottom: 8px; color: #b91c1c;"><i class="fas fa-exclamation-triangle"></i> Perhatian Etis</h4>
+                                <h4 style="margin-top: 0; margin-bottom: 8px; color: #b91c1c;"><i class="ph ph-warning"></i> Perhatian Etis</h4>
                                 <p style="margin-bottom: 0;">Data pribadi siswa termasuk nama lengkap, NISN, foto, nilai, atau informasi identitas lainnya tidak boleh dimasukkan ke dalam sistem AI publik. Platform AI umumnya menyimpan data input untuk keperluan pelatihan model. Memasukkan data siswa ke dalamnya dapat melanggar privasi dan berpotensi melanggar peraturan perlindungan data.</p>
                             </div>
                         </div>
@@ -317,9 +326,9 @@
 
                 <div class="materi-tabs-container">
                     <div class="materi-tabs">
-                        <button class="tab-btn active" data-tab="tab-kasus1"><i class="fas fa-file-alt"></i> Kasus 1</button>
-                        <button class="tab-btn" data-tab="tab-kasus2"><i class="fas fa-user-shield"></i> Kasus 2</button>
-                        <button class="tab-btn" data-tab="tab-kasus3"><i class="fas fa-image"></i> Kasus 3</button>
+                        <button class="tab-btn active" data-tab="tab-kasus1"><i class="ph ph-file-text"></i> Kasus 1</button>
+                        <button class="tab-btn" data-tab="tab-kasus2"><i class="ph ph-user-shield"></i> Kasus 2</button>
+                        <button class="tab-btn" data-tab="tab-kasus3"><i class="ph ph-image"></i> Kasus 3</button>
                     </div>
 
                     <div id="tab-kasus1" class="tab-content active">
@@ -329,7 +338,7 @@
                             <p><strong>Masalah Etis:</strong> Satu data dalam poster ternyata tidak akurat angka persentase air tawar di bumi yang disebutkan AI berbeda dari sumber ilmiah yang sahih. Siswa mempelajari fakta yang keliru selama dua minggu.</p>
                             <p><strong>Analisis:</strong> Ini adalah masalah pada tahap pengembangan dan pemanfaatan. Bu Rina melewatkan langkah verifikasi konten dan tidak menjalankan prinsip kontrol pedagogis.</p>
                             <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px solid rgba(16,185,129,0.3);">
-                                <p style="margin: 0; color: #047857;"><strong><i class="fas fa-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Sebelum mencetak, Bu Rina seharusnya membaca ulang seluruh konten poster, memverifikasi data dari buku teks atau sumber ilmiah, dan menyunting bagian yang tidak akurat.</p>
+                                <p style="margin: 0; color: #047857;"><strong><i class="ph ph-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Sebelum mencetak, Bu Rina seharusnya membaca ulang seluruh konten poster, memverifikasi data dari buku teks atau sumber ilmiah, dan menyunting bagian yang tidak akurat.</p>
                             </div>
                         </div>
                     </div>
@@ -341,7 +350,7 @@
                             <p><strong>Masalah Etis:</strong> Data identitas dan nilai siswa adalah informasi pribadi yang seharusnya tidak dimasukkan ke platform AI publik. Platform AI umumnya menyimpan input untuk keperluan pelatihan model.</p>
                             <p><strong>Analisis:</strong> Ini adalah pelanggaran pada tahap pengelolaan menyangkut privasi data siswa dan keamanan informasi.</p>
                             <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px solid rgba(16,185,129,0.3);">
-                                <p style="margin: 0; color: #047857;"><strong><i class="fas fa-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Pak Dimas seharusnya menggunakan data anonim (misalnya Siswa A, B, C) atau deskripsi pola kesalahan secara umum tanpa identitas. Data nilai siswa diolah secara lokal tanpa melibatkan platform AI publik.</p>
+                                <p style="margin: 0; color: #047857;"><strong><i class="ph ph-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Pak Dimas seharusnya menggunakan data anonim (misalnya Siswa A, B, C) atau deskripsi pola kesalahan secara umum tanpa identitas. Data nilai siswa diolah secara lokal tanpa melibatkan platform AI publik.</p>
                             </div>
                         </div>
                     </div>
@@ -353,7 +362,7 @@
                             <p><strong>Masalah Etis:</strong> Konten visual yang tidak selaras dengan nilai lembaga dapat mengirimkan pesan yang tidak konsisten kepada siswa dan bertentangan dengan nilai serta karakter yang dibentuk satuan pendidikan.</p>
                             <p><strong>Analisis:</strong> Ini adalah masalah pada tahap pengembangan menyangkut verifikasi kesesuaian visual dengan nilai dan visi lembaga pendidikan.</p>
                             <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px solid rgba(16,185,129,0.3);">
-                                <p style="margin: 0; color: #047857;"><strong><i class="fas fa-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Bu Hasna seharusnya memeriksa setiap ilustrasi sebelum presentasi digunakan. Gambar yang tidak sesuai diganti baik dengan mengedit manual, mencari gambar alternatif, atau menggunakan ilustrasi abstrak yang tidak menampilkan figur manusia.</p>
+                                <p style="margin: 0; color: #047857;"><strong><i class="ph ph-check-circle"></i> Keputusan yang Seharusnya Dilakukan:</strong> Bu Hasna seharusnya memeriksa setiap ilustrasi sebelum presentasi digunakan. Gambar yang tidak sesuai diganti baik dengan mengedit manual, mencari gambar alternatif, atau menggunakan ilustrasi abstrak yang tidak menampilkan figur manusia.</p>
                             </div>
                         </div>
                     </div>
@@ -376,62 +385,62 @@
                             <tr>
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">1</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah media selaras dengan tujuan pembelajaran yang ditetapkan?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr style="background-color: var(--color-bg-alt);">
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">2</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah seluruh fakta, angka, dan klaim telah diverifikasi dari sumber terpercaya?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr>
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">3</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah tidak ada data pribadi siswa yang dimasukkan dalam proses pengembangan?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr style="background-color: var(--color-bg-alt);">
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">4</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah aset yang digunakan sesuai ketentuan hak cipta dan atribusi?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr>
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">5</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah bahasa dan kompleksitas sesuai dengan usia dan karakteristik siswa?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr style="background-color: var(--color-bg-alt);">
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">6</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah konten dan visual sesuai dengan nilai, budaya, dan karakter yang dianut satuan pendidikan?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr>
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">7</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah media dapat diakses oleh semua siswa dengan kondisi teknologi yang beragam?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr style="background-color: var(--color-bg-alt);">
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">8</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah penggunaan AI dalam media ini dicantumkan secara transparan?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr>
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">9</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah terdapat kontribusi pedagogis guru yang substansial bukan sekadar output mentah AI?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                             <tr style="background-color: var(--color-bg-alt);">
                                 <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;">10</td>
                                 <td style="padding: 12px; border: 1px solid var(--color-border);">Apakah media telah dievaluasi dan dinilai layak sebelum digunakan di kelas?</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="far fa-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
+                                <td style="padding: 12px; border: 1px solid var(--color-border); text-align: center;"><i class="ph ph-square" style="color: #94a3b8; font-size: 1.25rem;"></i></td>
                             </tr>
                         </tbody>
                     </table>
@@ -441,7 +450,7 @@
                 <!-- Aktivitas Singkat -->
                 <div class="highlight-box mt-8" style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.3); border-left: 4px solid #8b5cf6;">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                        <i class="fas fa-tasks text-xl" style="color: #8b5cf6;"></i>
+                        <i class="ph ph-check-square text-xl" style="color: #8b5cf6;"></i>
                         <h4 style="margin: 0; color: #5b21b6;">Aktivitas Singkat</h4>
                     </div>
                     <p style="margin-bottom:0;">Ambil satu media yang pernah Anda kembangkan (berbantuan AI atau tidak). Coba jalankan checklist di atas. Berapa banyak poin yang sudah terpenuhi? Apa yang perlu diperbaiki?</p>
@@ -452,7 +461,7 @@
                 <!-- Rangkuman -->
                 <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
                     <div style="background: var(--color-primary); padding: var(--space-4) var(--space-6);">
-                        <h3 style="margin: 0; color: white;"><i class="fas fa-clipboard-list"></i> Rangkuman BAB 4</h3>
+                        <h3 style="margin: 0; color: white;"><i class="ph ph-clipboard-text"></i> Rangkuman BAB 4</h3>
                     </div>
                     <div style="padding: var(--space-6); background: white;">
                         <ul style="margin-bottom:0;">
@@ -468,7 +477,7 @@
                 <!-- Refleksi -->
                 <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
                     <div style="background: var(--color-accent); padding: var(--space-4) var(--space-6);">
-                        <h3 style="margin: 0; color: white;"><i class="fas fa-comment-dots"></i> Refleksi BAB 4</h3>
+                        <h3 style="margin: 0; color: white;"><i class="ph ph-chat-circle-dots"></i> Refleksi BAB 4</h3>
                     </div>
                     <div style="padding: var(--space-6); background: white;">
                         <ol style="margin-bottom:0; padding-left: 1.5rem;">
@@ -487,7 +496,7 @@
                 <!-- Navigation -->
                 <div class="chapter-nav mt-8">
                     <a href="materi-bab3.html" class="chapter-nav-btn prev">
-                        <i class="fas fa-arrow-left text-accent" style="font-size: 1.5rem;"></i>
+                        <i class="ph ph-arrow-left text-accent" style="font-size: 1.5rem;"></i>
                         <div style="text-align: right;">
                             <span class="nav-label">Bab Sebelumnya</span>
                             <span class="nav-title">BAB 3: Pengembangan Media</span>
@@ -499,7 +508,7 @@
                             <span class="nav-label">Bab Selanjutnya</span>
                             <span class="nav-title">BAB 5: Evaluasi Media</span>
                         </div>
-                        <i class="fas fa-arrow-right text-accent" style="font-size: 1.5rem;"></i>
+                        <i class="ph ph-arrow-right text-accent" style="font-size: 1.5rem;"></i>
                     </a>
                 </div>
 
@@ -507,13 +516,15 @@
         </div>
     </div>
 
+    </section>
+
     <!-- Footer -->
     <footer class="footer mt-auto">
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
                     <span class="brand-name">
-                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                        <i class="ph ph-robot text-accent-light"></i> E-Modul AI
                     </span>
                     <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
                 </div>
@@ -528,18 +539,38 @@
                     </ul>
                 </div>
             </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="ph ph-heart text-danger ph-fill"></i> di Indonesia.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Kembali ke atas">
-        <i class="fas fa-arrow-up"></i>
+        <i class="ph ph-arrow-up"></i>
     </button>
 
     <!-- Scripts -->
     <script src="assets/js/quiz-data.js"></script>
     <script src="assets/js/quiz-engine.js"></script>
-    <script src="assets/js/main.js?v=3.0"></script>
+    <script src="assets/js/main.js?v=premium"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

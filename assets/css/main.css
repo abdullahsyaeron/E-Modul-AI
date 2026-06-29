@@ -1,127 +1,124 @@
 /* ============================================================
-   LABSPACE DESIGN SYSTEM (CSS Tokens)
+   DESIGN TOKENS (CSS Custom Properties)
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
-  /* ========================================================
-     1. TYPOGRAPHY
-     ======================================================== */
-  --font-system: "SF Pro Display", "SF Pro Text", "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  /* Colors — LabSpace Design System */
+  --color-primary: #007AFF;       /* iOS Blue */
+  --color-primary-light: #2997ff; /* Apple Sky Link Blue */
+  --color-primary-dark: #006EE6;  /* iOS Blue Hover/Focus */
+  --color-accent: #007AFF;        
+  --color-accent-dark: #006EE6;   
+  --color-accent-light: #2997ff;  
+  --color-success: #137A3A;
+  --color-success-light: #E8F8EF;
+  --color-warning: #8A5A00;       
+  --color-warning-light: #FFF4D6;
+  --color-danger: #B42318;        
+  --color-danger-light: #FFE8E6;
+  --color-info: #005BB5;          
+  --color-info-light: #EAF3FF;
   
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-base: 15px; /* Apple's ideal readability base */
-  --text-lg: 17px;
-  --text-xl: 20px;
-  --text-2xl: 24px;
-  --text-3xl: 32px;
-  --text-4xl: 40px;
-  --text-5xl: 48px;
-  --text-6xl: 64px;
-
-  /* ========================================================
-     2. COLOR PALETTE
-     ======================================================== */
-  /* Primary Palette */
-  --color-primary: #007AFF;         /* iOS Blue */
-  --color-primary-hover: #006EE6;
-  --color-primary-soft: #EAF3FF;
-  --color-primary-muted: #D6E9FF;
-
-  /* Neutral Background & Surface */
-  --color-bg: #F5F5F7;              /* Latar belakang halaman utama */
-  --color-surface: #FFFFFF;         /* Latar belakang kartu/modal */
+  /* Backgrounds & Surfaces */
+  --color-bg: #F5F5F7;            /* LabSpace App Background */
+  --color-bg-alt: #F5F5F7;        /* Alias */
+  --color-surface: #FFFFFF;       /* Card / Modal surface */
   --color-surface-2: #FBFBFD;
-
-  /* Text & Border */
-  --color-text: #1D1D1F;            /* Teks hitam solid */
-  --color-text-secondary: #6E6E73;  /* Teks abu-abu deskripsi */
-  --color-text-tertiary: #8E8E93;   /* Hint / placeholder */
-  --color-text-inverse: #FFFFFF;    /* Teks putih */
-  --color-border: #D2D2D7;          /* Garis pembatas solid */
-  --color-border-soft: #E5E5EA;     /* Garis pembatas sangat halus */
-
-  /* Semantic / Status Colors */
-  --color-success-bg: #E8F8EF;
-  --color-success-text: #137A3A;
+  --color-surface-raised: #FBFBFD;
+  --color-surface-dark: #272729;
+  --color-surface-ink: #1d1d1f;
   
-  --color-warning-bg: #FFF4D6;
-  --color-warning-text: #8A5A00;
+  /* Text — LabSpace Hierarchy */
+  --color-text: #1D1D1F;          /* Primary text */
+  --color-text-muted: #6E6E73;    /* Secondary text */
+  --color-text-light: #8E8E93;    /* Tertiary / placeholder */
+  --color-text-inverse: #ffffff;
   
-  --color-danger-bg: #FFE8E6;
-  --color-danger-text: #B42318;
+  /* Borders */
+  --color-border: #D2D2D7;        /* Solid border */
+  --color-border-soft: #E5E5EA;   /* Soft / subtle border */
+  --color-border-focus: #007AFF;  /* Focus ring */
   
-  --color-info-bg: #EAF3FF;
-  --color-info-text: #005BB5;
-  
-  --color-neutral-bg: #F2F2F7;
-  --color-neutral-text: #3A3A3C;
+  /* Navigation — Glassmorphism */
+  --color-nav-bg: var(--glass-bg);
+  --color-nav-text: #1D1D1F;
+  --color-nav-text-muted: #6E6E73;
+  --color-nav-active: #007AFF;
+  --color-nav-hover-bg: rgba(0,0,0,0.04);
 
-  /* Legacy Fallbacks (untuk menghindari error class lama) */
-  --color-accent: var(--color-primary);
-  --color-accent-dark: var(--color-primary-hover);
-  --color-accent-light: var(--color-primary-soft);
-  --color-bg-alt: var(--color-bg);
-  --color-text-muted: var(--color-text-secondary);
-
-  /* ========================================================
-     3. SPACING SYSTEM (Kelipatan 4 & 8)
-     ======================================================== */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-10: 40px;
-  --space-12: 48px;
-  --space-16: 64px;
-  --space-20: 80px;
-  --space-24: 96px;
-  --space-32: 128px;
-  --space-section: 96px;
-
-  /* ========================================================
-     4. BORDER RADIUS
-     ======================================================== */
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-  --radius-pill: 999px;
-
-  /* ========================================================
-     5. SHADOWS & DEPTH
-     ======================================================== */
-  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.045);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.08);
-
-  /* ========================================================
-     6. GLASSMORPHISM
-     ======================================================== */
+  /* Glassmorphism Tokens */
   --glass-bg: rgba(245, 245, 247, 0.72);
   --glass-surface: rgba(255, 255, 255, 0.78);
   --glass-border: rgba(255, 255, 255, 0.55);
   --glass-blur: blur(20px) saturate(180%);
 
-  /* ========================================================
-     7. MOTION & TRANSITIONS
-     ======================================================== */
+  /* Typography */
+  --font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  
+  /* Font sizes (Apple scaling) */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 17px;
+  --text-lg: 21px;
+  --text-xl: 24px;
+  --text-2xl: 28px;
+  --text-3xl: 34px;
+  --text-4xl: 40px;
+  --text-5xl: 56px;
+  --text-6xl: 72px;
+  
+  /* Font weights (Apple removes 500) */
+  --font-normal: 400;
+  --font-medium: 600; /* Re-mapped to 600 */
+  --font-semibold: 600;
+  --font-bold: 600;   /* Re-mapped to 600 */
+  --font-extrabold: 700;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  
+  /* Border Radius — LabSpace (iPadOS/visionOS scale) */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+  
+  /* Shadows — LabSpace Floating Card */
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.045);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.045);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.06);
+  
+  /* Motion — LabSpace Apple Easing */
   --ease-apple: cubic-bezier(0.2, 0.8, 0.2, 1);
   --transition-fast: 160ms var(--ease-apple);
-  --transition-normal: 240ms var(--ease-apple);
+  --transition-base: 240ms var(--ease-apple);
   --transition-slow: 400ms var(--ease-apple);
   
-  /* Layout constraints */
-  --container-max: 1200px;
+  /* Layout */
+  --container-max: 1280px;
   --content-max: 800px;
+  --nav-height: 52px; /* Apple frosted sub-nav height */
+  --space-section: 80px; /* Apple section spacing */
 }
 
 /* ============================================================
-   CSS RESET & BASE TYPOGRAPHY
+   CSS RESET
    ============================================================ */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -129,41 +126,37 @@
   padding: 0;
 }
 
-.materi-dashboard-bg {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-system);
-  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
   color: var(--color-text);
-  line-height: 1.7;
+  background-color: var(--color-bg);
+  line-height: 1.47;
+  letter-spacing: -0.022em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-system);
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: var(--color-text);
-  letter-spacing: -0.025em; /* Apple typography characteristic */
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: var(--font-bold);
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-accent);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-a:hover { color: var(--color-primary-hover); }
+a:hover { color: var(--color-accent-dark); }
 
 img, video {
   max-width: 100%;
@@ -181,60 +174,97 @@ input, button, textarea, select {
 
 button { cursor: pointer; background: none; }
 
-/* ============================================================
-   TYPOGRAPHY UTILITIES
-   ============================================================ */
-.text-xs   { font-size: var(--text-xs); line-height: 1.4;}
-.text-sm   { font-size: var(--text-sm); line-height: 1.5;}
-.text-base { font-size: var(--text-base); line-height: 1.6;}
-.text-lg   { font-size: var(--text-lg); line-height: 1.5;}
-.text-xl   { font-size: var(--text-xl); line-height: 1.4;}
-.text-2xl  { font-size: var(--text-2xl); line-height: 1.3;}
-.text-3xl  { font-size: var(--text-3xl); line-height: 1.2;}
-.text-4xl  { font-size: var(--text-4xl); line-height: 1.1; letter-spacing: -0.03em;}
-.text-5xl  { font-size: var(--text-5xl); line-height: 1.1; letter-spacing: -0.04em;}
-.text-6xl  { font-size: var(--text-6xl); line-height: 1; letter-spacing: -0.05em;}
+table { border-collapse: collapse; width: 100%; }
 
-.font-normal    { font-weight: 400; }
-.font-medium    { font-weight: 500; }
-.font-semibold  { font-weight: 600; }
-.font-bold      { font-weight: 700; }
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ============================================================
+   TYPOGRAPHY SCALE
+   ============================================================ */
+.text-xs   { font-size: var(--text-xs); }
+.text-sm   { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg   { font-size: var(--text-lg); }
+.text-xl   { font-size: var(--text-xl); }
+.text-2xl  { font-size: var(--text-2xl); }
+.text-3xl  { font-size: var(--text-3xl); }
+.text-4xl  { font-size: var(--text-4xl); }
+.text-5xl  { font-size: var(--text-5xl); }
+.text-6xl  { font-size: var(--text-6xl); }
+
+.font-normal    { font-weight: var(--font-normal); }
+.font-medium    { font-weight: var(--font-medium); }
+.font-semibold  { font-weight: var(--font-semibold); }
+.font-bold      { font-weight: var(--font-bold); }
 
 .text-primary   { color: var(--color-primary); }
-.text-muted     { color: var(--color-text-secondary); }
+.text-accent    { color: var(--color-accent); }
+.text-muted     { color: var(--color-text-muted); }
+.text-light     { color: var(--color-text-light); }
 .text-inverse   { color: var(--color-text-inverse); }
+.text-success   { color: var(--color-success); }
+.text-warning   { color: var(--color-warning); }
+.text-danger    { color: var(--color-danger); }
+
+.heading-display {
+  font-family: var(--font-heading);
+  font-weight: var(--font-extrabold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.heading-section {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  line-height: 1.25;
+}
 
 /* ============================================================
    LAYOUT UTILITIES
    ============================================================ */
 .container {
+  width: 100%;
   max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 var(--space-6);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
 }
 
 .container-narrow {
+  width: 100%;
   max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 0 var(--space-6);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
 }
 
-.section { padding-block: var(--space-20); }
-.section-sm { padding-block: var(--space-12); }
-.section-lg { padding-block: var(--space-32); }
+.section {
+  padding-block: var(--space-20);
+}
 
-/* Modern CSS Grid */
+.section-sm {
+  padding-block: var(--space-12);
+}
+
+.section-lg {
+  padding-block: var(--space-32);
+}
+
+/* Grid system */
 .grid { display: grid; }
 .grid-1 { grid-template-columns: 1fr; }
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
 
 .gap-2  { gap: var(--space-2); }
 .gap-4  { gap: var(--space-4); }
 .gap-6  { gap: var(--space-6); }
 .gap-8  { gap: var(--space-8); }
 .gap-10 { gap: var(--space-10); }
+.gap-12 { gap: var(--space-12); }
 
 /* Flex utilities */
 .flex           { display: flex; }
@@ -242,9 +272,13 @@ button { cursor: pointer; background: none; }
 .flex-wrap      { flex-wrap: wrap; }
 .items-center   { align-items: center; }
 .items-start    { align-items: flex-start; }
+.items-end      { align-items: flex-end; }
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
+.justify-start  { justify-content: flex-start; }
 .justify-end    { justify-content: flex-end; }
+.gap-x-4       { column-gap: var(--space-4); }
+.gap-y-4       { row-gap: var(--space-4); }
 
 /* Spacing */
 .mt-auto { margin-top: auto; }
@@ -252,26 +286,37 @@ button { cursor: pointer; background: none; }
 .mb-4    { margin-bottom: var(--space-4); }
 .mb-6    { margin-bottom: var(--space-6); }
 .mb-8    { margin-bottom: var(--space-8); }
-.mb-10   { margin-bottom: var(--space-10); }
+.mb-12   { margin-bottom: var(--space-12); }
 .mt-4    { margin-top: var(--space-4); }
 .mt-6    { margin-top: var(--space-6); }
 .mt-8    { margin-top: var(--space-8); }
 .mt-12   { margin-top: var(--space-12); }
 
-/* Display & Positioning */
+/* Display */
 .block        { display: block; }
 .inline-block { display: inline-block; }
 .inline-flex  { display: inline-flex; }
 .hidden       { display: none; }
-.relative     { position: relative; }
-.absolute     { position: absolute; }
-.sticky       { position: sticky; }
-.fixed        { position: fixed; }
 
+/* Position */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.sticky   { position: sticky; }
+.fixed    { position: fixed; }
+
+/* Overflow */
 .overflow-hidden { overflow: hidden; }
+.overflow-auto   { overflow: auto; }
+
+/* Text align */
 .text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+/* Width/Height */
 .w-full  { width: 100%; }
 .h-full  { height: 100%; }
+.min-h-screen { min-height: 100dvh; }
 
 /* Border radius */
 .rounded-sm  { border-radius: var(--radius-sm); }
@@ -279,15 +324,22 @@ button { cursor: pointer; background: none; }
 .rounded-lg  { border-radius: var(--radius-lg); }
 .rounded-xl  { border-radius: var(--radius-xl); }
 .rounded-pill { border-radius: var(--radius-pill); }
+.rounded-full { border-radius: var(--radius-pill); }
 
-/* Reading Progress */
+/* Visual */
+.bg-primary  { background-color: var(--color-primary); }
+.bg-accent   { background-color: var(--color-accent); }
+.bg-surface  { background-color: var(--color-surface); }
+.bg-alt      { background-color: var(--color-bg-alt); }
+
+/* Reading progress bar */
 #reading-progress {
   position: fixed;
   top: 0;
   left: 0;
   width: 0%;
   height: 3px;
-  background: var(--color-primary);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
   z-index: 9999;
   transition: width 0.1s linear;
 }
@@ -297,22 +349,19 @@ button { cursor: pointer; background: none; }
   position: fixed;
   bottom: var(--space-6);
   right: var(--space-6);
-  width: 48px;
-  height: 48px;
-  background: var(--glass-surface);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  color: var(--color-text);
-  border: 1px solid var(--glass-border);
+  width: 44px;
+  height: 44px;
+  background: var(--color-primary);
+  color: white;
   border-radius: var(--radius-pill);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-lg);
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: all var(--transition-normal);
+  transition: all var(--transition-base);
   z-index: 100;
   cursor: pointer;
 }
@@ -324,22 +373,53 @@ button { cursor: pointer; background: none; }
 }
 
 #back-to-top:hover {
-  background: var(--color-surface);
+  background: var(--color-accent);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
+
+  /* Max Widths */
+  .max-w-xs  { max-width: 320px; width: 100%; }
+  .max-w-sm  { max-width: 384px; width: 100%; }
+  .max-w-md  { max-width: 448px; width: 100%; }
+  .max-w-lg  { max-width: 512px; width: 100%; }
+  .max-w-xl  { max-width: 576px; width: 100%; }
+  .max-w-2xl { max-width: 672px; width: 100%; }
+  .max-w-3xl { max-width: 768px; width: 100%; }
+  .max-w-4xl { max-width: 896px; width: 100%; }
+  .mx-auto   { margin-inline: auto; }
 
 /* ============================================================
    RESPONSIVE BREAKPOINTS
    ============================================================ */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .hide-tablet { display: none; }
+}
+
 @media (max-width: 768px) {
   :root { 
-    --space-section: 64px;
+    --nav-height: 52px; 
+    --space-section: 48px; /* Tighter padding on mobile */
   }
+  
+  .container, .container-narrow { padding-inline: var(--space-4); }
+  .section, .tile { padding-block: var(--space-section); }
+  .section-lg { padding-block: var(--space-20); }
+  
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .hide-mobile { display: none; }
+  
   .text-6xl { font-size: var(--text-4xl); }
   .text-5xl { font-size: var(--text-3xl); }
-  .text-4xl { font-size: var(--text-3xl); }
+  .text-4xl { font-size: var(--text-2xl); }
+  .text-3xl { font-size: var(--text-2xl); }
+}
+
+@media (max-width: 480px) {
+  .container, .container-narrow { padding-inline: var(--space-4); }
+  .text-6xl { font-size: var(--text-3xl); }
+  .text-5xl { font-size: var(--text-2xl); }
+  .text-4xl { font-size: var(--text-xl); }
 }
 
 /* ============================================================
@@ -348,7 +428,7 @@ button { cursor: pointer; background: none; }
 .reveal-item {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.8s var(--ease-apple), transform 0.8s var(--ease-apple);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 .reveal-item.is-revealed {
@@ -356,20 +436,220 @@ button { cursor: pointer; background: none; }
   transform: translateY(0);
 }
 
+/* ============================================================
+   STAGGERED ENTRY ANIMATION (HERO)
+   ============================================================ */
+@keyframes fadeUpStagger {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-stagger {
   opacity: 0;
-  animation: fadeUpStagger 0.8s var(--ease-apple) forwards;
+  animation: fadeUpStagger 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: opacity, transform;
 }
-@keyframes fadeUpStagger {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
+
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
 
-/* Legacy tile background support to ensure HTML doesn't break */
-.tile-light { background-color: var(--color-surface); }
-.tile-parchment { background-color: var(--color-bg); }
+/* ============================================================
+   APPLE TILE ARCHITECTURE
+   ============================================================ */
+.tile {
+  padding-block: var(--space-section);
+  width: 100%;
+}
+
+.tile-light {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.tile-dark {
+  background-color: var(--color-surface-dark);
+  color: white;
+}
+
+.tile-dark .section-title,
+.tile-dark .section-desc {
+  color: white;
+}
+
+.tile-parchment {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+/* ============================================================
+   APPLE-INSPIRED REDESIGN PASS
+   ============================================================ */
+:root {
+  --color-primary: #0066cc;
+  --color-primary-light: #2997ff;
+  --color-primary-dark: #004f9f;
+  --color-accent: #0066cc;
+  --color-accent-dark: #004f9f;
+  --color-accent-light: #5eb0ff;
+  --color-success: #247a3d;
+  --color-success-light: #eaf7ee;
+  --color-warning: #8b5d13;
+  --color-warning-light: #fff3d8;
+  --color-danger: #b3261e;
+  --color-danger-light: #ffe9e7;
+  --color-info: #255f99;
+  --color-info-light: #eaf4ff;
+  --color-bg: #f5f5f7;
+  --color-bg-alt: #f2f2f4;
+  --color-surface: #ffffff;
+  --color-surface-2: #fbfbfd;
+  --color-surface-raised: rgba(255, 255, 255, 0.86);
+  --color-surface-dark: #1d1d1f;
+  --color-surface-ink: #111113;
+  --color-text: #1d1d1f;
+  --color-text-muted: #6e6e73;
+  --color-text-light: #8c8c91;
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-border-soft: rgba(0, 0, 0, 0.07);
+  --glass-bg: rgba(251, 251, 253, 0.74);
+  --glass-surface: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --font-heading: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Outfit", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 30px rgba(29, 29, 31, 0.05);
+  --shadow-md: 0 16px 44px rgba(29, 29, 31, 0.08);
+  --shadow-lg: 0 24px 70px rgba(29, 29, 31, 0.12);
+  --shadow-xl: 0 34px 90px rgba(29, 29, 31, 0.16);
+  --shadow-card: 0 1px 1px rgba(0, 0, 0, 0.03), 0 16px 44px rgba(29, 29, 31, 0.06);
+  --shadow-card-hover: 0 20px 56px rgba(29, 29, 31, 0.11);
+  --container-max: 1180px;
+  --content-max: 760px;
+  --nav-height: 56px;
+  --space-section: 96px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% -10%, rgba(0, 102, 204, 0.08), transparent 30rem),
+    radial-gradient(circle at 88% 12%, rgba(36, 122, 61, 0.06), transparent 28rem),
+    var(--color-bg);
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+  opacity: 0.022;
+  background-image:
+    linear-gradient(rgba(29, 29, 31, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 29, 31, 0.55) 1px, transparent 1px);
+  background-size: 4px 4px;
+  mix-blend-mode: multiply;
+}
+
+h1, h2, h3, h4, h5, h6,
+.heading-display,
+.heading-section {
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid rgba(0, 102, 204, 0.26);
+  outline-offset: 3px;
+}
+
+.container,
+.container-narrow {
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+.section,
+.tile {
+  padding-block: var(--space-section);
+}
+
+.tile-light,
+.tile-parchment {
+  background: transparent;
+}
+
+.tile-dark {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(94, 176, 255, 0.16), transparent 34rem),
+    linear-gradient(180deg, #242426 0%, #171718 100%);
+}
+
+.tile-dark .section-label {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.tile-dark .section-label::before {
+  background: rgba(255, 255, 255, 0.34);
+}
+
+#reading-progress {
+  height: 2px;
+  background: linear-gradient(90deg, #0066cc, #5eb0ff);
+  z-index: 1200;
+}
+
+#back-to-top {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--color-text);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+}
+
+#back-to-top:hover {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-section: 64px;
+  }
+
+  body::before {
+    opacity: 0.025;
+  }
+}
+
+/* Sembunyikan elemen yang dilingkari merah oleh user */
+.section-label,
+.footer-bottom {
+  display: none !important;
+}

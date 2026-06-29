@@ -8,16 +8,18 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
-    <link rel="stylesheet" href="assets/css/apple-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=clean3">
+    <link rel="stylesheet" href="assets/css/components.css?v=clean3">
+    <link rel="stylesheet" href="assets/css/pages.css?v=clean3">
 </head>
 <body class="page-body">
 
@@ -26,7 +28,7 @@
         <div class="navbar-inner">
             <a href="index.html" class="navbar-brand">
                 <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
-                    <i class="fas fa-robot text-primary"></i>
+                    <i class="ph ph-robot text-primary"></i>
                 </div>
                 <div>
                     <span class="brand-name">E-Modul AI</span>
@@ -35,11 +37,11 @@
             </a>
             
             <ul class="navbar-nav" id="navbar-nav">
-                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="materi.html" class="nav-link"><i class="fas fa-book"></i> Materi Pembelajaran</a></li>
-                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt Library</a></li>
-                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Instrumen Evaluasi</a></li>
-                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a></li>
+                <li><a href="index.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link">Materi Pembelajaran</a></li>
+                <li><a href="prompt.html" class="nav-link">Prompt Library</a></li>
+                <li><a href="evaluasi.html" class="nav-link">Instrumen Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link">Tentang Modul</a></li>
             </ul>
             
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
@@ -52,295 +54,46 @@
 
     <!-- Mobile Navigation -->
     <div class="navbar-mobile" id="navbar-mobile">
-    <style>#navbar-mobile { display: none !important; }</style>
-        <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Dashboard</a>
-        <a href="materi.html" class="nav-link"><i class="fas fa-book"></i> Materi Pembelajaran</a>
-        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt Library</a>
-        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Instrumen Evaluasi</a>
-        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a>
+        <a href="index.html" class="nav-link active">Dashboard</a>
+        <a href="materi.html" class="nav-link">Materi Pembelajaran</a>
+        <a href="prompt.html" class="nav-link">Prompt Library</a>
+        <a href="evaluasi.html" class="nav-link">Instrumen Evaluasi</a>
+        <a href="tentang.html" class="nav-link">Tentang Modul</a>
     </div>
 
-    <!-- Hero Section -->
-    <style>
-        .hero-dynamic-card {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #f0f7ff 0%, #e0eaff 50%, #e0f2fe 100%);
-            border-radius: 32px;
-            padding: 5rem 4rem;
-            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.08), inset 0 0 0 1px rgba(255,255,255,0.8);
-            margin: 6rem auto 4rem auto;
-            max-width: 1100px;
-        }
+    <!-- HERO SECTION -->
+    <section class="hero-section tile tile-light">
+        <div class="container">
+            <div class="hero-content">
 
-        .stars-container {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 0;
-            overflow: hidden;
-            /* No pointer-events: none, so we can track mouse over it */
-        }
-
-        #particle-canvas {
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-        }
-
-        .hero-dynamic-card > h1, .hero-dynamic-card > p, .hero-dynamic-card > .hero-actions {
-            position: relative;
-            z-index: 1;
-        }
-    </style>
-    <section class="hero-section" style="padding: 0;">
-        <div class="container" style="max-width: 1200px;">
-            <div class="hero-content hero-dynamic-card">
-                <div class="stars-container" id="stars-container"></div>
-                <h1 class="hero-title">
-                    E-Modul Pemanfaatan <span class="accent">Artificial Intelligence</span> dalam Pengembangan Media Pembelajaran
+                <h1 class="hero-title animate-stagger stagger-2">
+                    E-Modul Pemanfaatan<br>
+                    <span class="accent">Artificial Intelligence</span> dalam<br>
+                    Pengembangan Media Pembelajaran
                 </h1>
-                <p class="hero-desc">
+                <p class="hero-desc animate-stagger stagger-3">
                     E-modul interaktif yang dirancang untuk membantu guru memahami, memanfaatkan, dan mengevaluasi penggunaan Artificial Intelligence secara efektif, etis, dan bertanggung jawab dalam pengembangan media pembelajaran.
                 </p>
-                <div class="hero-actions">
+                <div class="hero-actions animate-stagger stagger-4">
                     <a href="materi.html" class="btn btn-primary btn-lg">
-                        Mulai Belajar <i class="fas fa-arrow-right"></i>
+                        Mulai Belajar <i class="ph ph-arrow-right"></i>
                     </a>
-                    <a href="#cara-penggunaan" class="btn btn-secondary btn-lg" style="color: var(--apple-text-primary); border: 1px solid var(--apple-border); background: var(--apple-bg-card);">
+                    <a href="#cara-penggunaan" class="btn btn-secondary btn-lg">
                         Cara Penggunaan
                     </a>
                 </div>
+                
+
 
             </div>
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('stars-container');
-            if (!container) return;
-            
-            const canvas = document.createElement('canvas');
-            canvas.id = 'particle-canvas';
-            container.innerHTML = '';
-            container.appendChild(canvas);
-            
-            const ctx = canvas.getContext('2d');
-            let particles = [];
-            let backgroundParticles = [];
-            let mouse = { x: -1000, y: -1000, isActive: false };
-            let animationFrameId;
-            let lastTime = 0;
-            
-            // Adjusted for light background
-            const PARTICLE_DENSITY = 0.00015;
-            const BG_PARTICLE_DENSITY = 0.00005;
-            const MOUSE_RADIUS = 180;
-            const RETURN_SPEED = 0.08;
-            const DAMPING = 0.90;
-            const REPULSION_STRENGTH = 1.2;
-            
-            function randomRange(min, max) {
-                return Math.random() * (max - min) + min;
-            }
-            
-            function initParticles(width, height) {
-                particles = [];
-                const particleCount = Math.floor(width * height * PARTICLE_DENSITY);
-                for (let i = 0; i < particleCount; i++) {
-                    const x = Math.random() * width;
-                    const y = Math.random() * height;
-                    particles.push({
-                        x: x, y: y, originX: x, originY: y, vx: 0, vy: 0,
-                        size: randomRange(1, 2.5),
-                        color: Math.random() > 0.9 ? '#1e40af' : '#3b82f6', // Dark blue or normal blue
-                        angle: Math.random() * Math.PI * 2
-                    });
-                }
-                
-                backgroundParticles = [];
-                const bgCount = Math.floor(width * height * BG_PARTICLE_DENSITY);
-                for (let i = 0; i < bgCount; i++) {
-                    backgroundParticles.push({
-                        x: Math.random() * width, y: Math.random() * height,
-                        vx: (Math.random() - 0.5) * 0.2, vy: (Math.random() - 0.5) * 0.2,
-                        size: randomRange(0.5, 1.5), alpha: randomRange(0.1, 0.4), phase: Math.random() * Math.PI * 2
-                    });
-                }
-            }
-            
-            function animate(time) {
-                if (!ctx) return;
-                const delta = time - lastTime;
-                lastTime = time;
-                
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // Pulsating Radial Glow (Subtle blue)
-                const centerX = canvas.width / 2;
-                const centerY = canvas.height / 2;
-                const pulseSpeed = 0.0008;
-                const pulseOpacity = Math.sin(time * pulseSpeed) * 0.035 + 0.085;
-                
-                const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, Math.max(canvas.width, canvas.height) * 0.7);
-                gradient.addColorStop(0, `rgba(59, 130, 246, ${pulseOpacity})`);
-                gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-                ctx.fillStyle = gradient;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                
-                // Background Particles
-                ctx.fillStyle = "#60a5fa"; // Light blue for bg particles
-                for (let i = 0; i < backgroundParticles.length; i++) {
-                    const p = backgroundParticles[i];
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    if (p.x < 0) p.x = canvas.width;
-                    if (p.x > canvas.width) p.x = 0;
-                    if (p.y < 0) p.y = canvas.height;
-                    if (p.y > canvas.height) p.y = 0;
-                    
-                    const twinkle = Math.sin(time * 0.002 + p.phase) * 0.5 + 0.5;
-                    ctx.globalAlpha = p.alpha * (0.3 + 0.7 * twinkle);
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                    ctx.fill();
-                }
-                ctx.globalAlpha = 1.0;
-                
-                // Main Particles Physics
-                for (let i = 0; i < particles.length; i++) {
-                    const p = particles[i];
-                    const dx = mouse.x - p.x;
-                    const dy = mouse.y - p.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (mouse.isActive && distance < MOUSE_RADIUS) {
-                        const forceDirectionX = dx / distance;
-                        const forceDirectionY = dy / distance;
-                        const force = (MOUSE_RADIUS - distance) / MOUSE_RADIUS;
-                        const repulsion = force * REPULSION_STRENGTH;
-                        p.vx -= forceDirectionX * repulsion * 5;
-                        p.vy -= forceDirectionY * repulsion * 5;
-                    }
-                    // Dynamic wandering when mouse is away
-                    const wanderRadius = 15;
-                    const targetX = p.originX + Math.cos(time * 0.001 + p.angle) * wanderRadius;
-                    const targetY = p.originY + Math.sin(time * 0.0015 + p.angle) * wanderRadius;
-
-                    p.vx += (targetX - p.x) * RETURN_SPEED;
-                    p.vy += (targetY - p.y) * RETURN_SPEED;
-                }
-                
-                // Resolving Collisions
-                for (let i = 0; i < particles.length; i++) {
-                    for (let j = i + 1; j < particles.length; j++) {
-                        const p1 = particles[i];
-                        const p2 = particles[j];
-                        const dx = p2.x - p1.x;
-                        const dy = p2.y - p1.y;
-                        const distSq = dx * dx + dy * dy;
-                        const minDist = p1.size + p2.size;
-                        
-                        if (distSq < minDist * minDist) {
-                            const dist = Math.sqrt(distSq);
-                            if (dist > 0.01) {
-                                const nx = dx / dist;
-                                const ny = dy / dist;
-                                const overlap = minDist - dist;
-                                const pushX = nx * overlap * 0.5;
-                                const pushY = ny * overlap * 0.5;
-                                p1.x -= pushX; p1.y -= pushY;
-                                p2.x += pushX; p2.y += pushY;
-                                
-                                const dvx = p1.vx - p2.vx;
-                                const dvy = p1.vy - p2.vy;
-                                const velocityAlongNormal = dvx * nx + dvy * ny;
-                                if (velocityAlongNormal > 0) {
-                                    const m1 = p1.size;
-                                    const m2 = p2.size;
-                                    const restitution = 0.85;
-                                    const impulseMagnitude = (-(1 + restitution) * velocityAlongNormal) / (1/m1 + 1/m2);
-                                    const impulseX = impulseMagnitude * nx;
-                                    const impulseY = impulseMagnitude * ny;
-                                    p1.vx += impulseX / m1;
-                                    p1.vy += impulseY / m1;
-                                    p2.vx -= impulseX / m2;
-                                    p2.vy -= impulseY / m2;
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                // Drawing
-                for (let i = 0; i < particles.length; i++) {
-                    const p = particles[i];
-                    p.vx *= DAMPING; p.vy *= DAMPING;
-                    p.x += p.vx; p.y += p.vy;
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                    const velocity = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-                    const opacity = Math.min(0.3 + velocity * 0.1, 1);
-                    
-                    // We need to construct the rgba string because colors are hex
-                    let color = p.color; // "#1e40af" or "#3b82f6"
-                    let r, g, b;
-                    if (color === '#1e40af') { r = 30; g = 64; b = 175; }
-                    else { r = 59; g = 130; b = 246; }
-                    
-                    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${opacity})`;
-                    ctx.fill();
-                }
-                
-                animationFrameId = requestAnimationFrame(animate);
-            }
-            
-            function handleResize() {
-                const rect = container.getBoundingClientRect();
-                const dpr = window.devicePixelRatio || 1;
-                canvas.width = rect.width * dpr;
-                canvas.height = rect.height * dpr;
-                canvas.style.width = `${rect.width}px`;
-                canvas.style.height = `${rect.height}px`;
-                ctx.scale(dpr, dpr);
-                initParticles(rect.width, rect.height);
-            }
-            
-            window.addEventListener('resize', handleResize);
-            handleResize();
-            
-            container.addEventListener('mousemove', function(e) {
-                const rect = container.getBoundingClientRect();
-                mouse.x = e.clientX - rect.left;
-                mouse.y = e.clientY - rect.top;
-                mouse.isActive = true;
-            });
-            
-            container.addEventListener('mouseleave', function() {
-                mouse.isActive = false;
-            });
-            
-            // Allow pointer events to pass through text on top
-            document.querySelector('.hero-dynamic-card').addEventListener('mousemove', function(e) {
-                const rect = container.getBoundingClientRect();
-                mouse.x = e.clientX - rect.left;
-                mouse.y = e.clientY - rect.top;
-                mouse.isActive = true;
-            });
-            document.querySelector('.hero-dynamic-card').addEventListener('mouseleave', function() {
-                mouse.isActive = false;
-            });
-            
-            animationFrameId = requestAnimationFrame(animate);
-        });
-    </script>
-
-    <!-- Quick Access Section -->
-    <section class="section bg-surface">
+    <!-- PINTASAN UTAMA -->
+    <section class="section tile tile-dark">
         <div class="container">
             <div class="section-header text-center">
-
+                <div class="section-label">Akses Cepat</div>
                 <h2 class="section-title">Eksplorasi E-Modul</h2>
                 <p class="section-desc">Pilih modul yang ingin Anda pelajari atau gunakan. Modul dirancang agar saling melengkapi untuk pengalaman belajar yang komprehensif.</p>
             </div>
@@ -348,53 +101,53 @@
             <div class="quick-access-grid">
                 <a href="materi.html" class="quick-card">
                     <div class="quick-card-icon card-icon-primary">
-                        <i class="fas fa-book-reader"></i>
+                        <i class="ph ph-book-open-text"></i>
                     </div>
                     <h3>Materi Pembelajaran</h3>
                     <p>Pelajari konsep dasar AI, tools generatif, dan strategi implementasinya dalam pembelajaran.</p>
-                    <div class="card-arrow">Mulai Belajar <i class="fas fa-arrow-right"></i></div>
+                    <div class="card-arrow">Mulai Belajar <i class="ph ph-arrow-right"></i></div>
                 </a>
                 
                 <a href="prompt.html" class="quick-card">
                     <div class="quick-card-icon card-icon-accent">
-                        <i class="fas fa-magic"></i>
+                        <i class="ph ph-magic-wand"></i>
                     </div>
                     <h3>Prompt Library</h3>
                     <p>Temukan ratusan template prompt siap pakai untuk berbagai mata pelajaran dan kebutuhan.</p>
-                    <div class="card-arrow">Lihat Prompt <i class="fas fa-arrow-right"></i></div>
+                    <div class="card-arrow">Lihat Prompt <i class="ph ph-arrow-right"></i></div>
                 </a>
                 
                 <a href="evaluasi.html" class="quick-card">
                     <div class="quick-card-icon card-icon-success">
-                        <i class="fas fa-clipboard-check"></i>
+                        <i class="ph ph-clipboard-text"></i>
                     </div>
                     <h3>Instrumen Evaluasi</h3>
                     <p>Gunakan instrumen interaktif untuk menilai kualitas media pembelajaran yang telah Anda buat.</p>
-                    <div class="card-arrow">Mulai Evaluasi <i class="fas fa-arrow-right"></i></div>
+                    <div class="card-arrow">Mulai Evaluasi <i class="ph ph-arrow-right"></i></div>
                 </a>
 
                 <a href="tentang.html" class="quick-card">
                     <div class="quick-card-icon card-icon-info">
-                        <i class="fas fa-info-circle"></i>
+                        <i class="ph ph-info"></i>
                     </div>
                     <h3>Tentang Modul</h3>
                     <p>Kenali latar belakang pengembangan e-modul, profil pengembang, dan referensi yang digunakan.</p>
-                    <div class="card-arrow">Baca Selengkapnya <i class="fas fa-arrow-right"></i></div>
+                    <div class="card-arrow">Baca Selengkapnya <i class="ph ph-arrow-right"></i></div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Capaian Pembelajaran -->
-    <section class="section bg-alt">
+    <!-- MENGAPA E-MODUL INI PENTING? -->
+    <section class="section tile tile-parchment">
         <div class="container">
             <div class="grid grid-2 gap-12 items-center">
                 <div>
-
+                    <div class="section-label">Kompetensi</div>
                     <h2 class="section-title">Capaian Pembelajaran</h2>
                     <p class="section-desc mb-8">Setelah mempelajari seluruh materi pada e-modul ini, Anda diharapkan mampu memahami, merancang, dan mengevaluasi media pembelajaran berbasis AI dengan efektif dan etis.</p>
                     
-                    <a href="materi.html" class="btn btn-primary">Lihat Seluruh Materi <i class="fas fa-arrow-right"></i></a>
+                    <a href="materi.html" class="btn btn-primary">Lihat Seluruh Materi <i class="ph ph-arrow-right"></i></a>
                 </div>
                 
                 <div class="capaian-list">
@@ -419,13 +172,13 @@
         </div>
     </section>
 
-    <!-- Cara Penggunaan -->
-    <section id="cara-penggunaan" class="section bg-surface">
+    <!-- CARA PENGGUNAAN -->
+    <section id="cara-penggunaan" class="section tile tile-light">
         <div class="container">
             <div class="section-header text-center">
-
+                <div class="section-label">Panduan</div>
                 <h2 class="section-title">Cara Menggunakan E-Modul</h2>
-                <p class="section-desc">Berikut ini adalah langkah-langkah yang dapat Anda lakukan untuk menggunakan E-Modul ini.</p>
+                <p class="section-desc">Ikuti langkah-langkah berikut untuk mendapatkan hasil maksimal dari pembelajaran menggunakan e-modul ini.</p>
             </div>
             
             <div class="steps-container">
@@ -453,8 +206,8 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section" style="background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)); color: white;">
+    <!-- CTA SECTION -->
+    <section class="section tile tile-dark">
         <div class="container-narrow text-center">
             <h2 class="heading-section text-4xl mb-4 text-inverse">Siap Untuk Bertransformasi?</h2>
             <p class="text-lg mb-8" style="color: rgba(255,255,255,0.8);">Mulai perjalanan Anda sekarang dalam mengintegrasikan kecerdasan buatan ke dalam ruang kelas Anda.</p>
@@ -470,7 +223,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <span class="brand-name">
-                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                        <i class="ph ph-robot text-accent-light"></i> E-Modul AI
                     </span>
                     <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
                 </div>
@@ -494,15 +247,37 @@
                     </ul>
                 </div>
             </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="ph ph-heart text-danger ph-fill"></i> di Indonesia.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Kembali ke atas">
-        <i class="fas fa-arrow-up"></i>
+        <i class="ph ph-arrow-up"></i>
     </button>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=fast-scroll"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

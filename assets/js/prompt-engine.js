@@ -37,21 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
       let html = '';
       data.forEach(p => {
         // Icon logic based on category
-        let icon = 'wand-2';
+        let icon = 'ph-magic-wand';
         let catName = 'Template AI';
         
         if (p.category === 'analisis') {
-          icon = 'search';
+          icon = 'ph-magnifying-glass';
           catName = 'Analisis Instruksional';
         } else if (p.category === 'produksi') {
-          icon = 'video';
+          icon = 'ph-video-camera';
           catName = 'Produksi Media';
         }
   
         html += `
           <div class="prompt-card" data-category="${p.category}" onclick="document.querySelector('.btn-open-modal[data-id=\\'${p.id}\\']').click()">
             <div class="prompt-card-badge">
-              <i data-lucide="${icon}"></i>
+              <i class="ph ${icon}"></i>
               <span>${catName}</span>
             </div>
             <div class="prompt-card-body">
@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="prompt-card-footer-meta">
               <div class="meta-left">
-                <i data-lucide="check-circle" style="color: var(--color-success); width: 16px; height: 16px;"></i>
+                <i class="ph ph-check-circle text-success" style="color: var(--color-success);"></i>
                 <span>Siap Pakai</span>
               </div>
               <div class="meta-right">
-                <span>Lihat Detail <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+                <span>Lihat Detail <i class="ph ph-arrow-right"></i></span>
               </div>
             </div>
             <button class="btn-open-modal" data-id="${p.id}" style="display: none;"></button>
@@ -73,13 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   
       promptGrid.innerHTML = html;
-      
-      // Initialize icons for the newly added HTML
-      if (window.lucide) {
-          window.lucide.createIcons({
-              root: promptGrid
-          });
-      }
 
     // Attach Modal Events
     const openBtns = promptGrid.querySelectorAll('.btn-open-modal');
@@ -97,11 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!p) return;
 
         // Determine icon
-        let icon = 'wand-2';
-        if (p.category === 'analisis') icon = 'search';
-        else if (p.category === 'produksi') icon = 'video';
+        let icon = 'fa-magic';
+        if (p.category === 'analisis') icon = 'fa-search-plus';
+        else if (p.category === 'produksi') icon = 'fa-photo-video';
 
-        document.getElementById('modal-icon').innerHTML = `<i data-lucide="${icon}"></i>`;
+        document.getElementById('modal-icon').innerHTML = `<i class="fas ${icon}"></i>`;
         document.getElementById('modal-title').innerText = p.title;
         document.getElementById('modal-desc').innerText = p.description;
         
@@ -109,29 +102,29 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (p.guide) {
           contentHtml += `
-            <div style="background: rgba(14, 165, 233, 0.05); border-left: 4px solid var(--color-primary); padding: 15px; margin-bottom: 20px; border-radius: 4px;">
-              <h4 style="color: var(--color-primary-dark); margin-bottom: 10px; font-weight: bold; display: flex; align-items: center; gap: 8px;"><i data-lucide="info" size="18"></i> Panduan Penggunaan</h4>
-              <div style="font-size: 0.9rem; line-height: 1.5; color: var(--color-text);">${formatPromptHTML(p.guide)}</div>
+            <div style="background: rgba(14, 165, 233, 0.05); border-left: 4px solid var(--color-primary); padding: 15px; margin-bottom: 20px; border-radius: 4px; color: #1D1D1F;">
+              <h4 style="color: var(--color-primary-dark); margin-bottom: 10px; font-weight: bold;"><i class="fas fa-info-circle"></i> Panduan Penggunaan</h4>
+              <div style="font-size: 0.9rem; line-height: 1.5; color: #1D1D1F;">${formatPromptHTML(p.guide)}</div>
             </div>
           `;
         }
 
         contentHtml += `
-          <h4 style="margin-bottom: 10px; font-weight: bold; display: flex; align-items: center; gap: 8px;"><i data-lucide="terminal" size="18" class="text-muted"></i> Prompt Utama <span style="font-size: 0.8rem; font-weight: normal; color: var(--color-text-muted);">(Klik Salin di bawah untuk menyalin bagian ini saja)</span></h4>
-          <div style="background: var(--color-bg-alt); padding: 15px; border-radius: 8px; border: 1px solid var(--color-border); margin-bottom: 20px; font-family: monospace; font-size: 0.9rem;">${formatPromptHTML(p.prompt)}</div>
+          <h4 style="margin-bottom: 10px; font-weight: bold; color: #1D1D1F;"><i class="fas fa-terminal text-muted"></i> Prompt Utama <span style="font-size: 0.8rem; font-weight: normal; color: #6E6E73;">(Klik Salin di bawah untuk menyalin bagian ini saja)</span></h4>
+          <div style="background: #F1F5F9; color: #0F172A; padding: 16px; border-radius: 8px; border: 1px solid #CBD5E1; margin-bottom: 20px; font-family: monospace; font-size: 0.92rem; line-height: 1.65;">${formatPromptHTML(p.prompt)}</div>
         `;
 
         if (p.exampleInput) {
           contentHtml += `
-            <h4 style="margin-bottom: 10px; font-weight: bold; display: flex; align-items: center; gap: 8px;"><i data-lucide="keyboard" size="18" class="text-muted"></i> Contoh Input Data Anda</h4>
-            <div style="background: white; padding: 15px; border-radius: 8px; border: 1px dashed var(--color-border); margin-bottom: 20px; font-size: 0.9rem; color: var(--color-text-muted);">${formatPromptHTML(p.exampleInput)}</div>
+            <h4 style="margin-bottom: 10px; font-weight: bold; color: #1D1D1F;"><i class="fas fa-keyboard text-muted"></i> Contoh Input Data Anda</h4>
+            <div style="background: white; color: #334155; padding: 15px; border-radius: 8px; border: 1px dashed #CBD5E1; margin-bottom: 20px; font-size: 0.9rem; line-height: 1.6;">${formatPromptHTML(p.exampleInput)}</div>
           `;
         }
 
         if (p.exampleOutput) {
           contentHtml += `
-            <h4 style="margin-bottom: 10px; font-weight: bold; display: flex; align-items: center; gap: 8px;"><i data-lucide="bot" size="18" class="text-muted"></i> Contoh Hasil dari AI</h4>
-            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.9rem; color: #334155; border-left: 4px solid #10b981;">${formatPromptHTML(p.exampleOutput)}</div>
+            <h4 style="margin-bottom: 10px; font-weight: bold; color: #1D1D1F;"><i class="fas fa-robot text-muted"></i> Contoh Hasil dari AI</h4>
+            <div style="background: #f8fafc; color: #334155; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.9rem; line-height: 1.6; border-left: 4px solid #10b981;">${formatPromptHTML(p.exampleOutput)}</div>
           `;
         }
 
@@ -139,19 +132,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-prompt-box').style.background = 'transparent';
         document.getElementById('modal-prompt-box').style.border = 'none';
         document.getElementById('modal-prompt-box').style.padding = '0';
-        
-        if (window.lucide) {
-            window.lucide.createIcons({ root: modal });
-        }
 
         btnCopyModal.setAttribute('data-text', encodeURIComponent(p.prompt));
 
-        modal.classList.add('open');
+        modal.style.display = 'flex';
       });
     });
 
     // Close Modal Events
-    const closeModal = () => { modal.classList.remove('open'); };
+    const closeModal = () => { modal.style.display = 'none'; };
     if (btnClose) btnClose.addEventListener('click', closeModal);
     modal.addEventListener('click', function(e) {
       if (e.target === modal) closeModal();
@@ -166,16 +155,14 @@ document.addEventListener('DOMContentLoaded', () => {
       newCopyBtn.addEventListener('click', function() {
         const textToCopy = decodeURIComponent(this.getAttribute('data-text'));
         if (window.copyToClipboard) {
-          window.copyToClipboard(textToCopy, 'Prompt disalin!');
+          window.copyToClipboard(textToCopy, 'Prompt disalin ke clipboard!');
         }
         
         const originalHtml = this.innerHTML;
-        this.innerHTML = '<i data-lucide="check"></i> Disalin';
-        if(window.lucide) window.lucide.createIcons({ root: this });
+        this.innerHTML = '<i class="fas fa-check"></i> Disalin';
         
         setTimeout(() => {
           this.innerHTML = originalHtml;
-          if(window.lucide) window.lucide.createIcons({ root: this });
         }, 2000);
       });
     }

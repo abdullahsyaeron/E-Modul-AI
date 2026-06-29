@@ -8,16 +8,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
-    <link rel="stylesheet" href="assets/css/apple-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=clean3">
+    <link rel="stylesheet" href="assets/css/components.css?v=clean3">
+    <link rel="stylesheet" href="assets/css/pages.css?v=clean3">
 </head>
 <body class="page-body bg-alt">
 
@@ -28,7 +27,7 @@
         <div class="navbar-inner">
             <a href="index.html" class="navbar-brand">
                 <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
-                    <i class="fas fa-robot text-primary"></i>
+                    <i class="ph ph-robot text-primary"></i>
                 </div>
                 <div>
                     <span class="brand-name">E-Modul AI</span>
@@ -37,11 +36,11 @@
             </a>
             
             <ul class="navbar-nav" id="navbar-nav">
-                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a></li>
-                <li><a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a></li>
-                <li><a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
-                <li><a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a></li>
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="materi.html" class="nav-link active">Materi</a></li>
+                <li><a href="prompt.html" class="nav-link">Prompt</a></li>
+                <li><a href="evaluasi.html" class="nav-link">Evaluasi</a></li>
+                <li><a href="tentang.html" class="nav-link">Tentang</a></li>
             </ul>
             
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Buka menu" aria-expanded="false">
@@ -54,17 +53,50 @@
 
     <!-- Mobile Navigation -->
     <div class="navbar-mobile" id="navbar-mobile">
-    <style>#navbar-mobile { display: none !important; }</style>
-        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
-        <a href="materi.html" class="nav-link active"><i class="fas fa-book"></i> Materi</a>
-        <a href="prompt.html" class="nav-link"><i class="fas fa-magic"></i> Prompt</a>
-        <a href="evaluasi.html" class="nav-link"><i class="fas fa-clipboard-check"></i> Evaluasi</a>
-        <a href="tentang.html" class="nav-link"><i class="fas fa-info-circle"></i> Tentang Modul</a>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="materi.html" class="nav-link active">Materi</a>
+        <a href="prompt.html" class="nav-link">Prompt</a>
+        <a href="evaluasi.html" class="nav-link">Evaluasi</a>
+        <a href="tentang.html" class="nav-link">Tentang</a>
     </div>
 
     <!-- Chapter Header -->
+    <!-- HERO TILE -->
+    <section class="hero-section tile tile-light" style="padding-top: 140px; padding-bottom: 60px; min-height: auto; background-image: none; animation: none;">
+        <div class="container">
+            <div class="breadcrumb mb-4" style="padding-block: 0;">
+                <a href="index.html" style="">Dashboard</a>
+                <i class="ph ph-caret-right sep" style=""></i>
+                <a href="materi.html" style="">Materi</a>
+                <i class="ph ph-caret-right sep" style=""></i>
+                <span class="current" >BAB 5</span>
+            </div>
+            
+            <div class="chapter-num">
+                <i class="ph ph-book-openmark text-accent-light"></i> BAB 5
+            </div>
+            <h1 class="hero-title text-left">Evaluasi dan Refleksi</h1>
+            
+            <p style="color: var(--color-text-muted); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
+                Bab ini menutup perjalanan belajar Anda dalam modul ini dengan dua fokus utama: mengevaluasi media yang telah Anda kembangkan secara sistematis, dan merefleksikan proses belajar serta perencanaan tindak lanjut yang konkret.
+            </p>
 
-    <div class="container section pt-8">
+            <div class="chapter-tujuan mt-8">
+                <h3><i class="ph ph-target text-accent-light"></i> Tujuan Pembelajaran Bab Ini:</h3>
+                <ul>
+                    <li>Mengevaluasi media berbantuan AI menggunakan rubrik multi-dimensi yang mencakup aspek instruksional, teknis, nilai dan karakter sekolah, serta etika.</li>
+                    <li>Menginterpretasikan hasil skor rubrik sebagai dasar keputusan kelayakan media.</li>
+                    <li>Merefleksikan proses pengembangan media secara kritis dan profesional.</li>
+                    <li>Merencanakan tindak lanjut konkret berdasarkan pengalaman dalam modul ini.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT TILE -->
+    <section class="section tile tile-parchment">
+
+    <div class="container pt-8">
         <div class="materi-layout">
             
             <!-- Sidebar Navigation -->
@@ -94,7 +126,7 @@
 
                     <div class="sidebar-nav-item" style="margin-top: 15px; border-top: 1px dashed var(--color-border); padding-top: 15px;">
                         <a href="#quiz-container" style="color: var(--color-accent); font-weight: 600;">
-                            <i class="fas fa-tasks"></i> Kuis Evaluasi
+                            <i class="ph ph-check-square"></i> Kuis Evaluasi
                         </a>
                     </div>
                 </div>
@@ -103,33 +135,10 @@
             <!-- Main Content -->
             <main class="materi-main content-body">
 
-                <div class="chapter-content-header" style="margin-bottom: 2rem;">
-                    <div class="chapter-num" style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">
-                        <i class="fas fa-bookmark text-accent"></i> BAB 5
-                    </div>
-                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-text);">Evaluasi dan Refleksi</h1>
-                    
-                    <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 2rem;">
-                        Bab ini menutup perjalanan belajar Anda dalam modul ini dengan dua fokus utama: mengevaluasi media yang telah Anda kembangkan secara sistematis, dan merefleksikan proses belajar serta perencanaan tindak lanjut yang konkret.
-                    </p>
-
-                    <div class="chapter-tujuan" style="background: var(--apple-bg-card); border: 1px solid var(--apple-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
-                        <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--color-text); display: flex; align-items: center; gap: 8px; margin-bottom: 1rem;">
-                            <i class="fas fa-bullseye text-accent"></i> Tujuan Pembelajaran Bab Ini:
-                        </h3>
-                        <ul style="margin-bottom: 0; padding-left: 1.5rem; color: var(--color-text-muted);">
-                            <li style="margin-bottom: 0.5rem;">Mengevaluasi media berbantuan AI menggunakan rubrik multi-dimensi yang mencakup aspek instruksional, teknis, nilai dan karakter sekolah, serta etika.</li>
-                            <li style="margin-bottom: 0.5rem;">Menginterpretasikan hasil skor rubrik sebagai dasar keputusan kelayakan media.</li>
-                            <li style="margin-bottom: 0.5rem;">Merefleksikan proses pengembangan media secara kritis dan profesional.</li>
-                            <li>Merencanakan tindak lanjut konkret berdasarkan pengalaman dalam modul ini.</li>
-                        </ul>
-                    </div>
-                </div>
-
                 <!-- Pertanyaan Pemantik -->
                 <div class="highlight-box" style="background: linear-gradient(135deg, rgba(16,185,129,0.06), rgba(30,58,95,0.04)); border: 1px solid rgba(16,185,129,0.2);">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <i class="fas fa-lightbulb text-success text-2xl"></i>
+                        <i class="ph ph-lightbulb text-success text-2xl"></i>
                         <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
                     </div>
                     <p>Menurut Anda, apa yang membuat sebuah media pembelajaran "baik"? Apakah cukup jika tampilannya menarik dan siswa terlihat antusias?</p>
@@ -262,7 +271,7 @@
                 </div>
 
                 <div class="highlight-box mt-4 mb-8" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 4px solid var(--color-warning);">
-                    <p style="margin: 0; color: #b45309;"><strong><i class="fas fa-exclamation-circle"></i> Catatan Penting:</strong> Jika skor pada dimensi Akurasi Konten, Kesesuaian Nilai dan Karakter Sekolah, atau Perlindungan Privasi & Hak Cipta berada di angka 1, media tidak boleh digunakan sebelum dimensi tersebut diperbaiki terlepas dari total skor keseluruhan.</p>
+                    <p style="margin: 0; color: #b45309;"><strong><i class="ph ph-warning-circle"></i> Catatan Penting:</strong> Jika skor pada dimensi Akurasi Konten, Kesesuaian Nilai dan Karakter Sekolah, atau Perlindungan Privasi & Hak Cipta berada di angka 1, media tidak boleh digunakan sebelum dimensi tersebut diperbaiki terlepas dari total skor keseluruhan.</p>
                 </div>
 
                 <h2 id="sub4" style="scroll-margin-top: 100px;">D. Refleksi</h2>
@@ -296,7 +305,7 @@
                 <!-- Aktivitas Penutup -->
                 <div class="highlight-box mt-8 mb-8" style="background: rgba(14, 165, 233, 0.05); border: 1px solid rgba(14, 165, 233, 0.3); border-left: 4px solid var(--color-primary);">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                        <i class="fas fa-flag-checkered text-xl" style="color: var(--color-primary);"></i>
+                        <i class="ph ph-flag text-xl" style="color: var(--color-primary);"></i>
                         <h4 style="margin: 0; color: var(--color-primary-dark);">Aktivitas Penutup</h4>
                     </div>
                     <p style="margin-bottom:0;">Tuliskan satu komitmen konkret yang akan Anda lakukan dalam minggu depan sebagai tindak lanjut dari mempelajari modul ini. Komitmen ini bisa berupa: mengembangkan satu poster berbantuan AI, menjalankan checklist etika pada media yang sudah ada, atau mengajak rekan guru berdiskusi tentang penggunaan AI di sekolah.</p>
@@ -307,7 +316,7 @@
                 <!-- Rangkuman -->
                 <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
                     <div style="background: var(--color-primary); padding: var(--space-4) var(--space-6);">
-                        <h3 style="margin: 0; color: white;"><i class="fas fa-clipboard-list"></i> Rangkuman BAB 5</h3>
+                        <h3 style="margin: 0; color: white;"><i class="ph ph-clipboard-text"></i> Rangkuman BAB 5</h3>
                     </div>
                     <div style="padding: var(--space-6); background: white;">
                         <ul style="margin-bottom:0;">
@@ -322,13 +331,13 @@
                 <!-- Refleksi Akhir -->
                 <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
                     <div style="background: var(--color-success); padding: var(--space-4) var(--space-6);">
-                        <h3 style="margin: 0; color: white;"><i class="fas fa-medal"></i> Refleksi Akhir</h3>
+                        <h3 style="margin: 0; color: white;"><i class="ph ph-medal"></i> Refleksi Akhir</h3>
                     </div>
                     <div style="padding: var(--space-6); background: white;">
                         <p style="margin-bottom: 0.5rem; font-weight: 500;">Setelah mempelajari seluruh modul ini:</p>
                         <ul style="margin-bottom:0; list-style-type: none; padding-left: 0;">
-                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success mr-2"></i> Hal paling berharga apa yang akan Anda bawa ke dalam praktik mengajar Anda?</li>
-                            <li><i class="fas fa-check text-success mr-2"></i> Mengapa hal tersebut bermakna bagi Anda sebagai seorang guru?</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="ph ph-check text-success mr-2"></i> Hal paling berharga apa yang akan Anda bawa ke dalam praktik mengajar Anda?</li>
+                            <li><i class="ph ph-check text-success mr-2"></i> Mengapa hal tersebut bermakna bagi Anda sebagai seorang guru?</li>
                         </ul>
                     </div>
                 </div>
@@ -341,7 +350,7 @@
                 <!-- Navigation -->
                 <div class="chapter-nav mt-8" style="justify-content: flex-start;">
                     <a href="materi-bab4.html" class="chapter-nav-btn prev">
-                        <i class="fas fa-arrow-left text-accent" style="font-size: 1.5rem;"></i>
+                        <i class="ph ph-arrow-left text-accent" style="font-size: 1.5rem;"></i>
                         <div style="text-align: right;">
                             <span class="nav-label">Bab Sebelumnya</span>
                             <span class="nav-title">BAB 4: Etika dan Tanggung Jawab</span>
@@ -355,13 +364,15 @@
         </div>
     </div>
 
+    </section>
+
     <!-- Footer -->
     <footer class="footer mt-auto">
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
                     <span class="brand-name">
-                        <i class="fas fa-robot text-accent-light"></i> E-Modul AI
+                        <i class="ph ph-robot text-accent-light"></i> E-Modul AI
                     </span>
                     <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
                 </div>
@@ -376,18 +387,38 @@
                     </ul>
                 </div>
             </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Modul AI. Dikembangkan untuk keperluan penelitian tugas akhir.</p>
+                <p>Desain dan Pengembangan dengan <i class="ph ph-heart text-danger ph-fill"></i> di Indonesia.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Kembali ke atas">
-        <i class="fas fa-arrow-up"></i>
+        <i class="ph ph-arrow-up"></i>
     </button>
 
     <!-- Scripts -->
     <script src="assets/js/quiz-data.js"></script>
     <script src="assets/js/quiz-engine.js"></script>
-    <script src="assets/js/main.js?v=3.0"></script>
+    <script src="assets/js/main.js?v=premium"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
