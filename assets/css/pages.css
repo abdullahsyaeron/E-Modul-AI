@@ -421,8 +421,8 @@
    ============================================================ */
 .materi-layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: var(--space-12);
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: var(--space-10);
   align-items: flex-start;
 }
 
@@ -499,6 +499,9 @@
   border: none;
   padding: var(--space-12) var(--space-10);
   box-shadow: var(--shadow-md);
+  max-width: 1000px;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .materi-main h2 {
@@ -520,19 +523,21 @@
 
 .materi-main p {
   font-size: 1.125rem; /* 18px */
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--color-text-muted);
   margin-bottom: var(--space-6);
-  max-width: 720px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .materi-main ul, .materi-main ol {
   font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--color-text-muted);
   margin-bottom: var(--space-6);
   padding-left: var(--space-6);
-  max-width: 720px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .materi-main li {
@@ -1806,8 +1811,10 @@
   background: rgba(0, 0, 0, 0.04);
 }
 
-.materi-layout {
-  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+@media (min-width: 1025px) {
+  .materi-layout {
+    grid-template-columns: 280px minmax(0, 1fr);
+  }
 }
 
 .materi-sidebar {
@@ -2110,3 +2117,20 @@
   }
 }
 
+/* ============================================================
+   STRICT MATERI LAYOUT OVERRIDE (TABLET & MOBILE <= 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .materi-layout {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  .materi-sidebar {
+    display: none !important;
+  }
+  .materi-main {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: var(--space-6) !important;
+  }
+}
