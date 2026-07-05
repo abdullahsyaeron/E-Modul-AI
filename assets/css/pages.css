@@ -1759,24 +1759,49 @@
   justify-content: flex-start;
 }
 
-/* Russian Reference Style: 3D Icon prominently positioned at Bottom Right / Right side of the card */
+/* Russian Reference Style: 3D Icon Magazine Bleed & Dynamic Tilt */
 .quick-card .quick-card-icon {
   position: absolute !important;
-  right: 14px !important;
-  bottom: 12px !important;
-  width: 112px !important;
-  height: 112px !important;
+  right: -16px !important;
+  bottom: -12px !important;
+  width: 145px !important;
+  height: 145px !important;
   margin: 0 !important;
   display: block !important;
   object-fit: contain !important;
   z-index: 5 !important;
   pointer-events: none;
-  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.12));
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.15));
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.quick-card:hover .quick-card-icon {
-  transform: scale(1.12) translateY(-6px) rotate(-3deg);
+/* Dynamic Rotations Per Card (Staggered HIG Rhythm) */
+.staggered-bento-grid > :nth-child(1) .quick-card-icon {
+  transform: rotate(-12deg);
+}
+.staggered-bento-grid > :nth-child(1):hover .quick-card-icon {
+  transform: scale(1.12) translateY(-8px) rotate(-16deg);
+}
+
+.staggered-bento-grid > :nth-child(2) .quick-card-icon {
+  transform: rotate(10deg);
+}
+.staggered-bento-grid > :nth-child(2):hover .quick-card-icon {
+  transform: scale(1.12) translateY(-8px) rotate(14deg);
+}
+
+.staggered-bento-grid > :nth-child(3) .quick-card-icon {
+  transform: rotate(-6deg);
+}
+.staggered-bento-grid > :nth-child(3):hover .quick-card-icon {
+  transform: scale(1.12) translateY(-8px) rotate(-10deg);
+}
+
+.staggered-bento-grid > :nth-child(4) .quick-card-icon {
+  transform: rotate(12deg);
+}
+.staggered-bento-grid > :nth-child(4):hover .quick-card-icon {
+  transform: scale(1.12) translateY(-8px) rotate(16deg);
 }
 
 .quick-card-body p {
@@ -1784,7 +1809,8 @@
   font-size: 0.98rem;
   line-height: 1.62;
   margin: 0;
-  padding-right: 76px;
+  padding-right: 110px;
+  max-width: 60%;
   position: relative;
   z-index: 2;
 }
@@ -1902,10 +1928,14 @@
     transform: translateY(-4px) !important;
   }
   .quick-card .quick-card-icon {
-    width: 90px !important;
-    height: 90px !important;
-    right: 12px !important;
-    bottom: 12px !important;
+    width: 115px !important;
+    height: 115px !important;
+    right: -10px !important;
+    bottom: -8px !important;
+  }
+  .quick-card-body p {
+    padding-right: 90px;
+    max-width: 65%;
   }
 }
 
