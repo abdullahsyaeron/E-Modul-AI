@@ -15,9 +15,9 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=clean7">
-    <link rel="stylesheet" href="assets/css/components.css?v=clean7">
-    <link rel="stylesheet" href="assets/css/pages.css?v=clean7">
+    <link rel="stylesheet" href="assets/css/main.css?v=clean8">
+    <link rel="stylesheet" href="assets/css/components.css?v=clean8">
+    <link rel="stylesheet" href="assets/css/pages.css?v=clean8">
 </head>
 <body class="page-body bg-alt">
 
@@ -36,8 +36,8 @@
             
             <ul class="navbar-nav" id="navbar-nav">
                 <li><a href="index.html" class="nav-link">Dashboard</a></li>
-                <li><a href="materi.html" class="nav-link active">Materi</a></li>
-                <li><a href="prompt.html" class="nav-link">Prompt</a></li>
+                <li><a href="materi.html" class="nav-link active">Materi Pembelajaran</a></li>
+                <li><a href="prompt.html" class="nav-link">Prompt Library</a></li>
                 <li><a href="evaluasi.html" class="nav-link">Evaluasi</a></li>
                 <li><a href="tentang.html" class="nav-link">Tentang</a></li>
             </ul>
@@ -53,8 +53,8 @@
     <!-- Mobile Navigation -->
     <div class="navbar-mobile" id="navbar-mobile">
         <a href="index.html" class="nav-link">Dashboard</a>
-        <a href="materi.html" class="nav-link active">Materi</a>
-        <a href="prompt.html" class="nav-link">Prompt</a>
+        <a href="materi.html" class="nav-link active">Materi Pembelajaran</a>
+        <a href="prompt.html" class="nav-link">Prompt Library</a>
         <a href="evaluasi.html" class="nav-link">Evaluasi</a>
         <a href="tentang.html" class="nav-link">Tentang</a>
     </div>
@@ -84,8 +84,18 @@ berurutan agar pemahaman lebih komprehensif.</p>
             <!-- BAB 1 -->
             <a href="materi-bab1.html" class="bab-card">
                 <div class="bab-num">
-                    <span class="num-label">BAB</span>
-                    <span class="num-val">1</span>
+                    <img src="assets/images/materi/icon-bab1.png" alt="Ikon Bab 1"
+                         width="72" height="72" style="object-fit:contain"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                    <svg style="display:none" width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 18C8 15.8 9.8 14 12 14H26L30 18H52C54.2 18 56 19.8 56 22V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V18Z" fill="#0052B3"/>
+                        <rect x="14" y="16" width="36" height="34" rx="3" fill="#FFFFFF"/>
+                        <path d="M20 22H44M20 27H44M20 32H38" stroke="#D1E6FF" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M8 26C8 23.8 9.8 22 12 22H52C54.2 22 56 23.8 56 26V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V26Z" fill="#006EE6"/>
+                        <path d="M12 22H52" stroke="#4DA3FF" stroke-width="2"/>
+                        <circle cx="32" cy="38" r="12" fill="#FFB300" stroke="#FFFFFF" stroke-width="2.5"/>
+                        <text x="32" y="44" font-family="sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" text-anchor="middle">1</text>
+                    </svg>
                 </div>
                 <div class="bab-info">
                     <h3>Pendahuluan</h3>
@@ -101,8 +111,18 @@ berurutan agar pemahaman lebih komprehensif.</p>
             <!-- BAB 2 -->
             <a href="materi-bab2.html" class="bab-card">
                 <div class="bab-num">
-                    <span class="num-label">BAB</span>
-                    <span class="num-val">2</span>
+                    <img src="assets/images/materi/icon-bab2.png" alt="Ikon Bab 2"
+                         width="72" height="72" style="object-fit:contain"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                    <svg style="display:none" width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 18C8 15.8 9.8 14 12 14H26L30 18H52C54.2 18 56 19.8 56 22V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V18Z" fill="#0052B3"/>
+                        <rect x="14" y="16" width="36" height="34" rx="3" fill="#FFFFFF"/>
+                        <path d="M20 22H44M20 27H44M20 32H38" stroke="#D1E6FF" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M8 26C8 23.8 9.8 22 12 22H52C54.2 22 56 23.8 56 26V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V26Z" fill="#006EE6"/>
+                        <path d="M12 22H52" stroke="#4DA3FF" stroke-width="2"/>
+                        <circle cx="32" cy="38" r="12" fill="#FFB300" stroke="#FFFFFF" stroke-width="2.5"/>
+                        <text x="32" y="44" font-family="sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" text-anchor="middle">2</text>
+                    </svg>
                 </div>
                 <div class="bab-info">
                     <h3>Dasar Teori</h3>
@@ -118,25 +138,18 @@ berurutan agar pemahaman lebih komprehensif.</p>
             <!-- BAB 3 -->
             <a href="materi-bab3.html" class="bab-card">
                 <div class="bab-num">
-                    <span class="num-label">BAB</span>
-                    <span class="num-val">3</span>
-                </div>
-                <div class="bab-info">
-                    <h3>Pengembangan Media dengan AI</h3>
-                    <p>Mempelajari strategi meta prompting, Model MAP-AI, dan panduan langkah demi langkah mengembangkan media berbantuan AI.</p>
-                    <div class="bab-meta">
-                        <div class="bab-meta-item"><i class="ph ph-clock"></i> 25 Menit</div>
-                        <div class="bab-meta-item"><i class="ph ph-check-square"></i> Kuis Tersedia</div>
-                    </div>
-                </div>
-                <i class="ph ph-arrow-right bab-arrow"></i>
-            </a>
-
-            <!-- BAB 4 -->
-            <a href="materi-bab4.html" class="bab-card">
-                <div class="bab-num">
-                    <span class="num-label">BAB</span>
-                    <span class="num-val">4</span>
+                    <img src="assets/images/materi/icon-bab3.png" alt="Ikon Bab 3"
+                         width="72" height="72" style="object-fit:contain"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                    <svg style="display:none" width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 18C8 15.8 9.8 14 12 14H26L30 18H52C54.2 18 56 19.8 56 22V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V18Z" fill="#0052B3"/>
+                        <rect x="14" y="16" width="36" height="34" rx="3" fill="#FFFFFF"/>
+                        <path d="M20 22H44M20 27H44M20 32H38" stroke="#D1E6FF" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M8 26C8 23.8 9.8 22 12 22H52C54.2 22 56 23.8 56 26V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V26Z" fill="#006EE6"/>
+                        <path d="M12 22H52" stroke="#4DA3FF" stroke-width="2"/>
+                        <circle cx="32" cy="38" r="12" fill="#FFB300" stroke="#FFFFFF" stroke-width="2.5"/>
+                        <text x="32" y="44" font-family="sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" text-anchor="middle">3</text>
+                    </svg>
                 </div>
                 <div class="bab-info">
                     <h3>Etika dan Tanggung Jawab Penggunaan AI</h3>
@@ -149,11 +162,48 @@ berurutan agar pemahaman lebih komprehensif.</p>
                 <i class="ph ph-arrow-right bab-arrow"></i>
             </a>
 
+            <!-- BAB 4 -->
+            <a href="materi-bab4.html" class="bab-card">
+                <div class="bab-num">
+                    <img src="assets/images/materi/icon-bab4.png" alt="Ikon Bab 4"
+                         width="72" height="72" style="object-fit:contain"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                    <svg style="display:none" width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 18C8 15.8 9.8 14 12 14H26L30 18H52C54.2 18 56 19.8 56 22V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V18Z" fill="#0052B3"/>
+                        <rect x="14" y="16" width="36" height="34" rx="3" fill="#FFFFFF"/>
+                        <path d="M20 22H44M20 27H44M20 32H38" stroke="#D1E6FF" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M8 26C8 23.8 9.8 22 12 22H52C54.2 22 56 23.8 56 26V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V26Z" fill="#006EE6"/>
+                        <path d="M12 22H52" stroke="#4DA3FF" stroke-width="2"/>
+                        <circle cx="32" cy="38" r="12" fill="#FFB300" stroke="#FFFFFF" stroke-width="2.5"/>
+                        <text x="32" y="44" font-family="sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" text-anchor="middle">4</text>
+                    </svg>
+                </div>
+                <div class="bab-info">
+                    <h3>Pengembangan Media dengan AI</h3>
+                    <p>Mempelajari strategi meta prompting, Model MAP-AI, dan panduan langkah demi langkah mengembangkan media berbantuan AI.</p>
+                    <div class="bab-meta">
+                        <div class="bab-meta-item"><i class="ph ph-clock"></i> 25 Menit</div>
+                        <div class="bab-meta-item"><i class="ph ph-check-square"></i> Kuis Tersedia</div>
+                    </div>
+                </div>
+                <i class="ph ph-arrow-right bab-arrow"></i>
+            </a>
+
             <!-- BAB 5 -->
             <a href="materi-bab5.html" class="bab-card">
                 <div class="bab-num">
-                    <span class="num-label">BAB</span>
-                    <span class="num-val">5</span>
+                    <img src="assets/images/materi/icon-bab5.png" alt="Ikon Bab 5"
+                         width="72" height="72" style="object-fit:contain"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                    <svg style="display:none" width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 18C8 15.8 9.8 14 12 14H26L30 18H52C54.2 18 56 19.8 56 22V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V18Z" fill="#0052B3"/>
+                        <rect x="14" y="16" width="36" height="34" rx="3" fill="#FFFFFF"/>
+                        <path d="M20 22H44M20 27H44M20 32H38" stroke="#D1E6FF" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M8 26C8 23.8 9.8 22 12 22H52C54.2 22 56 23.8 56 26V50C56 52.2 54.2 54 52 54H12C9.8 54 8 52.2 8 50V26Z" fill="#006EE6"/>
+                        <path d="M12 22H52" stroke="#4DA3FF" stroke-width="2"/>
+                        <circle cx="32" cy="38" r="12" fill="#FFB300" stroke="#FFFFFF" stroke-width="2.5"/>
+                        <text x="32" y="44" font-family="sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" text-anchor="middle">5</text>
+                    </svg>
                 </div>
                 <div class="bab-info">
                     <h3>Evaluasi dan Refleksi</h3>
