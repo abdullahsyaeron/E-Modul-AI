@@ -15,9 +15,9 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=clean7">
-    <link rel="stylesheet" href="assets/css/components.css?v=clean7">
-    <link rel="stylesheet" href="assets/css/pages.css?v=clean7">
+    <link rel="stylesheet" href="assets/css/main.css?v=clean8">
+    <link rel="stylesheet" href="assets/css/components.css?v=clean8">
+    <link rel="stylesheet" href="assets/css/pages.css?v=clean8">
 </head>
 <body class="page-body bg-alt">
 
@@ -38,8 +38,8 @@
             
             <ul class="navbar-nav" id="navbar-nav">
                 <li><a href="index.html" class="nav-link">Dashboard</a></li>
-                <li><a href="materi.html" class="nav-link active">Materi</a></li>
-                <li><a href="prompt.html" class="nav-link">Prompt</a></li>
+                <li><a href="materi.html" class="nav-link active">Materi Pembelajaran</a></li>
+                <li><a href="prompt.html" class="nav-link">Prompt Library</a></li>
                 <li><a href="evaluasi.html" class="nav-link">Evaluasi</a></li>
                 <li><a href="tentang.html" class="nav-link">Tentang</a></li>
             </ul>
@@ -55,8 +55,8 @@
     <!-- Mobile Navigation -->
     <div class="navbar-mobile" id="navbar-mobile">
         <a href="index.html" class="nav-link">Dashboard</a>
-        <a href="materi.html" class="nav-link active">Materi</a>
-        <a href="prompt.html" class="nav-link">Prompt</a>
+        <a href="materi.html" class="nav-link active">Materi Pembelajaran</a>
+        <a href="prompt.html" class="nav-link">Prompt Library</a>
         <a href="evaluasi.html" class="nav-link">Evaluasi</a>
         <a href="tentang.html" class="nav-link">Tentang</a>
     </div>
@@ -68,7 +68,7 @@
             <div class="breadcrumb mb-4" style="padding-block: 0;">
                 <a href="index.html" style="">Dashboard</a>
                 <i class="ph ph-caret-right sep" style=""></i>
-                <a href="materi.html" style="">Materi</a>
+                <a href="materi.html" style="">Materi Pembelajaran</a>
                 <i class="ph ph-caret-right sep" style=""></i>
                 <span class="current" >BAB 1</span>
             </div>
@@ -136,7 +136,7 @@
             <main class="materi-main content-body">
 
                 <!-- Pertanyaan Pemantik -->
-                <div class="highlight-box" style="background: linear-gradient(135deg, rgba(16,185,129,0.06), rgba(30,58,95,0.04)); border: 1px solid rgba(16,185,129,0.2);">
+                <div class="highlight-box" style="background: #F0FDF4; border: 1px solid rgba(16,185,129,0.2);">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
                         <i class="ph ph-lightbulb text-success text-2xl"></i>
                         <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
@@ -192,23 +192,23 @@
                 <ul>
                     <li><strong>BAB 1 (Pendahuluan)</strong> — membangun konteks dan urgensi pemanfaatan AI bagi guru pada satuan pendidikan.</li>
                     <li><strong>BAB 2 (Dasar Teori)</strong> — menyediakan fondasi konseptual tentang media pembelajaran, Generative AI, dan keterbatasannya.</li>
-                    <li><strong>BAB 3 (Pengembangan Media dengan AI)</strong> — inti modul yang mencakup strategi meta prompting, Model MAP-AI, dan panduan praktis per jenis media.</li>
-                    <li><strong>BAB 4 (Etika dan Tanggung Jawab)</strong> — membahas secara khusus dimensi etis dan profesional penggunaan AI dalam pengembangan media.</li>
+                    <li><strong>BAB 3 (Etika dan Tanggung Jawab)</strong> — membahas secara khusus dimensi etis dan profesional penggunaan AI sebelum praktik pengembangan media.</li>
+                    <li><strong>BAB 4 (Pengembangan Media dengan AI)</strong> — inti modul yang mencakup strategi meta prompting, Model MAP-AI, dan panduan praktis per jenis media.</li>
                     <li><strong>BAB 5 (Evaluasi dan Refleksi)</strong> — mendorong guru untuk mengevaluasi media yang dikembangkan dan merencanakan tindak lanjut.</li>
                 </ul>
 
                 <p>
-                    Benang merah yang menghubungkan seluruh bab adalah <strong>Model Pemanfaatan AI Berbasis Meta Prompting dalam Pengembangan Media Pembelajaran (Model MAP-AI)</strong>, yang akan dijelaskan secara lengkap pada BAB 3.
+                    Benang merah yang menghubungkan seluruh bab adalah <strong>Model Pemanfaatan AI Berbasis Meta Prompting dalam Pengembangan Media Pembelajaran (Model MAP-AI)</strong>, yang akan dijelaskan secara lengkap pada BAB 4.
                 </p>
 
                 <hr style="margin: var(--space-8) 0; border: none; border-top: 1px solid var(--color-border);">
 
                 <!-- Rangkuman -->
                 <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div style="background: var(--color-primary); padding: var(--space-4) var(--space-6);">
+                    <div class="profile-header" style="background: var(--color-primary);">
                         <h3 style="margin: 0; color: white;"><i class="ph ph-clipboard-text"></i> Rangkuman BAB 1</h3>
                     </div>
-                    <div style="padding: var(--space-6); background: white;">
+                    <div class="profile-body">
                         <ul style="margin-bottom:0;">
                             <li>Media pembelajaran adalah perantara instruksional yang dirancang berdasarkan tujuan, karakteristik siswa, dan konteks belajar—bukan sekadar alat visual.</li>
                             <li>Generative AI memungkinkan guru mengembangkan media lebih efisien, tetapi kontrol pedagogis tetap berada di tangan guru.</li>
@@ -220,10 +220,10 @@
 
                 <!-- Refleksi -->
                 <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div style="background: var(--color-accent); padding: var(--space-4) var(--space-6);">
+                    <div class="profile-header" style="background: var(--color-accent);">
                         <h3 style="margin: 0; color: white;"><i class="ph ph-chat-circle-dots"></i> Refleksi BAB 1</h3>
                     </div>
-                    <div style="padding: var(--space-6); background: white;">
+                    <div class="profile-body">
                         <ol style="margin-bottom:0; padding-left: 1.5rem;">
                             <li style="margin-bottom: 0.75rem;">Jenis media pembelajaran apa yang paling sering Anda gunakan saat ini? Apa tantangan utama dalam pengembangannya?</li>
                             <li style="margin-bottom: 0.75rem;">Berdasarkan gambaran umum modul ini, kompetensi mana yang paling Anda butuhkan dan ingin kembangkan lebih lanjut?</li>

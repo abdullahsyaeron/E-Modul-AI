@@ -15,9 +15,9 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=clean7">
-    <link rel="stylesheet" href="assets/css/components.css?v=clean7">
-    <link rel="stylesheet" href="assets/css/pages.css?v=clean7">
+    <link rel="stylesheet" href="assets/css/main.css?v=clean8">
+    <link rel="stylesheet" href="assets/css/components.css?v=clean8">
+    <link rel="stylesheet" href="assets/css/pages.css?v=clean8">
 </head>
 <body class="page-body bg-alt">
 
@@ -38,8 +38,8 @@
             
             <ul class="navbar-nav" id="navbar-nav">
                 <li><a href="index.html" class="nav-link">Dashboard</a></li>
-                <li><a href="materi.html" class="nav-link active">Materi</a></li>
-                <li><a href="prompt.html" class="nav-link">Prompt</a></li>
+                <li><a href="materi.html" class="nav-link active">Materi Pembelajaran</a></li>
+                <li><a href="prompt.html" class="nav-link">Prompt Library</a></li>
                 <li><a href="evaluasi.html" class="nav-link">Evaluasi</a></li>
                 <li><a href="tentang.html" class="nav-link">Tentang</a></li>
             </ul>
@@ -55,8 +55,8 @@
     <!-- Mobile Navigation -->
     <div class="navbar-mobile" id="navbar-mobile">
         <a href="index.html" class="nav-link">Dashboard</a>
-        <a href="materi.html" class="nav-link active">Materi</a>
-        <a href="prompt.html" class="nav-link">Prompt</a>
+        <a href="materi.html" class="nav-link active">Materi Pembelajaran</a>
+        <a href="prompt.html" class="nav-link">Prompt Library</a>
         <a href="evaluasi.html" class="nav-link">Evaluasi</a>
         <a href="tentang.html" class="nav-link">Tentang</a>
     </div>
@@ -68,7 +68,7 @@
             <div class="breadcrumb mb-4" style="padding-block: 0;">
                 <a href="index.html" style="">Dashboard</a>
                 <i class="ph ph-caret-right sep" style=""></i>
-                <a href="materi.html" style="">Materi</a>
+                <a href="materi.html" style="">Materi Pembelajaran</a>
                 <i class="ph ph-caret-right sep" style=""></i>
                 <span class="current" >BAB 5</span>
             </div>
@@ -137,7 +137,7 @@
             <main class="materi-main content-body">
 
                 <!-- Pertanyaan Pemantik -->
-                <div class="highlight-box" style="background: linear-gradient(135deg, rgba(16,185,129,0.06), rgba(30,58,95,0.04)); border: 1px solid rgba(16,185,129,0.2);">
+                <div class="highlight-box" style="background: #F0FDF4; border: 1px solid rgba(16,185,129,0.2);">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
                         <i class="ph ph-lightbulb text-success text-2xl"></i>
                         <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
@@ -299,7 +299,7 @@
                         <li class="mb-3">Jadwalkan sesi berbagi praktik dengan minimal dua rekan guru untuk saling memberikan umpan balik terhadap media yang dikembangkan.</li>
                         <li class="mb-3">Lakukan asesmen respons siswa terhadap media berbantuan AI yang Anda gunakan dan dokumentasikan hasilnya.</li>
                         <li class="mb-3">Identifikasi satu area keahlian AI yang ingin Anda tingkatkan misalnya pembuatan video pembelajaran, pembuatan soal analisis tinggi, atau penguatan integrasi nilai dan karakter sekolah dalam konten.</li>
-                        <li style="margin-bottom:0;">Gunakan checklist etika (BAB 4G) secara konsisten sebagai bagian dari alur kerja pengembangan media Anda.</li>
+                        <li style="margin-bottom:0;">Gunakan checklist etika (BAB 3G) secara konsisten sebagai bagian dari alur kerja pengembangan media Anda.</li>
                     </ol>
                 </div>
 
@@ -316,10 +316,10 @@
 
                 <!-- Rangkuman -->
                 <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div style="background: var(--color-primary); padding: var(--space-4) var(--space-6);">
+                    <div class="profile-header" style="background: var(--color-primary);">
                         <h3 style="margin: 0; color: white;"><i class="ph ph-clipboard-text"></i> Rangkuman BAB 5</h3>
                     </div>
-                    <div style="padding: var(--space-6); background: white;">
+                    <div class="profile-body">
                         <ul style="margin-bottom:0;">
                             <li>Evaluasi media berbantuan AI mencakup delapan dimensi: keselarasan instruksional, akurasi konten, kesesuaian usia, kualitas teknis, kesesuaian nilai dan karakter sekolah, kontribusi pedagogis, transparansi etika AI, dan perlindungan privasi.</li>
                             <li>Skor pada dimensi akurasi, nilai dan karakter sekolah, serta privasi bersifat kritis jika skor 1, media tidak boleh digunakan sebelum diperbaiki.</li>
@@ -331,10 +331,10 @@
 
                 <!-- Refleksi Akhir -->
                 <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div style="background: var(--color-success); padding: var(--space-4) var(--space-6);">
+                    <div class="profile-header" style="background: var(--color-success);">
                         <h3 style="margin: 0; color: white;"><i class="ph ph-medal"></i> Refleksi Akhir</h3>
                     </div>
-                    <div style="padding: var(--space-6); background: white;">
+                    <div class="profile-body">
                         <p style="margin-bottom: 0.5rem; font-weight: 500;">Setelah mempelajari seluruh modul ini:</p>
                         <ul style="margin-bottom:0; list-style-type: none; padding-left: 0;">
                             <li style="margin-bottom: 0.5rem;"><i class="ph ph-check text-success mr-2"></i> Hal paling berharga apa yang akan Anda bawa ke dalam praktik mengajar Anda?</li>
@@ -354,7 +354,7 @@
                         <i class="ph ph-arrow-left text-accent" style="font-size: 1.5rem;"></i>
                         <div style="text-align: right;">
                             <span class="nav-label">Bab Sebelumnya</span>
-                            <span class="nav-title">BAB 4: Etika dan Tanggung Jawab</span>
+                            <span class="nav-title">BAB 4: Pengembangan Media</span>
                         </div>
                     </a>
                     
