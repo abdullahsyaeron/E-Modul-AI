@@ -1593,7 +1593,7 @@
 .hero-card {
   position: relative;
   width: 100%;
-  min-height: 540px;
+  min-height: 720px;
   border-radius: 0;
   overflow: hidden;
   display: flex;
@@ -1604,7 +1604,7 @@
   background:
     linear-gradient(to right, rgba(219, 234, 254, 0.4), rgba(243, 244, 246, 0.5), rgba(219, 234, 254, 0.4)),
     url('../images/hero/hero-bg.png');
-  background-position: center bottom;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: none;
@@ -1673,7 +1673,7 @@
 @media (max-width: 1024px) and (min-width: 769px) {
   .hero-card {
     background-size: cover;
-    background-position: center bottom;
+    background-position: center center;
   }
   .hero-content {
     max-width: 540px;
