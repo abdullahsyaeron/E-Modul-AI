@@ -1611,6 +1611,14 @@
    EKSPLORASI E-MODUL (APPLE HIG STAGGERED BENTO BOARD REDESIGN)
    ========================================================================== */
 
+/* ponytail: widen container to 1560px to shrink wasted side margins and give cards breathable width */
+.container-bento {
+  width: 100%;
+  max-width: 1560px;
+  margin-inline: auto;
+  padding-inline: var(--space-6, 24px);
+}
+
 .eksplorasi-hero-box {
   background: #007AFF;
   border-radius: var(--radius-2xl, 32px);
