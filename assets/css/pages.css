@@ -1629,16 +1629,26 @@
   margin-top: 16px;
 }
 
+.eksplorasi-hero-box .section-header {
+  text-align: left !important;
+  max-width: 720px;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  margin-bottom: 36px;
+}
+
 .eksplorasi-hero-box .section-title,
 .eksplorasi-hero-box .section-label {
   color: #FFFFFF !important;
+  text-align: left !important;
 }
 
 .eksplorasi-hero-box .section-desc {
   color: rgba(255, 255, 255, 0.85) !important;
   max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
 }
 
 .staggered-bento-grid {
@@ -1730,15 +1740,15 @@
 }
 
 .quick-card-header h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
   line-height: 1.35;
   margin: 0;
   color: #1D1D1F;
 }
 
-/* Pristine White Body Zone */
+/* Pristine White Body Zone & 3D Icon Playground */
 .quick-card-body {
   background: #FFFFFF;
   padding: 0 20px 18px 20px;
@@ -1746,6 +1756,19 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.quick-card-body .quick-card-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.quick-card-body .quick-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .quick-card-body p {
