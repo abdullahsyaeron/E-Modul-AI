@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;600&display=swap');
+
 /* ============================================================
    DESIGN TOKENS (CSS Custom Properties)
    ============================================================ */
@@ -52,20 +54,20 @@
   --glass-blur: blur(20px) saturate(180%);
 
   /* Typography */
-  --font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Geist', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+  --font-body: 'Geist', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif;
   
-  /* Font sizes — Fluid Typography (clamp scale) */
-  --text-xs: clamp(0.7rem, 1.5vw, 0.75rem);
-  --text-sm: clamp(0.8125rem, 1.8vw, 0.875rem);
-  --text-base: clamp(0.9375rem, 2vw, 1.0625rem);
-  --text-lg: clamp(1.0625rem, 2.5vw, 1.3125rem);
-  --text-xl: clamp(1.25rem, 3vw, 1.5rem);
-  --text-2xl: clamp(1.5rem, 4vw, 1.75rem);
-  --text-3xl: clamp(1.75rem, 5vw, 2.125rem);
-  --text-4xl: clamp(2rem, 6vw, 2.5rem);
-  --text-5xl: clamp(2.5rem, 8vw, 3.5rem);
-  --text-6xl: clamp(3rem, 10vw, 4.5rem);
+  /* Font sizes — Apple HIG & LabSpace Scale (Fixed Body + Fluid Headings) */
+  --text-xs: 0.75rem;          /* 12px - Badges, captions, timestamps */
+  --text-sm: 0.875rem;         /* 14px - Secondary text, cards, nav links */
+  --text-base: 1rem;           /* 16px - Standard Body Text, paragraphs */
+  --text-lg: 1.125rem;         /* 18px - Lead paragraphs, card titles */
+  --text-xl: clamp(1.25rem, 2vw, 1.5rem);       /* 20-24px - Small section headers */
+  --text-2xl: clamp(1.5rem, 2.5vw, 1.875rem);   /* 24-30px - Chapter headers */
+  --text-3xl: clamp(1.875rem, 3.5vw, 2.25rem);  /* 30-36px - Major headings */
+  --text-4xl: clamp(2.25rem, 5vw, 3rem);        /* 36-48px - Hero / Banner titles */
+  --text-5xl: clamp(2.75rem, 7vw, 3.75rem);     /* 44-60px - Large display */
+  --text-6xl: clamp(3.25rem, 9vw, 4.5rem);      /* 52-72px - Extra large display */
   
   /* Font weights (Apple removes 500) */
   --font-normal: 400;
@@ -140,6 +142,17 @@ body {
   letter-spacing: -0.022em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -339,7 +352,7 @@ table { border-collapse: collapse; width: 100%; }
   left: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  background: var(--color-accent);
   z-index: 9999;
   transition: width 0.1s linear;
 }
@@ -546,26 +559,13 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(circle at 18% -10%, rgba(0, 102, 204, 0.08), transparent 30rem),
-    radial-gradient(circle at 88% 12%, rgba(36, 122, 61, 0.06), transparent 28rem),
-    var(--color-bg);
+  background: var(--color-bg);
   letter-spacing: 0;
   font-variant-numeric: tabular-nums;
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2147483647;
-  opacity: 0.022;
-  background-image:
-    linear-gradient(rgba(29, 29, 31, 0.55) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(29, 29, 31, 0.55) 1px, transparent 1px);
-  background-size: 4px 4px;
-  mix-blend-mode: multiply;
+  display: none;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -606,9 +606,7 @@ select:focus-visible,
 }
 
 .tile-dark {
-  background:
-    radial-gradient(circle at 20% 0%, rgba(94, 176, 255, 0.16), transparent 34rem),
-    linear-gradient(180deg, #242426 0%, #171718 100%);
+  background: #1e1e20;
 }
 
 .tile-dark .section-label {
@@ -619,9 +617,28 @@ select:focus-visible,
   background: rgba(255, 255, 255, 0.34);
 }
 
+.tile-blue {
+  background: #006EE6;
+  color: white;
+}
+
+.tile-blue .section-label {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.tile-blue .section-label::before {
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.tile-blue .section-title,
+.tile-blue .section-desc,
+.tile-blue .heading-section {
+  color: white;
+}
+
 #reading-progress {
   height: 2px;
-  background: linear-gradient(90deg, #0066cc, #5eb0ff);
+  background: #0066cc;
   z-index: 1200;
 }
 
