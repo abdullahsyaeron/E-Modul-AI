@@ -1614,7 +1614,7 @@
 .eksplorasi-hero-box {
   background: #007AFF;
   border-radius: var(--radius-2xl, 32px);
-  padding: 64px 40px;
+  padding: 44px 28px;
   box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15);
   position: relative;
   overflow: hidden;
@@ -1636,9 +1636,9 @@
 .staggered-bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 48px;
-  padding-bottom: 36px;
+  gap: 18px;
+  margin-top: 28px;
+  padding-bottom: 24px;
   align-items: stretch;
 }
 
@@ -1672,10 +1672,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 310px;
+  min-height: 240px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 28px;
+  border-radius: 22px;
   overflow: hidden;
   text-decoration: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.035);
@@ -1691,7 +1691,7 @@
 /* Edge-to-Edge Gradient Header Zone */
 .quick-card-header {
   width: 100%;
-  padding: 28px 28px 22px 28px;
+  padding: 20px 20px 14px 20px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1709,10 +1709,16 @@
   box-shadow: none;
 }
 
-.quick-card-icon svg {
+.quick-card-icon svg,
+.quick-card-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.quick-card-icon i {
+  font-size: 32px;
+  color: #007AFF;
 }
 
 .quick-card-header h3 {
@@ -1727,7 +1733,7 @@
 /* Pristine White Body Zone */
 .quick-card-body {
   background: #FFFFFF;
-  padding: 0 28px 24px 28px;
+  padding: 0 20px 18px 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1744,10 +1750,10 @@
 /* Footer Zone & Solid Apple Matte Capsule CTA */
 .quick-card-footer {
   background: #FFFFFF;
-  padding: 0 28px 28px 28px;
+  padding: 0 20px 20px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 12px;
 }
 
@@ -1758,12 +1764,12 @@
   letter-spacing: 0.01em;
 }
 
-/* Universal iOS Blue Matte Capsule Button (HIG 44px Touch Target) */
+/* Universal iOS Blue Matte Capsule Button (HIG Touch Target) */
 .card-pill-btn {
   border-radius: 9999px;
-  padding: 12px 24px;
-  min-height: 44px;
-  font-size: 0.92rem;
+  padding: 10px 18px;
+  min-height: 40px;
+  font-size: 0.88rem;
   font-weight: 600;
   color: #FFFFFF;
   background: #007AFF;
@@ -1774,6 +1780,11 @@
   gap: 6px;
   border: none;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-pill-btn i {
@@ -1799,24 +1810,24 @@
     border-radius: 24px;
   }
   .quick-card-header {
-    padding: 22px 22px 18px 22px;
+    padding: 18px 18px 14px 18px;
   }
   .quick-card-body {
-    padding: 0 22px 20px 22px;
+    padding: 0 18px 16px 18px;
   }
   .quick-card-footer {
-    padding: 0 22px 22px 22px;
+    padding: 0 18px 18px 18px;
   }
 }
 
 @media (max-width: 1023px) {
   .eksplorasi-hero-box {
-    padding: 48px 32px;
+    padding: 36px 24px;
   }
   .staggered-bento-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding-bottom: 28px;
+    gap: 16px;
+    padding-bottom: 20px;
   }
   .staggered-bento-grid > :nth-child(odd) {
     transform: translateY(0);
@@ -1834,8 +1845,8 @@
 
 @media (max-width: 768px) {
   .eksplorasi-hero-box {
-    padding: 36px 20px;
-    border-radius: 24px;
+    padding: 28px 16px;
+    border-radius: 20px;
   }
   .staggered-bento-grid {
     grid-template-columns: 1fr;
