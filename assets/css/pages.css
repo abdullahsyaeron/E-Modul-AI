@@ -275,9 +275,9 @@
   border-radius: var(--radius-xl);
   border: none;
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.06),
-    0 6px 20px -2px rgba(0, 0, 0, 0.11),
-    0 16px 40px -6px rgba(0, 0, 0, 0.09);
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 16px -2px rgba(0, 0, 0, 0.07),
+    0 12px 32px -6px rgba(0, 0, 0, 0.06);
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   color: var(--color-text);
@@ -285,9 +285,9 @@
 
 .bab-card:hover {
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.06),
-    0 10px 28px -4px rgba(0, 0, 0, 0.13),
-    0 24px 56px -8px rgba(0, 0, 0, 0.10);
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px -4px rgba(0, 0, 0, 0.10),
+    0 20px 48px -8px rgba(0, 0, 0, 0.08);
   transform: translateY(-3px);
   color: var(--color-text);
 }
@@ -305,7 +305,16 @@
   padding: 10px;
 }
 
-.bab-num .num-label { font-size: var(--text-xs); opacity: 0.7; }
+.bab-num img {
+  filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.18)) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.10));
+  transition: filter 0.3s ease;
+}
+
+.bab-card:hover .bab-num img {
+  filter: drop-shadow(3px 8px 14px rgba(0, 0, 0, 0.22)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+
 .bab-num .num-val   { font-size: var(--text-3xl); font-weight: var(--font-extrabold); line-height: 1; }
 
 .bab-info { flex: 1; }
