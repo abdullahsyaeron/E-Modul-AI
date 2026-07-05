@@ -1809,8 +1809,6 @@
   font-size: 0.98rem;
   line-height: 1.62;
   margin: 0;
-  padding-right: 110px;
-  max-width: 60%;
   position: relative;
   z-index: 2;
 }
@@ -1823,6 +1821,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
+  position: relative;
+  z-index: 3;
 }
 
 .card-sublabel {
@@ -1932,10 +1932,6 @@
     height: 115px !important;
     right: -10px !important;
     bottom: -8px !important;
-  }
-  .quick-card-body p {
-    padding-right: 90px;
-    max-width: 65%;
   }
 }
 
