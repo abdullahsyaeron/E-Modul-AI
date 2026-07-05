@@ -9,11 +9,7 @@
 
 .hero-section {
   background-color: var(--color-bg-alt); /* Parchment base */
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(0, 122, 255, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(41, 151, 255, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 122, 255, 0.15) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(26, 174, 57, 0.05) 0px, transparent 50%);
+  background-image: none;
   background-size: 100% 100%;
   /* animation: meshMovement 20s ease-in-out infinite; */
   display: flex;
@@ -131,73 +127,7 @@
 /* ============================================================
    QUICK ACCESS CARDS (Dashboard)
    ============================================================ */
-.quick-access-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-6);
-}
-
-.quick-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: var(--space-8);
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  border: none;
-  text-decoration: none;
-  transition: all var(--transition-base);
-  box-shadow: var(--shadow-sm);
-  height: 100%;
-}
-
-.quick-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-  color: var(--color-text);
-}
-
-.quick-card:active {
-  transform: scale(0.98);
-}
-
-.quick-card-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.75rem;
-  margin-bottom: var(--space-5);
-}
-
-.quick-card h3 {
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  color: var(--color-primary);
-  margin-bottom: var(--space-2);
-}
-
-.quick-card p {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  line-height: 1.6;
-  flex: 1;
-}
-
-.quick-card .card-arrow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin-top: var(--space-5);
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  color: var(--color-accent);
-  transition: gap var(--transition-fast);
-}
-
-.quick-card:hover .card-arrow { gap: var(--space-3); }
+/* Quick access grid and card styles moved to main card section around line 1670 */
 
 @media (max-width: 1024px) {
   .quick-access-grid { grid-template-columns: repeat(2, 1fr); }
@@ -224,7 +154,7 @@
   left: calc(12.5% + 20px);
   right: calc(12.5% + 20px);
   height: 2px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  background: var(--color-accent);
   z-index: 0;
 }
 
@@ -344,15 +274,15 @@
   background: var(--color-surface);
   border-radius: var(--radius-xl);
   border: none;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.03);
   text-decoration: none;
   transition: all var(--transition-base);
   color: var(--color-text);
 }
 
 .bab-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1.5px);
   color: var(--color-text);
 }
 
@@ -360,14 +290,13 @@
   width: 96px;
   height: 96px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-  color: white;
+  background: #F0F7FF;
+  box-shadow: inset 0 0 0 1px rgba(0, 110, 230, 0.12), 0 4px 12px rgba(0, 110, 230, 0.06);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-family: var(--font-heading);
+  padding: 8px;
 }
 
 .bab-num .num-label { font-size: var(--text-xs); opacity: 0.7; }
@@ -564,11 +493,14 @@
    QUIZ STYLES
    ============================================================ */
 .quiz-container {
-  background: var(--color-bg-alt);
-  border-radius: var(--radius-lg);
-  padding: var(--space-8);
-  margin-top: var(--space-10);
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+  padding: 28px 32px;
 }
 
 .quiz-header {
@@ -587,12 +519,11 @@
 }
 
 .quiz-question {
-  background: var(--color-surface);
-  border-radius: var(--radius-md);
-  padding: var(--space-6);
-  margin-bottom: var(--space-4);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  padding: 20px 24px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+  border: 1px solid var(--color-border-soft);
 }
 
 .quiz-question-num {
@@ -619,15 +550,16 @@
 }
 
 .quiz-option {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-4);
-  border: 2px solid var(--color-border);
+  padding: 16px 20px;
   border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  background: white;
+  margin-bottom: var(--space-3);
   cursor: pointer;
-  transition: all var(--transition-fast);
-  background: var(--color-surface);
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
 }
 
 .quiz-option:hover {
@@ -665,14 +597,20 @@
 }
 
 .quiz-pembahasan {
-  margin-top: var(--space-3);
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-sm);
-  background: rgba(16,185,129,0.08);
-  border: 1px solid rgba(16,185,129,0.2);
-  color: #065f46;
+  margin-top: var(--space-6);
+  padding: 20px 24px;
+  background: rgba(0, 122, 255, 0.05);
+  border: 1px solid rgba(0, 122, 255, 0.2);
+  border-radius: var(--radius-lg);
   display: none;
+}
+
+@media (max-width: 768px) {
+  .profile-header { padding: 14px 20px; }
+  .profile-body { padding: 20px 24px; }
+  .quiz-container { padding: 20px 20px; }
+  .quiz-question, .quiz-pembahasan { padding: 16px 18px; }
+  .quiz-option { padding: 14px 16px; }
 }
 
 .quiz-pembahasan.show { display: block; }
@@ -892,7 +830,7 @@
 .prompt-card:hover {
   border-color: rgba(0,0,0,0.1);
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateY(-1.5px);
 }
 
 .prompt-card:active {
@@ -1369,7 +1307,7 @@
 }
 
 .eval-dimensi-header {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  background: var(--color-primary);
   padding: var(--space-5) var(--space-6);
   color: white;
   display: flex;
@@ -1488,8 +1426,8 @@
 }
 
 .profile-header {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  padding: 20px 24px;
+  background: #0f172a;
+  padding: 18px 28px;
   color: white;
   display: flex;
   align-items: center;
@@ -1515,7 +1453,7 @@
 }
 
 .profile-body {
-  padding: 24px;
+  padding: 28px 32px;
   margin-top: 0;
   position: relative;
 }
@@ -1620,14 +1558,8 @@
   min-height: auto;
   padding-top: clamp(4.5rem, 8vw, 6rem);
   padding-bottom: clamp(4rem, 7vw, 5rem);
-  background:
-    radial-gradient(circle at 50% 0%, rgba(0, 102, 204, 0.16), transparent 36rem),
-    radial-gradient(circle at 18% 72%, rgba(36, 122, 61, 0.08), transparent 30rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86) 0%, rgba(245, 245, 247, 0.76) 100%);
-  background-image:
-    radial-gradient(circle at 50% 0%, rgba(0, 102, 204, 0.16), transparent 36rem),
-    radial-gradient(circle at 18% 72%, rgba(36, 122, 61, 0.08), transparent 30rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86) 0%, rgba(245, 245, 247, 0.76) 100%) !important;
+  background: #f5f5f7;
+  background-image: none !important;
   animation: none;
   isolation: isolate;
 }
@@ -1657,10 +1589,7 @@
 }
 
 .hero-title .accent {
-  color: transparent;
-  background: linear-gradient(110deg, #0066cc 0%, #1d1d1f 72%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #0066cc;
 }
 
 .hero-desc {
@@ -1678,66 +1607,163 @@
   padding-bottom: clamp(3rem, 5vw, 4rem) !important;
 }
 
+/* ==========================================================================
+   EKSPLORASI E-MODUL (APPLE SLEEK GLASS & TACTILE TILE REDESIGN)
+   ========================================================================== */
+
 .quick-access-grid {
-  grid-template-columns: 1.05fr 1fr;
-  gap: clamp(1rem, 2.2vw, 1.5rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 24px;
 }
 
 .quick-card {
-  min-height: 260px;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 246, 248, 0.86));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 310px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 28px;
-  box-shadow: var(--shadow-card);
   overflow: hidden;
-  position: relative;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.035);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-.quick-card::after {
-  content: "";
-  position: absolute;
-  inset: auto -20% -48% 42%;
-  height: 60%;
-  border-radius: 50%;
-  background: rgba(0, 102, 204, 0.08);
-  filter: blur(22px);
-  transition: transform var(--transition-base), opacity var(--transition-base);
-}
-
-.quick-card:nth-child(2)::after { background: rgba(36, 122, 61, 0.08); }
-.quick-card:nth-child(3)::after { background: rgba(139, 93, 19, 0.08); }
-.quick-card:nth-child(4)::after { background: rgba(37, 95, 153, 0.08); }
 
 .quick-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
-.quick-card:hover::after {
-  transform: translateY(-8px) scale(1.08);
-  opacity: 0.9;
+/* Edge-to-Edge Gradient Header Zone */
+.quick-card-header {
+  width: 100%;
+  padding: 28px 28px 22px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: transparent;
 }
 
 .quick-card-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 18px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.quick-card h3,
+.quick-card-icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.quick-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin: 0;
+  color: #1D1D1F;
+}
+
+/* Pristine White Body Zone */
+.quick-card-body {
+  background: #FFFFFF;
+  padding: 0 28px 24px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.quick-card-body p {
+  color: #6E6E73;
+  font-size: 0.98rem;
+  line-height: 1.62;
+  margin: 0;
+}
+
+/* Footer Zone & Solid Apple Matte Capsule CTA */
+.quick-card-footer {
+  background: #FFFFFF;
+  padding: 0 28px 28px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-sublabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8E8E93;
+  letter-spacing: 0.01em;
+}
+
+/* Universal iOS Blue Matte Capsule Button (HIG 44px Touch Target) */
+.card-pill-btn {
+  border-radius: 9999px;
+  padding: 12px 24px;
+  min-height: 44px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: #007AFF;
+  box-shadow: 0 4px 14px rgba(0, 122, 255, 0.28);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-pill-btn i {
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.quick-card:hover .card-pill-btn {
+  background: #006EE6;
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.38);
+  transform: translateY(-1.5px);
+}
+.quick-card:hover .card-pill-btn i {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .quick-access-grid {
+    grid-template-columns: 1fr;
+  }
+  .quick-card {
+    min-height: auto;
+    border-radius: 24px;
+  }
+  .quick-card-header {
+    padding: 22px 22px 18px 22px;
+  }
+  .quick-card-body {
+    padding: 0 22px 20px 22px;
+  }
+  .quick-card-footer {
+    padding: 0 22px 22px 22px;
+  }
+}
+
 .bab-info h3,
 .step-item h4,
 .quiz-header h3 {
   color: var(--color-text);
   letter-spacing: 0;
-}
-
-.quick-card p {
-  max-width: 36rem;
-  color: var(--color-text-muted);
 }
 
 .steps-container {
@@ -1782,23 +1808,23 @@
 
 .bab-card {
   padding: clamp(1.25rem, 2.4vw, 2rem);
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  background: rgba(255, 255, 255, 0.84);
-  box-shadow: var(--shadow-card);
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.03);
 }
 
 .bab-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1.5px);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
 }
 
 .bab-num {
   width: 88px;
   height: 88px;
   border-radius: 24px;
-  background:
-    radial-gradient(circle at 30% 12%, rgba(255, 255, 255, 0.38), transparent 34%),
-    linear-gradient(150deg, #1d1d1f, #3a3a3c);
+  background: #F0F7FF;
+  box-shadow: inset 0 0 0 1px rgba(0, 110, 230, 0.12), 0 4px 12px rgba(0, 110, 230, 0.06);
+  padding: 6px;
 }
 
 .bab-num .num-label {
@@ -1935,7 +1961,7 @@
 }
 
 .prompt-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-1.5px);
   box-shadow: var(--shadow-card-hover);
 }
 
@@ -2063,12 +2089,10 @@
    ============================================================ */
 @media (max-width: 768px) {
   /* Adaptive Card Padding */
-  .profile-header,
   .eval-dimensi-header {
     padding: 16px 20px !important;
   }
   
-  .profile-body,
   .eval-kriteria-list {
     padding: 16px 20px !important;
   }
@@ -2095,12 +2119,10 @@
 
 @media (max-width: 480px) {
   /* Ultra-compact padding for small screens (<480px) */
-  .profile-header,
   .eval-dimensi-header {
     padding: 14px 16px !important;
   }
   
-  .profile-body,
   .eval-kriteria-list {
     padding: 14px 16px !important;
   }
