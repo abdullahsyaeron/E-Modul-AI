@@ -1643,10 +1643,9 @@
   color: #0066cc;
 }
 
-/* Penekanan teks hitam pekat sesuai instruksi user */
+/* Penekanan teks hitam pekat (tanpa bold tambahan agar seragam) */
 .highlight-black {
   color: #000000 !important;
-  font-weight: 800;
 }
 
 .hero-desc {
@@ -1667,6 +1666,21 @@
 .page-body.bg-alt .hero-section {
   padding-top: clamp(2.5rem, 5vw, 4rem) !important;
   padding-bottom: clamp(2.5rem, 5vw, 4rem) !important;
+}
+
+/* Responsif Tablet/Medium (768px - 1024px): Mendorong karakter ke tepi luar & mempersempit zona teks */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-card {
+    background-size: 120% auto;
+    background-position: center bottom;
+  }
+  .hero-content {
+    max-width: 580px;
+  }
+  .hero-card::before {
+    left: 8%;
+    right: 8%;
+  }
 }
 
 /* Responsif Mobile (<768px): Sembunyikan gambar latar agar teks tidak bertumpuk */
