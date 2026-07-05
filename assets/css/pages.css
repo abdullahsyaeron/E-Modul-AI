@@ -1600,28 +1600,16 @@
   align-items: center;
   justify-content: center;
   padding: clamp(3rem, 6vw, 5rem) 2rem;
-  /* 3 Lapisan: Gradasi halus + Gambar Ilustrasi 3D */
-  background:
-    linear-gradient(to right, rgba(219, 234, 254, 0.4), rgba(243, 244, 246, 0.5), rgba(219, 234, 254, 0.4)),
-    url('../images/hero/hero-bg.png');
-  background-position: center center;
+  /* Gambar Ilustrasi 3D murni tanpa overlay gradasi agar tidak ada garis tajam */
+  background: url('../images/hero/hero-bg.png') no-repeat center center;
   background-size: cover;
-  background-repeat: no-repeat;
   box-shadow: none;
   border: none;
 }
 
-/* Overlay Kontras Teks di Tengah Kartu */
+/* Overlay Kontras Teks di Tengah Kartu dihapus sesuai instruksi user */
 .hero-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 10%;
-  right: 10%;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 50%, rgba(255, 255, 255, 0) 100%);
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .hero-content {
@@ -1677,10 +1665,6 @@
   }
   .hero-content {
     max-width: 540px;
-  }
-  .hero-card::before {
-    left: 5%;
-    right: 5%;
   }
 }
 
