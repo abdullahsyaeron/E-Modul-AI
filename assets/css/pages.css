@@ -1575,8 +1575,7 @@
    ============================================================ */
 .hero-section {
   min-height: auto;
-  padding-top: clamp(2.5rem, 5vw, 4rem);
-  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding: 0;
   background: #ffffff;
   animation: none;
   isolation: isolate;
@@ -1586,17 +1585,21 @@
 
 .hero-section .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 100%;
+  padding: 0;
 }
 
-/* Apple HIG Bento Hero Card Container */
+/* Apple HIG Bento Hero Card Container -> Diubah menjadi Full-Width Edge-to-Edge Banner tanpa bingkai/rounded corner */
 .hero-card {
   position: relative;
   width: 100%;
-  min-height: 480px;
-  border-radius: 24px;
+  min-height: 540px;
+  border-radius: 0;
   overflow: hidden;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3rem, 6vw, 5rem) 2rem;
   /* 3 Lapisan: Gradasi halus + Gambar Ilustrasi 3D */
   background:
     linear-gradient(to right, rgba(219, 234, 254, 0.4), rgba(243, 244, 246, 0.5), rgba(219, 234, 254, 0.4)),
@@ -1604,7 +1607,8 @@
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: none;
+  border: none;
 }
 
 /* Overlay Kontras Teks di Tengah Kartu */
@@ -1613,15 +1617,15 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 12%;
-  right: 12%;
+  left: 10%;
+  right: 10%;
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 50%, rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
   z-index: 1;
 }
 
 .hero-content {
-  max-width: 560px;
+  max-width: 640px;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -1629,7 +1633,7 @@
 }
 
 .hero-title {
-  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  font-size: clamp(2rem, 3.4vw, 3rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: #111827;
@@ -1646,8 +1650,8 @@
 }
 
 .hero-desc {
-  max-width: 480px;
-  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  max-width: 560px;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
   line-height: 1.6;
   color: #4b5563;
   margin: 0 auto 2rem auto;
@@ -1661,8 +1665,8 @@
 }
 
 .page-body.bg-alt .hero-section {
-  padding-top: clamp(2.5rem, 5vw, 4rem) !important;
-  padding-bottom: clamp(2.5rem, 5vw, 4rem) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* Responsif Tablet/Medium (768px - 1024px): Mendorong karakter ke tepi luar & mempersempit zona teks */
@@ -1672,7 +1676,7 @@
     background-position: center bottom;
   }
   .hero-content {
-    max-width: 500px;
+    max-width: 540px;
   }
   .hero-card::before {
     left: 5%;
@@ -1686,7 +1690,7 @@
     min-height: auto;
     padding: 2.5rem 1.5rem;
     background: linear-gradient(135deg, rgba(219, 234, 254, 0.6), rgba(243, 244, 246, 0.8));
-    border-radius: 20px;
+    border-radius: 0;
   }
   .hero-card::before {
     display: none;
