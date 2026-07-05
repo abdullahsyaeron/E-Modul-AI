@@ -1608,14 +1608,64 @@
 }
 
 /* ==========================================================================
-   EKSPLORASI E-MODUL (APPLE SLEEK GLASS & TACTILE TILE REDESIGN)
+   EKSPLORASI E-MODUL (APPLE HIG STAGGERED BENTO BOARD REDESIGN)
    ========================================================================== */
 
-.quick-access-grid {
+.eksplorasi-hero-box {
+  background: #007AFF;
+  border-radius: var(--radius-2xl, 32px);
+  padding: 64px 40px;
+  box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.eksplorasi-hero-box .section-title,
+.eksplorasi-hero-box .section-label {
+  color: #FFFFFF !important;
+}
+
+.eksplorasi-hero-box .section-desc {
+  color: rgba(255, 255, 255, 0.85) !important;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.staggered-bento-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  margin-top: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  padding-bottom: 36px;
+  align-items: stretch;
+}
+
+/* Ensure uniform card dimensions across all 4 cards */
+.staggered-bento-grid .quick-card {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Staggered Vertical Rhythm (The Wave) */
+.staggered-bento-grid > :nth-child(odd) {
+  transform: translateY(0);
+}
+
+.staggered-bento-grid > :nth-child(even) {
+  transform: translateY(24px);
+}
+
+/* Dynamic Hover Elevation preserving offset */
+.staggered-bento-grid > :nth-child(odd):hover {
+  transform: translateY(-8px);
+}
+
+.staggered-bento-grid > :nth-child(even):hover {
+  transform: translateY(16px);
 }
 
 .quick-card {
@@ -1756,6 +1806,44 @@
   }
   .quick-card-footer {
     padding: 0 22px 22px 22px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .staggered-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-bottom: 28px;
+  }
+  .staggered-bento-grid > :nth-child(odd) {
+    transform: translateY(0);
+  }
+  .staggered-bento-grid > :nth-child(even) {
+    transform: translateY(16px);
+  }
+  .staggered-bento-grid > :nth-child(odd):hover {
+    transform: translateY(-6px);
+  }
+  .staggered-bento-grid > :nth-child(even):hover {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .eksplorasi-hero-box {
+    padding: 36px 20px;
+    border-radius: 24px;
+  }
+  .staggered-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 0;
+  }
+  .staggered-bento-grid > * {
+    transform: none !important;
+  }
+  .staggered-bento-grid > *:hover {
+    transform: translateY(-4px) !important;
   }
 }
 
