@@ -270,33 +270,39 @@
   display: flex;
   gap: var(--space-6);
   align-items: center;
-  padding: var(--space-8);
-  background: var(--color-surface);
+  padding: var(--space-10);
+  background: #FFFFFF;
   border-radius: var(--radius-xl);
   border: none;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 16px -2px rgba(0, 0, 0, 0.07),
+    0 12px 32px -6px rgba(0, 0, 0, 0.06);
   text-decoration: none;
-  transition: all var(--transition-base);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   color: var(--color-text);
 }
 
 .bab-card:hover {
-  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
-  transform: translateY(-1.5px);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px -4px rgba(0, 0, 0, 0.10),
+    0 20px 48px -8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
   color: var(--color-text);
 }
 
 .bab-num {
-  width: 96px;
-  height: 96px;
+  width: 108px;
+  height: 108px;
   border-radius: var(--radius-lg);
   background: #F0F7FF;
-  box-shadow: inset 0 0 0 1px rgba(0, 110, 230, 0.12), 0 4px 12px rgba(0, 110, 230, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(0, 110, 230, 0.10);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  padding: 8px;
+  padding: 10px;
 }
 
 .bab-num .num-label { font-size: var(--text-xs); opacity: 0.7; }
@@ -305,7 +311,8 @@
 .bab-info { flex: 1; }
 .bab-info h3 {
   font-size: var(--text-xl);
-  font-weight: var(--font-bold);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--color-primary);
   margin-bottom: var(--space-2);
 }
@@ -313,7 +320,7 @@
 .bab-info p {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: var(--space-3);
 }
 
@@ -329,6 +336,9 @@
   gap: var(--space-1);
   font-size: var(--text-xs);
   color: var(--color-text-muted);
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.04);
 }
 
 .bab-arrow {
@@ -341,8 +351,8 @@
 .bab-card:hover .bab-arrow { transform: translateX(4px); }
 
 @media (max-width: 768px) {
-  .bab-card { flex-direction: column; align-items: flex-start; }
-  .bab-num { width: 60px; height: 60px; }
+  .bab-card { flex-direction: column; align-items: flex-start; padding: var(--space-6); }
+  .bab-num { width: 72px; height: 72px; }
 }
 
 /* ============================================================
@@ -1980,33 +1990,10 @@
   gap: 1.25rem;
 }
 
-.bab-card {
-  padding: clamp(1.25rem, 2.4vw, 2rem);
-  border: none;
-  background: #FFFFFF;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.03);
-}
-
-.bab-card:hover {
-  transform: translateY(-1.5px);
-  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
-}
-
-.bab-num {
-  width: 88px;
-  height: 88px;
-  border-radius: 24px;
-  background: #F0F7FF;
-  box-shadow: inset 0 0 0 1px rgba(0, 110, 230, 0.12), 0 4px 12px rgba(0, 110, 230, 0.06);
-  padding: 6px;
-}
-
-.bab-num .num-label {
-  letter-spacing: 0;
-}
+/* bab-card overrides consolidated to main definition above */
 
 .bab-meta-item {
-  padding: 6px 10px;
+  padding: 5px 10px;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.04);
 }
