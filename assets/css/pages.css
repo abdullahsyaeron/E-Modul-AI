@@ -1810,6 +1810,9 @@
 }
 
 @media (max-width: 1023px) {
+  .eksplorasi-hero-box {
+    padding: 48px 32px;
+  }
   .staggered-bento-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -2121,18 +2124,7 @@
   border-radius: 28px;
 }
 
-@media (min-width: 1025px) {
-  .quick-card:first-child,
-  .quick-card:last-child {
-    min-height: 300px;
-  }
-}
 
-@media (max-width: 1024px) {
-  .quick-access-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 @media (max-width: 768px) {
   .hero-section {
