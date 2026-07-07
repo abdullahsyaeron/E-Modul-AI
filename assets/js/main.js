@@ -165,7 +165,8 @@ function showToast(message, type) {
 
   const toast = document.createElement('div');
   toast.className = 'toast' + (type ? ' ' + type : '');
-  toast.innerHTML = '<i class="fas fa-check-circle"></i> ' + message;
+  const iconClass = (type === 'warning') ? 'ph ph-warning-circle' : 'ph ph-check-circle';
+  toast.innerHTML = `<i class="${iconClass}" style="font-size: 20px;"></i> <span>${message}</span>`;
   document.body.appendChild(toast);
 
   // Trigger animation
@@ -284,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* ============================================================
-   TABS NAVIGATION FOR BAB 3
+   TABS NAVIGATION FOR BAB 4 (PENGEMBANGAN MEDIA)
    ============================================================ */
 function initTabs() {
   const tabBtns = document.querySelectorAll('.tab-btn');

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
   
         html += `
-          <div class="prompt-card" data-category="${p.category}" onclick="document.querySelector('.btn-open-modal[data-id=\\'${p.id}\\']').click()">
+          <div class="prompt-card" data-id="${p.id}" data-category="${p.category}">
             <div class="prompt-card-badge">
               <i class="ph ${icon}"></i>
               <span>${catName}</span>
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h3 class="prompt-card-title">${p.title}</h3>
               <p class="prompt-card-desc">${p.description || 'Prompt untuk membantu Anda merancang media pembelajaran secara efektif.'}</p>
             </div>
-            <div class="prompt-card-footer-meta">
+            <div class="prompt-card-footer">
               <div class="meta-left">
                 <i class="ph ph-check-circle text-success" style="color: var(--color-success);"></i>
                 <span>Siap Pakai</span>
@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>Lihat Detail <i class="ph ph-arrow-right"></i></span>
               </div>
             </div>
-            <button class="btn-open-modal" data-id="${p.id}" style="display: none;"></button>
           </div>
         `;
       });
@@ -75,26 +74,26 @@ document.addEventListener('DOMContentLoaded', () => {
       promptGrid.innerHTML = html;
 
     // Attach Modal Events
-    const openBtns = promptGrid.querySelectorAll('.btn-open-modal');
+    const cards = promptGrid.querySelectorAll('.prompt-card');
     const modal = document.getElementById('prompt-modal');
     const btnClose = document.getElementById('btn-close-modal');
     const btnCopyModal = document.getElementById('modal-btn-copy');
 
     if (!modal) return;
 
-    openBtns.forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
+    cards.forEach(card => {
+      card.addEventListener('click', function(e) {
         const id = this.getAttribute('data-id');
         const p = window.promptDatabase.find(x => x.id === id);
         if (!p) return;
 
-        // Determine icon
-        let icon = 'fa-magic';
-        if (p.category === 'analisis') icon = 'fa-search-plus';
-        else if (p.category === 'produksi') icon = 'fa-photo-video';
-
-        document.getElementById('modal-icon').innerHTML = `<i class="fas ${icon}"></i>`;
+        const iconEl = document.getElementById('modal-icon');
+        if (iconEl) {
+          let icon = 'ph-magic-wand';
+          if (p.category === 'analisis') icon = 'ph-magnifying-glass-plus';
+          else if (p.category === 'produksi') icon = 'ph-image';
+          iconEl.innerHTML = `<i class="ph ${icon}" style="font-size: 24px; color: var(--color-primary);"></i>`;
+        }
         document.getElementById('modal-title').innerText = p.title;
         document.getElementById('modal-desc').innerText = p.description;
         
@@ -102,29 +101,29 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (p.guide) {
           contentHtml += `
-            <div style="background: rgba(14, 165, 233, 0.05); border-left: 4px solid var(--color-primary); padding: 15px; margin-bottom: 20px; border-radius: 4px; color: #1D1D1F;">
-              <h4 style="color: var(--color-primary-dark); margin-bottom: 10px; font-weight: bold;"><i class="fas fa-info-circle"></i> Panduan Penggunaan</h4>
-              <div style="font-size: 0.9rem; line-height: 1.5; color: #1D1D1F;">${formatPromptHTML(p.guide)}</div>
+            <div class="prompt-modal-guide-box">
+              <h4 class="prompt-modal-guide-title"><i class="ph ph-info"></i> Panduan Penggunaan</h4>
+              <div style="font-size: 0.95rem; line-height: 1.6;">${formatPromptHTML(p.guide)}</div>
             </div>
           `;
         }
 
         contentHtml += `
-          <h4 style="margin-bottom: 10px; font-weight: bold; color: #1D1D1F;"><i class="fas fa-terminal text-muted"></i> Prompt Utama <span style="font-size: 0.8rem; font-weight: normal; color: #6E6E73;">(Klik Salin di bawah untuk menyalin bagian ini saja)</span></h4>
-          <div style="background: #F1F5F9; color: #0F172A; padding: 16px; border-radius: 8px; border: 1px solid #CBD5E1; margin-bottom: 20px; font-family: monospace; font-size: 0.92rem; line-height: 1.65;">${formatPromptHTML(p.prompt)}</div>
+          <h4 class="prompt-modal-section-title"><i class="ph ph-terminal text-muted"></i> Prompt Utama <span>(Klik Salin di bawah untuk menyalin bagian ini saja)</span></h4>
+          <div class="prompt-modal-main-box">${formatPromptHTML(p.prompt)}</div>
         `;
 
         if (p.exampleInput) {
           contentHtml += `
-            <h4 style="margin-bottom: 10px; font-weight: bold; color: #1D1D1F;"><i class="fas fa-keyboard text-muted"></i> Contoh Input Data Anda</h4>
-            <div style="background: white; color: #334155; padding: 15px; border-radius: 8px; border: 1px dashed #CBD5E1; margin-bottom: 20px; font-size: 0.9rem; line-height: 1.6;">${formatPromptHTML(p.exampleInput)}</div>
+            <h4 class="prompt-modal-section-title"><i class="ph ph-keyboard text-muted"></i> Contoh Input Data Anda</h4>
+            <div class="prompt-modal-input-box">${formatPromptHTML(p.exampleInput)}</div>
           `;
         }
 
         if (p.exampleOutput) {
           contentHtml += `
-            <h4 style="margin-bottom: 10px; font-weight: bold; color: #1D1D1F;"><i class="fas fa-robot text-muted"></i> Contoh Hasil dari AI</h4>
-            <div style="background: #f8fafc; color: #334155; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.9rem; line-height: 1.6; border-left: 4px solid #10b981;">${formatPromptHTML(p.exampleOutput)}</div>
+            <h4 class="prompt-modal-section-title"><i class="ph ph-robot text-muted"></i> Contoh Hasil dari AI</h4>
+            <div class="prompt-modal-output-box">${formatPromptHTML(p.exampleOutput)}</div>
           `;
         }
 
@@ -133,33 +132,39 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-prompt-box').style.border = 'none';
         document.getElementById('modal-prompt-box').style.padding = '0';
 
-        btnCopyModal.setAttribute('data-text', encodeURIComponent(p.prompt));
+        const liveCopyBtn = document.getElementById('modal-btn-copy');
+        if (liveCopyBtn) {
+          liveCopyBtn.setAttribute('data-text', encodeURIComponent(p.prompt));
+        }
 
-        modal.style.display = 'flex';
+        modal.classList.add('active');
       });
     });
 
     // Close Modal Events
-    const closeModal = () => { modal.style.display = 'none'; };
-    if (btnClose) btnClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) closeModal();
-    });
+    const closeModal = () => { modal.classList.remove('active'); };
+    if (!modal.dataset.boundClose) {
+      modal.dataset.boundClose = 'true';
+      if (btnClose) btnClose.addEventListener('click', closeModal);
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
+      });
+    }
 
     // Copy Event in Modal
-    if (btnCopyModal) {
-      // remove old listener to avoid duplicate bindings
-      const newCopyBtn = btnCopyModal.cloneNode(true);
-      btnCopyModal.parentNode.replaceChild(newCopyBtn, btnCopyModal);
-      
-      newCopyBtn.addEventListener('click', function() {
-        const textToCopy = decodeURIComponent(this.getAttribute('data-text'));
+    const currentCopyBtn = document.getElementById('modal-btn-copy');
+    if (currentCopyBtn && !currentCopyBtn.dataset.boundCopy) {
+      currentCopyBtn.dataset.boundCopy = 'true';
+      currentCopyBtn.addEventListener('click', function() {
+        const rawText = this.getAttribute('data-text');
+        if (!rawText) return;
+        const textToCopy = decodeURIComponent(rawText);
         if (window.copyToClipboard) {
-          window.copyToClipboard(textToCopy, 'Prompt disalin ke clipboard!');
+          window.copyToClipboard(textToCopy, 'Prompt berhasil disalin!');
         }
         
         const originalHtml = this.innerHTML;
-        this.innerHTML = '<i class="fas fa-check"></i> Disalin';
+        this.innerHTML = '<i class="ph ph-check" style="font-size: 18px;"></i> Disalin';
         
         setTimeout(() => {
           this.innerHTML = originalHtml;

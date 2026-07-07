@@ -9,15 +9,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=herobento14">
-    <link rel="stylesheet" href="assets/css/components.css?v=herobento14">
-    <link rel="stylesheet" href="assets/css/pages.css?v=herobento14">
+    <link rel="stylesheet" href="assets/css/main.css?v=3.4">
+    <link rel="stylesheet" href="assets/css/components.css?v=3.4">
+    <link rel="stylesheet" href="assets/css/pages.css?v=3.4">
 </head>
 <body class="page-body bg-alt">
 
@@ -25,8 +25,8 @@
     <nav class="navbar" id="navbar">
         <div class="navbar-inner">
             <a href="index.html" class="navbar-brand">
-                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
-                    <img src="assets/images/logo.svg" alt="Logo" style="width: 26px; height: 26px; object-fit: contain;">
+                <div class="navbar-logo-container">
+                    <img src="assets/images/logo.svg" alt="Logo" class="navbar-logo-img">
                 </div>
                 <div>
                     <span class="brand-name">E-Modul AI</span>
@@ -60,7 +60,7 @@
     </div>
 
     <!-- HERO TILE -->
-    <section class="hero-section tile tile-light" style="padding-top: 140px; padding-bottom: 60px; min-height: auto; background-image: none; animation: none;">
+    <section class="hero-section tile tile-light hero-inner">
         <div class="container">
             <div class="breadcrumb">
                 <a href="index.html">Dashboard</a>
@@ -101,7 +101,7 @@ ini]</span> dengan konteks pelajaran Anda sendiri.</p>
         </div>
 
         <!-- Prompt Modal -->
-        <div class="prompt-modal-overlay" id="prompt-modal" style="display: none;">
+        <div class="prompt-modal-overlay" id="prompt-modal">
             <div class="prompt-modal-content">
                 <button class="btn-close-modal" id="btn-close-modal"><i class="ph ph-x"></i></button>
                 <div class="prompt-modal-scrollable-area">
@@ -127,7 +127,7 @@ ini]</span> dengan konteks pelajaran Anda sendiri.</p>
             <div class="footer-top">
                 <div class="footer-brand">
                     <span class="brand-name">
-                        <img src="assets/images/logo.svg" alt="Logo" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 6px;"> E-Modul AI
+                        <img src="assets/images/logo.svg" alt="Logo" class="footer-logo-img"> E-Modul AI
                     </span>
                     <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
                 </div>
@@ -165,9 +165,9 @@ ini]</span> dengan konteks pelajaran Anda sendiri.</p>
     </button>
 
     <!-- Scripts -->
-    <script src="assets/js/prompt-data.js?v=toast2"></script>
-    <script src="assets/js/prompt-engine.js?v=toast2"></script>
-    <script src="assets/js/main.js?v=toast2"></script>
+    <script src="assets/js/prompt-data.js?v=1.1"></script>
+    <script src="assets/js/prompt-engine.js?v=1.1"></script>
+    <script src="assets/js/main.js?v=1.1"></script>
 </body>
 </html>
 

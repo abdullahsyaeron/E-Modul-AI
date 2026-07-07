@@ -1,80 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 /* ============================================================
    DESIGN TOKENS (CSS Custom Properties)
    ============================================================ */
 :root {
-  /* Colors — LabSpace Design System (Consolidated Apple/Refined Values) */
-  --color-primary: #0066cc;       /* Apple Blue */
+  /* Colors — LabSpace Design System */
+  --color-primary: #007AFF;       /* iOS Blue */
   --color-primary-light: #2997ff; /* Apple Sky Link Blue */
-  --color-primary-dark: #004f9f;  /* iOS Blue Hover/Focus */
-  --color-accent: #0066cc;        
-  --color-accent-dark: #004f9f;   
-  --color-accent-light: #5eb0ff;  
-  --color-success: #247a3d;
-  --color-success-light: #eaf7ee;
-  --color-warning: #8b5d13;       
-  --color-warning-light: #fff3d8;
-  --color-danger: #b3261e;        
-  --color-danger-light: #ffe9e7;
-  --color-info: #255f99;          
-  --color-info-light: #eaf4ff;
+  --color-primary-dark: #006EE6;  /* iOS Blue Hover/Focus */
+  --color-accent: #007AFF;        
+  --color-accent-dark: #006EE6;   
+  --color-accent-light: #2997ff;  
+  --color-success: #137A3A;
+  --color-success-light: #E8F8EF;
+  --color-warning: #8A5A00;       
+  --color-warning-light: #FFF4D6;
+  --color-danger: #B42318;        
+  --color-danger-light: #FFE8E6;
+  --color-info: #005BB5;          
+  --color-info-light: #EAF3FF;
   
   /* Backgrounds & Surfaces */
-  --color-bg: #f5f5f7;            /* LabSpace App Background */
-  --color-bg-alt: #f2f2f4;        
-  --color-surface: #ffffff;       /* Card / Modal surface */
-  --color-surface-2: #fbfbfd;
-  --color-surface-raised: rgba(255, 255, 255, 0.86);
-  --color-surface-dark: #1d1d1f;
-  --color-surface-ink: #111113;
+  --color-bg: #F5F5F7;            /* LabSpace App Background */
+  --color-bg-alt: #F5F5F7;        /* Alias */
+  --color-surface: #FFFFFF;       /* Card / Modal surface */
+  --color-surface-2: #FBFBFD;
+  --color-surface-raised: #FBFBFD;
+  --color-surface-dark: #272729;
+  --color-surface-ink: #1d1d1f;
   
   /* Text — LabSpace Hierarchy */
-  --color-text: #1d1d1f;          /* Primary text */
-  --color-text-muted: #6e6e73;    /* Secondary text */
-  --color-text-light: #8c8c91;    /* Tertiary / placeholder */
+  --color-text: #1D1D1F;          /* Primary text */
+  --color-text-muted: #6E6E73;    /* Secondary text */
+  --color-text-light: #8E8E93;    /* Tertiary / placeholder */
   --color-text-inverse: #ffffff;
   
   /* Borders */
-  --color-border: rgba(0, 0, 0, 0.12);        /* Solid border */
-  --color-border-soft: rgba(0, 0, 0, 0.07);   /* Soft / subtle border */
-  --color-border-focus: #0066cc;  /* Focus ring */
+  --color-border: #D2D2D7;        /* Solid border */
+  --color-border-soft: #E5E5EA;   /* Soft / subtle border */
+  --color-border-focus: #007AFF;  /* Focus ring */
   
   /* Navigation — Glassmorphism */
   --color-nav-bg: var(--glass-bg);
-  --color-nav-text: #1d1d1f;
-  --color-nav-text-muted: #6e6e73;
-  --color-nav-active: var(--color-primary);
+  --color-nav-text: #1D1D1F;
+  --color-nav-text-muted: #6E6E73;
+  --color-nav-active: #007AFF;
   --color-nav-hover-bg: rgba(0,0,0,0.04);
 
   /* Glassmorphism Tokens */
-  --glass-bg: rgba(251, 251, 253, 0.74);
-  --glass-surface: rgba(255, 255, 255, 0.82);
-  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(245, 245, 247, 0.72);
+  --glass-surface: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.55);
   --glass-blur: blur(20px) saturate(180%);
 
-  /* Typography (Outfit Heading & Inter Body) */
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Typography */
+  --font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
   
-  /* Font sizes — Apple HIG & LabSpace Scale (Fixed Body + Fluid Headings) */
-  --text-xs: 0.75rem;          /* 12px - Badges, captions, timestamps */
-  --text-sm: 0.875rem;         /* 14px - Secondary text, cards, nav links */
-  --text-base: 1rem;           /* 16px - Standard Body Text, paragraphs */
-  --text-lg: 1.125rem;         /* 18px - Lead paragraphs, card titles */
-  --text-xl: clamp(1.25rem, 2vw, 1.5rem);       /* 20-24px - Small section headers */
-  --text-2xl: clamp(1.5rem, 2.5vw, 1.875rem);   /* 24-30px - Chapter headers */
-  --text-3xl: clamp(1.875rem, 3.5vw, 2.25rem);  /* 30-36px - Major headings */
-  --text-4xl: clamp(2.25rem, 5vw, 3rem);        /* 36-48px - Hero / Banner titles */
-  --text-5xl: clamp(2.75rem, 7vw, 3.75rem);     /* 44-60px - Large display */
-  --text-6xl: clamp(3.25rem, 9vw, 4.5rem);      /* 52-72px - Extra large display */
+  /* Font sizes — Fluid Typography (clamp scale) */
+  --text-xs: clamp(0.7rem, 1.5vw, 0.75rem);
+  --text-sm: clamp(0.8125rem, 1.8vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 2vw, 1.0625rem);
+  --text-lg: clamp(1.0625rem, 2.5vw, 1.3125rem);
+  --text-xl: clamp(1.25rem, 3vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 4vw, 1.75rem);
+  --text-3xl: clamp(1.75rem, 5vw, 2.125rem);
+  --text-4xl: clamp(2rem, 6vw, 2.5rem);
+  --text-5xl: clamp(2.5rem, 8vw, 3.5rem);
+  --text-6xl: clamp(3rem, 10vw, 4.5rem);
   
-  /* Font weights (Standardized) */
+  /* Font weights (Apple removes 500) */
   --font-normal: 400;
-  --font-medium: 500;
+  --font-medium: 600; /* Re-mapped to 600 */
   --font-semibold: 600;
-  --font-bold: 700;
-  --font-extrabold: 800;
+  --font-bold: 600;   /* Re-mapped to 600 */
+  --font-extrabold: 700;
   
   /* Spacing */
   --space-1: 0.25rem;
@@ -91,20 +89,20 @@
   --space-24: 6rem;
   --space-32: 8rem;
   
-  /* Border Radius (Standardized to sm, md, lg, xl, pill) */
+  /* Border Radius — LabSpace (iPadOS/visionOS scale) */
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-xl: 28px;
   --radius-pill: 999px;
   
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 30px rgba(29, 29, 31, 0.05);
-  --shadow-md: 0 16px 44px rgba(29, 29, 31, 0.08);
-  --shadow-lg: 0 24px 70px rgba(29, 29, 31, 0.12);
-  --shadow-xl: 0 34px 90px rgba(29, 29, 31, 0.16);
-  --shadow-card: 0 1px 1px rgba(0, 0, 0, 0.03), 0 16px 44px rgba(29, 29, 31, 0.06);
-  --shadow-card-hover: 0 20px 56px rgba(29, 29, 31, 0.11);
+  /* Shadows — LabSpace Floating Card */
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.045);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.045);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.06);
   
   /* Motion — LabSpace Apple Easing */
   --ease-apple: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -113,10 +111,10 @@
   --transition-slow: 400ms var(--ease-apple);
   
   /* Layout */
-  --container-max: 1180px;
-  --content-max: 760px;
-  --nav-height: 56px; 
-  --space-section: 96px;
+  --container-max: 1280px;
+  --content-max: 800px;
+  --nav-height: 52px; /* Apple frosted sub-nav height */
+  --space-section: 80px; /* Apple section spacing */
 }
 
 /* ============================================================
@@ -142,17 +140,6 @@ body {
   letter-spacing: -0.022em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0.015;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -352,7 +339,7 @@ table { border-collapse: collapse; width: 100%; }
   left: 0;
   width: 0%;
   height: 3px;
-  background: var(--color-accent);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
   z-index: 9999;
   transition: width 0.1s linear;
 }
@@ -503,20 +490,82 @@ table { border-collapse: collapse; width: 100%; }
   color: var(--color-text);
 }
 
-/* Note: Second root block merged and removed */
+/* ============================================================
+   APPLE-INSPIRED REDESIGN PASS
+   ============================================================ */
+:root {
+  --color-primary: #0066cc;
+  --color-primary-light: #2997ff;
+  --color-primary-dark: #004f9f;
+  --color-accent: #0066cc;
+  --color-accent-dark: #004f9f;
+  --color-accent-light: #5eb0ff;
+  --color-success: #247a3d;
+  --color-success-light: #eaf7ee;
+  --color-warning: #8b5d13;
+  --color-warning-light: #fff3d8;
+  --color-danger: #b3261e;
+  --color-danger-light: #ffe9e7;
+  --color-info: #255f99;
+  --color-info-light: #eaf4ff;
+  --color-bg: #f5f5f7;
+  --color-bg-alt: #f2f2f4;
+  --color-surface: #ffffff;
+  --color-surface-2: #fbfbfd;
+  --color-surface-raised: rgba(255, 255, 255, 0.86);
+  --color-surface-dark: #1d1d1f;
+  --color-surface-ink: #111113;
+  --color-text: #1d1d1f;
+  --color-text-muted: #6e6e73;
+  --color-text-light: #8c8c91;
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-border-soft: rgba(0, 0, 0, 0.07);
+  --glass-bg: rgba(251, 251, 253, 0.74);
+  --glass-surface: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --font-heading: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Outfit", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 30px rgba(29, 29, 31, 0.05);
+  --shadow-md: 0 16px 44px rgba(29, 29, 31, 0.08);
+  --shadow-lg: 0 24px 70px rgba(29, 29, 31, 0.12);
+  --shadow-xl: 0 34px 90px rgba(29, 29, 31, 0.16);
+  --shadow-card: 0 1px 1px rgba(0, 0, 0, 0.03), 0 16px 44px rgba(29, 29, 31, 0.06);
+  --shadow-card-hover: 0 20px 56px rgba(29, 29, 31, 0.11);
+  --container-max: 1180px;
+  --content-max: 760px;
+  --nav-height: 56px;
+  --space-section: 96px;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-bg);
+  background:
+    radial-gradient(circle at 18% -10%, rgba(0, 102, 204, 0.08), transparent 30rem),
+    radial-gradient(circle at 88% 12%, rgba(36, 122, 61, 0.06), transparent 28rem),
+    var(--color-bg);
   letter-spacing: 0;
   font-variant-numeric: tabular-nums;
 }
 
 body::before {
-  display: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+  opacity: 0.022;
+  background-image:
+    linear-gradient(rgba(29, 29, 31, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 29, 31, 0.55) 1px, transparent 1px);
+  background-size: 4px 4px;
+  mix-blend-mode: multiply;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -557,7 +606,9 @@ select:focus-visible,
 }
 
 .tile-dark {
-  background: #1e1e20;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(94, 176, 255, 0.16), transparent 34rem),
+    linear-gradient(180deg, #242426 0%, #171718 100%);
 }
 
 .tile-dark .section-label {
@@ -568,28 +619,9 @@ select:focus-visible,
   background: rgba(255, 255, 255, 0.34);
 }
 
-.tile-blue {
-  background: #006EE6;
-  color: white;
-}
-
-.tile-blue .section-label {
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.tile-blue .section-label::before {
-  background: rgba(255, 255, 255, 0.64);
-}
-
-.tile-blue .section-title,
-.tile-blue .section-desc,
-.tile-blue .heading-section {
-  color: white;
-}
-
 #reading-progress {
   height: 2px;
-  background: #0066cc;
+  background: linear-gradient(90deg, #0066cc, #5eb0ff);
   z-index: 1200;
 }
 

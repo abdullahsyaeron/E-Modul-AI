@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   html += `
       <div class="text-center mt-8">
         <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 400px;">
-          <i class="fas fa-calculator"></i> Hitung Kelayakan Media
+          <i class="ph ph-calculator" style="font-size: 20px;"></i> Hitung Kelayakan Media
         </button>
       </div>
     </form>

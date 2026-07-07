@@ -9,15 +9,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=herobento14">
-    <link rel="stylesheet" href="assets/css/components.css?v=herobento14">
-    <link rel="stylesheet" href="assets/css/pages.css?v=herobento14">
+    <link rel="stylesheet" href="assets/css/main.css?v=3.4">
+    <link rel="stylesheet" href="assets/css/components.css?v=3.4">
+    <link rel="stylesheet" href="assets/css/pages.css?v=3.4">
 </head>
 <body class="page-body bg-alt">
 
@@ -27,8 +27,8 @@
     <nav class="navbar" id="navbar">
         <div class="navbar-inner">
             <a href="index.html" class="navbar-brand">
-                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
-                    <img src="assets/images/logo.svg" alt="Logo" style="width: 26px; height: 26px; object-fit: contain;">
+                <div class="navbar-logo-container">
+                    <img src="assets/images/logo.svg" alt="Logo" class="navbar-logo-img">
                 </div>
                 <div>
                     <span class="brand-name">E-Modul AI</span>
@@ -63,13 +63,13 @@
 
     <!-- Chapter Header -->
     <!-- HERO TILE -->
-    <section class="hero-section tile tile-light" style="padding-top: 140px; padding-bottom: 60px; min-height: auto; background-image: none; animation: none;">
+    <section class="hero-section tile tile-light hero-inner">
         <div class="container">
-            <div class="breadcrumb mb-4" style="padding-block: 0;">
-                <a href="index.html" style="">Dashboard</a>
-                <i class="ph ph-caret-right sep" style=""></i>
-                <a href="materi.html" style="">Materi Pembelajaran</a>
-                <i class="ph ph-caret-right sep" style=""></i>
+            <div class="breadcrumb mb-4" >
+                <a href="index.html" >Dashboard</a>
+                <i class="ph ph-caret-right sep" ></i>
+                <a href="materi.html" >Materi Pembelajaran</a>
+                <i class="ph ph-caret-right sep" ></i>
                 <span class="current" >BAB 4</span>
             </div>
             
@@ -78,7 +78,7 @@
             </div>
             <h1 class="hero-title text-left">Pengembangan Media Pembelajaran dengan Artificial Intelligence</h1>
             
-            <p style="color: var(--color-text-muted); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
+            <p class="chapter-desc">
                 Bab ini adalah inti praktis dari modul. Di sini Anda akan mempelajari strategi meta prompting, memahami Model MAP-AI, dan mengikuti panduan langkah demi langkah untuk mengembangkan poster, presentasi, video, dan kuis interaktif berbantuan AI. Ikuti setiap langkah secara berurutan untuk mendapatkan hasil yang optimal.
             </p>
 
@@ -106,36 +106,36 @@
                 <div class="sidebar-nav-list">
                     <div class="sidebar-nav-item">
                         <a href="#sub1">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">A</span> Prinsip AI
+                            <span class="bab-badge" class="sidebar-badge">A</span> Prinsip AI
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub2">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">B</span> Meta Prompting
+                            <span class="bab-badge" class="sidebar-badge">B</span> Meta Prompting
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub3">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">C</span> Model MAP-AI
+                            <span class="bab-badge" class="sidebar-badge">C</span> Model MAP-AI
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub4">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">D</span> Prosedur Media
+                            <span class="bab-badge" class="sidebar-badge">D</span> Prosedur Media
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub5">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">E</span> Kuis Interaktif
+                            <span class="bab-badge" class="sidebar-badge">E</span> Kuis Interaktif
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub6">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">F</span> Latihan
+                            <span class="bab-badge" class="sidebar-badge">F</span> Latihan
                         </a>
                     </div>
-                    <div class="sidebar-nav-item" style="margin-top: 15px; border-top: 1px dashed var(--color-border); padding-top: 15px;">
-                        <a href="#quiz-container" style="color: var(--color-accent); font-weight: 600;">
+                    <div class="sidebar-nav-item sidebar-quiz-separator">
+                        <a href="#quiz-container" class="sidebar-quiz-link">
                             <i class="ph ph-check-square"></i> Kuis Evaluasi
                         </a>
                     </div>
@@ -146,31 +146,31 @@
             <main class="materi-main content-body">
 
                 <!-- Pertanyaan Pemantik -->
-                <div class="highlight-box" style="background: #F0FDF4; border: 1px solid rgba(16,185,129,0.2);">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                <div class="highlight-box content-box-success">
+                    <div class="content-box-header">
                         <i class="ph ph-lightbulb text-success text-2xl"></i>
-                        <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
+                        <h3 class="content-box-title content-box-title-success">Pertanyaan Pemantik</h3>
                     </div>
                     <p>Ketika Anda meminta bantuan seseorang untuk mengerjakan sesuatu, apakah Anda langsung meminta hasilnya atau Anda jelaskan dulu konteks, tujuan, dan standar yang diharapkan? Bagaimana perbedaan pendekatan itu memengaruhi hasilnya?</p>
-                    <p style="margin-bottom:0;">Bayangkan AI seperti asisten baru yang sangat cepat bekerja, tetapi belum mengenal konteks kelas Anda. Instruksi seperti apa yang harus Anda berikan agar hasilnya benar-benar bermanfaat?</p>
+                    <p class="content-box-body">Bayangkan AI seperti asisten baru yang sangat cepat bekerja, tetapi belum mengenal konteks kelas Anda. Instruksi seperti apa yang harus Anda berikan agar hasilnya benar-benar bermanfaat?</p>
                 </div>
                 
-                <h2 id="sub1" style="scroll-margin-top: 100px;">A. Prinsip Pemanfaatan AI dalam Pengembangan Media</h2>
+                <h2 id="sub1" class="scroll-target">A. Prinsip Pemanfaatan AI dalam Pengembangan Media</h2>
                 <p>
                     Pemanfaatan AI yang efektif tidak bersifat ad hoc. Dibutuhkan kerangka prinsip yang memandu setiap keputusan dari pemilihan alat hingga evaluasi output. Lima prinsip berikut menjadi fondasi seluruh praktik dalam modul ini.
                 </p>
 
-                <div style="background: white; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; margin: 1.5rem 0;">
-                    <ol style="margin: 0; padding-left: 1.5rem; color: var(--color-text);">
+                <div class="content-custom-card">
+                    <ol class="module-list">
                         <li class="mb-3"><strong>Prinsip Tujuan (Goal-Driven):</strong> Setiap keputusan penggunaan AI berawal dari tujuan pembelajaran yang spesifik dan terukur. Jangan gunakan AI hanya karena sedang populer atau terlihat menarik.</li>
                         <li class="mb-3"><strong>Prinsip Kontrol Pedagogis:</strong> Guru tetap memegang kendali atas seluruh keputusan instruksional. AI adalah asisten Anda yang menentukan apa yang harus dipelajari siswa dan bagaimana caranya.</li>
                         <li class="mb-3"><strong>Prinsip Verifikasi:</strong> Seluruh konten faktual yang dihasilkan AI wajib diverifikasi sebelum digunakan. Tidak ada pengecualian untuk fakta, angka, kutipan, ayat, atau hadis.</li>
                         <li class="mb-3"><strong>Prinsip Kontekstualisasi:</strong> Output AI selalu disesuaikan dengan konteks mata pelajaran, karakteristik siswa, dan nilai-nilai yang dianut sekolah. Konten yang "benar" secara umum belum tentu tepat untuk kelas Anda.</li>
-                        <li style="margin-bottom: 0;"><strong>Prinsip Iterasi:</strong> Pengembangan media berbantuan AI adalah proses siklik prompt dirancang, output dievaluasi, prompt direvisi, output diperbaiki hingga memenuhi standar kualitas yang Anda tetapkan.</li>
+                        <li class="content-box-body"><strong>Prinsip Iterasi:</strong> Pengembangan media berbantuan AI adalah proses siklik prompt dirancang, output dievaluasi, prompt direvisi, output diperbaiki hingga memenuhi standar kualitas yang Anda tetapkan.</li>
                     </ol>
                 </div>
 
-                <h2 id="sub2" style="scroll-margin-top: 100px;">B. Meta Prompting dan Prompt Chaining</h2>
+                <h2 id="sub2" class="scroll-target">B. Meta Prompting dan Prompt Chaining</h2>
                 
                 <h3 class="mt-6 mb-3 text-xl text-primary">1. Konsep Meta Prompting</h3>
                 <p>
@@ -181,8 +181,8 @@
                 </p>
                 
                 <div class="prompt-content-box" style="margin: var(--space-6) 0;">
-                    <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Contoh Meta Prompting</div>
-                    <p style="margin-bottom: 0;">"Saya adalah guru IPA kelas VII. Saya ingin membuat poster pembelajaran tentang proses fotosintesis untuk siswa usia 12–13 tahun. Tolong buatkan prompt yang dapat saya gunakan di Canva Magic Write untuk menghasilkan poster yang menarik, sesuai usia, dan mengintegrasikan nilai kekaguman terhadap alam dan ciptaan Tuhan. Prompt harus mencakup: komposisi visual, palet warna, elemen teks, dan gaya ilustrasi."</p>
+                    <div class="module-section-label">Contoh Meta Prompting</div>
+                    <p class="content-box-body">"Saya adalah guru IPA kelas VII. Saya ingin membuat poster pembelajaran tentang proses fotosintesis untuk siswa usia 12–13 tahun. Tolong buatkan prompt yang dapat saya gunakan di Canva Magic Write untuk menghasilkan poster yang menarik, sesuai usia, dan mengintegrasikan nilai kekaguman terhadap alam dan ciptaan Tuhan. Prompt harus mencakup: komposisi visual, palet warna, elemen teks, dan gaya ilustrasi."</p>
                 </div>
                 
                 <p>
@@ -195,45 +195,45 @@
                 </p>
 
                 <div class="table-responsive my-6">
-                    <table class="table-bordered" style="width: 100%; border-collapse: collapse; margin-bottom: 0;">
+                    <table class="table-bordered" class="content-table">
                         <thead>
-                            <tr style="background-color: rgba(14,165,233,0.1);">
-                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 25%;">Tahap</th>
-                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 40%;">Prompt kepada ChatGPT</th>
-                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 35%;">Output yang Dihasilkan</th>
+                            <tr class="table-head-alt">
+                                <th class="table-cell table-cell-left table-cell-w25">Tahap</th>
+                                <th class="table-cell text-left" style="width: 40%;">Prompt kepada ChatGPT</th>
+                                <th class="table-cell text-left" style="width: 35%;">Output yang Dihasilkan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>1. Analisis Instruksional</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">"Analisis karakteristik materi [topik] untuk siswa SMP kelas [X]. Identifikasi konsep utama dan modalitas belajar yang paling sesuai."</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Peta konsep dan rekomendasi jenis media</td>
+                                <td class="table-cell"><strong>1. Analisis Instruksional</strong></td>
+                                <td class="table-cell">"Analisis karakteristik materi [topik] untuk siswa SMP kelas [X]. Identifikasi konsep utama dan modalitas belajar yang paling sesuai."</td>
+                                <td class="table-cell">Peta konsep dan rekomendasi jenis media</td>
                             </tr>
-                            <tr style="background-color: var(--color-bg-alt);">
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>2. Perancangan Tujuan</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">"Berdasarkan analisis di atas, rumuskan 3 tujuan pembelajaran spesifik menggunakan format ABCD."</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Tujuan pembelajaran terukur</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>3. Perancangan Konten</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">"Berdasarkan tujuan tersebut, tentukan konten yang harus ada dalam [jenis media] dan bagaimana urutannya."</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Outline konten media</td>
-                            </tr>
-                            <tr style="background-color: var(--color-bg-alt);">
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>4. Prompt Produksi</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">"Buatkan prompt siap pakai untuk [platform AI] berdasarkan konten dan tujuan di atas, lengkap dengan spesifikasi teknis."</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Prompt produksi yang presisi</td>
+                            <tr class="table-row-alt">
+                                <td class="table-cell"><strong>2. Perancangan Tujuan</strong></td>
+                                <td class="table-cell">"Berdasarkan analisis di atas, rumuskan 3 tujuan pembelajaran spesifik menggunakan format ABCD."</td>
+                                <td class="table-cell">Tujuan pembelajaran terukur</td>
                             </tr>
                             <tr>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>5. Evaluasi</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">"Evaluasi output berdasarkan: keselarasan tujuan, kesesuaian usia, akurasi konten, kesesuaian nilai dan karakter sekolah. Sarankan revisi jika diperlukan."</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Catatan evaluasi dan prompt revisi</td>
+                                <td class="table-cell"><strong>3. Perancangan Konten</strong></td>
+                                <td class="table-cell">"Berdasarkan tujuan tersebut, tentukan konten yang harus ada dalam [jenis media] dan bagaimana urutannya."</td>
+                                <td class="table-cell">Outline konten media</td>
+                            </tr>
+                            <tr class="table-row-alt">
+                                <td class="table-cell"><strong>4. Prompt Produksi</strong></td>
+                                <td class="table-cell">"Buatkan prompt siap pakai untuk [platform AI] berdasarkan konten dan tujuan di atas, lengkap dengan spesifikasi teknis."</td>
+                                <td class="table-cell">Prompt produksi yang presisi</td>
+                            </tr>
+                            <tr>
+                                <td class="table-cell"><strong>5. Evaluasi</strong></td>
+                                <td class="table-cell">"Evaluasi output berdasarkan: keselarasan tujuan, kesesuaian usia, akurasi konten, kesesuaian nilai dan karakter sekolah. Sarankan revisi jika diperlukan."</td>
+                                <td class="table-cell">Catatan evaluasi dan prompt revisi</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h2 id="sub3" style="scroll-margin-top: 100px;">C. Model Konseptual MAP-AI</h2>
+                <h2 id="sub3" class="scroll-target">C. Model Konseptual MAP-AI</h2>
                 
                 <h3 class="mt-6 mb-3 text-xl text-primary">1. Deskripsi Model</h3>
                 <p>
@@ -244,62 +244,62 @@
                 <p>Model MAP-AI terdiri atas lima lapisan yang bekerja secara berurutan namun dapat diulang secara iteratif.</p>
 
                 <div class="table-responsive my-6">
-                    <table class="table-bordered" style="width: 100%; border-collapse: collapse; margin-bottom: 0;">
+                    <table class="table-bordered" class="content-table">
                         <thead>
-                            <tr style="background-color: rgba(14,165,233,0.1);">
-                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 25%;">Lapisan</th>
-                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 35%;">Komponen</th>
-                                <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left; width: 40%;">Proses</th>
+                            <tr class="table-head-alt">
+                                <th class="table-cell table-cell-left table-cell-w25">Lapisan</th>
+                                <th class="table-cell text-left" style="width: 35%;">Komponen</th>
+                                <th class="table-cell text-left" style="width: 40%;">Proses</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>INPUT</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Tujuan Pembelajaran, Karakteristik Siswa, Konten Materi</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Guru mendefinisikan ketiga elemen ini secara eksplisit sebelum memulai proses meta prompting</td>
+                                <td class="table-cell"><strong>INPUT</strong></td>
+                                <td class="table-cell">Tujuan Pembelajaran, Karakteristik Siswa, Konten Materi</td>
+                                <td class="table-cell">Guru mendefinisikan ketiga elemen ini secara eksplisit sebelum memulai proses meta prompting</td>
                             </tr>
-                            <tr style="background-color: var(--color-bg-alt);">
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>META PROMPTING (ChatGPT)</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Analisis Instruksional, Perancangan Prompt, Panduan Evaluasi</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">ChatGPT memproses input dan menghasilkan prompt produksi serta kriteria evaluasi</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>OUTPUT PROMPT</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Prompt Produksi, Spesifikasi Teknis</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Prompt siap pakai yang telah dioptimalkan untuk platform target</td>
-                            </tr>
-                            <tr style="background-color: var(--color-bg-alt);">
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>PRODUKSI AI</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Platform Pilihan (Canva/Gamma/Google Vids/Quizizz)</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">AI menghasilkan draft media; guru melakukan penyesuaian manual</td>
+                            <tr class="table-row-alt">
+                                <td class="table-cell"><strong>META PROMPTING (ChatGPT)</strong></td>
+                                <td class="table-cell">Analisis Instruksional, Perancangan Prompt, Panduan Evaluasi</td>
+                                <td class="table-cell">ChatGPT memproses input dan menghasilkan prompt produksi serta kriteria evaluasi</td>
                             </tr>
                             <tr>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;"><strong>EVALUASI & REVISI</strong></td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Kriteria Kelayakan, Revisi Prompt</td>
-                                <td style="padding: 12px; border: 1px solid var(--color-border); vertical-align: top;">Jika belum layak → kembali ke lapisan Meta Prompting; jika layak → media final</td>
+                                <td class="table-cell"><strong>OUTPUT PROMPT</strong></td>
+                                <td class="table-cell">Prompt Produksi, Spesifikasi Teknis</td>
+                                <td class="table-cell">Prompt siap pakai yang telah dioptimalkan untuk platform target</td>
+                            </tr>
+                            <tr class="table-row-alt">
+                                <td class="table-cell"><strong>PRODUKSI AI</strong></td>
+                                <td class="table-cell">Platform Pilihan (Canva/Gamma/Google Vids/Quizizz)</td>
+                                <td class="table-cell">AI menghasilkan draft media; guru melakukan penyesuaian manual</td>
+                            </tr>
+                            <tr>
+                                <td class="table-cell"><strong>EVALUASI & REVISI</strong></td>
+                                <td class="table-cell">Kriteria Kelayakan, Revisi Prompt</td>
+                                <td class="table-cell">Jika belum layak → kembali ke lapisan Meta Prompting; jika layak → media final</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h2 id="sub4" style="scroll-margin-top: 100px;">D. Prosedur Pengembangan Media Berbantuan AI</h2>
+                <h2 id="sub4" class="scroll-target">D. Prosedur Pengembangan Media Berbantuan AI</h2>
                 <p>
                     Prosedur berikut merupakan implementasi operasional dari Model MAP-AI yang dapat diterapkan untuk semua jenis media. Ikuti tujuh langkah ini secara berurutan.
                 </p>
 
-                <div style="background: white; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; margin: 1.5rem 0;">
-                    <ol style="margin: 0; padding-left: 1.5rem; color: var(--color-text);">
+                <div class="content-custom-card">
+                    <ol class="module-list">
                         <li class="mb-3"><strong>Definisikan Tujuan Pembelajaran.</strong> Tentukan secara eksplisit apa yang harus diketahui, dipahami, atau dapat dilakukan siswa setelah menggunakan media. Gunakan format yang terukur (format ABCD atau sejenisnya).</li>
                         <li class="mb-3"><strong>Analisis Karakteristik dan Konten.</strong> Identifikasi tingkat kognitif siswa, pengetahuan prasyarat, dan sifat konten materi (abstrak/konkret, prosedural/deklaratif).</li>
                         <li class="mb-3"><strong>Gunakan ChatGPT untuk Meta Prompting.</strong> Berikan informasi dari langkah 1 dan 2 kepada ChatGPT. Minta ChatGPT menghasilkan prompt yang optimal untuk platform AI yang Anda pilih.</li>
                         <li class="mb-3"><strong>Sempurnakan Prompt (Prompt Chaining).</strong> Tanyakan kepada ChatGPT apakah ada elemen yang perlu ditambahkan atau diperkuat. Lakukan iterasi hingga prompt dinilai cukup presisi.</li>
                         <li class="mb-3"><strong>Gunakan Prompt pada Platform AI Produksi.</strong> Terapkan prompt final pada platform yang sesuai (Canva, Gamma, Google Vids, Quizizz, atau lainnya) dan hasilkan draft media.</li>
                         <li class="mb-3"><strong>Evaluasi Berdasarkan Prinsip Instruksional.</strong> Periksa media berdasarkan: keselarasan dengan tujuan pembelajaran, kesesuaian dengan karakteristik siswa, akurasi konten, dan kesesuaian nilai serta karakter sekolah.</li>
-                        <li style="margin-bottom:0;"><strong>Revisi dan Finalisasi.</strong> Lakukan revisi berdasarkan hasil evaluasi baik secara manual maupun dengan merevisi prompt di ChatGPT dan mengulang proses produksi.</li>
+                        <li class="content-box-body"><strong>Revisi dan Finalisasi.</strong> Lakukan revisi berdasarkan hasil evaluasi baik secara manual maupun dengan merevisi prompt di ChatGPT dan mengulang proses produksi.</li>
                     </ol>
                 </div>
 
-                <h2 id="sub5" style="scroll-margin-top: 100px;">E. Implementasi per Jenis Media</h2>
+                <h2 id="sub5" class="scroll-target">E. Implementasi per Jenis Media</h2>
                 
                 <div class="materi-tabs-container">
                     <div class="materi-tabs">
@@ -375,7 +375,7 @@
                                         <p>Pada tahap ini ChatGPT berfungsi sebagai perancang prompt.</p>
 
                                         <div class="prompt-content-box mt-4">
-                                            <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Prompt:</div>
+                                            <div class="module-section-label">Prompt:</div>
                                             <p style="margin-bottom: 0; white-space: pre-line;">Saya adalah guru [mata pelajaran] kelas [kelas].
                                             Saya ingin membuat poster pembelajaran tentang [topik].
                                             Tujuan pembelajaran:
@@ -564,7 +564,7 @@
                                         </ul>
 
                                         <div class="prompt-content-box mt-4">
-                                            <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Prompt:</div>
+                                            <div class="module-section-label">Prompt:</div>
                                             <p style="margin-bottom: 0; white-space: pre-line;">Saya adalah guru [mata pelajaran] kelas [kelas].
                                             Saya ingin membuat presentasi pembelajaran menggunakan Gamma tentang [topik].
                                             Tujuan pembelajaran:
@@ -775,7 +775,7 @@
                                         </ul>
 
                                         <div class="prompt-content-box mt-4">
-                                            <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Prompt:</div>
+                                            <div class="module-section-label">Prompt:</div>
                                             <p style="margin-bottom: 0; white-space: pre-line;">Saya adalah guru [mata pelajaran] kelas [kelas].
                                             Saya ingin membuat video pembelajaran tentang [topik].
                                             Tujuan pembelajaran:
@@ -966,7 +966,7 @@
                                         </ul>
 
                                         <div class="prompt-content-box mt-4">
-                                            <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Prompt:</div>
+                                            <div class="module-section-label">Prompt:</div>
                                             <p style="margin-bottom: 0; white-space: pre-line;">Saya adalah guru [mata pelajaran] kelas [kelas].
                                             Saya ingin membuat kuis interaktif tentang [topik].
                                             Tujuan pembelajaran:
@@ -1087,26 +1087,26 @@
                 </div> <!-- End of Tabs Container -->
 
                 <!-- Catatan Penting -->
-                <div class="highlight-box mt-6" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 4px solid var(--color-warning);">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                <div class="highlight-box mt-6" class="content-box-warning">
+                    <div class="content-header-small">
                         <i class="ph ph-shield-check text-warning text-xl"></i>
-                        <h4 style="margin: 0; color: #b45309;">Catatan Penting</h4>
+                        <h4 class="content-box-title content-box-title-warning">Catatan Penting</h4>
                     </div>
-                    <p style="margin-bottom:0; color: #78350f;">
+                    <p class="content-box-body content-box-body-warning">
                         Sebelum mengembangkan media apa pun, pastikan Anda merujuk kembali rambu-rambu etika di <strong>BAB 3</strong> sebelum menggunakannya di kelas. Dimensi etika termasuk verifikasi konten, privasi siswa, dan kesesuaian nilai serta karakter sekolah adalah bagian tak terpisahkan dari tanggung jawab profesional Anda.
                     </p>
                 </div>
 
-                <h2 id="sub6" style="scroll-margin-top: 100px;">F. Latihan Pengembangan Media</h2>
+                <h2 id="sub6" class="scroll-target">F. Latihan Pengembangan Media</h2>
 
                 <!-- Latihan 1 -->
-                <div class="highlight-box" style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.3); border-left: 4px solid #8b5cf6;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                        <i class="ph ph-barbell text-xl" style="color: #8b5cf6;"></i>
-                        <h4 style="margin: 0; color: #5b21b6;">Latihan 1: Meta Prompting Dasar</h4>
+                <div class="highlight-box content-box-purple">
+                    <div class="content-header-small">
+                        <i class="ph ph-barbell text-xl" class="content-box-title content-box-title-purple"></i>
+                        <h4 class="content-box-title content-box-title-purple">Latihan 1: Meta Prompting Dasar</h4>
                     </div>
                     <p><strong>Tujuan:</strong> Anda mampu menggunakan ChatGPT sebagai meta prompting tool untuk menghasilkan prompt produksi yang efektif.</p>
-                    <ol style="margin-bottom:0; color: #4c1d95;">
+                    <ol class="content-box-body content-box-body-purple">
                         <li>Pilih satu topik dari mata pelajaran yang Anda ampu.</li>
                         <li>Rumuskan tujuan pembelajaran yang spesifik dan terukur (format ABCD).</li>
                         <li>Buka ChatGPT dan berikan konteks lengkap: mata pelajaran, kelas, topik, dan tujuan.</li>
@@ -1117,13 +1117,13 @@
                 </div>
 
                 <!-- Latihan 2 -->
-                <div class="highlight-box" style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.3); border-left: 4px solid #8b5cf6;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                        <i class="ph ph-stack text-xl" style="color: #8b5cf6;"></i>
-                        <h4 style="margin: 0; color: #5b21b6;">Latihan 2: Pengembangan Media Lengkap</h4>
+                <div class="highlight-box content-box-purple">
+                    <div class="content-header-small">
+                        <i class="ph ph-stack text-xl" class="content-box-title content-box-title-purple"></i>
+                        <h4 class="content-box-title content-box-title-purple">Latihan 2: Pengembangan Media Lengkap</h4>
                     </div>
                     <p><strong>Tujuan:</strong> Anda mampu menyelesaikan siklus pengembangan media dari awal hingga evaluasi menggunakan Model MAP-AI.</p>
-                    <ol style="margin-bottom:0; color: #4c1d95;">
+                    <ol class="content-box-body content-box-body-purple">
                         <li>Pilih satu jenis media: poster, presentasi, video, atau kuis.</li>
                         <li>Ikuti seluruh langkah prosedur pengembangan (BAB 4D).</li>
                         <li>Lakukan minimal dua putaran revisi prompt.</li>
@@ -1133,13 +1133,13 @@
                 </div>
 
                 <!-- Latihan 3 -->
-                <div class="highlight-box" style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.3); border-left: 4px solid #8b5cf6;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                        <i class="ph ph-magnifying-glass-plus text-xl" style="color: #8b5cf6;"></i>
-                        <h4 style="margin: 0; color: #5b21b6;">Latihan 3: Evaluasi Kritis Media Berbantuan AI</h4>
+                <div class="highlight-box content-box-purple">
+                    <div class="content-header-small">
+                        <i class="ph ph-magnifying-glass-plus text-xl" class="content-box-title content-box-title-purple"></i>
+                        <h4 class="content-box-title content-box-title-purple">Latihan 3: Evaluasi Kritis Media Berbantuan AI</h4>
                     </div>
                     <p><strong>Tujuan:</strong> Anda mampu mengevaluasi kelebihan dan keterbatasan media yang dihasilkan AI secara kritis.</p>
-                    <ol style="margin-bottom:0; color: #4c1d95;">
+                    <ol class="content-box-body content-box-body-purple">
                         <li>Ambil satu media yang telah Anda kembangkan pada Latihan 2.</li>
                         <li>Evaluasi media menggunakan tiga lensa: (a) keselarasan instruksional, (b) akurasi konten, (c) kesesuaian nilai dan karakter sekolah.</li>
                         <li>Identifikasi minimal tiga keterbatasan yang Anda temukan.</li>
@@ -1148,15 +1148,15 @@
                     </ol>
                 </div>
 
-                <hr style="margin: var(--space-8) 0; border: none; border-top: 1px solid var(--color-border);">
+                <hr class="content-divider">
 
                 <!-- Rangkuman -->
-                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div class="profile-header" style="background: var(--color-primary);">
-                        <h3 style="margin: 0; color: white;"><i class="ph ph-clipboard-text"></i> Rangkuman BAB 4</h3>
+                <div class="profile-card">
+                    <div class="profile-header profile-header-primary">
+                        <h3 class="profile-header-title"><i class="ph ph-clipboard-text"></i> Rangkuman BAB 4</h3>
                     </div>
                     <div class="profile-body">
-                        <ul style="margin-bottom:0;">
+                        <ul class="content-box-body">
                             <li>Lima prinsip pemanfaatan AI tujuan, kontrol pedagogis, verifikasi, kontekstualisasi, dan iterasi menjadi landasan seluruh praktik pengembangan media.</li>
                             <li>Meta prompting menggunakan ChatGPT membantu guru mentransformasi niat pedagogis menjadi instruksi teknis yang optimal.</li>
                             <li>Model MAP-AI menyediakan alur kerja lima lapisan yang dapat diulang hingga media memenuhi standar kualitas.</li>
@@ -1167,14 +1167,14 @@
                 </div>
 
                 <!-- Refleksi -->
-                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div class="profile-header" style="background: var(--color-accent);">
-                        <h3 style="margin: 0; color: white;"><i class="ph ph-chat-circle-dots"></i> Refleksi BAB 4</h3>
+                <div class="profile-card">
+                    <div class="profile-header profile-header-accent">
+                        <h3 class="profile-header-title"><i class="ph ph-chat-circle-dots"></i> Refleksi BAB 4</h3>
                     </div>
                     <div class="profile-body">
-                        <ol style="margin-bottom:0; padding-left: 1.5rem;">
-                            <li style="margin-bottom: 0.75rem;">Jenis media mana yang paling relevan dengan kebutuhan mengajar Anda saat ini? Mengapa?</li>
-                            <li style="margin-bottom: 0.75rem;">Saat mengikuti alur kerja di bab ini, tahap mana yang menurut Anda paling menantang? Apa yang akan membantu Anda melewati tantangan itu?</li>
+                        <ol class="refleksi-list">
+                            <li class="refleksi-item">Jenis media mana yang paling relevan dengan kebutuhan mengajar Anda saat ini? Mengapa?</li>
+                            <li class="refleksi-item">Saat mengikuti alur kerja di bab ini, tahap mana yang menurut Anda paling menantang? Apa yang akan membantu Anda melewati tantangan itu?</li>
                             <li>Bagaimana Anda akan memastikan bahwa media yang dihasilkan AI tetap mencerminkan judgment pedagogis Anda bukan sekadar output mentah dari AI?</li>
                         </ol>
                     </div>
@@ -1188,8 +1188,8 @@
                 <!-- Navigation -->
                 <div class="chapter-nav mt-8">
                     <a href="materi-bab3.html" class="chapter-nav-btn prev">
-                        <i class="ph ph-arrow-left text-accent" style="font-size: 1.5rem;"></i>
-                        <div style="text-align: right;">
+                        <i class="ph ph-arrow-left text-accent" class="chapter-nav-icon"></i>
+                        <div class="chapter-nav-right">
                             <span class="nav-label">Bab Sebelumnya</span>
                             <span class="nav-title">BAB 3: Etika dan Tanggung Jawab</span>
                         </div>
@@ -1200,7 +1200,7 @@
                             <span class="nav-label">Bab Selanjutnya</span>
                             <span class="nav-title">BAB 5: Evaluasi dan Refleksi</span>
                         </div>
-                        <i class="ph ph-arrow-right text-accent" style="font-size: 1.5rem;"></i>
+                        <i class="ph ph-arrow-right text-accent" class="chapter-nav-icon"></i>
                     </a>
                 </div>
 
@@ -1216,7 +1216,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <span class="brand-name">
-                        <img src="assets/images/logo.svg" alt="Logo" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 6px;"> E-Modul AI
+                        <img src="assets/images/logo.svg" alt="Logo" class="footer-logo-img"> E-Modul AI
                     </span>
                     <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
                 </div>
@@ -1228,6 +1228,15 @@
                         <li><a href="materi.html">Materi Belajar</a></li>
                         <li><a href="prompt.html">Kumpulan Prompt</a></li>
                         <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Kontak & Info</h4>
+                    <ul>
+                        <li><a href="tentang.html">Tentang Pengembang</a></li>
+                        <li><a href="tentang.html#referensi">Referensi</a></li>
+                        <li><a href="#">Bantuan</a></li>
                     </ul>
                 </div>
             </div>
@@ -1247,7 +1256,7 @@
     <!-- Scripts -->
     <script src="assets/js/quiz-data.js"></script>
     <script src="assets/js/quiz-engine.js"></script>
-    <script src="assets/js/main.js?v=premium"></script>
+    <script src="assets/js/main.js?v=1.1"></script>
 </body>
 </html>
 

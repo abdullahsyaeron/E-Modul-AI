@@ -21,7 +21,7 @@ function initQuiz(babId) {
   // Build UI
   let html = `
     <div class="quiz-header">
-      <i class="fas fa-tasks text-primary" style="font-size: 1.5rem;"></i>
+      <i class="ph ph-clipboard-text text-primary" style="font-size: 1.5rem;"></i>
       <h3>Kuis Pemahaman ${babId.toUpperCase()}</h3>
     </div>
     <div class="quiz-questions-wrapper">
@@ -47,7 +47,7 @@ function initQuiz(babId) {
     html += `
         </div>
         <div class="quiz-pembahasan" id="pembahasan-${qIndex}">
-          <strong><i class="fas fa-info-circle"></i> Pembahasan:</strong><br>
+          <strong><i class="ph ph-info"></i> Pembahasan:</strong><br>
           ${q.explanation}
         </div>
       </div>
@@ -58,7 +58,7 @@ function initQuiz(babId) {
     </div>
     <div class="quiz-actions">
       <button class="btn btn-primary btn-lg" id="btn-submit-quiz">
-        <i class="fas fa-check-double"></i> Cek Jawaban
+        <i class="ph ph-check-square-offset"></i> Cek Jawaban
       </button>
     </div>
     <div class="quiz-result" id="quiz-result">
@@ -66,7 +66,7 @@ function initQuiz(babId) {
       <div class="quiz-score-label" id="quiz-score-label">Nilai Anda</div>
       <p id="quiz-score-msg" class="text-muted"></p>
       <button class="btn btn-secondary mt-4" id="btn-retry-quiz">
-        <i class="fas fa-redo"></i> Coba Lagi
+        <i class="ph ph-arrow-counter-clockwise"></i> Coba Lagi
       </button>
     </div>
   `;
@@ -133,11 +133,11 @@ function initQuiz(babId) {
         if (optIndex === q.correct) {
           opt.classList.add('correct');
           if (userAns === q.correct) {
-             opt.innerHTML += '<i class="fas fa-check text-success" style="margin-left:auto;"></i>';
+             opt.innerHTML += '<i class="ph ph-check text-success" style="margin-left:auto; font-size: 18px;"></i>';
           }
         } else if (optIndex === userAns && !isCorrect) {
           opt.classList.add('wrong');
-          opt.innerHTML += '<i class="fas fa-times text-danger" style="margin-left:auto;"></i>';
+          opt.innerHTML += '<i class="ph ph-x text-danger" style="margin-left:auto; font-size: 18px;"></i>';
         }
       });
 

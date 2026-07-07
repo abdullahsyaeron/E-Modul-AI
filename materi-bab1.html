@@ -9,15 +9,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=herobento14">
-    <link rel="stylesheet" href="assets/css/components.css?v=herobento14">
-    <link rel="stylesheet" href="assets/css/pages.css?v=herobento14">
+    <link rel="stylesheet" href="assets/css/main.css?v=3.4">
+    <link rel="stylesheet" href="assets/css/components.css?v=3.4">
+    <link rel="stylesheet" href="assets/css/pages.css?v=3.4">
 </head>
 <body class="page-body bg-alt">
 
@@ -27,8 +27,8 @@
     <nav class="navbar" id="navbar">
         <div class="navbar-inner">
             <a href="index.html" class="navbar-brand">
-                <div style="background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
-                    <img src="assets/images/logo.svg" alt="Logo" style="width: 26px; height: 26px; object-fit: contain;">
+                <div class="navbar-logo-container">
+                    <img src="assets/images/logo.svg" alt="Logo" class="navbar-logo-img">
                 </div>
                 <div>
                     <span class="brand-name">E-Modul AI</span>
@@ -63,13 +63,13 @@
 
     <!-- Chapter Header -->
     <!-- HERO TILE -->
-    <section class="hero-section tile tile-light" style="padding-top: 140px; padding-bottom: 60px; min-height: auto; background-image: none; animation: none;">
+    <section class="hero-section tile tile-light hero-inner">
         <div class="container">
-            <div class="breadcrumb mb-4" style="padding-block: 0;">
-                <a href="index.html" style="">Dashboard</a>
-                <i class="ph ph-caret-right sep" style=""></i>
-                <a href="materi.html" style="">Materi Pembelajaran</a>
-                <i class="ph ph-caret-right sep" style=""></i>
+            <div class="breadcrumb mb-4" >
+                <a href="index.html" >Dashboard</a>
+                <i class="ph ph-caret-right sep" ></i>
+                <a href="materi.html" >Materi Pembelajaran</a>
+                <i class="ph ph-caret-right sep" ></i>
                 <span class="current" >BAB 1</span>
             </div>
             
@@ -78,7 +78,7 @@
             </div>
             <h1 class="hero-title text-left">Pendahuluan</h1>
             
-            <p style="color: var(--color-text-muted); font-size: var(--text-lg); line-height: 1.6; margin-top: var(--space-4);">
+            <p class="chapter-desc">
                 Pada bab ini, Anda akan mempelajari konteks dan landasan mengapa guru perlu memanfaatkan AI dalam pengembangan media pembelajaran. Bab ini membangun pemahaman awal yang diperlukan sebelum Anda memasuki pembahasan teknis dan praktis pada bab-bab berikutnya.
             </p>
 
@@ -106,26 +106,26 @@
                 <div class="sidebar-nav-list">
                     <div class="sidebar-nav-item">
                         <a href="#sub1">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">A</span> Konsep Media
+                            <span class="bab-badge" class="sidebar-badge">A</span> Konsep Media
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub2">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">B</span> Peran AI
+                            <span class="bab-badge" class="sidebar-badge">B</span> Peran AI
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub3">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">C</span> Urgensi AI bagi Guru
+                            <span class="bab-badge" class="sidebar-badge">C</span> Urgensi AI bagi Guru
                         </a>
                     </div>
                     <div class="sidebar-nav-item">
                         <a href="#sub4">
-                            <span class="bab-badge" style="background: var(--color-surface); color: var(--color-primary); font-size:0.8rem; width:20px; height:20px;">D</span> Gambaran Umum
+                            <span class="bab-badge" class="sidebar-badge">D</span> Gambaran Umum
                         </a>
                     </div>
-                    <div class="sidebar-nav-item" style="margin-top: 15px; border-top: 1px dashed var(--color-border); padding-top: 15px;">
-                        <a href="#quiz-container" style="color: var(--color-accent); font-weight: 600;">
+                    <div class="sidebar-nav-item sidebar-quiz-separator">
+                        <a href="#quiz-container" class="sidebar-quiz-link">
                             <i class="ph ph-check-square"></i> Kuis Evaluasi
                         </a>
                     </div>
@@ -136,16 +136,16 @@
             <main class="materi-main content-body">
 
                 <!-- Pertanyaan Pemantik -->
-                <div class="highlight-box" style="background: #F0FDF4; border: 1px solid rgba(16,185,129,0.2);">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                <div class="highlight-box content-box-success">
+                    <div class="content-box-header">
                         <i class="ph ph-lightbulb text-success text-2xl"></i>
-                        <h3 style="margin: 0; color: var(--color-primary-dark);">Pertanyaan Pemantik</h3>
+                        <h3 class="content-box-title content-box-title-success">Pertanyaan Pemantik</h3>
                     </div>
                     <p>Pernahkah Anda menghabiskan berjam-jam menyiapkan media pembelajaran, tetapi hasilnya terasa kurang menarik atau tidak sesuai dengan yang dibayangkan? Kira-kira, di mana letak tantangan terbesarnya, apakah pada ide, waktu, atau keahlian teknis?</p>
-                    <p style="margin-bottom:0;">Jika tersedia alat yang dapat membantu Anda merancang poster, presentasi, atau video dalam waktu singkat, hal apa yang tetap harus menjadi keputusan Anda sebagai guru dan tidak boleh diserahkan kepada alat tersebut?</p>
+                    <p class="content-box-body">Jika tersedia alat yang dapat membantu Anda merancang poster, presentasi, atau video dalam waktu singkat, hal apa yang tetap harus menjadi keputusan Anda sebagai guru dan tidak boleh diserahkan kepada alat tersebut?</p>
                 </div>
                 
-                <h2 id="sub1" style="scroll-margin-top: 100px;">A. Konsep Media Pembelajaran</h2>
+                <h2 id="sub1" class="scroll-target">A. Konsep Media Pembelajaran</h2>
                 <p>
                     Sebelum mengembangkan media berbantuan AI, Anda perlu memahami bahwa media pembelajaran bukan sekadar alat bantu visual, melainkan perantara yang dirancang untuk menyampaikan pesan instruksional secara efektif. Media pembelajaran yang baik tidak berdiri sendiri—ia dirancang berdasarkan tujuan pembelajaran yang jelas, karakteristik siswa yang spesifik, dan konteks belajar yang nyata (Arsyad, 2013).
                 </p>
@@ -156,7 +156,7 @@
                     Tiga jenis media yang relevan dalam modul ini adalah: (1) media visual statis seperti poster dan infografis; (2) media visual dinamis seperti presentasi dan video; dan (3) media interaktif seperti kuis digital. Setiap jenis media memiliki karakteristik, kekuatan, dan keterbatasan tersendiri yang harus dipahami sebelum Anda memilih strategi produksinya.
                 </p>
 
-                <h2 id="sub2" style="scroll-margin-top: 100px;">B. Peran AI dalam Pengembangan Media Pembelajaran</h2>
+                <h2 id="sub2" class="scroll-target">B. Peran AI dalam Pengembangan Media Pembelajaran</h2>
                 <p>
                     Dalam praktik pengembangan media, Anda dapat memanfaatkan Generative AI untuk membantu menyusun teks, membuat rancangan visual, menyiapkan naskah video, atau menyusun soal kuis. Namun, setiap hasil AI tetap perlu diperiksa dan disesuaikan dengan tujuan pembelajaran. Perkembangan Generative AI—sistem yang mampu menghasilkan konten baru berupa teks, gambar, audio, dan video berdasarkan instruksi pengguna—mengubah paradigma pengembangan media dari yang semula memerlukan keahlian teknis tinggi menjadi proses yang dapat diakses lebih luas (Wollny et al., 2021).
                 </p>
@@ -165,17 +165,17 @@
                 </p>
 
                 <!-- Catatan Penting -->
-                <div class="highlight-box" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 4px solid var(--color-warning);">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                <div class="highlight-box content-box-warning">
+                    <div class="content-header-small">
                         <i class="ph ph-warning text-warning text-xl"></i>
-                        <h4 style="margin: 0; color: #b45309;">Catatan Penting</h4>
+                        <h4 class="content-box-title content-box-title-warning">Catatan Penting</h4>
                     </div>
-                    <p style="margin-bottom:0; color: #78350f;">
+                    <p class="content-box-body content-box-body-warning">
                         AI adalah asisten, bukan pengambil keputusan pedagogis. Seluruh keputusan tentang tujuan pembelajaran, kesesuaian konten, dan relevansi media tetap berada di tangan Anda sebagai guru.
                     </p>
                 </div>
 
-                <h2 id="sub3" style="scroll-margin-top: 100px;">C. Urgensi Pemanfaatan AI bagi Guru</h2>
+                <h2 id="sub3" class="scroll-target">C. Urgensi Pemanfaatan AI bagi Guru</h2>
                 <p>
                     Guru pada satuan pendidikan menghadapi tantangan yang nyata: mengintegrasikan nilai, budaya, dan karakter sekolah ke dalam pembelajaran yang modern, inovatif, dan teknologis. Pemanfaatan AI dalam pengembangan media memberikan solusi pragmatis terhadap tiga hambatan yang sering dialami guru: keterbatasan waktu, keterbatasan keahlian teknis desain, dan kebutuhan akan konten yang terkontekstualisasi.
                 </p>
@@ -186,7 +186,7 @@
                     Di sisi lain, integrasi nilai dan karakter sekolah dalam media berbantuan AI memerlukan supervisi aktif guru. Konten yang dihasilkan AI harus selalu diperiksa, disunting, dan disesuaikan dengan nilai yang dianut satuan pendidikan serta karakteristik peserta didik sebelum digunakan. Inilah mengapa pemahaman tentang prinsip desain instruksional dan tanggung jawab etis menjadi bagian yang tidak terpisahkan dari modul ini.
                 </p>
 
-                <h2 id="sub4" style="scroll-margin-top: 100px;">D. Gambaran Umum Modul</h2>
+                <h2 id="sub4" class="scroll-target">D. Gambaran Umum Modul</h2>
                 <p>Modul ini disusun dalam lima bab yang saling terhubung secara progresif. Setiap bab dibangun di atas pemahaman dari bab sebelumnya.</p>
                 
                 <ul>
@@ -201,15 +201,15 @@
                     Benang merah yang menghubungkan seluruh bab adalah <strong>Model Pemanfaatan AI Berbasis Meta Prompting dalam Pengembangan Media Pembelajaran (Model MAP-AI)</strong>, yang akan dijelaskan secara lengkap pada BAB 4.
                 </p>
 
-                <hr style="margin: var(--space-8) 0; border: none; border-top: 1px solid var(--color-border);">
+                <hr class="content-divider">
 
                 <!-- Rangkuman -->
-                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-6); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div class="profile-header" style="background: var(--color-primary);">
-                        <h3 style="margin: 0; color: white;"><i class="ph ph-clipboard-text"></i> Rangkuman BAB 1</h3>
+                <div class="profile-card">
+                    <div class="profile-header profile-header-primary">
+                        <h3 class="profile-header-title"><i class="ph ph-clipboard-text"></i> Rangkuman BAB 1</h3>
                     </div>
                     <div class="profile-body">
-                        <ul style="margin-bottom:0;">
+                        <ul class="content-box-body">
                             <li>Media pembelajaran adalah perantara instruksional yang dirancang berdasarkan tujuan, karakteristik siswa, dan konteks belajar—bukan sekadar alat visual.</li>
                             <li>Generative AI memungkinkan guru mengembangkan media lebih efisien, tetapi kontrol pedagogis tetap berada di tangan guru.</li>
                             <li>Bagi guru, AI membantu mengatasi hambatan waktu dan keahlian teknis, tetapi integrasi nilai dan karakter sekolah tetap memerlukan supervisi aktif.</li>
@@ -219,14 +219,14 @@
                 </div>
 
                 <!-- Refleksi -->
-                <div class="profile-card" style="text-align: left; margin-bottom: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div class="profile-header" style="background: var(--color-accent);">
-                        <h3 style="margin: 0; color: white;"><i class="ph ph-chat-circle-dots"></i> Refleksi BAB 1</h3>
+                <div class="profile-card">
+                    <div class="profile-header profile-header-accent">
+                        <h3 class="profile-header-title"><i class="ph ph-chat-circle-dots"></i> Refleksi BAB 1</h3>
                     </div>
                     <div class="profile-body">
-                        <ol style="margin-bottom:0; padding-left: 1.5rem;">
-                            <li style="margin-bottom: 0.75rem;">Jenis media pembelajaran apa yang paling sering Anda gunakan saat ini? Apa tantangan utama dalam pengembangannya?</li>
-                            <li style="margin-bottom: 0.75rem;">Berdasarkan gambaran umum modul ini, kompetensi mana yang paling Anda butuhkan dan ingin kembangkan lebih lanjut?</li>
+                        <ol class="refleksi-list">
+                            <li class="refleksi-item">Jenis media pembelajaran apa yang paling sering Anda gunakan saat ini? Apa tantangan utama dalam pengembangannya?</li>
+                            <li class="refleksi-item">Berdasarkan gambaran umum modul ini, kompetensi mana yang paling Anda butuhkan dan ingin kembangkan lebih lanjut?</li>
                             <li>Sebagai guru, nilai-nilai apa yang menurut Anda paling penting untuk dijaga ketika menggunakan AI dalam pengembangan media?</li>
                         </ol>
                     </div>
@@ -245,7 +245,7 @@
                             <span class="nav-label">Bab Selanjutnya</span>
                             <span class="nav-title">BAB 2: Dasar Teori</span>
                         </div>
-                        <i class="ph ph-arrow-right text-accent" style="font-size: 1.5rem;"></i>
+                        <i class="ph ph-arrow-right text-accent" class="chapter-nav-icon"></i>
                     </a>
                 </div>
 
@@ -261,7 +261,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <span class="brand-name">
-                        <img src="assets/images/logo.svg" alt="Logo" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 6px;"> E-Modul AI
+                        <img src="assets/images/logo.svg" alt="Logo" class="footer-logo-img"> E-Modul AI
                     </span>
                     <p>Media Pembelajaran Interaktif Pemanfaatan Artificial Intelligence dalam Pengembangan Media Pembelajaran bagi Guru.</p>
                 </div>
@@ -273,6 +273,15 @@
                         <li><a href="materi.html">Materi Belajar</a></li>
                         <li><a href="prompt.html">Kumpulan Prompt</a></li>
                         <li><a href="evaluasi.html">Evaluasi Media</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Kontak & Info</h4>
+                    <ul>
+                        <li><a href="tentang.html">Tentang Pengembang</a></li>
+                        <li><a href="tentang.html#referensi">Referensi</a></li>
+                        <li><a href="#">Bantuan</a></li>
                     </ul>
                 </div>
             </div>
@@ -292,7 +301,7 @@
     <!-- Scripts -->
     <script src="assets/js/quiz-data.js"></script>
     <script src="assets/js/quiz-engine.js"></script>
-    <script src="assets/js/main.js?v=premium"></script>
+    <script src="assets/js/main.js?v=1.1"></script>
 </body>
 </html>
 

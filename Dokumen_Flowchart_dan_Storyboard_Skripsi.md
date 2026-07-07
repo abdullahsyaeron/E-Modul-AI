@@ -20,9 +20,9 @@ graph TD
     
     Mat --> Bab1["BAB 1: Pendahuluan & Urgensi AI"]
     Mat --> Bab2["BAB 2: Konsep Dasar AI"]
-    Mat --> Bab3["BAB 3: AI Tools Generatif"]
-    Mat --> Bab4["BAB 4: Perancangan Media Pembelajaran"]
-    Mat --> Bab5["BAB 5: Evaluasi & Etika AI"]
+    Mat --> Bab3["BAB 3: Etika & Tanggung Jawab AI"]
+    Mat --> Bab4["BAB 4: Pengembangan Media AI"]
+    Mat --> Bab5["BAB 5: Evaluasi & Refleksi Media"]
     
     Bab1 & Bab2 & Bab3 & Bab4 & Bab5 --> Kuis{"Kuis Interaktif Akhir BAB"}
     Kuis -->|Skor >= 70| Lulus["Lanjut BAB Berikutnya"]
@@ -174,16 +174,17 @@ Storyboard matriks di bawah menyajikan dokumentasi perancangan antarmuka visual 
 |  +-----------------------------------------------------------------------+  |
 |                                                                             |
 |  +-----------------------------------------------------------------------+  |
-|  | [ BAB 3 ]  AI Tools Generatif untuk Produksi Media        [ Pelajari ]|  |
-|  | Praktik menggunakan ChatGPT, Canva AI, Midjourney, dan DALL-E...      |  |
+|  | [ BAB 3 ]  Etika dan Tanggung Jawab Penggunaan AI         [ Pelajari ]|  |
+|  | Memahami kedudukan etika, tanggung jawab guru, dan risiko etis...     |  |
 |  +-----------------------------------------------------------------------+  |
 |                                                                             |
 |  +-----------------------------------------------------------------------+  |
-|  | [ BAB 4 ]  Perancangan Media Pembelajaran Berbasis AI     [ Pelajari ]|  |
+|  | [ BAB 4 ]  Pengembangan Media dengan AI                   [ Pelajari ]|  |
+|  | Mempelajari strategi meta prompting, Model MAP-AI, dan panduan...     |  |
 |  +-----------------------------------------------------------------------+  |
 |                                                                             |
 |  +-----------------------------------------------------------------------+  |
-|  | [ BAB 5 ]  Evaluasi Kelayakan & Etika Penggunaan AI       [ Pelajari ]|  |
+|  | [ BAB 5 ]  Evaluasi dan Refleksi Media Pembelajaran       [ Pelajari ]|  |
 |  +-----------------------------------------------------------------------+  |
 +-----------------------------------------------------------------------------+
 ```

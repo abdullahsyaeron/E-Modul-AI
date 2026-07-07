@@ -122,64 +122,6 @@ const quizData = {
 
   bab3: [
     {
-      question: "Guru ingin membuat video pembelajaran menggunakan AI. Langkah pertama dalam Model MAP-AI adalah...",
-      options: [
-        "Membuat video",
-        "Menentukan tujuan pembelajaran",
-        "Menulis prompt",
-        "Memilih platform"
-      ],
-      correct: 1,
-      explanation: "Langkah paling awal dalam Model MAP-AI (maupun desain instruksional lainnya) selalu berawal dari merumuskan tujuan pembelajaran sebelum menyentuh AI."
-    },
-    {
-      question: "Seorang guru meminta ChatGPT langsung membuat materi presentasi lengkap.\nGuru lain meminta ChatGPT:\n• menganalisis materi\n• menyusun tujuan\n• membuat outline\n• membuat prompt Gamma\nPendekatan kedua lebih baik karena...",
-      options: [
-        "Lebih cepat",
-        "Menggunakan prompt chaining yang lebih sistematis",
-        "Menghasilkan lebih banyak slide",
-        "Lebih mudah disalin"
-      ],
-      correct: 1,
-      explanation: "Pendekatan kedua adalah contoh penerapan Prompt Chaining. Hal ini memastikan output AI selaras secara bertahap dan lebih terstruktur dibanding prompt sekali jadi."
-    },
-    {
-      question: "Dalam Model MAP-AI, kapan proses revisi perlu dilakukan?",
-      options: [
-        "Hanya setelah media selesai",
-        "Jika ditemukan ketidaksesuaian terhadap kriteria evaluasi",
-        "Setelah presentasi kepada siswa",
-        "Setelah semester berakhir"
-      ],
-      correct: 1,
-      explanation: "Proses revisi bersifat iteratif dan dilakukan setiap kali ditemukan output yang tidak selaras dengan kriteria evaluasi (tujuan, karakteristik siswa, akurasi fakta)."
-    },
-    {
-      question: "Manakah contoh penerapan prinsip kontekstualisasi?",
-      options: [
-        "Menggunakan output AI apa adanya",
-        "Menyesuaikan media dengan karakteristik siswa dan konteks sekolah",
-        "Menggunakan AI terbaru",
-        "Membuat media sebanyak mungkin"
-      ],
-      correct: 1,
-      explanation: "Prinsip kontekstualisasi berarti menyesuaikan konten umum dari AI agar relevan dengan budaya sekolah, latar belakang siswa, dan lingkungan belajar lokal."
-    },
-    {
-      question: "Seorang guru memperoleh media yang menarik tetapi tidak mendukung tujuan pembelajaran. Prinsip yang dilanggar adalah...",
-      options: [
-        "Iterasi",
-        "Verifikasi",
-        "Goal-Driven",
-        "Prompt Chaining"
-      ],
-      correct: 2,
-      explanation: "Prinsip Goal-Driven menekankan bahwa tujuan pembelajaran adalah panglima. Visual yang indah tidak ada gunanya jika melenceng dari kompetensi yang harus dicapai."
-    }
-  ],
-
-  bab4: [
-    {
       question: "BENAR atau SALAH: Selama informasi berasal dari AI yang populer, guru tidak perlu melakukan pengecekan ulang.",
       options: ["Benar", "Salah"],
       correct: 1,
@@ -263,6 +205,64 @@ const quizData = {
       ],
       correct: 2,
       explanation: "Hilangnya judgment (penilaian kritis) pedagogis terjadi ketika guru menyerahkan keputusan instruksional kepada AI secara mentah tanpa proses evaluasi profesional."
+    }
+  ],
+
+  bab4: [
+    {
+      question: "Guru ingin membuat video pembelajaran menggunakan AI. Langkah pertama dalam Model MAP-AI adalah...",
+      options: [
+        "Membuat video",
+        "Menentukan tujuan pembelajaran",
+        "Menulis prompt",
+        "Memilih platform"
+      ],
+      correct: 1,
+      explanation: "Langkah paling awal dalam Model MAP-AI (maupun desain instruksional lainnya) selalu berawal dari merumuskan tujuan pembelajaran sebelum menyentuh AI."
+    },
+    {
+      question: "Seorang guru meminta ChatGPT langsung membuat materi presentasi lengkap.\nGuru lain meminta ChatGPT:\n• menganalisis materi\n• menyusun tujuan\n• membuat outline\n• membuat prompt Gamma\nPendekatan kedua lebih baik karena...",
+      options: [
+        "Lebih cepat",
+        "Menggunakan prompt chaining yang lebih sistematis",
+        "Menghasilkan lebih banyak slide",
+        "Lebih mudah disalin"
+      ],
+      correct: 1,
+      explanation: "Pendekatan kedua adalah contoh penerapan Prompt Chaining. Hal ini memastikan output AI selaras secara bertahap dan lebih terstruktur dibanding prompt sekali jadi."
+    },
+    {
+      question: "Dalam Model MAP-AI, kapan proses revisi perlu dilakukan?",
+      options: [
+        "Hanya setelah media selesai",
+        "Jika ditemukan ketidaksesuaian terhadap kriteria evaluasi",
+        "Setelah presentasi kepada siswa",
+        "Setelah semester berakhir"
+      ],
+      correct: 1,
+      explanation: "Proses revisi bersifat iteratif dan dilakukan setiap kali ditemukan output yang tidak selaras dengan kriteria evaluasi (tujuan, karakteristik siswa, akurasi fakta)."
+    },
+    {
+      question: "Manakah contoh penerapan prinsip kontekstualisasi?",
+      options: [
+        "Menggunakan output AI apa adanya",
+        "Menyesuaikan media dengan karakteristik siswa dan konteks sekolah",
+        "Menggunakan AI terbaru",
+        "Membuat media sebanyak mungkin"
+      ],
+      correct: 1,
+      explanation: "Prinsip kontekstualisasi berarti menyesuaikan konten umum dari AI agar relevan dengan budaya sekolah, latar belakang siswa, dan lingkungan belajar lokal."
+    },
+    {
+      question: "Seorang guru memperoleh media yang menarik tetapi tidak mendukung tujuan pembelajaran. Prinsip yang dilanggar adalah...",
+      options: [
+        "Iterasi",
+        "Verifikasi",
+        "Goal-Driven",
+        "Prompt Chaining"
+      ],
+      correct: 2,
+      explanation: "Prinsip Goal-Driven menekankan bahwa tujuan pembelajaran adalah panglima. Visual yang indah tidak ada gunanya jika melenceng dari kompetensi yang harus dicapai."
     }
   ],
 
