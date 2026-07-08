@@ -458,8 +458,11 @@
     right: -10px !important;
     bottom: -8px !important;
   }
+  .quick-card-body p {
+    max-width: 70%;
+  }
   .eksplorasi-hero-box {
-    padding: 28px 16px;
+    padding: 20px 16px;
     border-radius: var(--radius-lg);
   }
 }
@@ -532,6 +535,10 @@
 @media (max-width: 768px) {
   .steps-container { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
   .steps-container::before { display: none; }
+}
+
+@media (max-width: 480px) {
+  .steps-container { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
@@ -822,6 +829,12 @@
     max-width: 100% !important;
     width: 100% !important;
     padding: var(--space-6) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .materi-main {
+    padding: var(--space-4) !important;
   }
 }
 
@@ -2381,6 +2394,7 @@
 /* Unified Hero Split-Layout Styles (Desktop) */
 .hero-section.unified-hero {
   padding-top: var(--nav-height); /* Offset the fixed top navbar */
+  overflow: hidden; /* Prevent horizontal scroll from side-translated cards */
 }
 
 .hero-section.unified-hero .hero-card {
@@ -2437,6 +2451,7 @@
     flex-direction: column;
     text-align: center;
     gap: var(--space-8);
+    padding: clamp(3rem, 6vw, 4.5rem) 1.25rem;
   }
   .hero-section.unified-hero .hero-content {
     max-width: 600px;

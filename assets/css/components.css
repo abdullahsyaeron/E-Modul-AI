@@ -121,6 +121,8 @@
   display: none;
   width: 40px;
   height: 40px;
+  flex-direction: column;
+  gap: 3.5px;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
@@ -155,7 +157,8 @@
   gap: var(--space-2);
 }
 
-.navbar-mobile.active {
+.navbar-mobile.active,
+.navbar-mobile.open {
   display: flex;
 }
 
@@ -1011,6 +1014,19 @@
   .navbar-inner,
   .footer-inner {
     padding-inline: 16px;
+  }
+
+  .navbar-nav {
+    display: none !important;
+  }
+
+  .navbar-toggle {
+    display: flex !important;
+  }
+
+  .chapter-header {
+    padding: var(--space-8) var(--space-4) !important;
+    margin-bottom: var(--space-6) !important;
   }
 
   .footer-top {
