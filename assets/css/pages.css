@@ -1991,7 +1991,8 @@
 /* Tertiary Audit Utilities */
 .content-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin-bottom: 0;
 }
 .content-header-small {
