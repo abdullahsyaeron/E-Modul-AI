@@ -1,6 +1,6 @@
 # Spesifikasi Desain: Ilustrasi & Diagram Konsep E-Modul AI
 
-Dokumen ini mendokumentasikan spesifikasi desain visual untuk penambahan 5 diagram konsep (berformat SVG inline) dan 4 ilustrasi realistis (berformat PNG) ke dalam materi pembelajaran E-Modul AI (Bab 1 s.d. Bab 5) secara lokal (localhost).
+Dokumen ini mendokumentasikan spesifikasi desain visual untuk penambahan 5 diagram konsep (berformat SVG inline) dan 4 ilustrasi realistis (berformat JPG) ke dalam materi pembelajaran E-Modul AI (Bab 1 s.d. Bab 5) secara lokal (localhost).
 
 ---
 
@@ -41,7 +41,7 @@ Semua ilustrasi dan diagram baru akan menggunakan aturan CSS standar untuk menja
   display: block;
 }
 
-/* Responsivitas Gambar PNG */
+/* Responsivitas Gambar JPG */
 .illustration-img {
   width: 100%;
   max-width: 680px;
@@ -92,7 +92,7 @@ Setiap diagram akan ditulis langsung menggunakan tag `<svg>` untuk mempertahanka
 * **Target File**: [materi-bab3.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-bab3.html)
 * **Penempatan**: Di bawah paragraf pertama di bawah heading `h2 id="sub5"`.
 * **Deskripsi Visual**:
-  * Tiga lingkaran besar bertautan (Fase Perencanaan, Fase Produksi, Fase Evaluasi/Diseminasi).
+  * Tiga lingkaran besar berdampingan secara berurutan (Fase Perencanaan, Fase Produksi, Fase Evaluasi/Diseminasi).
   * Masing-masing lingkaran memiliki warna gradasi pastel tersendiri dan memuat teks kriteria etika utama (seperti atribusi karya AI, validasi bias, kepatuhan hak cipta).
 
 ### D. BAB 4: Gambar 4.1 Skema Hierarki Model Konseptual MAP-AI
@@ -114,41 +114,41 @@ Setiap diagram akan ditulis langsung menggunakan tag `<svg>` untuk mempertahanka
 
 ---
 
-## 3. Spesifikasi Ilustrasi PNG Realistis
+## 3. Spesifikasi Ilustrasi JPG Realistis
 
-Untuk memberikan visualisasi kontekstual nyata dalam ekosistem pendidikan Indonesia, 4 file PNG akan ditambahkan.
+Untuk memberikan visualisasi kontekstual nyata dalam ekosistem pendidikan Indonesia, 4 file JPG akan ditambahkan.
 
 ### A. Gambar 1.2: Guru Indonesia Merancang Media Pembelajaran Berbantuan AI
 * **Target File**: [materi-bab1.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-bab1.html)
 * **Penempatan**: Di bawah teks penutup sub-bab C (sebelum sub-bab D).
 * **Konsep Prompt AI**:
   > "A highly realistic photo of a middle-aged Indonesian female high school teacher, smiling warmly, wearing a neat traditional blue batik teacher uniform. She is sitting at her clean wooden desk in a bright classroom, working on a modern laptop. The background shows a white board with simple, clean educational diagrams. Warm daylight, shot on DSLR, highly detailed, realistic skin texture, professional photo --ar 16:9"
-* **Nama Berkas**: `guru-merancang-media.png`
-* **Path Tujuan**: `assets/images/materi/guru-merancang-media.png`
+* **Nama Berkas**: `guru-merancang-media.jpg`
+* **Path Tujuan**: `assets/images/materi/guru-merancang-media.jpg`
 
 ### B. Gambar 3.2: Pengawasan Etis Guru Terhadap Penggunaan Media oleh Siswa
 * **Target File**: [materi-bab3.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-bab3.html)
 * **Penempatan**: Di bawah sub-bab **F. Studi Kasus Singkat** (setelah Kasus Bu Hasna).
 * **Konsep Prompt AI**:
   > "A realistic documentary photo of a friendly Indonesian female teacher standing beside two Indonesian junior high school students (a boy and a girl wearing neat white and blue uniforms) in a clean, modern school library. They are looking at a tablet screen together, smiling naturally. Warm ambient lighting, highly realistic details, shot on 35mm lens, authentic classroom interaction --ar 16:9"
-* **Nama Berkas**: `pengawasan-etis-siswa.png`
-* **Path Tujuan**: `assets/images/materi/pengawasan-etis-siswa.png`
+* **Nama Berkas**: `pengawasan-etis-siswa.jpg`
+* **Path Tujuan**: `assets/images/materi/pengawasan-etis-siswa.jpg`
 
 ### C. Gambar 4.2: Mockup Hasil Cetak Poster Fotosintesis Berbantuan Canva AI
 * **Target File**: [materi-bab4.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-bab4.html)
 * **Penempatan**: Di bawah bagian **Canva (Media Poster)** pada sub-bab E.
 * **Konsep Prompt AI**:
   > "A professional photo of a clean educational poster about 'Fotosintesis' (Photosynthesis process) framed neatly on a light classroom wall. The poster has clean vector diagrams of a green plant, sun, and water, with readable indonesian text. Natural classroom background with wooden desks and warm lighting, soft depth of field, high-end mockup --ar 16:9"
-* **Nama Berkas**: `mockup-poster-fotosintesis.png`
-* **Path Tujuan**: `assets/images/materi/mockup-poster-fotosintesis.png`
+* **Nama Berkas**: `mockup-poster-fotosintesis.jpg`
+* **Path Tujuan**: `assets/images/materi/mockup-poster-fotosintesis.jpg`
 
 ### D. Gambar 5.2: Diskusi Dewan Guru dalam Evaluasi Kelayakan Media AI
 * **Target File**: [materi-bab5.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-bab5.html)
 * **Penempatan**: Di bawah sub-bab **E. Rencana Tindak Lanjut** (sebelum Rangkuman).
 * **Konsep Prompt AI**:
   > "A realistic group photo of three Indonesian high school teachers (two women and one man, wearing neat PGRI batik and khaki uniforms) sitting around a table in a bright staff room, looking at a laptop screen together and discussing, smiling and pointing at the screen. Rubric paper worksheets are on the table. Professional lighting, highly detailed, realistic skin textures, shot on DSLR --ar 16:9"
-* **Nama Berkas**: `diskusi-evaluasi-guru.png`
-* **Path Tujuan**: `assets/images/materi/diskusi-evaluasi-guru.png`
+* **Nama Berkas**: `diskusi-evaluasi-guru.jpg`
+* **Path Tujuan**: `assets/images/materi/diskusi-evaluasi-guru.jpg`
 
 ---
 
@@ -157,6 +157,6 @@ Untuk memberikan visualisasi kontekstual nyata dalam ekosistem pendidikan Indone
 1. **Uji Validitas SVG**:
    * Memastikan dokumen HTML termuat tanpa error XML parser.
    * Melakukan pengujian responsivitas pada lebar viewport desktop (>1200px), tablet (768px - 1024px), dan mobile (<480px).
-2. **Kualitas Gambar PNG**:
+2. **Kualitas Gambar JPG**:
    * Melakukan kurasi terhadap gambar hasil generate agar 100% bebas dari cacat AI (tangan/jemari cacat, detail mata asimetris, distorsi objek latar).
    * Memastikan resolusi minimal gambar adalah 1400x700px (16:9 ratio).

@@ -2,19 +2,19 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Menambahkan 5 diagram konsep interaktif berbasis SVG inline dan 4 gambar realistis berbasis PNG ke dalam halaman bab materi e-modul secara lokal, lengkap dengan styling CSS pendukung dan penulisan keterangan gambar (caption) ilmiah.
+**Goal:** Menambahkan 5 diagram konsep interaktif berbasis SVG inline dan 4 gambar realistis berbasis JPG ke dalam halaman bab materi e-modul secara lokal, lengkap dengan styling CSS pendukung dan penulisan keterangan gambar (caption) ilmiah.
 
 **Architecture:** 
 1. **CSS styling**: Membuat kontainer ilustrasi responsif (`.illustration-container`), penataan gambar (`.illustration-img`), dan penataan bagan SVG (`.illustration-svg`) beserta caption teks (`.illustration-caption`) di `pages.css`.
 2. **Inline SVG**: Menuliskan kode SVG terstruktur secara inline di berkas HTML bab materi untuk memaksimalkan ketajaman teks, aksesibilitas, dan skalabilitas.
-3. **PNG Generation**: Menghasilkan 4 gambar realistis menggunakan tool `generate_image` sesuai prompt spec, menyimpannya di `assets/images/materi/`, dan menampilkannya menggunakan tag `<img>` di HTML.
+3. **JPG Generation**: Menghasilkan 4 gambar realistis menggunakan tool `generate_image` sesuai prompt spec, menyimpannya di `assets/images/materi/`, dan menampilkannya menggunakan tag `<img>` di HTML.
 
-**Tech Stack:** HTML5, CSS3, Inline SVG, PNG Images.
+**Tech Stack:** HTML5, CSS3, Inline SVG, JPG Images.
 
 ## Global Constraints
 - Seluruh teks dalam diagram SVG harus menggunakan bahasa Indonesia baku sesuai konten materi.
 - Teks di dalam SVG harus menggunakan font-family `var(--font-body)` (Inter) atau `var(--font-heading)` (Outfit).
-- Gambar PNG tidak boleh memiliki cacat AI (distorsi jemari, tulisan latar rusak, mata asimetris).
+- Gambar JPG tidak boleh memiliki cacat AI (distorsi jemari, tulisan latar rusak, mata asimetris).
 - Responsivitas harus dijaga penuh menggunakan `viewBox` pada SVG dan `max-width: 100%` pada gambar.
 - Tidak boleh menggunakan placeholder (misal: "TODO", "TBD"). Semua kode dan prompt wajib lengkap.
 
@@ -350,25 +350,25 @@ git commit -m "feat(materi): integrasi diagram konsep SVG Gambar 3.1, Gambar 4.1
 
 ---
 
-### Task 4: Pengadaan & Integrasi Gambar PNG Realistis Bab 1 & Bab 3
+### Task 4: Pengadaan & Integrasi Gambar JPG Realistis Bab 1 & Bab 3
 
 **Files:**
-- Create: `assets/images/materi/guru-merancang-media.png`
-- Create: `assets/images/materi/pengawasan-etis-siswa.png`
+- Create: `assets/images/materi/guru-merancang-media.jpg`
+- Create: `assets/images/materi/pengawasan-etis-siswa.jpg`
 - Modify: `materi-bab1.html:200-205`
 - Modify: `materi-bab3.html:370-375`
 
 **Interfaces:**
 - Consumes: Tool `generate_image` untuk pengadaan aset.
-- Produces: File ilustrasi PNG dan integrasinya di berkas HTML Bab 1 dan Bab 3.
+- Produces: File ilustrasi JPG dan integrasinya di berkas HTML Bab 1 dan Bab 3.
 
-- [ ] **Step 1: Generate Gambar 1.2 (guru-merancang-media.png)**
+- [ ] **Step 1: Generate Gambar 1.2 (guru-merancang-media.jpg)**
 
 Jalankan tool `generate_image` dengan parameter berikut:
 Prompt: `"A highly realistic photo of a middle-aged Indonesian female high school teacher, smiling warmly, wearing a neat traditional blue batik teacher uniform. She is sitting at her clean wooden desk in a bright classroom, working on a modern laptop. The background shows a white board with simple, clean educational diagrams. Warm daylight, shot on DSLR, highly detailed, realistic skin texture, professional photo --ar 16:9"`
 ImageName: `"guru_merancang_media"`
 
-- [ ] **Step 2: Generate Gambar 3.2 (pengawasan-etis-siswa.png)**
+- [ ] **Step 2: Generate Gambar 3.2 (pengawasan-etis-siswa.jpg)**
 
 Jalankan tool `generate_image` dengan parameter berikut:
 Prompt: `"A realistic documentary photo of a friendly Indonesian female teacher standing beside two Indonesian junior high school students (a boy and a girl wearing neat white and blue uniforms) in a clean, modern school library. They are looking at a tablet screen together, smiling naturally. Warm ambient lighting, highly realistic details, shot on 35mm lens, authentic classroom interaction --ar 16:9"`
@@ -376,7 +376,7 @@ ImageName: `"pengawasan_etis_siswa"`
 
 - [ ] **Step 3: Pindahkan dan verifikasi berkas gambar ke direktori materi**
 
-Pastikan file `guru-merancang-media.png` dan `pengawasan-etis-siswa.png` dipindahkan (atau disalin) ke `d:\APPS\xampp\htdocs\E-Modul Skripsi\assets\images\materi/`.
+Pastikan file `guru-merancang-media.jpg` dan `pengawasan-etis-siswa.jpg` dipindahkan (atau disalin) ke `d:\APPS\xampp\htdocs\E-Modul Skripsi\assets\images\materi/`.
 
 - [ ] **Step 4: Sisipkan Gambar 1.2 ke dalam materi-bab1.html**
 
@@ -384,7 +384,7 @@ Buka [materi-bab1.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-ba
 
 ```html
                 <div class="illustration-container">
-                    <img class="illustration-img" src="assets/images/materi/guru-merancang-media.png" alt="Guru Merancang Media AI" loading="lazy">
+                    <img class="illustration-img" src="assets/images/materi/guru-merancang-media.jpg" alt="Guru Merancang Media AI" loading="lazy">
                     <div class="illustration-caption">Gambar 1.2: Potret Guru Berkolaborasi dengan Alat AI untuk Efisiensi Persiapan Pembelajaran</div>
                 </div>
 ```
@@ -395,43 +395,43 @@ Buka [materi-bab3.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-ba
 
 ```html
                 <div class="illustration-container">
-                    <img class="illustration-img" src="assets/images/materi/pengawasan-etis-siswa.png" alt="Pengawasan Etis Guru" loading="lazy">
+                    <img class="illustration-img" src="assets/images/materi/pengawasan-etis-siswa.jpg" alt="Pengawasan Etis Guru" loading="lazy">
                     <div class="illustration-caption">Gambar 3.2: Guru Melakukan Pendampingan Pembelajaran Menggunakan Media Digital di Perpustakaan</div>
                 </div>
 ```
 
 - [ ] **Step 6: Verifikasi pemuatan gambar di browser**
 
-Buka halaman Bab 1 dan Bab 3 di localhost. Pastikan gambar PNG berhasil termuat dengan baik tanpa ada broken image.
+Buka halaman Bab 1 dan Bab 3 di localhost. Pastikan gambar JPG berhasil termuat dengan baik tanpa ada broken image.
 
 - [ ] **Step 7: Commit gambar dan perubahan HTML**
 
 ```bash
-git add assets/images/materi/guru-merancang-media.png assets/images/materi/pengawasan-etis-siswa.png materi-bab1.html materi-bab3.html
+git add assets/images/materi/guru-merancang-media.jpg assets/images/materi/pengawasan-etis-siswa.jpg materi-bab1.html materi-bab3.html
 git commit -m "feat(materi): pengadaan dan integrasi foto realistis Gambar 1.2 dan Gambar 3.2"
 ```
 
 ---
 
-### Task 5: Pengadaan & Integrasi Gambar PNG Realistis Bab 4 & Bab 5
+### Task 5: Pengadaan & Integrasi Gambar JPG Realistis Bab 4 & Bab 5
 
 **Files:**
-- Create: `assets/images/materi/mockup-poster-fotosintesis.png`
-- Create: `assets/images/materi/diskusi-evaluasi-guru.png`
+- Create: `assets/images/materi/mockup-poster-fotosintesis.jpg`
+- Create: `assets/images/materi/diskusi-evaluasi-guru.jpg`
 - Modify: `materi-bab4.html:450-455`
 - Modify: `materi-bab5.html:300-305`
 
 **Interfaces:**
 - Consumes: Tool `generate_image` untuk pengadaan aset.
-- Produces: File ilustrasi PNG dan integrasinya di berkas HTML Bab 4 and Bab 5.
+- Produces: File ilustrasi JPG dan integrasinya di berkas HTML Bab 4 and Bab 5.
 
-- [ ] **Step 1: Generate Gambar 4.2 (mockup-poster-fotosintesis.png)**
+- [ ] **Step 1: Generate Gambar 4.2 (mockup-poster-fotosintesis.jpg)**
 
 Jalankan tool `generate_image` dengan parameter berikut:
 Prompt: `"A professional photo of a clean educational poster about 'Fotosintesis' (Photosynthesis process) framed neatly on a light classroom wall. The poster has clean vector diagrams of a green plant, sun, and water, with readable indonesian text. Natural classroom background with wooden desks and warm lighting, soft depth of field, high-end mockup --ar 16:9"`
 ImageName: `"mockup_poster_fotosintesis"`
 
-- [ ] **Step 2: Generate Gambar 5.2 (diskusi-evaluasi-guru.png)**
+- [ ] **Step 2: Generate Gambar 5.2 (diskusi-evaluasi-guru.jpg)**
 
 Jalankan tool `generate_image` dengan parameter berikut:
 Prompt: `"A realistic group photo of three Indonesian high school teachers (two women and one man, wearing neat PGRI batik and khaki uniforms) sitting around a table in a bright staff room, looking at a laptop screen together and discussing, smiling and pointing at the screen. Rubric paper worksheets are on the table. Professional lighting, highly detailed, realistic skin textures, shot on DSLR --ar 16:9"`
@@ -439,7 +439,7 @@ ImageName: `"diskusi_evaluasi_guru"`
 
 - [ ] **Step 3: Pindahkan berkas gambar ke direktori materi**
 
-Pastikan file `mockup-poster-fotosintesis.png` dan `diskusi-evaluasi-guru.png` disalin ke `d:\APPS\xampp\htdocs\E-Modul Skripsi\assets\images\materi/`.
+Pastikan file `mockup-poster-fotosintesis.jpg` dan `diskusi-evaluasi-guru.jpg` disalin ke `d:\APPS\xampp\htdocs\E-Modul Skripsi\assets\images\materi/`.
 
 - [ ] **Step 4: Sisipkan Gambar 4.2 ke dalam materi-bab4.html**
 
@@ -447,7 +447,7 @@ Buka [materi-bab4.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-ba
 
 ```html
                                         <div class="illustration-container">
-                                            <img class="illustration-img" src="assets/images/materi/mockup-poster-fotosintesis.png" alt="Mockup Poster Fotosintesis" loading="lazy">
+                                            <img class="illustration-img" src="assets/images/materi/mockup-poster-fotosintesis.jpg" alt="Mockup Poster Fotosintesis" loading="lazy">
                                             <div class="illustration-caption">Gambar 4.2: Mockup Hasil Desain Poster Fotosintesis Menggunakan Canva AI di Dinding Kelas</div>
                                         </div>
 ```
@@ -458,19 +458,19 @@ Buka [materi-bab5.html](file:///d:/APPS/xampp/htdocs/E-Modul%20Skripsi/materi-ba
 
 ```html
                 <div class="illustration-container">
-                    <img class="illustration-img" src="assets/images/materi/diskusi-evaluasi-guru.png" alt="Diskusi Evaluasi Kelayakan Media" loading="lazy">
+                    <img class="illustration-img" src="assets/images/materi/diskusi-evaluasi-guru.jpg" alt="Diskusi Evaluasi Kelayakan Media" loading="lazy">
                     <div class="illustration-caption">Gambar 5.2: Diskusi Dewan Guru (MGMP) dalam Rangka Evaluasi Formatif Kelayakan Media Berbantuan AI</div>
                 </div>
 ```
 
 - [ ] **Step 6: Verifikasi pemuatan gambar di browser**
 
-Buka halaman Bab 4 dan Bab 5 di localhost. Pastikan gambar PNG berhasil termuat dengan baik tanpa ada broken image.
+Buka halaman Bab 4 dan Bab 5 di localhost. Pastikan gambar JPG berhasil termuat dengan baik tanpa ada broken image.
 
 - [ ] **Step 7: Commit gambar dan perubahan HTML**
 
 ```bash
-git add assets/images/materi/mockup-poster-fotosintesis.png assets/images/materi/diskusi-evaluasi-guru.png materi-bab4.html materi-bab5.html
+git add assets/images/materi/mockup-poster-fotosintesis.jpg assets/images/materi/diskusi-evaluasi-guru.jpg materi-bab4.html materi-bab5.html
 git commit -m "feat(materi): pengadaan dan integrasi foto realistis Gambar 4.2 and Gambar 5.2"
 ```
 
@@ -480,7 +480,7 @@ git commit -m "feat(materi): pengadaan dan integrasi foto realistis Gambar 4.2 a
 
 - **Risiko: Render SVG rusak karena kesalahan sintaks tag XML.**
   - *Mitigasi*: Pengujian langsung di browser modern (Chrome/Edge) dengan menginspeksi elemen SVG menggunakan devtools.
-- **Risiko: Detail wajah/tangan pada gambar PNG tidak realistis (AI slop).**
+- **Risiko: Detail wajah/tangan pada gambar JPG tidak realistis (AI slop).**
   - *Mitigasi*: Melakukan kurasi manual setelah proses `generate_image` selesai. Jika hasil kurang memuaskan, generate ulang dengan prompt yang lebih spesifik.
 
 ## Rollback plan
