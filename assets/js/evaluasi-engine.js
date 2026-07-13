@@ -1,8 +1,8 @@
 /**
  * evaluasi-engine.js
  * Renders the evaluation instrument and calculates the score.
- * 8 dimensions × scale 1–4 = max score 32.
- * Aligned with the rubric in Chapter 5 of this module.
+ * 8 dimensi × skala 1–4 = skor maks 32.
+ * Selaras dengan Rubrik Penilaian Media di Bab 5 modul ini.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,28 +16,34 @@ document.addEventListener('DOMContentLoaded', () => {
   let html = '<form id="evaluasi-form" novalidate>';
 
   data.forEach((dimensi, dIndex) => {
-    const kritisAttr = dimensi.kritis ? 'data-kritis="true"' : '';
+    const kritisTag = dimensi.kritis
+      ? `<span class="eval-kritis-badge">Kritis</span>`
+      : '';
 
     html += `
-      <div class="eval-row" ${kritisAttr} id="eval-row-${dimensi.id}">
-        <div class="eval-row-label">
-          <span class="eval-row-num">${dIndex + 1}</span>
-          <div class="eval-row-text">
-            <div class="eval-row-dimensi">${dimensi.dimensi}${dimensi.kritis ? ' <span class="eval-kritis-dot" title="Dimensi kritis — skor 1 akan memblokir penggunaan media"></span>' : ''}</div>
-            <div class="eval-row-indikator">${dimensi.indikator}</div>
+      <div class="eval-card" id="eval-card-${dimensi.id}">
+        <div class="eval-card-header">
+          <div class="eval-card-num">${dIndex + 1}</div>
+          <div class="eval-card-meta">
+            <div class="eval-card-title">${dimensi.dimensi}${kritisTag ? ' ' + kritisTag : ''}</div>
+            <div class="eval-card-indikator">${dimensi.indikator}</div>
           </div>
         </div>
-        <div class="eval-row-options" role="radiogroup" aria-label="${dimensi.dimensi}">
+        <div class="eval-options-grid">
     `;
 
     dimensi.options.forEach(opt => {
+      const scoreClass = opt.val === 4 ? 'opt-great'
+                       : opt.val === 3 ? 'opt-good'
+                       : opt.val === 2 ? 'opt-warn'
+                       : 'opt-poor';
       html += `
-        <label class="eval-opt" title="Skor ${opt.val}">
+        <label class="eval-option ${scoreClass}">
           <input type="radio" name="dim_${dimensi.id}" value="${opt.val}" required>
-          <span class="eval-opt-body">
-            <span class="eval-opt-score">${opt.val}</span>
-            <span class="eval-opt-text">${opt.text}</span>
-          </span>
+          <div class="eval-option-inner">
+            <div class="eval-option-score">${opt.val}</div>
+            <div class="eval-option-text">${opt.text}</div>
+          </div>
         </label>
       `;
     });
@@ -49,14 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   html += `
-    <div class="eval-actions">
-      <button type="submit" class="btn btn-primary" id="eval-submit-btn">
-        <i class="ph ph-calculator-fill"></i> Hitung Kelayakan Media
+    <div class="text-center mt-8">
+      <button type="submit" class="btn btn-primary btn-lg eval-submit-btn" id="eval-submit-btn">
+        Hitung Kelayakan Media
       </button>
     </div>
   </form>`;
 
   container.innerHTML = html;
+
+  // ─── Interactive: highlight selected option ──────────────────────────────
+  container.addEventListener('change', (e) => {
+    if (e.target.type !== 'radio') return;
+    const card = e.target.closest('.eval-card');
+    card.querySelectorAll('.eval-option').forEach(opt => opt.classList.remove('selected'));
+    e.target.closest('.eval-option').classList.add('selected');
+  });
 
   // ─── Handle Submit ──────────────────────────────────────────────────────────
   const form = document.getElementById('evaluasi-form');
@@ -81,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         answered++;
         if (d.kritis && val === 1) criticalWarnings.push(d.dimensi);
       } else if (!firstUnanswered) {
-        firstUnanswered = document.getElementById(`eval-row-${d.id}`);
+        firstUnanswered = document.getElementById(`eval-card-${d.id}`);
       }
     });
 
@@ -111,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
       message = 'Media perlu dikembangkan ulang secara menyeluruh. Tinjau setiap dimensi rubrik dari awal.';
     }
 
-    // Build result
     scoreVal.textContent = `${totalScore} / ${MAX_SCORE}`;
     scoreVal.style.color = colorHex;
     scoreDesc.textContent = category;
@@ -126,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const warnEl = document.createElement('div');
       warnEl.className = 'eval-critical-block';
       warnEl.innerHTML = `
-        <i class="ph ph-warning-octagon-fill"></i>
         <div>
           <strong>Peringatan:</strong> Skor 1 pada dimensi di bawah ini berarti media <em>tidak boleh digunakan</em> sebelum diperbaiki, terlepas dari total skor.
           <ul>${criticalWarnings.map(d => `<li>${d}</li>`).join('')}</ul>
