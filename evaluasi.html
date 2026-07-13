@@ -80,19 +80,31 @@
     <section class="section tile tile-parchment">
         <div class="container">
             <div class="evaluasi-wrapper max-w-3xl mx-auto">
-            
+
+            <!-- Instrumen header -->
+            <div class="eval-table-header">
+                <div class="eval-table-header-left">Dimensi &amp; Indikator</div>
+                <div class="eval-table-header-right">Penilaian (pilih satu)</div>
+            </div>
+
             <!-- Evaluasi Form Container -->
             <div id="evaluasi-form-container">
                 <!-- Rendered via JS -->
             </div>
 
-            <!-- Evaluasi Result Container (Hidden by default) -->
+            <!-- Kritis legend -->
+            <div class="eval-kritis-note">
+                <span class="eval-kritis-dot"></span>
+                Dimensi kritis — jika skor 1, media tidak boleh digunakan sebelum diperbaiki.
+            </div>
+
+            <!-- Evaluasi Result -->
             <div class="eval-result-box mt-8" id="evaluasi-result">
                 <h2 class="text-2xl mb-2">Hasil Evaluasi</h2>
-                <div class="eval-score-val" id="eval-score-val">0%</div>
-                <div class="eval-score-desc" id="eval-score-desc">Kategori</div>
+                <div class="eval-score-val" id="eval-score-val">—</div>
+                <div class="eval-score-desc" id="eval-score-desc"></div>
                 <p id="eval-score-msg" class="text-muted mt-2"></p>
-                
+
                 <div class="mt-6 text-center">
                     <button class="btn btn-secondary" onclick="window.location.reload();">
                         <i class="ph ph-arrow-clockwise"></i> Evaluasi Ulang
