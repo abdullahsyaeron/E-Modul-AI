@@ -1524,14 +1524,304 @@
   line-height: 1.4;
 }
 
-.eval-dimensi-card {
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(0, 0, 0, 0.075);
-  box-shadow: var(--shadow-sm);
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: var(--space-6);
+/* ============================================================
+   EVALUASI — INFO STRIP
+   ============================================================ */
+.eval-info-strip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  font-size: var(--text-sm);
+  color: #1e40af;
+  line-height: 1.5;
 }
+.eval-info-strip i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.eval-info-strip a {
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   EVALUASI — DIMENSION CARD
+   ============================================================ */
+.eval-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+.eval-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+}
+
+.eval-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.eval-card-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.eval-card-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.eval-card-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  line-height: 1.4;
+}
+.eval-card-title i {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.eval-card-indikator {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* Kritis badge */
+.eval-kritis-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  padding: 2px 8px;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   EVALUASI — OPTIONS GRID (4 options horizontal)
+   ============================================================ */
+.eval-options-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 18px 22px;
+}
+
+.eval-option {
+  cursor: pointer;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.18s ease;
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+.eval-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.eval-option input[type="radio"] {
+  display: none;
+}
+.eval-option-inner {
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.eval-option-score {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-muted);
+  transition: color 0.18s;
+}
+.eval-option-text {
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--color-text-muted);
+  transition: color 0.18s;
+}
+
+/* Selected states by score level */
+.eval-option.opt-great.selected,
+.eval-option.opt-great:has(input:checked) {
+  background: #ecfdf5;
+  border-color: #10b981;
+}
+.eval-option.opt-great.selected .eval-option-score,
+.eval-option.opt-great:has(input:checked) .eval-option-score { color: #059669; }
+.eval-option.opt-great.selected .eval-option-text,
+.eval-option.opt-great:has(input:checked) .eval-option-text { color: #065f46; }
+
+.eval-option.opt-good.selected,
+.eval-option.opt-good:has(input:checked) {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+.eval-option.opt-good.selected .eval-option-score,
+.eval-option.opt-good:has(input:checked) .eval-option-score { color: #2563eb; }
+.eval-option.opt-good.selected .eval-option-text,
+.eval-option.opt-good:has(input:checked) .eval-option-text { color: #1e40af; }
+
+.eval-option.opt-warn.selected,
+.eval-option.opt-warn:has(input:checked) {
+  background: #fffbeb;
+  border-color: #f59e0b;
+}
+.eval-option.opt-warn.selected .eval-option-score,
+.eval-option.opt-warn:has(input:checked) .eval-option-score { color: #d97706; }
+.eval-option.opt-warn.selected .eval-option-text,
+.eval-option.opt-warn:has(input:checked) .eval-option-text { color: #92400e; }
+
+.eval-option.opt-poor.selected,
+.eval-option.opt-poor:has(input:checked) {
+  background: #fff1f2;
+  border-color: #ef4444;
+}
+.eval-option.opt-poor.selected .eval-option-score,
+.eval-option.opt-poor:has(input:checked) .eval-option-score { color: #dc2626; }
+.eval-option.opt-poor.selected .eval-option-text,
+.eval-option.opt-poor:has(input:checked) .eval-option-text { color: #991b1b; }
+
+/* ============================================================
+   EVALUASI — RESULT BOX
+   ============================================================ */
+.eval-result-box {
+  display: none;
+  background: #ffffff;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 20px;
+  padding: 36px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  animation: fadeInUp 0.4s ease;
+}
+.eval-result-box.show {
+  display: block;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.eval-score-val {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 16px 0 8px;
+  letter-spacing: -0.02em;
+}
+.eval-score-desc {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ============================================================
+   EVALUASI — CRITICAL WARNINGS
+   ============================================================ */
+.eval-critical-warnings {
+  text-align: left;
+  background: #fff1f2;
+  border: 2px solid #ef4444;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 20px 0;
+}
+.eval-critical-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #b91c1c;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.eval-critical-header i {
+  font-size: 1.2rem;
+}
+.eval-critical-warnings p {
+  font-size: var(--text-sm);
+  color: #7f1d1d;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.eval-critical-warnings ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.eval-critical-warnings ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #991b1b;
+}
+.eval-critical-warnings ul li i {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   EVALUASI — SUBMIT BUTTON
+   ============================================================ */
+.eval-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   PROFILE / TENTANG
+   ============================================================ */
 
 .eval-dimensi-header {
   padding: var(--space-4) var(--space-6);
@@ -1728,17 +2018,17 @@
 }
 
 @media (max-width: 768px) {
-  .eval-dimensi-header { padding: 16px 20px !important; }
-  .eval-kriteria-list { padding: 16px 20px !important; }
+  .eval-options-grid { grid-template-columns: repeat(2, 1fr); }
+  .eval-card-header { padding: 14px 18px; gap: 12px; }
   .profile-body { padding: 20px 24px; }
   .profile-header { padding: 14px 20px; }
 }
 
 @media (max-width: 480px) {
-  .eval-dimensi-header { padding: 14px 16px !important; }
-  .eval-kriteria-list { padding: 14px 16px !important; }
-  .likert-options { grid-template-columns: 1fr !important; padding-left: 0 !important; margin-top: 12px; }
-  .eval-kriteria-text { margin-bottom: 8px; }
+  .eval-options-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 14px 14px; }
+  .eval-card-header { padding: 12px 14px; }
+  .eval-option-inner { padding: 10px 6px; }
+  .eval-result-box { padding: 24px 20px; }
 }
 
 
